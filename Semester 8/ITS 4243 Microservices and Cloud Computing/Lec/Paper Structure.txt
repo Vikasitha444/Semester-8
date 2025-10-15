@@ -1,0 +1,9 @@
+Enterprise software development approach 
+Business case
+Sizing and scoping microservices 
+Design patterns
+Kafka
+Right sizing
+Deployment models 
+How to justify microservices is suitable for a given scenario 
+Solution architecture diagram
