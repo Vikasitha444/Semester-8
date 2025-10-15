@@ -1,0 +1,90 @@
+												Emerging Technologies
+												(නවීන තාක්ෂනයන්)
+
+													Lession 01
+											What to expect as a Machine
+								(Machine එකක් විදිහට අපි මොනවද බලාපොරොත්තු වෙන්නේ?)
+
+
+
+
+[Slide 1]
+---පොතේ ලිව්ව Note එක කියවන්න
+
+[Slide 2]
+---පොතේ ලිව්ව Note එක කියවන්න
+
+[Slide 3]
+---පොතේ ලිව්ව Note එක කියවන්න
+
+[Slide 4]
+---පොතේ ලිව්ව Note එක කියවන්න
+
+[Slide 5]
+---පොතේ ලිව්ව Note එක කියවන්න
+
+[Slide 6]
+---පොතේ ලිව්ව Note එක කියවන්න
+
+
+[Slide 7]
+	---පොතේ ලිව්ව Note එක කියවන්න
+
+[Slide 8]
+[Slide 9]
+[Slide 10]
+[Slide 11]
+[Slide 12]
+[Slide 13]
+
+
+
+
+[Slide 14 - 17] 	Examples
+					(උදාහරණ)
+
+	<pencil>
+			Deep Learning වලින් කරපු, Project එකකට උදාහරණයක් විදිහට, සර් කරපු, Project එකක් ගැන විස්තර දාලා තියෙනවා. මේක සිංගප්පුරුවේ කරපු Project එකක්. 
+
+			 මේකේ අරමුණ තමා, Customer Support Center එකක එන Call වලින්, Customerලගේ emotion එක හඳුනාගන්න එක.
+
+			"Speech Independent Emotion Recognition System" එක තමා project එක.
+	</pencil>
+
+
+									Speech Independent Emotion Recognition
+
+
+	* "Speech Independent" කියන්නේ මොකද්ද?
+			- සාමාන්‍යයෙන්, හැඟීම් Recogonazie කරන්නේ, කථා කරන භාෂාවේ වචන භාවිතා කරලා,
+			- එතකොට, Algoritham එක භාෂාව මත Depend වෙනවා
+			- නමුත් මේ System එකේදී, ඕනෑම භාෂාවක හැඟීම් recoginize කරනවා
+			- මේකෙදි කරන්නේ, හඬේ තියෙන  voice tone, pitch, rhythm වගේ දේවල් වලින් හැඟීම් අඳුරගන්න එක
+
+
+
+
+	* මේකේ, Architecture හදලා තියෙන්නේ CNN-RNN වලින්. 
+			CNN භාවිතා කරලා තියෙනවා  :- හඬේ ඉහළ frequency විස්තර capture කරන්න
+			RNN භාවිතා කරනවා 			:-  කාලය සමඟ හඬ වෙනස් වෙන විදිය track කරන්න
+
+
+	* නමුත් මේ Project එකට, CNN-RNN Architecture එක භාවිතා කරන්න බෑ. ඒ ඇයි?
+			- මොකද, CNN හා RNN ගන්න පුළුවන්, Noize නැති Audio වලට විතරයි. Customor කෙනෙක් Call එකක් දුන්නොත්, විවිධ Noize ඇහෙනවා.
+
+
+	* මේ ගැටලුවට පිළිතුරු විදිහට, මෙයාලා, Machine Learning Model එකක් නිර්මාණය කරලා තියෙනවා. මේකෙදි, Audio එක Compress කරලා වැදගත් Features Extract කරගන්නවා Audio එකෙන්. 
+
+	* මේ විදිහට තමා මෙයාලා Project එක කරලා තියෙන්නේ
+
+
+
+
+[Slide 17] 
+
+
+
+
+
+
+
