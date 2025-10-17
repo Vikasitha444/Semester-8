@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Class Timetable</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .reminder-box {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .reminder-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .reminder-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .reminder-title {
+            font-size: 1.8em;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .reminder-subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .today-class {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+        }
+        
+        .class-time {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .class-subject {
+            font-size: 1.3em;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .tomorrow-reminder {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .no-class {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .timetable-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.7s ease;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .class-card {
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border-left: 5px solid;
+            background: #f8f9fa;
+            transition: transform 0.3s ease;
+        }
+        
+        .class-card:hover {
+            transform: translateX(5px);
+        }
+        
+        .class-card.monday {
+            border-left-color: #f5576c;
+        }
+        
+        .class-card.thursday {
+            border-left-color: #4facfe;
+        }
+        
+        .class-card.friday {
+            border-left-color: #38f9d7;
+        }
+        
+        .class-card.highlight {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            border-left-width: 8px;
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.3);
+        }
+        
+        .day-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .class-time-small {
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .class-subject-small {
+            color: #444;
+            font-weight: 500;
+        }
+        
+        .current-badge {
+            display: inline-block;
+            background: #ff4757;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.7em;
+            margin-left: 10px;
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        @media (max-width: 600px) {
+            .reminder-title {
+                font-size: 1.4em;
+            }
+            
+            .class-time {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="reminder-box">
+            <div class="reminder-header">
+                <div class="reminder-icon" id="reminderIcon">📅</div>
+                <div class="reminder-title" id="reminderTitle">අද ඔයාට Class තියෙනවා!</div>
+                <div class="reminder-subtitle" id="currentDate"></div>
+            </div>
+            
+            <div id="todayReminder"></div>
+        </div>
+        
+        <div class="timetable-section">
+            <div class="section-title">📚 සම්පූර්ණ Time Table</div>
+            
+            <div class="class-card monday" id="monday">
+                <div class="day-name">
+                    📅 සඳුදා (Monday)
+                </div>
+                <div class="class-time-small">🕗 8:30 AM</div>
+                <div class="class-subject-small">Entrepreneurship and Small Business Management</div>
+            </div>
+            
+            <div class="class-card thursday" id="thursday">
+                <div class="day-name">
+                    📅 බ්‍රහස්පතින්දා (Thursday)
+                </div>
+                <div class="class-time-small">🕖 7:00 PM</div>
+                <div class="class-subject-small">Professional Practices in ICT</div>
+            </div>
+            
+            <div class="class-card friday" id="friday">
+                <div class="day-name">
+                    📅 සිකුරාදා (Friday)
+                </div>
+                <div class="class-time-small">🕖 7:00 PM - 9:00 PM</div>
+                <div class="class-subject-small">Microservices and Cloud Computing</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const classes = {
+            1: { // Monday
+                day: 'සඳුදා',
+                time: '8:30 AM',
+                subject: 'Entrepreneurship and Small Business Management',
+                id: 'monday'
+            },
+            4: { // Thursday
+                day: 'බ්‍රහස්පතින්දා',
+                time: '7:00 PM',
+                subject: 'Professional Practices in ICT',
+                id: 'thursday'
+            },
+            5: { // Friday
+                day: 'සිකුරාදා',
+                time: '7:00 PM - 9:00 PM',
+                subject: 'Microservices and Cloud Computing',
+                id: 'friday'
+            }
+        };
+        
+        function updateReminder() {
+            const now = new Date();
+            const dayOfWeek = now.getDay();
+            const days = ['ඉරිදා', 'සඳුදා', 'අඟහරුවාදා', 'බදාදා', 'බ්‍රහස්පතින්දා', 'සිකුරාදා', 'සෙනසුරාදා'];
+            
+            document.getElementById('currentDate').textContent = days[dayOfWeek] + ' - ' + now.toLocaleDateString('en-GB');
+            
+            const todayClass = classes[dayOfWeek];
+            const reminderDiv = document.getElementById('todayReminder');
+            const reminderIcon = document.getElementById('reminderIcon');
+            const reminderTitle = document.getElementById('reminderTitle');
+            
+            // Highlight today's class in timetable
+            Object.values(classes).forEach(cls => {
+                const card = document.getElementById(cls.id);
+                card.classList.remove('highlight');
+            });
+            
+            if (todayClass) {
+                reminderIcon.textContent = '🔔';
+                reminderTitle.textContent = 'අද ඔයාට Class එකක් තියෙනවා!';
+                
+                reminderDiv.innerHTML = `
+                    <div class="today-class">
+                        <div class="class-time">⏰ ${todayClass.time}</div>
+                        <div class="class-subject">${todayClass.subject}</div>
+                    </div>
+                `;
+                
+                // Highlight in timetable
+                document.getElementById(todayClass.id).classList.add('highlight');
+                document.getElementById(todayClass.id).querySelector('.day-name').innerHTML += 
+                    '<span class="current-badge">NOW</span>';
+                
+                // Check for tomorrow
+                const tomorrowDay = (dayOfWeek + 1) % 7;
+                const tomorrowClass = classes[tomorrowDay];
+                
+                if (tomorrowClass) {
+                    reminderDiv.innerHTML += `
+                        <div class="tomorrow-reminder">
+                            <strong>හෙට:</strong> ${tomorrowClass.time} - ${tomorrowClass.subject}
+                        </div>
+                    `;
+                }
+            } else {
+                reminderIcon.textContent = '😊';
+                reminderTitle.textContent = 'අද Class නැහැ!';
+                
+                // Find next class
+                let nextDay = (dayOfWeek + 1) % 7;
+                let daysChecked = 0;
+                let nextClass = null;
+                
+                while (daysChecked < 7 && !nextClass) {
+                    if (classes[nextDay]) {
+                        nextClass = classes[nextDay];
+                        break;
+                    }
+                    nextDay = (nextDay + 1) % 7;
+                    daysChecked++;
+                }
+                
+                if (nextClass) {
+                    reminderDiv.innerHTML = `
+                        <div class="no-class">
+                            <p style="font-size: 1.5em; margin-bottom: 15px;">අද ඔයාට classes නැහැ! 🎉</p>
+                            <div class="tomorrow-reminder">
+                                <strong>ඊළඟ Class:</strong> ${nextClass.day}<br>
+                                ${nextClass.time} - ${nextClass.subject}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    reminderDiv.innerHTML = `
+                        <div class="no-class">
+                            <p style="font-size: 1.5em;">අද ඔයාට classes නැහැ! 🎉</p>
+                        </div>
+                    `;
+                }
+            }
+        }
+        
+        updateReminder();
+        
+        // Update every minute
+        setInterval(updateReminder, 60000);
+    </script>
+</body>
+</html>
