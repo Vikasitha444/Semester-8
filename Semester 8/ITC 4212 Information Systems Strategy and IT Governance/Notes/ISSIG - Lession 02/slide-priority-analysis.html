@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Priority Analysis</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .chart-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .chart-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .priority-high {
+            background: #ff4757;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .priority-medium {
+            background: #ffa502;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .priority-low {
+            background: #2ed573;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 IT Governance Frameworks</h1>
+        <p class="subtitle">Slide Priority Analysis - ITC4212</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">13</div>
+                <div class="stat-label">ඉතා වැදගත් Slides</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">8</div>
+                <div class="stat-label">මධ්‍යම වැදගත් Slides</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">අඩු Priority Slides</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">25</div>
+                <div class="stat-label">මුළු Slides ගණන</div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff4757;"></div>
+                <span>🔴 ඉතා වැදගත් (Must Study)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ffa502;"></div>
+                <span>🟡 මධ්‍යම වැදගත් (Important)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #2ed573;"></div>
+                <span>🟢 අඩු Priority (Additional)</span>
+            </div>
+        </div>
+        
+        <div class="charts-grid">
+            <div class="chart-container">
+                <div class="chart-title">Priority Distribution</div>
+                <canvas id="pieChart"></canvas>
+            </div>
+            
+            <div class="chart-container">
+                <div class="chart-title">Slide Count by Priority</div>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #333;">📋 Slide-wise Priority Breakdown</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Slide අංක</th>
+                        <th>විෂයය</th>
+                        <th>Priority Level</th>
+                        <th>Exam Relevance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>4, 5</td>
+                        <td>ITG Frameworks හැඳින්වීම</td>
+                        <td><span class="priority-high">ඉතා වැදගත්</span></td>
+                        <td>2024 Q2(A), Q2(B)</td>
+                    </tr>
+                    <tr>
+                        <td>6, 7, 8</td>
+                        <td>COBIT හැඳින්වීම & 4 Domains</td>
+                        <td><span class="priority-high">ඉතා වැදගත්</span></td>
+                        <td>All Questions</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>COBIT Domains & Objectives Table</td>
+                        <td><span class="priority-high">ඉතා වැදගත්</span></td>
+                        <td>2024 Q2(C), Q2(E)</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Planning & Organizing (PO)</td>
+                        <td><span class="priority-high">ඉතා වැදගත්</span></td>
+                        <td>Domain විස්තර</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Acquisition & Implementation (AI)</td>
+                        <td><span class="priority-high">ඉතා වැදගත්</span></td>
+                        <td>Domain විස්තර</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Delivery & Support (DS)</td>
+                        <td><span class="priority-high">ඉතා වැදගත්</span></td>
+                        <td>Domain විස්තර</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Monitoring & Evaluation (ME)</td>
+                        <td><span class="priority-high">ඉතා වැදගත්</span></td>
+                        <td>Domain විස්තර</td>
+                    </tr>
+                    <tr>
+                        <td>15, 16</td>
+                        <td>Metrics (KGIs & KPIs)</td>
+                        <td><span class="priority-high">ඉතා වැදගත්</span></td>
+                        <td>2023 Q2(D)</td>
+                    </tr>
+                    <tr>
+                        <td>26, 27</td>
+                        <td>COBIT vs ITIL & Integration</td>
+                        <td><span class="priority-high">ඉතා වැදගත්</span></td>
+                        <td>2023 Q2(B) - ඉතාම වැදගත්!</td>
+                    </tr>
+                    <tr>
+                        <td>18, 19, 20</td>
+                        <td>ITIL හැඳින්වීම & 8 Books</td>
+                        <td><span class="priority-medium">මධ්‍යම වැදගත්</span></td>
+                        <td>ITIL පිළිබඳ මූලික අවබෝධය</td>
+                    </tr>
+                    <tr>
+                        <td>21-23</td>
+                        <td>ITIL Books විස්තර</td>
+                        <td><span class="priority-medium">මධ්‍යම වැදගත්</span></td>
+                        <td>2024 Q2(E) - Implementation</td>
+                    </tr>
+                    <tr>
+                        <td>24, 25</td>
+                        <td>ISO 17799</td>
+                        <td><span class="priority-medium">මධ්‍යම වැදගත්</span></td>
+                        <td>3rd Framework සම්පූර්ණ කිරීමට</td>
+                    </tr>
+                    <tr>
+                        <td>1-3</td>
+                        <td>Title & Contents</td>
+                        <td><span class="priority-low">අඩු Priority</span></td>
+                        <td>Reference පමණක්</td>
+                    </tr>
+                    <tr>
+                        <td>9, 17</td>
+                        <td>Diagrams</td>
+                        <td><span class="priority-low">අඩු Priority</span></td>
+                        <td>අවබෝධයට උපකාරී</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Pie Chart
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        const pieChart = new Chart(pieCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['ඉතා වැදගත්', 'මධ්‍යම වැදගත්', 'අඩු Priority'],
+                datasets: [{
+                    data: [13, 8, 4],
+                    backgroundColor: [
+                        '#ff4757',
+                        '#ffa502',
+                        '#2ed573'
+                    ],
+                    borderWidth: 3,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                size: 14
+                            },
+                            padding: 15
+                        }
+                    }
+                }
+            }
+        });
+
+        // Bar Chart
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['ඉතා වැදගත්', 'මධ්‍යම වැදගත්', 'අඩු Priority'],
+                datasets: [{
+                    label: 'Slide Count',
+                    data: [13, 8, 4],
+                    backgroundColor: [
+                        '#ff4757',
+                        '#ffa502',
+                        '#2ed573'
+                    ],
+                    borderRadius: 10,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 2,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

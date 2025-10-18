@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Class Timetable</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .reminder-box {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .reminder-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .reminder-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .reminder-title {
+            font-size: 1.8em;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .reminder-subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .today-class {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+        }
+        
+        .class-time {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .class-subject {
+            font-size: 1.3em;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .tomorrow-reminder {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .no-class {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .timetable-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.7s ease;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .class-card {
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            background: #f8f9fa;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .class-card:hover {
+            transform: translateX(5px);
+        }
+        
+        .class-card.highlight {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+            border-left-width: 8px;
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.3);
+        }
+        
+        .day-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .class-time-small {
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .class-subject-small {
+            color: #444;
+            font-weight: 500;
+        }
+        
+        .current-badge {
+            display: inline-block;
+            background: #ff4757;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.7em;
+            margin-left: 10px;
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .delete-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff4757;
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .delete-btn:hover {
+            background: #ff3838;
+        }
+
+        .add-class-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.9s ease;
+        }
+
+        .add-class-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .add-class-btn:hover {
+            transform: scale(1.02);
+        }
+
+        .add-class-form {
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+        .add-class-form.show {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .submit-btn {
+            flex: 1;
+            padding: 12px;
+            background: #43e97b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #38d66b;
+        }
+
+        .cancel-btn {
+            flex: 1;
+            padding: 12px;
+            background: #e0e0e0;
+            color: #333;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cancel-btn:hover {
+            background: #d0d0d0;
+        }
+
+        .storage-info {
+            text-align: center;
+            color: #43e97b;
+            font-size: 0.9em;
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(67, 233, 123, 0.1);
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 600px) {
+            .reminder-title {
+                font-size: 1.4em;
+            }
+            
+            .class-time {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="reminder-box">
+            <div class="reminder-header">
+                <div class="reminder-icon" id="reminderIcon">📅</div>
+                <div class="reminder-title" id="reminderTitle">අද ඔයාට Class තියෙනවා!</div>
+                <div class="reminder-subtitle" id="currentDate"></div>
+            </div>
+            
+            <div id="todayReminder"></div>
+        </div>
+        
+        <div class="timetable-section">
+            <div class="section-title">📚 සම්පූර්ණ Time Table</div>
+            <div id="classList"></div>
+        </div>
+
+        <div class="add-class-section">
+            <button class="add-class-btn" onclick="toggleAddForm()">
+                ➕ අලුත් Class එකක් එකතු කරන්න
+            </button>
+            
+            <div class="add-class-form" id="addClassForm">
+                <form onsubmit="addClass(event)">
+                    <div class="form-group">
+                        <label>දවස (Day)</label>
+                        <select id="daySelect" required>
+                            <option value="">දවසක් තෝරන්න</option>
+                            <option value="0">ඉරිදා (Sunday)</option>
+                            <option value="1">සඳුදා (Monday)</option>
+                            <option value="2">අඟහරුවාදා (Tuesday)</option>
+                            <option value="3">බදාදා (Wednesday)</option>
+                            <option value="4">බ්‍රහස්පතින්දා (Thursday)</option>
+                            <option value="5">සිකුරාදා (Friday)</option>
+                            <option value="6">සෙනසුරාදා (Saturday)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>වේලාව (Time)</label>
+                        <input type="text" id="timeInput" placeholder="උදා: 8:30 AM or 7:00 PM - 9:00 PM" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>විෂයය (Subject)</label>
+                        <input type="text" id="subjectInput" placeholder="විෂයය ඇතුළත් කරන්න" required>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="submit-btn">✓ එකතු කරන්න</button>
+                        <button type="button" class="cancel-btn" onclick="toggleAddForm()">✗ අවලංගු කරන්න</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="storage-info">
+                💾 ඔයාගේ classes browser එකේ save වෙනවා - refresh කළත් නැති වෙන්නේ නැහැ!
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const dayNames = ['ඉරිදා', 'සඳුදා', 'අඟහරුවාදා', 'බදාදා', 'බ්‍රහස්පතින්දා', 'සිකුරාදා', 'සෙනසුරාදා'];
+        const dayNamesEn = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        // Load classes from localStorage or use defaults
+        function loadClasses() {
+            const saved = localStorage.getItem('myClasses');
+            if (saved) {
+                return JSON.parse(saved);
+            } else {
+                // Default classes
+                return {
+                    1: {
+                        day: 'සඳුදා',
+                        time: '8:30 AM',
+                        subject: 'Entrepreneurship and Small Business Management'
+                    },
+                    4: {
+                        day: 'බ්‍රහස්පතින්දා',
+                        time: '7:00 PM',
+                        subject: 'Professional Practices in ICT'
+                    },
+                    5: {
+                        day: 'සිකුරාදා',
+                        time: '7:00 PM - 9:00 PM',
+                        subject: 'Microservices and Cloud Computing'
+                    }
+                };
+            }
+        }
+
+        // Save classes to localStorage
+        function saveClasses() {
+            localStorage.setItem('myClasses', JSON.stringify(classes));
+        }
+
+        let classes = loadClasses();
+
+        function toggleAddForm() {
+            const form = document.getElementById('addClassForm');
+            form.classList.toggle('show');
+        }
+
+        function addClass(event) {
+            event.preventDefault();
+            
+            const day = document.getElementById('daySelect').value;
+            const time = document.getElementById('timeInput').value;
+            const subject = document.getElementById('subjectInput').value;
+
+            // Check if class already exists for this day
+            if (classes[day]) {
+                alert('මේ දවසට දැනටමත් class එකක් තියෙනවා! ඒක delete කරල අලුත් එක add කරන්න.');
+                return;
+            }
+
+            classes[day] = {
+                day: dayNames[day],
+                time: time,
+                subject: subject
+            };
+
+            // Save to localStorage
+            saveClasses();
+
+            // Reset form
+            document.getElementById('daySelect').value = '';
+            document.getElementById('timeInput').value = '';
+            document.getElementById('subjectInput').value = '';
+            
+            toggleAddForm();
+            updateDisplay();
+        }
+
+        function deleteClass(day) {
+            if (confirm('ඔයා මේ class එක delete කරන්න ඕනද?')) {
+                delete classes[day];
+                saveClasses();
+                updateDisplay();
+            }
+        }
+
+        function renderClassList() {
+            const classList = document.getElementById('classList');
+            classList.innerHTML = '';
+
+            // Sort by day
+            const sortedDays = Object.keys(classes).sort((a, b) => parseInt(a) - parseInt(b));
+
+            if (sortedDays.length === 0) {
+                classList.innerHTML = '<div class="no-class">තවම classes නැහැ! ඉහත button එකෙන් classes එකතු කරන්න.</div>';
+                return;
+            }
+
+            sortedDays.forEach(day => {
+                const classInfo = classes[day];
+                const card = document.createElement('div');
+                card.className = 'class-card';
+                card.id = 'day-' + day;
+                
+                card.innerHTML = `
+                    <button class="delete-btn" onclick="deleteClass('${day}')">🗑️ Delete</button>
+                    <div class="day-name">
+                        📅 ${classInfo.day} (${dayNamesEn[day]})
+                    </div>
+                    <div class="class-time-small">🕗 ${classInfo.time}</div>
+                    <div class="class-subject-small">${classInfo.subject}</div>
+                `;
+                
+                classList.appendChild(card);
+            });
+        }
+
+        function updateReminder() {
+            const now = new Date();
+            const dayOfWeek = now.getDay();
+            
+            document.getElementById('currentDate').textContent = dayNames[dayOfWeek] + ' - ' + now.toLocaleDateString('en-GB');
+            
+            const todayClass = classes[dayOfWeek];
+            const reminderDiv = document.getElementById('todayReminder');
+            const reminderIcon = document.getElementById('reminderIcon');
+            const reminderTitle = document.getElementById('reminderTitle');
+            
+            // Remove all highlights
+            document.querySelectorAll('.class-card').forEach(card => {
+                card.classList.remove('highlight');
+                const badge = card.querySelector('.current-badge');
+                if (badge) badge.remove();
+            });
+            
+            if (todayClass) {
+                reminderIcon.textContent = '🔔';
+                reminderTitle.textContent = 'අද ඔයාට Class එකක් තියෙනවා!';
+                
+                reminderDiv.innerHTML = `
+                    <div class="today-class">
+                        <div class="class-time">⏰ ${todayClass.time}</div>
+                        <div class="class-subject">${todayClass.subject}</div>
+                    </div>
+                `;
+                
+                // Highlight in timetable
+                const todayCard = document.getElementById('day-' + dayOfWeek);
+                if (todayCard) {
+                    todayCard.classList.add('highlight');
+                    todayCard.querySelector('.day-name').innerHTML += 
+                        '<span class="current-badge">NOW</span>';
+                }
+                
+                // Check for tomorrow
+                const tomorrowDay = (dayOfWeek + 1) % 7;
+                const tomorrowClass = classes[tomorrowDay];
+                
+                if (tomorrowClass) {
+                    reminderDiv.innerHTML += `
+                        <div class="tomorrow-reminder">
+                            <strong>හෙට:</strong> ${tomorrowClass.time} - ${tomorrowClass.subject}
+                        </div>
+                    `;
+                }
+            } else {
+                reminderIcon.textContent = '😊';
+                reminderTitle.textContent = 'අද Class නැහැ!';
+                
+                // Find next class
+                let nextDay = (dayOfWeek + 1) % 7;
+                let daysChecked = 0;
+                let nextClass = null;
+                
+                while (daysChecked < 7 && !nextClass) {
+                    if (classes[nextDay]) {
+                        nextClass = classes[nextDay];
+                        break;
+                    }
+                    nextDay = (nextDay + 1) % 7;
+                    daysChecked++;
+                }
+                
+                if (nextClass) {
+                    reminderDiv.innerHTML = `
+                        <div class="no-class">
+                            <p style="font-size: 1.5em; margin-bottom: 15px;">අද ඔයාට classes නැහැ! 🎉</p>
+                            <div class="tomorrow-reminder">
+                                <strong>ඊළඟ Class:</strong> ${nextClass.day}<br>
+                                ${nextClass.time} - ${nextClass.subject}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    reminderDiv.innerHTML = `
+                        <div class="no-class">
+                            <p style="font-size: 1.5em;">අද ඔයාට classes නැහැ! 🎉</p>
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        function updateDisplay() {
+            renderClassList();
+            updateReminder();
+        }
+        
+        // Initial render
+        updateDisplay();
+        
+        // Update every minute
+        setInterval(updateReminder, 60000);
+    </script>
+</body>
+</html>
