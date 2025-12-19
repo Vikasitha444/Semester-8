@@ -1,0 +1,340 @@
+
+1. Selected Paper
+
+	Title	: 	GPT-4 Technical Report
+
+	Authors	: 	OpenAI, Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad,               Ilge Akkaya, Florencia Leoni Aleman, Diogo 				Almeida, Janko Altenschmidt, Sam Altman, Shyamal Anadkat, Red Avila, Igor Babuschkin, Suchir Balaji, Valerie Balcom, Paul 				Baltescu, Haiming Bao, Mohammad Bavarian, Jeff Belgum, Irwan Bello, Jake Berdine, Gabriel Bernadett-Shapiro, 
+
+	Published	: 	March 2023 (Updated March 2024)
+
+	Source 		: 	arXiv.org (arXiv:2303.08774)
+
+	Category: Large AI Models (Language Models)
+
+	
+	
+	The reason for my choice of this paper is the fact that GPT-4 is among the leading language models in the world today. It is, moreover, the technology that powers ChatGPT. The knowledge of the structure, the possibilities, and the problems of GPT-4 is a must for every AI and tech person. The comprehension of the infrastructure needs that coincide with the application of such large models in practice is not only necessary but also crucial in the future of AI.
+
+
+
+
+2.	Summary of the Research
+
+	2.1	What problem the research is solving
+		This research addresses the challenge of building an AI model that can understand and generate text like humans and can process both images and text inputs. Older language models have had several shortcomings, including difficulties in understanding complex instructions, providing factually accurate responses, and handling multimodal inputs.
+
+
+	2.2	What approach or method is used?
+
+		These are Several main approaches use by GPT-4 model:
+
+				• The GPT’s Transformer Architecture:	
+					 	GPT-4 is built on the Transformer architecture. It uses attention mechanisms to understand the relationships between words in text. It can process context better than older approaches.
+
+				•	Large-Scale Pre-Training: 
+						The model is trained on a very large amount of text data available on the internet. This allows the model to learn patterns in language, facts about the world, and reasoning abilities.
+				
+				•	Post-Training Alignment
+						After the initial training is complete, the model goes through alignment processes. This uses Reinforcement Learning from Human Feedback (RLHF). This means that human reviewers rate the model's responses, and then the model learns to generate more helpful, accurate, and safe outputs.
+
+				
+				•	Multimodal Capabilities: 
+						Unlike older models, GPT-4 can accept both text and image inputs, making it more versatile for real-world applications.
+
+
+		The research mentioned above proposed an interesting new idea in the form of predictable scaling techniques. OpenAI realized that it could accurately predict the performance of GPT-4 by testing small versions. This is important because training these massive models is very expensive, and being able to predict performance can prevent wasting resources.
+
+
+
+
+	2.3	What results or benefits does it report
+
+		•	Enhanced Factuality:
+				GPT-4 proved to be 19% better than the previously existing GPT-3.5 in terms of evaluation of accuracy. Thus, it gives out more precise data and less incorrect information.
+
+		•	Multimodal Understanding: 
+				GPT-4 can analyze images, interpret diagrams, read text from images, and reason with text about visual content at the same time. This leads to a lot of new application possibilities opening up
+
+
+
+
+
+3.	Analyze the Challenges
+
+	When trying to deploy and scale large language models like GPT-4 in real-world scenarios, there can be significant infrastructure and technical challenges
+
+	3.1 Need Large Amount of Computational Power
+
+			* 	The model has hundreds of billions of parameters and Each parameter requires memory storage, and the entire model can take 	 	up hundreds of gigabytes of GPU memory.
+
+			*	GPT-4 requires high-end GPUs like the NVIDIA A100 or H100 to run. Even with these powerful GPUs, many GPU units need to 	work together to handle the size of the model. A single A100 GPU has 80GB of memory, but GPT-4 requires many GPUs in 		parallel.
+
+			* 	Training GPT-4 model required months of running thousands of GPUs. Industry estimates put the training cost at more than 	  $100 million in compute resources alone.
+
+			* 	Even after training is complete, running the model for every user query is expensive. OpenAI has to maintain a massive 		server infrastructure to handle millions of ChatGPT users making requests at the same time.
+
+
+		<b> Real World Impacts that could happen because of this reason </b>
+				- 	The price of an 8 A100 GPUs cluster is around $100,000-200,000, and also, 
+					it is necessary to have several  clusters 	
+					for running the GPT-4 LLM Model. Hence, it will become almost 
+					impossible for small companies or research 				
+					institutions to deploy 	 such models independently.
+
+
+
+
+
+
+
+
+
+	3.2 High Latency and Response Time
+
+			*	GPT-4 generates text token-by-token (a token is roughly a word or part of a word). Complex queries can take 10-30 seconds 	  or more to process. Therefore this process could take such a time to give the response back to the user which gave the 		query to the LLM. 
+
+			*	When users access GPT-4 through APIs or web interfaces, network delays add to the response time. Users located far from 	data centers may experience even longer wait times.
+
+			* 	Because the model generates one token at a time, and each token depends on the previous ones, the process cannot be easily 	   parallelized. This sequential nature inherently limits speed improvements.
+
+			* 	During peak usage times, many users send requests at the same time. The infrastructure has to queue the requests and 		manage load balance, which can increase wait times even further.
+
+
+
+			<b> Real World Impacts that could happen because of this reason </b>
+					- Customer service chatbots, medical diagnosis assistance, or real-time translation like time-sensitive applications might find such delays tech impracticable. Users expect almost instant replies, especially in the professional environments where rapid decision-making is crucial.
+
+	
+
+
+
+
+
+
+	3.3 Energy Consumption and Environmental Impact
+
+			* 	Even a single A100 GPU consumes 400 watts of power. Thousands of these GPUs require megawatts of electricity to run 		continuously for training and inference. One estimate says that training a large language model like GPT-4 generates as 	much carbon as five cars over their entire lifetimes.
+
+			* 	GPUs generate a lot of heat. Data centers have to use powerful cooling systems, which consume additional energy. 
+			
+
+
+
+			<b> Real World Impacts that could happen because of this reason </b>
+					- As AI becomes more prevalent, the collective energy consumption of AI systems could become a significant portion of global electricity use. This raises both cost concerns (higher electricity bills) and environmental concerns (carbon emissions). Organizations will need to consider sustainability implications when scaling such models.
+
+
+
+
+
+
+4. Propose Solutions 
+	
+	4.1 Model Optimization Techniques
+
+			*	This technique reduces the precision of model parameters. Instead of storing each parameter as a 32-bit floating-point 		number, 8-bit or 4-bit representations can be used. This can reduce model size by 75% or more, with minimal loss of 		accuracy. For example, Meta's LLaMA models have been successfully quantized to 4-bit and run on consumer GPUs.
+
+			*	Smaller 'student' models are trained to mimic the behavior of larger 'teacher' models. The smaller model learns to produce 	   outputs similar to GPT-4 using a fraction of the computational resources. Companies like Anthropic and Google have 			successfully used this approach to build efficient smaller models.
+
+			* 	Models are designed to activate only a subset of parameters for each input. Techniques such as Mixture of Experts (MoE) 	route different inputs to different specialized sub-models. This effectively reduces the computation required per query 	while maintaining overall model capacity.
+
+			*	Models are optimized for specific hardware platforms. For example, Google's Tensor Processing Units (TPUs) are 				specifically designed for neural network operations and can run AI models more efficiently than general-purpose GPUs.
+
+
+	4.2 Caching and Dynamic Batching
+			
+			*	Stores frequently requested queries and their responses. When users ask common questions, the system can instantly return 	  cached responses instead of generating new ones. This is particularly effective for FAQs, standard documentation queries, 	and common code snippets.
+
+			*	Instead of processing one request at a time, multiple user requests are batched together. This technique allows the GPU to 	   process multiple queries simultaneously, increasing throughput. Technologies like vLLM implement continuous batching, 		improving serving efficiency by 10-20x.
+
+			*	Intelligent routing is implemented that assesses query complexity and routes simple questions to faster, smaller models. 	 The full GPT-4 model is reserved only for complex queries that require full capabilities.
+
+				
+	
+
+
+	4.3 Green Computing Practices
+
+			*	AI infrastructure is hosted in data centers powered by renewable energy sources. Major cloud providers like AWS, Google 	Cloud, and Microsoft Azure now offer carbon-neutral or carbon-negative data center options in various regions.
+
+
+			* 	NVIDIA's H100 and like newer GPU generations perform significantly better per than their older GPUs. Even though the 		initial 		costs are higher, the improved efficiency can reduce long-term energy costs and environmental impact.
+
+
+			* 	Each organization has their own large models for training, while existing pre-trained models can be fine-tuned to specific 	   needs of the organizations and used. The overall energy cost is significantly reduced by this approach when compared to 		training from scratch.
+
+
+
+5. Reflection
+
+		5.1 Instead of pursuing larger general purpose models, the industry might shift towards small, specialized models that are 			optimized for specific tasks. These models will be the most efficient and practical for real-world deployment.
+
+		5.2	More AI processing is moving to edge devices like smartphones and embedded systems. Companies like Apple and Qualcomm are 		already developing specialized AI chips for mobile devices, enabling privacy-preserving on-device AI.
+
+		5.3	Open-source AI models and tools are growing ecosystems (like Meta's LLaMA, Mistral AI's models, and various optimization 		frameworks) making advanced AI technologies most accessible to small organizations and researchers.
+
+
+		5.4	 Worldwide governments have started a process of establishing frameworks for AI governance. Among these requirements, there 	 could be ones about transparency of energy consumption and environmental impact which would help the sector to adopt 			 the        most 	sustainable practices and thus, push the industry in that direction.
+
+
+
+
+Refrences
+	OpenAI. (2023). GPT-4 Technical Report. arXiv:2303.08774. Retrieved from https://arxiv.org/abs/2303.08774
+
+OpenAI. (2022). Introducing ChatGPT. Retrieved from https://openai.com/blog/chatgpt
+
+Liu, Y., et al. (2023). Summary of ChatGPT-Related Research and Perspective Towards the Future of Large Language Models. arXiv:2304.01852.
+
+Bubeck, S., et al. (2023). Sparks of Artificial General Intelligence: Early experiments with GPT-4. arXiv:2303.12712.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------මේවා ලියන්න එපා-------------------------------------------------------------
+
+1. Selected Paper
+
+	Title	: 	GPT-4 Technical Report
+
+	Authors	: 	OpenAI, Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad,               Ilge Akkaya, Florencia Leoni Aleman, Diogo 				Almeida, Janko Altenschmidt, Sam Altman, Shyamal Anadkat, Red Avila, Igor Babuschkin, Suchir Balaji, Valerie Balcom, Paul 				Baltescu, Haiming Bao, Mohammad Bavarian, Jeff Belgum, Irwan Bello, Jake Berdine, Gabriel Bernadett-Shapiro, 
+
+	Published	: 	March 2023 (Updated March 2024)
+
+	Source 		: 	arXiv.org (arXiv:2303.08774)
+
+	Category: Large AI Models (Language Models)
+
+	
+	
+	The reason for my choice of this paper is the fact that GPT-4 is among the leading language models in the world today. It is, moreover, the technology that powers ChatGPT. The knowledge of the structure, the possibilities, and the problems of GPT-4 is a must for every AI and tech person. The comprehension of the infrastructure needs that coincide with the application of such large models in practice is not only necessary but also crucial in the future of AI.
+
+
+
+
+2.	Summary of the Research
+
+	2.1	What problem the research is solving
+		This research addresses the challenge of building an AI model that can understand and generate text like humans and can process both images and text inputs. Older language models have had several shortcomings, including difficulties in understanding complex instructions, providing factually accurate responses, and handling multimodal inputs.
+
+
+	2.2	What approach or method is used?
+
+		These are Several main approaches use by GPT-4 model:
+
+				• The GPT’s Transformer Architecture:	
+					 	GPT-4 is built on the Transformer architecture. It uses attention mechanisms to understand the relationships between words in text. It can process context better than older approaches.
+
+				•	Large-Scale Pre-Training: 
+						The model is trained on a very large amount of text data available on the internet. This allows the model to learn patterns in language, facts about the world, and reasoning abilities.
+				
+				•	Post-Training Alignment
+						After the initial training is complete, the model goes through alignment processes. This uses Reinforcement Learning from Human Feedback (RLHF). This means that human reviewers rate the model's responses, and then the model learns to generate more helpful, accurate, and safe outputs.
+
+				
+				•	Multimodal Capabilities: 
+						Unlike older models, GPT-4 can accept both text and image inputs, making it more versatile for real-world applications.
+
+
+		The research mentioned above proposed an interesting new idea in the form of predictable scaling techniques. OpenAI realized that it could accurately predict the performance of GPT-4 by testing small versions. This is important because training these massive models is very expensive, and being able to predict performance can prevent wasting resources.
+
+
+
+
+	2.3	What results or benefits does it report
+
+		•	Enhanced Factuality:
+				GPT-4 proved to be 19% better than the previously existing GPT-3.5 in terms of evaluation of accuracy. Thus, it gives out more precise data and less incorrect information.
+
+		•	Multimodal Understanding: 
+				GPT-4 can analyze images, interpret diagrams, read text from images, and reason with text about visual content at the same time. This leads to a lot of new application possibilities opening up
+
+
+
+
+
+3.	Analyze the Challenges
+
+	When trying to deploy and scale large language models like GPT-4 in real-world scenarios, there can be significant infrastructure and technical challenges
+
+	3.1 Need Large Amount of Computational Power
+
+		- GPT-4 is a very large model and therefore requires large Amount of Computational Power
+
+			* 	The model has hundreds of billions of parameters (the exact number has not been mentopned, but estimates suggest it could 		be as high as 1.7 trillion parameters). Each parameter requires memory storage, and the entire model can take up hundreds 		of gigabytes of GPU memory.
+
+			*	GPT-4 requires high-end GPUs like the NVIDIA A100 or H100 to run. Even with these powerful GPUs, many GPU units need to 		work together to handle the size of the model. A single A100 GPU has 80GB of memory, but GPT-4 requires many GPUs in 			parallel.
+
+			* 	Training GPT-4 required months of running thousands of GPUs. Industry estimates put the training cost at more than $100 		million in compute resources alone.
+
+			* 	Even after training is complete, running the model for every user query is expensive. OpenAI has to maintain a massive 			server infrastructure to handle millions of ChatGPT users making requests at the same time.
+
+
+
+		- Real World Impacts that could happen because of this reasons:
+			*	Computer hardware costs alone could become very prohibitive for organizations thinking of deploying such models. The price 		of an 8 A100 GPUs cluster is around $100,000-200,000, and also, it is necessary to have several such clusters for the GPT-4 	scale applications. Hence, it will become almost impossible for small companies or research institutions to deploy such 		models independently.
+
+
+
+
+	3.2 High Latency and Response Time
+		
+	3.3 Energy Consumption and Environmental Impact

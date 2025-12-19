@@ -1,0 +1,2116 @@
+									
+									Information Systems Strategy and IT Governance
+					(තොරතුරු පද්ධති සාර්ථකව භාවිතා කරනා ක්‍රමවේදය සහ තොරතුරු තාක්ෂණ පරිපාලනය)
+											
+											Lession 04
+									IT Strategic Alignment and Maturity
+					(තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැස්ම සහ IT ක්ෂේත්‍රයේ පරිණතභාවය)
+
+2023 May
+	Question 2) 
+		D. An organisation's level of IT maturity can have a significant impact on its ability to achieve 
+		   effective alignment between its IT strategy and overall business goals. Justify this statement.         [6 Marks]
+
+
+⚠️ ඉගැන්වීමේ පහසුව සඳහා Slides අනු පිළිවෙල වෙනස් කර ඇත.
+	ක්ෂේත්‍රය == Department
+	
+
+[Slide 2] IT Strategic Alignment and Maturity
+		 (තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැස්ම හා IT ක්ෂේත්‍රයේ පරිණතභාවය)
+
+
+
+
+
+[Slide 4] මොකද්ද මේ Alignment (එකෙල්ල කිරීම) කියන්නේ?
+
+	- සරලවම Allignment (එකෙල්ල කිරීම) කියන්නේ, දෙයක් එක කෙලින් පිහිටුවන එක
+			උදා:- Wheel Alignment ("Wheel Alignment.png" එක Open කරලා පෙන්වන්න)
+
+	
+
+
+
+[Slide 5] IT Strategic Alignment
+		(තොරතුරු තාක්ෂණ, උපායමාර්ගික සැලසුම් එකෙල්ල කිරීම)  
+
+
+	මොකද්ද මේ "තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැස්ම (IT Strategic Alignment)" කියන්නේ?
+		
+		* "තොරතුරු තාක්ෂණ, උපායමාර්ගික සැලසුම්, එකෙල්ල කිරීම" කියන්නේ, 
+		  <red> Bussiness Goals සාක්ෂාත් කරගන්න, නිවැරදි වෙලාවට, IT ක්ෂේත්‍රය භාවිතා කිරීමයි. </red>
+
+
+
+	<pencil>
+
+			* හැබැයි තාම මේක ආයතන වල, ඉහල පෙලේ කළමනාකරුවන්ට (executives ලාට) ලොකු ප්‍රශ්නයක්.       	
+			 මොකද?
+					 -	IT ක්ෂේත්‍රය කොහොමද, Bussiness එකට ගලපා ගන්නේ, සහ Bussiness එක කොහොමද IT 	   ක්ෂේත්‍රයට ගලපා ගන්නේ, කියන දේ ගැන අවබෝධ	නොතිබීම නිසා
+								උදා:- 	 ආයතනක IT Department එක විසින්, විශාල මුදලක් යොදවා, ආයතනයේ, 			 දත්ත වල "Secutiry" එක වැඩි කරමු කියා යෝජනා කලද, ආයතයේ ඉහල 			 පෙලේ කළමානාකරුවන් විසින්, ඒ සඳහා අඩු මුදලක් වැඩ කර, ඒ වෙනුවට, 			 "Customor Staisfaction" එක වැඩි කරමු යයි යෝජනා කිරීම.
+
+
+			* ඒ නිසා, ඒ ගැටළු වලට විසඳුම් දෙන්න තමා, මේ "තොරතුරු තාක්ෂණ, උපායමාර්ගික සැලසුම් එකෙල්ල කිරීම (IT Strategic Alignment)" ක්‍රමවේදය නිර්මාණය කරලා තියෙන්නේ.
+	</pencil>
+
+
+
+
+[Slide 6] IT Strategic Alignment Models (SAM)
+			(තොරතුරු තාක්ෂණ, උපායමාර්ගික සැලසුම් එකෙල්ල කිරීමේ ආකෘති)
+
+
+	*  තොරතුරු තාක්ෂණ, උපායමාර්ගික සැලසුම් එකෙල්ල කිරීමේ ආකෘති (IT Strategic Alignment Models) කියන්නේ, <red> 		   	ආයතනයේ IT ක්ෂේත්‍රය, ආයතනයේ Bussiness Goals සමඟ සමපාත කරන ආකාරය පෙන්වන Plan එකක් වේ. 		</red>
+
+	* මහාචාර්ය හෙන්ඩර්සන්(Henderson) සහ වෙන්කට්රාමන්(Venkatraman) විසින්, 1990දී, Strategic Alignment Model 
+	  (SAM) එකක් නිර්මාණය කරලා තියෙනවා. 
+
+
+
+	  #අපි දැන් බලමු මේක මොන වගේද කියලා
+
+
+
+
+[Slide 7] Strategic Alignment Model (SAM) Proposed by Henderson & Venkatraman
+		  (Henderson හා Venkatraman විසින් යෝජනා කල, තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැසුම් ආකෘතිය)
+
+		 #මේක ගොඩක් ගැඹුරට ඉගෙන ගන්න ඕන නෑ
+		 #සරලව වෙන වැඩේ දැනගතම ඇති.
+
+		 
+		 * මේ ආකෘතිය, <red> කොටස් 4කින් (quadrants 4කින්) සමන්විත වෙනවා, </red>
+		 		01) Bussiness Strategy
+		 		02) IT Strategy
+		 		03) Organizational Infrastructure and Processes
+		 		04) IT Infrastructure & Processes
+
+		 		කියලා.
+
+		 * මෙතැනදී පෙන්වන්නේ, මේ එක් එක් කොටසේදී, Focus කල යුතු දේ කුමක්ද යන්නයි.
+		 
+
+		  ---"SAM.png" එක Open කරන්න
+
+		 * මේ කොටස් 04, අභ්‍යන්තර පරිසරය හා බාහිර පරිසරය ලෙසද බෙදනු ලබයි
+		 
+		 * ඒ වගේම, Bussiness හා IT වශයෙන්ද කොටස් දෙකකට බෙදනු ලැබේ.
+		 
+		 *  Company එකක් සාර්ථක වෙන්න නම්, මේ කොටස් 04ම නිවැරදිව, සමපාත වෙලා තියෙන්න ඕනේ, එහෙම නැතුව, මේවා එකට සමපාත 	වුනේ නැත්නම්, Company එක Fail වේ.
+		 
+		 
+
+
+
+					  	Bussiness  														IT
+					  	Strategy 														Strategy 
+
+					  		* ආයතනය විසින් Achive කර ගත  								* ආයතනයේ IT ක්ෂේත්‍රය විසින් භාවිතා කරන
+					  		  යුතු Golas මොනවද? 											  Technologies මොනවද?
+
+
+
+
+
+
+
+
+		  	Organizational  												 IT 
+		  	Infrastructure and  											 Infrastructure 
+		  	Processes  														 & Processes
+		  																	(මෙතනට එන්න ඕනේ, IT කියලා. දකුණේ උඩම තියෙන
+		  																	අළු පාට Diagram එක බලන්න)
+		  		* ආයතනය කොහොමද Organize  									* ආයතනයේ තාක්ෂනය කොහොමද
+		  		  වෙලා තියෙන්නේ? 													  Organize වෙලා තියෙන්නේ?
+
+
+
+
+
+
+
+
+[Slide 8] What is Maturity? 
+		(මොකද්ද මේ පරිණත භාවය කියන්නේ?)
+
+
+
+	<pencil>
+			* අපි ඉස්සෙලාම බලමු, මනුස්සයෙක් කොහොමද පරිණත වෙන්නේ කියලා?
+
+			* ඕනෑම මනුස්සයෙක් පරිණතයි (Mature) කියලා අඳුරගන්න පුළුවන් සාධක මොනවද? 
+
+
+			  	 - වයසින්
+			  	 - හැකියාවන් වලින්
+			  	 - ප්‍රශ්නෙකට මුහුණ දෙන විදිහකින්
+			  	 - තත්වයක් Manage කරන විදිහෙන්
+
+			  	 අපිට ඕනෑම කෙනෙක් පරිණතයි (Mature) කියලා කියන්න පුළුවන්.
+
+			* නමුත්, මේක වැරදියි. මොකද, පරිණතභාවය (Matureness) කියන දේ, පුද්ගලයාගෙන් පුද්ගලයට වෙනස් වෙනවා. 
+			* මේ, නිසා හැම පුද්ගලයාම පරිණතද කියලා බලන්න, එකම සාධක ටිකක් භාවිතා කරලා බෑ. මොකද මෝඩයෝත් වයසට යනවා.
+
+
+	</pencil>
+
+
+
+	මනුස්සයෙක් Mature වෙන ආකාරය
+	(4 Maturity Levels)	
+
+			■	Level 1
+				ළදරු විය
+				(Nascent)
+					* මේ යුගයේදී පොඩි ළමයි දේවල් ඉගෙන ගැනීම සිදු කරනවා.
+					* තාම කිසි දෙයක් හරියට කරන්න බෑ
+
+
+
+			■	Level 2
+				පුර්ව ළමා විය
+				(Evolving)
+					* මේ යුගයේදී, කලින් ඉගෙන ගත්තු දේවල් එක්ක, තනියෙම වැඩක් කරන්න උත්සහ කරනවා.
+					* නමුත් තවම, වැරදි ගොඩක් සිදු කරගන්නවා
+
+
+
+			■	Level 3
+				පරිණත වෙමින් පවතින යුගය
+				(Mature)
+					* මේ යුගයේදී, ළමයා හොඳට දන්නවා වැඩක් කරන විදිහ
+					* සිදු කරන Mistakes ප්‍රමාණය ගොඩක් අඩුයි
+
+
+
+
+			■	Level 4
+				වැඩිහිටි විය
+				(Self-sustainable)
+					* මේ යුගයේදී, ළමයට තනියෙන් වැඩක් කරගන්න පුළුවන්
+					* හැමදේම හරියට Handle කරගන්න පුළුවන්.
+
+
+
+
+
+		* මේ වගේම තමා, Bussiness එකත් පරිණත වෙන්නේ
+
+
+
+[Slide ] Characteristics of the Maturity levels
+		 (Bussiness එකක, පරිණතභාවයේ විවිධ අවධි, හා ඒවායේ ලක්ෂණ)
+
+	
+	■	Level 01
+		ආරම්භක අවධිය
+		(Initial)
+			* මේ අවධියේදී, ව්‍යාපාරය පිලිබඳ අලුතෙන් ඉගෙන ගැනීම සිදු වේ.
+			* මුල්ම අවධිය නිසා, ව්‍යාපාරය හැසිරවීම තරමක් අපහසු වේ
+			* ව්‍යාපාරයේ අනාගතය පුරෝකථනය කිරීම අපහසු වේ.
+			
+
+
+
+	■	Level 2
+		පාලනය කල හැකි අවධිය
+		(Managed)
+			* ව්‍යාපාරය පිලිබඳ මුලික දැනුමක් ලැබේ.
+			* ව්‍යාපාරය විසින් එහි, කෙටි කාලින සැලසුම් වලට ප්‍රමුඛතාව ලබාදේ.
+			
+
+
+
+	■	Level 3
+		අර්ථ දැක්විය හැකි අවධිය
+		(Defined)
+			* ව්‍යාපාරය පිලිබඳ හොඳ දැනුමක් ලැබේ
+			* ව්‍යාපාරයට පැමිණෙන ගැටළු, කලින්ම හඳුනාගත හැක
+			* සම්පුර්ණ ව්‍යාපාරයට, දැක්මක් තිබේ
+			
+			
+
+	■	Level 4
+		ප්‍රමාණාත්මකව කළමනාකරණය කල හැකි අවධිය
+		(Quantitatively Managed)
+			* ව්‍යාපාරය පිළිබඳව මනා දැනුමක් තිබේ.
+			* ව්‍යාපාර තීරණ ගැනීම ඉතා පහසු වේ
+			* ව්‍යාපාරයේ අනාගතය තීරණය කල හැක
+
+
+
+
+	■	Level 5
+		ප්‍රශස්ත අවධිය
+		(Optimizing)
+			* ව්‍යාපාර පිලිබඳ ඉතා පුළුල් දැනුමක් තිබේ.
+			* අලුත් දේවල් පාරිබෝගිකයන්ට හඳුන්වා දේ
+
+
+
+
+
+
+
+
+
+
+
+
+[Slide 9] IT Governance Maturity
+		  (තොරතුරු තාක්ෂණ පරිපාලනයේ පරිණතභාවය)
+
+	* තොරතුරු තාක්ෂණ පරිපාලනයේ පරිණතභාවය (IT Governance Maturity) කියන්නේ, ආයතනයක් තුල, තොරතුරු තාක්ෂණ පරිපාලනයේ වර්ධනය සහ එහි ඇති Updated බවයි.
+
+
+
+	මොනවද මේ, "IT Maturity Models" කියන්නේ?
+
+		* 	IT Maturity Models (IT ක්ෂේත්‍රය කෙතරම් පරිණතද කියලා බලන ආකෘති) කියන්නේ, ආයතනයක 
+			තොරතුරු තාක්ෂණ පරිපාලනයේ,පරිණතභාවය, මනින්න භාවිතා කරන මිනුමක් වේ.
+
+
+		* 	මේ අගයෙන් (Maturity Level එකෙන්) බලන්නේ, IT ක්ෂේත්‍රය, ව්‍යාපාරයේ අරමුණු සමඟ කොච්චර හොඳින්,  
+			එකෙල්ල වෙලා තියෙනවාද කියන එක. 
+
+
+
+		* මෙහිදී, ලෝකයේ බහුලව භාවිතා වෙන, IT Maturity Models (IT ක්ෂේත්‍රය කෙතරම් පරිණතද කියලා බලන ආකෘති) පහත දැක්වේ
+
+			   	<red>	   01) 	  "IT Strategic Alignment Maturity Model"  එක 					</red>
+										# මෙතැනදී, මේ කිසිම වචනෙක තනි තේරුම හිතන්න එපා
+										# "IT Strategic Alignment Maturity Model" කියන්නේ එක නමක්
+
+							02) 	PRINCE2 Maturity Model" එක
+
+							03)		"TOGAF (The Open Group Architecture Framework)" එක
+
+
+
+		#අපි මෙතැනදී කතා කරන්නේ, පලවෙනි, IT Maturity Model ගැන විතරයි
+
+
+
+
+ලියාගන්න
+[Slide 10] 01) "IT Strategic Alignment Maturity Model"  
+				(SAMM Model එක)
+
+	* මේ Model එක, 2000 වසරේදී, ලෆ්මාන් (Luftman) කියන පුද්ගලයා විසින් තමා නිර්මාණය කරලා තියෙන්නේ.
+	
+	* මේ Model එකට අනුව, ආයතනයක පරිණතභාවය මැනිය යුතු, "Areas 06ක්" ගැන සඳහන් කරනවා. 
+	* මේ Area 06 පහත දැක්වෙනවා.
+
+
+
+
+		<red>	01) සන්නිවේදනය (Commucation) 	</red>
+					- ආයතනයේ IT Team එක සහ Bussiness එක අතර සන්නිවේදනය සිදු කරන විදිහ.
+
+		<red>	02) ශක්‍යතාව (Competence/Value Measurements) </red>
+					- ආයතනයේ IT ක්ෂේත්‍රය මගින්, ව්‍යාපාරයට ලැබෙන වටිනාකම, මනින විදිහ
+
+		<red>	03) පරිපාලනය  (Governance) 	</red>
+					- ආයතනය පරිපාලනය කරන විදිහ
+
+		<red>	04) සහයෝගීතාව (Partnership) </red>
+					- ආයතනයේ IT Team එක සහ Bussiness එකේ අනිත් අය සමඟ ඇති සහයෝගීතාව
+
+		<red>	05)	තාක්ෂනය සහ වපසරිය (Architecture & Scope) </red>
+					- ආයතනයේ භාවිතා වෙන තාක්ෂනයන්, ඒවායින් සිදු කරන දේවල්.
+
+		<red>	06) හැකියා 	(Skills) </red>
+					- ආයතනයේ සේවකයන්ගේ හැකියාව
+
+
+	---"luftman.html" එක පෙන්වන්න.
+
+	
+	
+	* ඉන්පසුව, මෙම Areas 06 ට, වෙන වෙනම, ලකුණු ලබා දිය යුතුය.
+
+			
+
+		 		<red> 	Level 1 : දුර්වලයි 							</red>
+		 		<red> 	Level 2 : තරමක් හොඳයි 					</red>
+		 		<red> 	Level 3 : මධ්‍යස්ත මට්ටමකට හොඳයි 		</red>
+		 		<red> 	Level 4 : හොඳයි 							</red>
+		 		<red> 	Level 5 : ඉතා හොඳයි 						</red>
+
+
+	---"luftman.html" එක පෙන්වන්න.
+
+	
+	* මේකෙදි <red> අපේ කැමැත්තට ලකුණු ලබා දෙන්න බෑ. </red> 
+	* මේකෙදි, අදාළ ලකුණ ලබාදෙන්න කලින් සලකා බලන්න ඕන කරුණු කිහිපයක් තියෙනවා.
+	* ඒ වගේම, ලකුණු ලබා දෙන ආකාරය, ආයතනයෙන් ආයතනයට වෙනස් වෙනවා.
+
+
+
+
+[Slide 15] 		ලකුණු 
+			(IT maturity levels)
+
+	* <red> මෙහිදී, ලකුණ ලබා දෙන්න පහත තියෙන කොන්දේසි සපුරාලිය යුතුය </red>
+
+
+
+
+
+
+[Slide 16] Level 0 :  නොපවතින අවස්ථාවක් (Non-existent)  						#Just ignore this
+
+	* ආයතනයේ කිසිම Management එකක් නැත්නම්
+	* ආයතනයේ Top Management එක IT Decitions ගැනීමට සහභාගී වෙන්නේ නැත්නම්
+
+	ලකුණු 0ක් ලබා දිය හැක.
+
+
+
+
+
+[Slide 17] Level 1 : දුර්වලයි (Initial/Ad Hoc)
+
+
+	 <pencil>
+	 	Ad Hoc === එවෙලේ ගහන Plan වලට අනුව තමා වැඩ කරන්නේ
+	 </pencil>
+
+	* එවෙලේ වෙන ප්‍රශ්න වලට එවෙලේ නම් උත්තර හොයන්නේ
+	* IT Staff එක, ආයතනයේ අනිත් ක්ෂේත්‍ර සමඟ කිසිම සම්බන්ධයක් නැත්නම්
+
+
+	ලකුණු 1ක් ලබා දිය හැක
+
+
+
+[Slide 18] Level 2 - තරමක් හොඳයි (Repeatable)
+	
+	* එවෙලේ වෙන ප්‍රශ්න වලට එවෙලේ නම් උත්තර හොයන්නේ
+	* සාමාන්‍ය මට්ටමේ පරිපාලනයක් පවත්වනවා නම්
+
+
+	ලකුණු 2ක් ලබා දිය හැක.
+
+
+
+
+[Slide 19] Level 3 - මධ්‍යස්ත මට්ටමකට හොඳයි  (Defined)
+
+	* හොඳ මට්ටමේ IT පරිපාලනයක් පවතිනවා  නම්
+	* ප්‍රශ්නයක් එන්න කලින්ම එකට ලෑස්ති වෙලා ඉන්නවා නම්
+
+
+	ලකුණු 3ක් ලබා දිය හැක
+
+
+
+
+[Slide 20] Level 4 - හොඳයි (Managed)
+
+	* Bussiness Team එක හා IT Team එක, එකට එකතු වෙලා වැඩ කරනවා නම්
+	* Organization එකේ අවශ්‍යතා හොඳින් අඳුරගෙන තියෙනවා, නම්
+
+	ලකුණු 4ක් ලබා දිය හැක
+
+
+
+[Slide 21] Level 5 - ඉතා හොඳයි (Optimised)
+
+	* ඉතාමත් හොඳ IT පාලනයක් පවත්වාගෙන යයි නම්
+	* හොඳින් Risk එක Manage කරයි  නම්
+	* ව්‍යාපාරයට IT ක්ෂේත්‍රය ගැන පුර්ණ විශ්වාසය තැබිය හැක නම්
+
+	ලකුණු 5ක් ලබා දිය හැක
+
+
+
+
+
+
+
+
+[Quiz] 2023 May
+
+	Question 2) 
+		D. An organisation's level of IT maturity can have a significant impact on its ability to achieve 
+		   effective alignment between its IT strategy and overall business goals. Justify this statement.         [6 Marks]
+
+
+	("ආයතනයක IT ක්ෂේත්‍රයේ පරිණතභාවය, ඒ ආයතනයේ, IT ක්ෂේත්‍රය සහ ආයතනයේ  Bussiness Goals අතර හොඳ එකෙල්ල කිරීමක් (Alignment එකක්) ලබා ගන්න තියෙන හැකියාවට සැලකිය යුතු බලපෑමක් කරනවා". ඉහත ප්‍රකාශය සාධාරණීකරණය කරන්න)
+
+
+											Answer
+
+	ඔව්. මොකද,
+
+	* ආයතනයේ පරිණතභාවය වැඩි නම්, ආයතනයට ගැටළුවක් පැමිණීමෙන් පසු, ඒවාට ප්‍රතිචාර දක්වනවාට වඩා, ගැටලුව කලින්ම හඳුනා ගන්න පුළුවන්.
+	* ආයතනයේ පරිනතභාවය වැඩි නම්, ආයතනය ඇතුලේ හොඳ සන්නිවේදනයක් වෙන නිසා, සිදු වෙන, Mistakes ප්‍රමාණය අඩු කරන්න පුළුවන්.
+	* ආයතනයේ පරිණතභාවය වැඩි නම්, ආයතනයේ හොඳ පරිපාලනයක් වෙන නිසා, Resouces අපතේ යාම අඩු කරගන්න පුළුවන්.
+	* ආයතනයේ පරිණතභාවය වැඩි නම්, ආයතනයේ අනාගතය පිලිබඳ තීරණ පහසුවෙන් ගන්න පුළුවන්.
+
+
+
+
+
+
+
+[Quiz] Example
+	
+	TechSolutions (Pvt) Ltd කියන්නේ, ලංකාවේ Gaming PC, Sale කරන ලොකු සමාගමක්. 
+
+			■ 	ඔවුන්ගේ IT Department එක තියෙන්නේ වෙනම Building එකක. මේ නිසා  IT Department එකේ අයට, ආයතනයේ ඉන්න අනිත් 		අයත් එක්ක Commucate කිරීම තරමක් අපහසුයි.
+
+
+			■ 	ඒ වගේම, IT Department එකේ, තාම භාවිතා කරන්නේ, Excel Sheets. ඒ නිසා ආයතනයේ, KPI (Key Performance Indicators:- 	 ආයතනයේ, Performence එක කොහොමද කියලා මනින්න පුළුවන් මිනුමක්) ගණනය කිරීමක් වෙන්නේ නෑ.
+
+
+			■ 	ආයතනයේ, දිගු දුර සැලසුම් කරලා කිසිම දෙයක් කරන්නේ නෑ. ඔක්කොම එන එන විදිහට තමා කරගෙන යන්නේ.
+
+
+			■ 	ඒ වගේම මේ ආයතනයේ, IT Manager එච්චර හොඳ කෙනෙක් නෙවෙයි. එයා ඔක්කොම තනි තීරණ ගන්නේ. Bussiness එකේ අනිත් 	  අයගෙන් කිසිම දෙයක් අහන්නේ නැතුව
+
+
+			■ 	කෙසේ නමුත්, ආයතනයේ හොඳ E Comarce Webstie එකක් සහ, හොඳ Database එකක් පවත්වාගෙන යනවා. E Commarce Website 	 එකට නම්, Compain එකක් එන්නෙම නැති තරම්
+
+
+			■ 	ඒ වගේම, මේ ආයතනයේ හොඳ Talented පිරිසක් වැඩ කරනවා. 
+
+			 	
+			 	මේකෙදි ඔබට කරන්න තියෙන්නේ, 
+					01) "Luftman's IT-Business Alignment Maturity Model" එක භාවිතා කරලා, මේ ආයතනයේ එක් එක් Area එකේ, Maturity 	 Level එක Define කරන්න
+
+					02) ඒ අගය තෝරාගැනීමට, හේතුව සඳහන් කරන්න
+
+					03) ව්‍යාපාරයේ overall IT maturity level එක මොකක්ද?
+
+
+
+												Answer
+
+01) "Luftman's IT-Business Alignment Maturity Model" එක භාවිතා කරලා, මේ ආයතනයේ එක් එක් Area එකේ, Maturity Level එක,  			 Define කරන්න.
+
+
+			01) සන්නිවේදනය 																:-  Level 1 (දුර්වලයි)	
+			02) ශක්‍යතාව 																	:- 	Level 1 (දුර්වලයි)
+			03) පරිපාලනය 																	:- 	Level 1 (දුර්වලයි)
+			04) සහයෝගීතාව 																:-	Level 1 (දුර්වලයි)
+			05) ආයතනයේ භාවිතා වන තාක්ෂනයන් සහ ඒවායින් ආවරණය වන වපසරිය 		:-	Level 5 (ඉතා හොඳයි)
+			06) හැකියා 	 																	:-	Level 5 (ඉතා හොඳයි)
+			
+
+
+			# මේක, "luftman.html" එකේ ලකුණු කරන්න.
+
+
+
+02) ඒ අගය තෝරාගැනීමට, හේතුව සඳහන් කරන්න
+
+
+			01) සන්නිවේදනය [Level 1 (දුර්වලයි)]
+					- 	ඔවුන්ගේ IT Department එක තියෙන්නේ වෙනම Building එකක. මේ නිසා  IT Department එකේ අයට, ආයතනයේ ඉන්න 	 අනිත් අයත් එක්ක Commucate කිරීම තරමක් අපහසුයි.
+
+			02) ශක්‍යතාව [Level 1 (දුර්වලයි)]
+					-	IT Department එකේ, තාම භාවිතා කරන්නේ, Excel Sheets. ඒ නිසා ආයතනයේ, KPI (Key Performance 					Indicators:- ආයතනයේ, Performence එක කොහොමද කියලා මනින්න පුළුවන් මිනුමක්) ගණනය කිරීමක් වෙන්නේ නෑ.
+
+
+			03) පරිපාලනය [Level 1 (දුර්වලයි)]
+					-	ආයතනයේ, දිගු දුර සැලසුම් කරලා කිසිම දෙයක් කරන්නේ නෑ. ඔක්කොම එන එන විදිහට තමා කරගෙන යන්නේ.
+
+
+			04) සහයෝගීතාව [Level 1 (දුර්වලයි)]
+					-	මේ ආයතනයේ, IT Manager එච්චර හොඳ කෙනෙක් නෙවෙයි. එයා ඔක්කොම තනි තීරණ ගන්නේ. Bussiness එකේ 	  		අනිත් අයගෙන් කිසිම දෙයක් අහන්නේ නැතුව
+
+			
+			05) ආයතනයේ භාවිතා වන තාක්ෂනයන් සහ ඒවායින් ආවරණය වන වපසරිය [Level 5 (ඉතා හොඳයි)]
+					- 	කෙසේ නමුත්, ආයතනයේ හොඳ E Commarce Webstie එකක් සහ, හොඳ Database එකක් පවත්වාගෙන යනවා. E Commarce 	  Website එකට නම්, Compain එකක් එන්නෙම නැති තරම්
+
+			
+			06) හැකියා [Level 5 (ඉතා හොඳයි)]
+					- 	මේ ආයතනයේ හොඳ Talented පිරිසක් වැඩ කරනවා. 
+
+
+
+03) මෙහි බහුතරයක්ම Level 01 පවතින නිසා, මේ ව්‍යාපාරයේ Maturity Level එක "Level 01" හි පවතී.
+
+
+
+
+
+
+
+
+
+
+[Case Study 01]
+	
+	"Ceylon AgroTech Pvt Ltd" කියන්නේ ශ්‍රී ලංකාවේ "Agritech company" එකක්. මේක 2012 දී පටන් ගත්තේ කෘෂිකර්ම ඉංජිනේරුවරු දෙන්නෙක් එකතුවෙලා. ඔවුන්ගේ idea එක තිබුණේ නවීන technology එක සාමාන්‍ය ගොවිතැන් එක්ක mix කරන එක.
+
+
+	එයාලා මේ Company එක හදලා තියෙන්නේ, Smart වතුර දාන පද්ධති,  පස ගැන බලන Sensors (soil monitoring sensors), සහ ගොවිපොළ ගැන සියලු විස්තර එකතැනකින් බලාගන්න පුළුවන් වෙන විදිහේ Dashboard System, කියන දේවල් විකුණලා, ගොවීන්ගේ අස්වැන්න වැඩි කරගන්න උදව් කරන්න.
+
+
+
+	මේ, Company එක පටන් අරන් තියෙන්නේ, පොඩි ව්‍යාපාරයක් විදිහට. එතකොට ඉඳලා තියෙන්නේ, සේවකයෝ 15ක් වගේ. ඒත් දැන් සේවකයෝ 180 කට වඩා වැඩියෙන් ඉන්නවා. ඒ වගේම, මේ ව්‍යාපාරයට Branches තුනක් තියනවා, කොළඹ (Head Office), කුරුණෑගල, සහ අනුරාධපුර.
+
+
+	
+
+	ආයතනයේ ව්‍යුහය
+	(Organizational Structure)
+		මේ ආයතනයට ප්‍රධාන අංශ 03ක් තියෙනවා (divisions) :
+
+		  01) මෙහෙයුම් අංශය
+		  	  (Operations Division) 
+		  	  		– මේකෙන් බලනවා supply chain එක, logistics, සහ support services. වගේ දේවල් ගැන
+
+		  02) විකුණුම් සහ අලෙවි අංශය
+		  	  (Sales & Marketing Division) 
+		  	  		– මේකෙන් බලනවා customers එක්ක කරන relationships, promotions වගේ දේවල්
+		  
+		  03) තාක්ෂණික සංවර්ධන අංශය
+		  	  (Technical Development Division) 
+		  	  		– මේකෙන් බලනවා අලුත් IoT devices සහ software platforms Test කිරීම වගේ දේවල්
+
+
+
+		  	මේ ආයතනයේ IT Unit එක තියෙන්නේ මෙහෙයුම් අංශය ඇතුලේ (Operations Division). IT unit එකේ සේවකයෝ 8 දෙනෙක් ඉන්නවා. ඔවුන්ව Guide කරන්නේ IT Manager කෙනෙක් (Mr. Ranil Perera). 
+
+		  	මේ team එක විසින් 
+		  		- Server එක maintain කිරීම සහ network  එක maintain කිරීම සිදු කරනවා.
+		  		- මානව සම්පත් කළමානාකරණය කරන පද්ධති ගැන බැලීම (ERP) සහ Database Administrator ලෙස කටයුතු කරනවා
+		  		- Helpdesk support සේවාව සපනයවා
+		  		- Web and email සේවා සපනයනවා
+
+
+		  	නමුත් IT Team එකේ, තොරතුරු තාක්ෂණ, උපායමාර්ගික සැළසුම (Strategic IT planning එක), අඩුයි. ඒ කියන්නේ, IT Team එක කිසි දෙයක් Plan කරලා කරන්නේ නෑ. ප්‍රශ්නයක් ආවම විතරයි Troubleshoot කරන්නේ. 
+
+
+
+
+
+
+
+
+		■	ආයතනයේ IT Team එක සහ Bussiness එක අතර Commmucation එක සිදු කරන විදිහ
+		  	(Communication Between IT and Business)
+
+		  		-  IT Department එක සහ අනිත් departments අතර Formal Communication එකක් ලොකුවට සිදු වෙන්නේ නෑ
+		  		-  ප්‍රශ්නයක් ආවම විතරයි, Commucation එකක් සිද්ධ වෙන්නේ
+		  		-  හැමදාම වගේ පවත්වන ඕන, IT Team එකේ අය සහභාගී වෙන, Bussiness Meetings (IT-business Meetings) පවා පවත්වන්නේ 	 නෑ.
+		  		
+		  		- 	Sales Department එක විසින්, කලින් අවුරුද්දේ, E-Commerce Portal එකක් Launch කරලා තියෙනවා. නමුත් එයාලා ඒ Project 		එක Outsource කරලා තමා කරගෙන තියෙන්නේ, සහ මේ ගැන IT department එක දැනුවත් කරලා නෑ
+
+
+
+		  		- 	Team එකේ හැමෝම හොඳයි. IT Manager ත් හොඳයි. හැබැයි හරියට Commucation එකක් වෙන්නේ නැති නිසා,වැරදීම් වෙනවා 	   	   වැඩියි. සහ වැඩ කරන්න අමාරුයි.
+
+
+
+		■  	ශක්‍යතාව
+		  	(Competency and Value Measurement)
+		  			- IT Unit එකට KPI (Key Performance Indicators:- ආයතනයේ, Performence එක කොහොමද කියලා මනින්න පුළුවන් මිනුමක්) නිවැරදිව මනින්නේ නෑ. ඒ වගේම, IT ක්ෂේත්‍රයෙන් ලැබෙන Profit එක, ගණනය කරලා නෑ.
+
+		  			- IT Manager විසින් Tool එකක් හදුන්වලා තියෙනවා, Software වල මතු වෙන, problems Track කරන්න. ඒත් හැමෝම මේ Tool එක භාවිතා කරන්නේ නෑ
+
+		  			- Company එකේ Management එක හිතන්නේ, IT Unit එක තියෙන්නේ, IT ක්ෂේත්‍රයට අවශ්‍ය උදව් කරන්න විතරයි කියලා. Company එක Develop කරන්න IT Field එකේ උදව් ගන්න පුළුවන් කියලා විශවාස කරන්නේ නෑ
+
+
+
+
+
+		■  	පරිපාලනය
+		  	(Governence)
+		  		- 	ආයතනයේ, IT ක්ෂේත්‍රය manage කරන්න හොඳ system එකක් නෑ.
+				- 	ආයතනයේ IT policies තියෙන්නේ Documentation එකේ විතරයි
+				- 	IT එකට යොදවන  Budget එක ගැන CEO ට අවබෝධයක් නෑ
+
+				- 	ලඟදි, ERP System එක Update කරන්න Try කරලා තියෙනවා. ඒ Project එක කරන්න දීලා තියෙන්නේ ඒ දුන්න කෙනා ගැන හරියට හොයන්නේ බලන්නේ නැතුව. මේ නිසා වැඩේ හරියට වෙලා නෑ. මුදල් නාස්ති වෙලා තියෙනවා.
+
+
+
+			සහයෝගිතාව හා ආයතයේ Bussiness Goals Achive කරගන්න, නිවැරදි වෙලාවට, IT ක්ෂේත්‍රයේ උදව් ගැනීම
+			(Partnership හා Strategic Alignment)
+				-	කලින් වගේම, IT Team එකේ අය, Bussiness Meetings වලට සහභාගී වෙන්නේ නෑ. Company එකේ Management එක හිතන්නේ, IT Unit එක තියෙන්නේ, IT ක්ෂේත්‍රයට අවශ්‍ය උදව් කරන්න විතරයි කියලා. Company එක Develop කරන්න IT Field එකේ උදව් ගන්න පුළුවන් කියලා විශවාස කරන්නේ නෑ
+
+
+
+
+
+		■	Scope එක සහ Architecture එක
+			(Scope and Architecture)
+				- Company එකේ තියන systems හරියට එකට connect වෙලා නෑ
+
+				- මුදල් සම්බන්ධ වැඩ සහ ගබඩාව සම්බන්ධ වැඩ වලට, ආයතනයේ සම්පත් කළමානාකරණය කරන පද්ධතිය (ERP), නිවැරදි ලෙස සම්බන්ධ කරලා නෑ
+
+				- පාරිභෝගික සම්බන්ධතා කළමනාකරණය පද්ධතියක් (CRM), භාවිතා කරන්නේ, කොළඹ Branch එකේ විතරයි
+
+				- තව, Basic මට්ටමේ, මානව සම්පත් කළමනාකරණ (HR) System එකක් තමා මෙතන භාවිතා කරන්නේ.
+
+				- Project Track කරන්න, Excel Sheets භාවිතා කරනවා
+
+				- හැම දත්තයක්ම Save වෙන්නේ, එක එක තැන්වල. මේ නිසා වැඩ කරන්න අමාරුයි. සහ වැරදි වෙනවා වැඩියි
+
+				- IT Manager විසින්, මේවා Cloud එකට Connect කරන Idea එක දුන්නත්, ඒක Management එකෙන්, ඒක ප්‍රතික්ෂේප කළා.මේ වැඩේට යන Budget එක වැඩියි සහ Security එක ගැන ප්‍රශ්න තියෙනවා කියලා.
+
+
+
+
+
+
+		■	හැකියා සහ මානව සම්පත්
+			(Skills and Human Resources)
+				- IT ක්ෂේත්‍රයේ ඉන්නේ හොඳ Telent එකක් තියෙන අය
+				- එත් තොරතුරු තාක්ෂණ, උපායමාර්ගික කළමානාකරණය (strategic management) වගේ දේවල් ගැන knowledge නෑ. .
+				- ආයතනයේ ඉන්න අනිත් සේවකයන්ට, IT Traning එකක් ලබා දෙන්නේ නෑ
+				- මේ නිසා Report එකක් හදාගන්න වගේ පොඩි වැඩ වලටවත් IT staff ගාව යන්න වෙනවා.
+				- දැන්, IT Field එකේ ඉන්න, කිහිප දෙනෙක්, ආයතනයෙන් අයින් වෙන්න යන්නේ, මොකද එයාලගේ career එක,  develop වෙන්නේ නැති නිසා. HR එක විසින් Traning Program එකක් ගැන හිතලා තියෙන්නේ, නමුත්, ඒක තාම Approve කරලා නෑ
+
+
+
+			
+
+
+		■	කළමානාකරණය
+			(Management Concern)
+				- CEO කෙනෙක් වෙන Mr.දිල්ශාන් අබේරත්න, විසින් අඳුරගෙන තියෙනවා, India සහ Australia කියන රටවල් වලට, මේ ව්‍යාපාරය ගෙනියද්දි, IT ක්ෂේත්‍රය ගොඩක් වැදගත් වෙනවා කියලා. 
+
+				- මෙයා මේ ගැන Borard Meeting එකකදී මෙහෙම කියලා තියෙනවා.
+					"අපේ Company එකේ, IT ක්ෂේත්‍රය හරියට Manage කරන්නේ නෑ. තව රටවල් වලට මේ ව්‍යාපාරය ගෙනියන්න කලින්, අපේ IT Filed එක මොන Level එකේද තියෙන්නේ කියලා බලාගන්න ඕනේ කියලා."
+
+
+					එතකොට Board එකෙන් මෙහෙම කියලා තියෙනවා.
+						- "ආයතනයේ, හැම කොටසකම, වෙන වෙනම, IT ක්ෂේත්‍රයේ පරිණතභාවය මනින්න කියලා. මේ සඳහා, "Luftman's IT-Business Alignment Maturity Model" එක භාවිතා කරන්න.
+
+
+
+
+
+
+ඔයා කරන්න ඕනේ දේවල්
+(Task)
+
+		ඔයාව "IT Governance Consultant" කෙනෙක් විදිහට තෝරාගෙන තියෙනවා, "Ceylon AgroTech Pvt Ltd" එකේ,  "IT-Business alignment maturity" එක තක්සේරු  කරන්න. 
+
+		01) ඔයා "Luftman's IT Maturity Model " එක භාවිතා කරලා, පහත තියෙන Diamentions යටතේ, තක්සේරුව සිදු කරන්න ඕනේ.
+
+
+				- සන්නිවේදනය (Communication)
+				- ශක්‍යතාව 	(Competency / Value Measurement)
+				- පරිපාලනය (Governance)
+				- සහයෝගීතාව (Partnership)
+				- ආයතනයේ භාවිතා වන තාක්ෂනයන් සහ ඒවායින් ආවරණය වන වපසරිය (Scope & Architecture)
+				- හැකියා (Skills)
+
+
+
+		02) ඊට පස්සේ මේ එක එක Diamentions, එකක්ම පහත Scale එකට අනුව rate කරන්න 
+					Level 1 - දුර්වලයි (Initial / Ad hoc)						
+					Level 2 - තරමක් හොඳයි (Repeatable but intuitive) 		
+					Level 3 - මධ්‍යස්ත මට්ටමකට හොඳයි (Defined process)	
+					Level 4 - හොඳයි (Managed and measurable)				
+					Level 5 - ඉතා හොඳයි (Optimised)						
+
+		03) Use Case එකේ තියෙන සාක්ෂි භාවිතා කරලා, ඔබ Ratings ලබා දුන් හේතුව, සත්‍යාපනය කරන්න
+
+		04) Company එක ඊලඟ Maturity Level එකට යන්න කරන්න ඕන දේවල් මොනවද කියලා පහදන්න
+
+
+
+
+
+
+Questions
+	1. What is the overall IT maturity level of Ceylon AgroTech according to Luftman’s model?
+		(Luftman's model අනුව "Ceylon AgroTech" ව්‍යාපාරයේ overall IT maturity level එක මොකක්ද?)
+
+	2. Evaluate each of the six dimensions separately, providing your rating and justification.
+		(මේ Dimensions 6 වෙන වෙනම evaluate කරන්න, ඔබේ rating එක සහ එම Rating එක ලබාදීමට හේතුව සත්‍යාපනය කරන්න)
+
+
+	3. Identify three key weaknesses that limit IT–Business alignment in the company.
+		(ආයතනයේ IT ක්ෂේත්‍රය හා, Bussiness එකේ අනෙකුත් ක්ෂේත්‍ර සමඟ, සමාපත වීමට බාධා කරන, දුර්වලතා 03ක් ලියන්න)
+
+	4. Suggest three actionable recommendations to improve IT governance and maturity.
+		(IT governance සහ maturity වැඩි කරන්න පුළුවන් practical යෝජනා තුනක් suggest කරන්න.)
+
+	5. How could the organization benefit strategically from reaching Level 4 maturity?
+		(Organization එක Level 4 maturity එකට ගියොත් strategic විදිහට මොනවද හොඳ වෙන්නේ?)
+
+
+
+
+
+
+
+												Answers
+
+												(Task)
+
+	01) / 02) 03)  "answers.jpg" එක Open කරන්න. ප්‍රශ්න 3ට ම උත්තර තියෙනවා.
+
+												
+	04) Company එක ඊලඟ Maturity Level එකට යන්න කරන්න ඕන දේවල් මොනවද කියලා පහදන්න
+
+		# කලින් ප්‍රශ්න විදිහට තිබ්බ දේවල්, විසඳන විදිහ ලියන්න
+
+			01) Communication
+				(සන්නිවේදනය)
+						- පවත්වන Meeinngs ප්‍රමාණය වැඩි කරන්න පුළුවන්.
+						- හැම Divisions එකකට, IT Rep කෙනෙක් පත් කරන්න පුළුවන්.
+
+
+			02) Value Measurement 
+				(ශක්‍යතාව)
+						- KPI Measure කිරීම ආරම්භ කරන්න පුළුවන්
+						- Cost Analysis එකක් සිදු කරන්න පුළුවන්
+
+
+			03) Governance 
+				(පරිපාලනය)
+						- IT Policies ක්‍රියාත්මක කරන්න පුළුවන්
+						- දිගු කාලින Plan එකක් හදාගන්න පුළුවන්
+
+
+
+			04) Partnership 
+				(සහයෝගිතාව)
+						- Managersලාට IT ක්ෂේත්‍රයේ වටිනාකම හඳුන්වා දීම
+						- IT Team එක Bussiness Meeting වලට සහභාගී කරවීම
+
+
+			05) Scope & Architecture organize 
+				(ආයතනයේ භාවිතා වන තාක්ෂනයන් සහ ඒවායින් ආවරණය වන වපසරිය)
+						- දත්ත එක තැනක Store කරන්න පුළුවන්
+						- ERP System එක, IT Unit එකේ අධීක්ෂණය යටතේ Update කරන්න පුළුවන්
+
+			06) Skills
+				(හැකියා)
+						- IT Team එකට පුහුණුවක් ලබා දෙන්න පුළුවන්
+						- IT Team එකේ අයට, තමාගේ හැකියා වර්ධනය කරගන්න අවස්ථා හදලා දෙන පුළුවන්
+
+
+
+
+													Answers
+												   (Questions)
+
+
+
+1. What is the overall IT maturity level of Ceylon AgroTech according to Luftman’s model?
+	(Luftman's model අනුව "Ceylon AgroTech" ව්‍යාපාරයේ overall IT maturity level එක මොකක්ද?)
+
+
+
+			01) සන්නිවේදනය 																:-  Level 1 (දුර්වලයි)	
+			02) ශක්‍යතාව 																	:- 	Level 1 (දුර්වලයි)
+			03) පරිපාලනය 																	:- 	Level 1 (දුර්වලයි)
+			04) සහයෝගීතාව 																:-	Level 1 (දුර්වලයි)
+			05) ආයතනයේ භාවිතා වන තාක්ෂනයන් සහ ඒවායින් ආවරණය වන වපසරිය 		:-	Level 1 (ඉතා හොඳයි)
+			06) හැකියා 	 																	:-	Level 2 (තරමක් හොඳයි)
+
+
+			<red> මෙහි බහුතරයක්ම Level 01 පවතින නිසා, මේ ව්‍යාපාරයේ Maturity Level එක "Level 01" හි පවතී </red> 
+
+
+2. Evaluate each of the six dimensions separately, providing your rating and justification.
+	(මේ Dimensions 6 වෙන වෙනම evaluate කරන්න, ඔබේ rating එක සහ එම Rating එක ලබාදීමට හේතුව සත්‍යාපනය කරන්න)
+
+		--- "answers.jpg" එක Open කරන්න
+
+
+
+3. Identify three key weaknesses that limit IT–Business alignment in the company.
+	(ආයතනයේ IT ක්ෂේත්‍රය හා, Bussiness එකේ අනෙකුත් ක්ෂේත්‍ර, එකට, සමාපත වීමට බාධා කරන, දුර්වලතා 03ක් ලියන්න)
+
+
+	1. Formal Communication එකක් සිදු නොවීම
+	2. තනි තීරණ වලට වැඩ කිරීම
+	3. ආයතනයේ IT Unit එක, Bussiness එකේ අනිත් ක්ෂේත්‍ර වල සිදු වෙන දේ පිළිබඳව අවධානයෙන් නොසිටීම
+
+
+4. Suggest three actionable recommendations to improve IT governance and maturity.
+	(IT Governance සහ Maturity වැඩි කරන්න පුළුවන් Practical යෝජනා තුනක් suggest කරන්න.)
+
+					01) Communication
+						(සන්නිවේදනය)
+								- පවත්වන Meeinngs ප්‍රමාණය වැඩි කරන්න පුළුවන්.
+								- හැම Divisions එකකට, IT Rep කෙනෙක් පත් කරන්න පුළුවන්.
+
+
+					02) Value Measurement 
+						(ශක්‍යතාව)
+								- KPI Measure කිරීම ආරම්භ කරන්න පුළුවන්
+								- Cost Analysis එකක් සිදු කරන්න පුළුවන්
+
+
+					03) Governance 
+						(පරිපාලනය)
+								- IT Policies ක්‍රියාත්මක කරන්න පුළුවන්
+								- දිගු කාලින Plan එකක් හදාගන්න පුළුවන්
+
+
+
+					04) Partnership 
+						(සහයෝගිතාව)
+								- Managersලාට IT ක්ෂේත්‍රයේ වටිනාකම හඳුන්වා දීම
+								- IT Team එක Bussiness Meeting වලට සහභාගී කරවීම
+
+
+
+					05) Scope & Architecture organize 
+						(ආයතනයේ භාවිතා වන තාක්ෂනයන් සහ ඒවායින් ආවරණය වන වපසරිය)
+								- දත්ත එක තැනක Store කරන්න පුළුවන්
+								- ERP System එක, IT Unit එකේ අධීක්ෂණය යටතේ Update කරන්න පුළුවන්
+
+
+					06) Skills
+						(හැකියා)
+								- IT Team එකට පුහුණුවක් ලබා දෙන්න පුළුවන්
+								- IT Team එකේ අයට, තමාගේ හැකියා වර්ධනය කරගන්න අවස්ථා හදලා දෙන පුළුවන්
+
+
+
+
+5. How could the organization benefit strategically from reaching Level 4 maturity?
+	(Organization එක Level 4 maturity එකට ගියොත්, ඒ කියන්නේ Area 06ම "Level 4"ට ගියොත් මොකද වෙන්නේ?)
+
+
+					01) සන්නිවේදනය 																:-  Level 4 (හොඳයි)	
+					02) ශක්‍යතාව 																	:- 	Level 4 (හොඳයි)
+					03) පරිපාලනය 																	:- 	Level 4 (හොඳයි)
+					04) සහයෝගීතාව 																:-	Level 4 (හොඳයි)
+					05) ආයතනයේ භාවිතා වන තාක්ෂනයන් සහ ඒවායින් ආවරණය වන වපසරිය 		:-	Level 4 (හොඳයි)
+					06) හැකියා 	 																	:-	Level 4 (හොඳයි)
+
+
+
+
+			* India හා Australia වලට Bussiness එක Expan කරන්න පහසුයි
+			* Bussiness තීරණ පහසුවෙන් ගන්න පුළුවන්
+			* හොඳ සන්නිවෙදයනයක් පවත්වා ගන්න පුළුවන්
+			* ආයතනයට හොඳ දිගු කාලින Plan පවත්වා ගන්න පුළුවන්
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------පොතෙන් --------------
+	<pencil>
+		* අපි ඉස්සෙලාම බලමු, මනුස්සයෙක් කොහොමද පරිණත වෙන්නේ කියලා?
+
+		* ඕනෑම මනුස්සයෙක් පරිණතයි (Mature) කියලා අඳුරගන්න පුළුවන් සාධක මොනවද? 
+
+
+		  	 - එයා හැසිරෙන විදිහෙන්
+		  	 - හිතන විදිහෙන්
+		  	 - වයසින්
+		  	 - හැකියාවන් වලින්
+		  	 - ප්‍රශ්නෙකට මුහුණ දෙන විදිහකින්
+		  	 - තත්වයක් Manage කරන විදිහෙන්
+
+		  	 අපිට ඕනෑම කෙනෙක් පරිණතයි (Mature) කියලා කියන්න පුළුවන්.
+
+		* නමුත්, මේක වැරදියි. මොකද, පරිණතභාවය (Matureness) කියන දේ, පුද්ගලයාගෙන් පුද්ගලයට වෙනස් වෙනවා. 
+		* මේ, නිසා හැම පුද්ගලයාම පරිණතද කියලා බලන්න, එකම සාධක ටිකක් භාවිතා කරලා බෑ. මොකද මෝඩයෝත් වයසට යනවා.
+
+
+	</pencil>
+
+	ad-hoc == එවෙලේ ගහන Plan වලට අනුව තමා වැඩ කරන්නේ
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------මේවා ලියන්න එපා -----------------------------------------------------------------------------
+Information Systems Strategy and IT Governance
+					(තොරතුරු පද්ධති සාර්ථකව භාවිතා කරනා ක්‍රමවේදය සහ තොරතුරු තාක්ෂණ පරිපාලනය)
+											
+											Lession 03
+									IT Strategic Alignment and Maturity
+					(තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැස්ම සහ IT ක්ෂේත්‍රයේ පරිණතභාවය)
+
+2023 May
+	Question 2) 
+		D. An organisation's level of IT maturity can have a significant impact on its ability to achieve 
+		   effective alignment between its IT strategy and overall business goals. Justify this statement.         [6 Marks]
+
+4 5 7 8 10
+⚠️ Notice to Zoom					 
+
+[Slide 2] IT Strategic Alignment and Maturity
+		 (තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැස්ම හා IT ක්ෂේත්‍රයේ පරිණතභාවය)
+
+
+
+
+
+[Slide 4] මොකද්ද මේ Alignment (පෙළගැස්ම) කියන්නේ?
+
+	- සරලවම Allignment (පෙළගැස්ම) 	කියන්නේ, දෙයක් එක කෙලින් පිහිටුවන එක
+			උදා:- Wheel Alignment ("Wheel Alignment.png" එක Open කරලා පෙන්වන්න)
+
+	
+
+
+
+[Slide 5] IT Strategic Alignment
+		(තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැස්ම)  
+
+
+	මොකද්ද මේ "තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැස්ම (IT Strategic Alignment)" කියන්නේ?
+		
+		* "තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැස්ම (IT Strategic Alignment)" කියන්නේ, 
+		  <red> Bussiness Goals Achive කරගන්න, නිවැරදි වෙලාවට, IT ක්ෂේත්‍රයේ උදව් ගැනීමයි. </red>
+
+
+
+	<pencil>
+
+			* හැබැයි තාම මේක ආයතන වල, ඉහල පෙලේ කළමනාකරුවන්ට (executives ලාට) ලොකු ප්‍රශ්නයක්.       	
+			 මොකද?
+					 -	IT ක්ෂේත්‍රය කොහොමද, Bussiness එකට ගලපා ගන්නේ, සහ Bussiness එක කොහොමද IT 	   ක්ෂේත්‍රයට ගලපා ගන්නේ, කියන දේ ගැන අවබෝධ	නොතිබීම නිසා
+								උදා:- 	 ආයතනක IT Department එක විසින්, විශාල මුදලක් යොදවා, ආයතනයේ, 			 දත්ත වල "Secutiry" එක වැඩි කරමු කියා යෝජනා කලද, ආයතයේ ඉහල 			 පෙලේ කළමානාකරුවන් විසින්, ඒ සඳහා අඩු මුදලක් වැඩ කර, ඒ වෙනුවට, 			 "Customor Staisfaction" එක වැඩි කරමු යයි යෝජනා කිරීම.
+
+
+			* ඒ නිසා, ඒ ගැටළු වලට විසඳුම් දෙන්න තමා, මේ "තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැස්ම 
+			   (IT Strategic Alignment)" ක්‍රමවේදය නිර්මාණය කරලා තියෙන්නේ.
+	</pencil>
+
+
+
+
+[Slide 6] IT Strategic Alignment Models (SAM)
+			(තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැසුම් ආකෘති)
+
+
+	*  තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැසුම් ආකෘති (IT Strategic Alignment Models) කියන්නේ, <red> 		   	ආයතනයේ IT ක්ෂේත්‍රය, ආයතනයේ Bussiness Goals සමඟ සමපාත කරන ආකාරය පෙන්වන Plan එකක් වේ. 		</red>
+
+	* මහාචාර්ය හෙන්ඩර්සන්(Henderson) සහ වෙන්කට්රාමන්(Venkatraman) විසින්, 1990දී, Strategic Alignment Model 
+	  (SAM) එකක් නිර්මාණය කරලා තියෙනවා. 
+
+
+
+	  #අපි දැන් බලමු මේක මොන වගේද කියලා
+
+
+
+
+[Slide 7] Strategic Alignment Model (SAM) Proposed by Henderson & Venkatraman
+		  (Henderson හා Venkatraman විසින් යෝජනා කල, තොරතුරු තාක්ෂණ, උපායමාර්ගික පෙළගැසුම් ආකෘතිය)
+
+		 #මේක ගොඩක් ගමුරට ඉගෙන ගන්න ඕන නෑ
+		 #සරලව වෙන වැඩේ දැනගතම ඇති.
+
+		 
+		 * මේ ආකෘතිය, <red> කොටස් 4කින් (quadrants 4කින්) සමන්විත වෙනවා, </red>
+		 		01) Bussiness Strategy
+		 		02) IT Strategy
+		 		03) Organizational Infrastructure and Processes
+		 		04) IT Infrastructure & Processes
+
+		 		කියලා.
+
+		 * මෙතැනදී පෙන්වන්නේ, මේ එක් එක් කොටසේදී, Focus කල යුතු දේ කුමක්ද යන්නයි.
+		 
+
+		  ---"SAM.png" එක Open කරන්න
+
+		 * මේ කොටස් 04, අභ්‍යන්තර පරිසරය හා බාහිර පරිසරය ලෙසද බෙදනු ලබයි
+		 
+		 * ඒ වගේම, Bussiness හා IT වශයෙන්ද කොටස් දෙකකට බෙදනු ලැබේ.
+		 
+		 *  Company එකක් සාර්ථක වෙන්න නම්, මේ කොටස් 04ම නිවැරදිව, සමපාත වෙලා තියෙන්න ඕනේ, එහෙම නැතුව, මේවා එකට සමපාත 	වුනේ නැත්නම්, Company එක Fail වේ.
+		 
+		 
+
+
+
+					  	Bussiness  														IT
+					  	Strategy 														Strategy 
+
+					  		* ආයතනය විසින් Achive කර ගත  								* ආයතනයේ IT ක්ෂේත්‍රය විසින් භාවිතා කරන
+					  		  යුතු Golas මොනවද? 											  Technologies මොනවද?
+
+
+
+
+
+
+
+
+		  	Organizational  												 IT 
+		  	Infrastructure and  											 Infrastructure 
+		  	Processes  														 & Processes
+		  																	(මෙතනට එන්න ඕනේ, IT කියලා. දකුණේ උඩම තියෙන
+		  																	අළු පාට Diagram එක බලන්න)
+		  		* ආයතනය කොහොමද Organize  									* ආයතනයේ තාක්ෂනය කොහොමද
+		  		  වෙලා තියෙන්නේ? 													  Organize වෙලා තියෙන්නේ?
+
+
+
+
+
+
+
+
+[Slide 8] What is Maturity? 
+		(මොකද්ද මේ පරිණත භාවය කියන්නේ?)
+
+
+
+	<pencil>
+			* අපි ඉස්සෙලාම බලමු, මනුස්සයෙක් කොහොමද පරිණත වෙන්නේ කියලා?
+
+			* ඕනෑම මනුස්සයෙක් පරිණතයි (Mature) කියලා අඳුරගන්න පුළුවන් සාධක මොනවද? 
+
+
+			  	 - වයසින්
+			  	 - හැකියාවන් වලින්
+			  	 - ප්‍රශ්නෙකට මුහුණ දෙන විදිහකින්
+			  	 - තත්වයක් Manage කරන විදිහෙන්
+
+			  	 අපිට ඕනෑම කෙනෙක් පරිණතයි (Mature) කියලා කියන්න පුළුවන්.
+
+			* නමුත්, මේක වැරදියි. මොකද, පරිණතභාවය (Matureness) කියන දේ, පුද්ගලයාගෙන් පුද්ගලයට වෙනස් වෙනවා. 
+			* මේ, නිසා හැම පුද්ගලයාම පරිණතද කියලා බලන්න, එකම සාධක ටිකක් භාවිතා කරලා බෑ. මොකද මෝඩයෝත් වයසට යනවා.
+
+
+	</pencil>
+
+
+
+මනුස්සයෙක් Mature වෙන ආකාරය
+
+Level 1
+ළදරු විය
+(Nascent)
+	* මේ යුගයේදී පොඩි ළමයි දේවල් ඉගෙන ගැනීම සිදු කරනවා.
+	* තාම කිසි දෙයක් හරියට කරන්න බෑ
+
+
+
+Level 2
+පුර්ව ළමා විය
+(Evolving)
+	* මේ යුගයේදී, කලින් ඉගෙන ගත්තු දේවල් එක්ක, තනියෙම වැඩක් කරන්න උත්සහ කරනවා.
+	* නමුත් තවම, වැරදි ගොඩක් සිදු කරගන්නවා
+
+
+
+Level 3
+පරිණත වෙමින් පවතින යුගය
+(Mature)
+	* මේ යුගයේදී, ළමයා හොඳට දන්නවා වැඩක් කරන විදිහ
+	* සිදු කරන Mistakes ප්‍රමාණය ගොඩක් අඩුයි
+
+
+
+
+Level 4
+වැඩිහිටි විය
+(Self-sustainable)
+	* මේ යුගයේදී, ළමයට තනියෙන් වැඩක් කරගන්න පුළුවන්
+	* හැමදේම හරියට Handle කරගන්න පුළුවන්.
+
+
+
+
+
+* මේ වගේම තමා, Bussiness එකත් පරිණත වෙන්නේ
+
+
+
+									Characteristics of the Maturity levels
+									(Bussiness එකක, පරිණතභාවයේ විවිධ අවධි, හා ඒවායේ ලක්ෂණ)
+
+		#පහල ඉඳන් උඩට එන්න
+
+
+Level 5
+ප්‍රශස්ත අවධිය
+(Optimizing)
+	* ව්‍යාපාර පිලිබඳ ඉතා පුළුල් දැනුමක් තිබේ.
+	* අලුත් දේවල් පාරිබෝගිකයන්ට හඳුන්වා දේ
+
+
+
+Level 4
+ප්‍රමාණාත්මකව කළමනාකරණය කල හැකි අවධිය
+(Quantitatively Managed)
+	* ව්‍යාපාරය පිළිබඳව මනා දැනුමක් තිබේ.
+	* ව්‍යාපාර තීරණ ගැනීම ඉතා පහසු වේ
+	* ව්‍යාපාරයේ අනාගතය තීරණය කල හැක
+
+
+
+
+Level 3
+අර්ථ දැක්විය හැකි අවධිය
+(Defined)
+	* ව්‍යාපාරය පිලිබඳ හොඳ දැනුමක් ලැබේ
+	* ව්‍යාපාරයට පැමිණෙන ගැටළු, කලින්ම හඳුනාගත හැක
+	* සම්පුර්ණ ව්‍යාපාරයට, දැක්මක් තිබේ
+	
+	
+
+
+Level 2
+පාලනය කල හැකි අවධිය
+(Managed)
+	* ව්‍යාපාරය පිලිබඳ මුලික දැනුමක් ලැබේ.
+	* ව්‍යාපාරය විසින් එහි, කෙටි කාලින සැලසුම් වලට ප්‍රමුඛතාව ලබාදේ.
+	
+
+
+Level 01
+ආරම්භක අවධිය
+(Initial)
+	* මේ අවධියේදී, ව්‍යාපාරය පිලිබඳ අලුතෙන් ඉගෙන ගැනීම සිදු වේ.
+	* මුල්ම අවධිය නිසා, ව්‍යාපාරය හැසිරවීම තරමක් අපහසු වේ
+	* ව්‍යාපාරයේ අනාගතය පුරෝකථනය කිරීම අපහසු වේ.
+	
+
+
+
+
+
+
+[Slide 9] IT governance maturity
+		  (IT පරිපාලනයේ පරිණතභාවය)
+
+	* IT පරිපාලනයේ පරිණතභාවය (IT Governance Maturity) කියන්නේ, ආයතනයක් තුල, තොරතුරු තාක්ෂණ පරිපාලනයේ වර්ධනය සහ එහි ඇති යාවත්කාලින බවයි.
+
+
+
+	මොනවද මේ, IT ක්ෂේත්‍රය කෙතරම් පරිණතද කියලා බලන ආකෘති (IT Maturity Models) කියන්නේ?
+
+		* 	IT Maturity Models (IT ක්ෂේත්‍රය කෙතරම් පරිණතද කියලා බලන ආකෘති) කියන්නේ, ආයතනයක 
+			තොරතුරු තාක්ෂණ පරිපාලනයේ,පරිණතභාවය මනින මිනුමක් වේ.
+
+
+		* 	මේ අගයෙන් (Maturity Level එකෙන්) බලන්නේ, IT ක්ෂේත්‍රය, ව්‍යාපාරයේ අරමුණු සමඟ කොච්චර හොඳට සමපාත වෙලා තියෙනවාද 	කියන එක. 
+
+
+
+		* බහුලව භාවිතා වෙන, IT ක්ෂේත්‍රය කෙතරම් පරිණතද කියලා බලන ආකෘති (IT Maturity Models)
+
+				01) 	"IT Strategic Alignment Maturity Model"  එක 
+							# මෙතැනදී, මේ කිසිම වචනෙක තනි තේරුම හිතන්න එපා
+							# "IT Strategic Alignment Maturity Model" කියන්නේ එක නමක්
+
+				02) 	PRINCE2 Maturity Model" එක
+
+				03)		"TOGAF (The Open Group Architecture Framework)" එක
+
+
+
+
+
+
+
+
+
+[Slide 10] 01) "IT Strategic Alignment Maturity Model"  
+				(SAMM Model එක)
+
+	* මේ Model එක, 2000 වසරේදී, ලෆ්මාන් (Luftman) විසින් තමා නිර්මාණය කරලා තියෙන්නේ.
+	
+	* මේ Model එකට අනුව, ආයතනයක පරිණතභාවය මැනිය යුතු, Areas 06ක් ගැන සඳහන් කරනවා.
+
+			01) ආයතනයේ IT Team එක සහ Bussiness එක අතර සන්නිවේදනය එක සිදු කරන විදිහ.
+				(Commucation)
+
+
+			02) ආයතනයේ IT ක්ෂේත්‍රය මගින්, ව්‍යාපාරයට ලැබෙන වටිනාකම මැනීම
+				(Competence/value)
+
+
+			03) ආයතනයේ පරිපාලනය
+				(Governance)
+
+					
+
+			04) ආයතනයේ IT Team එක සහ Bussiness එකේ අනිත් අය සමඟ ඇති සහයෝගීතාව
+				(Partnership)
+					
+
+			05)	Scope එක සහ Architecture එක
+				(Scope & Architecture)
+
+			06) ආයතනයේ සේවකයන්ගේ හැකියාව
+				(Skills)
+
+
+
+
+
+
+			01) සන්නිවේදනය
+				(Commucation)
+					ආයතනයේ IT Team එක සහ Bussiness එක අතර සන්නිවේදනය එක සිදු කරන විදිහ.
+
+			02) ශක්‍යතාව
+				(Competence/value)
+					ආයතනයේ IT ක්ෂේත්‍රය මගින්, ව්‍යාපාරයට ලැබෙන වටිනාකම, මනින විදිහ
+
+			03) පරිපාලනය
+				(Governance)
+					ආයතනය පරිපාලනය කරන විදිහ
+
+			04) ආයතනයේ IT ක්ෂේත්‍රය හා, අනිත් ක්ෂේත්‍ර අතර සිදු වෙන 
+				(Partnership)
+					- ආයතනයේ IT Team එක සහ Bussiness එකේ අනිත් අය සමඟ ඇති සහයෝගීතාව
+
+			05)	Scope එක සහ Architecture එක
+				(Scope & Architecture)
+					- ආයතනයේ IT ආශ්‍රිත පද්ධති නිර්මාණය කරලා තියෙන විදිහ සහ, ඒවායින් ආවරණය වන දේවල්.
+
+			06) හැකියා
+				(Skills)
+				- ආයතනයේ සේවකයන්ගේ හැකියාව
+
+
+
+
+
+
+
+
+
+Case Study
+	
+	"Ceylon AgroTech Pvt Ltd" කියන්නේ ශ්‍රී ලංකාවේ "Agritech company" එකක්. මේක 2012 දී පටන් ගත්තේ කෘෂිකර්ම ඉංජිනේරුවරු දෙන්නෙක් එකතුවෙලා. ඔවුන්ගේ idea එක තිබුණේ නවීන technology එක සාමාන්‍ය ගොවිතැන් එක්ක mix කරන එක.
+
+
+	එයාලා මේ Company එක හදලා තියෙන්නේ, Smart වතුර දාන පද්ධති,  පස ගැන බලන Sensors (soil monitoring sensors), සහ ගොවිපොළ ගැන සියලු විස්තර එකතැනකින් බලාගන්න පුළුවන් වෙන විදිහේ Dashboard System, කියන දේවල් විකුණලා, ගොවීන්ගේ අස්වැන්න වැඩි කරගන්න උදව් කරන්න.
+
+
+
+	මේ, Company එක පටන් අරන් තියෙන්නේ, පොඩි ව්‍යාපාරයක් විදිහට. එතකොට ඉඳලා තියෙන්නේ, සේවකයෝ 15ක් වගේ. ඒත් දැන් සේවකයෝ 180 කට වඩා වැඩියෙන් ඉන්නවා. ඒ වගේම, මේ ව්‍යාපාරයට Branches තුනක් තියනවා, කොළඹ (Head Office), කුරුණෑගල, සහ අනුරාධපුර.
+
+
+	
+
+	ආයතනයේ ව්‍යුහය
+	(Organizational Structure)
+		මේ ආයතනයට ප්‍රධාන අංශ 03ක් තියෙනවා (divisions) :
+
+		  01) මෙහෙයුම් අංශය
+		  	  (Operations Division) 
+		  	  		– මේකෙන් බලනවා supply chain එක, logistics, සහ support services. වගේ දේවල් ගැන
+
+		  02) විකුණුම් සහ අලෙවි අංශය
+		  	  (Sales & Marketing Division) 
+		  	  		– මේ division එක manage කරනවා customers එක්ක කරන relationships, promotions වගේ දේවල්
+		  
+		  03) තාක්ෂණික සංවර්ධන අංශය
+		  	  (Technical Development Division) 
+		  	  		– අලුත් IoT devices සහ software platforms Test කිරීම සිදු කරනවා
+
+
+
+		  	මේ ආයතනයේ IT Unit එක තියෙන්නේ මෙහෙයුම් අංශය ඇතුලේ (Operations Division). IT unit එකේ සේවකයෝ 8 දෙනෙක් ඉන්නවා. ඔවුන්ව Guide කරන්නේ IT Manager කෙනෙක් (Mr. Ranil Perera). 
+
+		  	මේ team එක විසින් 
+		  		- Server එක maintain කිරීම සහ network  එක maintain කිරීම සිදු කරනවා.
+		  		- මානව සම්පත් කළමානාකරණය කරන පද්ධති ගැන බැලීම (ERP) සහ Database Administrator ලෙස කටයුතු කරනවා
+		  		- Helpdesk support සේවාව සපනයවා
+		  		- Web and email සේවා සපනයනවා
+
+
+		  	නමුත් IT Team එකේ, තොරතුරු තාක්ෂණ, උපායමාර්ගික සැළසුම (Strategic IT planning එක), අඩුයි. ඒ කියන්නේ, IT Team එක කිසි දෙයක් Plan කරලා කරන්නේ නෑ. ප්‍රශ්නයක් ආවම විතරයි Troubleshoot කරන්නේ. 
+
+
+
+
+
+
+
+
+		  	ආයතනයේ IT Team එක සහ Bussiness එක අතර Commmucation එක සිදු කරන විදිහ
+		  	(Communication Between IT and Business)
+
+		  		- IT Department එක සහ අනිත් departments අතර formal communication එකක් ලොකුවට සිදු වෙන්නේ නෑ
+		  		- ප්‍රශ්නයක් ආවම විතරයි, Commucation එකක් සිද්ධ වෙන්නේ
+		  		- හැමදාම වගේ පවත්වන ඕන, IT Team එකේ අය සහභාගී වෙන, Bussiness Meetings (IT-business Meetings) පවා පවත්වන්නේ නෑ.
+		  		
+		  		- Sales Department එක විසින්, කලින් අවුරුද්දේ, e-commerce portal එකක් launch කරලා තියෙනවා. නමුත් එයාලා ඒ Project එක Outsource කරලා තමා කරගෙන තියෙන්නේ, සහ මේ ගැන IT department එක දැනුවත් කරලා නෑ
+
+
+
+		  		- Team එකේ හැමෝම හොඳයි. IT Manager ත් හොඳයි. හැබැයි හරියට Commucation එකක් වෙන්නේ නැති නිසා,වැරදීම් වෙනවා වැඩියි. සහ වැඩ කරන්න අමාරුයි.
+
+
+
+		  	ශක්‍යතාව
+		  	(Competency and Value Measurement)
+		  			- IT Unit එකට KPI (Key Performance Indicators:- ආයතනයේ, Performence එක කොහොමද කියලා මනින්න පුළුවන් මිනුමක්) නිවැරදිව මනින්නේ නෑ. ඒ වගේම, IT ක්ෂේත්‍රයෙන් ලැබෙන Profit එක, ගණනය කරලා නෑ.
+
+		  			- IT Manager විසින් Tool එකක් හදුන්වලා තියෙනවා, Software වල මතු වෙන, problems Track කරන්න. ඒත් හැමෝම මේ Tool එක භාවිතා කරන්නේ නෑ
+
+		  			- Company එකේ Management එක හිතන්නේ, IT Unit එක තියෙන්නේ, IT ක්ෂේත්‍රයට අවශ්‍ය උදව් කරන්න විතරයි කියලා. Company එක Develop කරන්න IT Field එකේ උදව් ගන්න පුළුවන් කියලා විශවාස කරන්නේ නෑ
+
+
+
+
+
+		  	පරිපාලනය
+		  	(Governence)
+		  		- 	ආයතනයේ, IT ක්ෂේත්‍රය manage කරන්න හොඳ system එකක් නෑ.
+				- 	ආයතනයේ IT policies තියෙන්නේ Documentation එකේ විතරයි
+				- 	IT එකට යොදවන  Budget එක ගැන CEO ට අවබෝධයක් නෑ
+
+				- 	ලඟදි, ERP System එක Update කරන්න Try කරලා තියෙනවා. ඒ Project එක කරන්න දීලා තියෙන්නේ ඒ දුන්න කෙනා ගැන හරියට හොයන්නේ බලන්නේ නැතුව. මේ නිසා වැඩේ හරියට වෙලා නෑ. මුදල් නාස්ති වෙලා තියෙනවා.
+
+
+
+			සහයෝගිතාව හා ආයතයේ Bussiness Goals Achive කරගන්න, නිවැරදි වෙලාවට, IT ක්ෂේත්‍රයේ උදව් ගැනීම
+			(Partnership හා Strategic Alignment)
+				-	කලින් වගේම, IT Team එකේ අය, Bussiness Meetings වලට සහභාගී වෙන්නේ නෑ. Company එකේ Management එක හිතන්නේ, IT Unit එක තියෙන්නේ, IT ක්ෂේත්‍රයට අවශ්‍ය උදව් කරන්න විතරයි කියලා. Company එක Develop කරන්න IT Field එකේ උදව් ගන්න පුළුවන් කියලා විශවාස කරන්නේ නෑ
+
+
+
+
+
+			Scope එක සහ Architecture එක
+			(Scope and Architecture)
+				- Company එකේ තියන systems හරියට එකට connect වෙලා නෑ
+
+				- මුදල් සම්බන්ධ වැඩ සහ ගබඩාව සම්බන්ධ වැඩ වලට, ආයතනයේ සම්පත් කළමානාකරණය කරන පද්ධතිය (ERP), නිවැරදි ලෙස සම්බන්ධ කරලා නෑ
+
+				- පාරිභෝගික සම්බන්ධතා කළමනාකරණය පද්ධතියක් (CRM), භාවිතා කරන්නේ, කොළඹ Branch එකේ විතරයි
+
+				- තව, Basic මට්ටමේ, මානව සම්පත් කළමනාකරණ (HR) System එකක් තමා මෙතන භාවිතා කරන්නේ.
+
+				- Project Track කරන්න, Excel Sheets භාවිතා කරනවා
+
+				- හැම දත්තයක්ම Save වෙන්නේ, එක එක තැන්වල. මේ නිසා වැඩ කරන්න අමාරුයි. සහ වැරදි වෙනවා වැඩියි
+
+				- IT Manager විසින්, මේවා Cloud එකට Connect කරන Idea එක දුන්නත්, ඒක Management එකෙන්, ඒක ප්‍රතික්ෂේප කළා.මේ වැඩේට යන Budget එක වැඩියි සහ Security එක ගැන ප්‍රශ්න තියෙනවා කියලා.
+
+
+
+
+
+
+			හැකියා සහ මානව සම්පත්
+			(Skills and Human Resources)
+				- IT ක්ෂේත්‍රයේ ඉන්නේ හොඳ Telent එකක් තියෙන අය
+				- එත් තොරතුරු තාක්ෂණ, උපායමාර්ගික කළමානාකරණය (strategic management) වගේ දේවල් ගැන knowledge නෑ. .
+				- ආයතනයේ ඉන්න අනිත් සේවකයන්ට, IT Traning එකක් ලබා දෙන්නේ නෑ
+				- මේ නිසා Report එකක් හදාගන්න වගේ පොඩි වැඩ වලටවත් IT staff ගාව යන්න වෙනවා.
+				- දැන්, IT Field එකේ ඉන්න, කිහිප දෙනෙක්, ආයතනයෙන් අයින් වෙන්න යන්නේ, මොකද එයාලගේ career එක,  develop වෙන්නේ නැති නිසා. HR එක විසින් Traning Program එකක් ගැන හිතලා තියෙන්නේ, නමුත්, ඒක තාම Approve කරලා නෑ
+
+
+
+			
+
+
+			කළමානාකරණය
+			(Management Concern)
+				- CEO කෙනෙක් වෙන Mr.දිල්ශාන් අබේරත්න, විසින් අඳුරගෙන තියෙනවා, India සහ Australia කියන රටවල් වලට, මේ ව්‍යාපාරය ගෙනියද්දි, IT  ක්ෂේත්‍රය ගොඩක් වැදගත් වෙනවා කියලා. 
+
+				- මෙයා මේ ගැන Borard Meeting එකකදී මෙහෙම කියලා තියෙනවා.
+					"අපේ Company එකේ, IT ක්ෂේත්‍රය හරියට Manage කරන්නේ නෑ. තව රටවල් වලට මේ ව්‍යාපාරය ගෙනියන්න කලින්, අපේ IT Filed එක මොන Level එකේද තියෙන්නේ කියලා බලාගන්න ඕනේ කියලා."
+
+
+					එතකොට Board එකෙන් මෙහෙම කියලා තියෙනවා.
+						- "ආයතනයේ, හැම කොටසකම, වෙන වෙනම, IT ක්ෂේත්‍රයේ පරිණතභාවය මනින්න කියලා. මේ සඳහා, "Luftman's IT-Business Alignment Maturity Model" එක භාවිතා කරන්න.
+
+
+
+
+
+
+			ඔයා කරන්න ඕනේ දේවල්
+			(Task)
+
+				01) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Slide 15] IT maturity levels
+			(ආයතනයක IT ක්ෂේත්‍රයේ පරිණතභාවයට පිරිනමන ලකුණු)
+
+
+
+
+	* Laffman ආකෘතියට අනුව, ආයතනයක පරිණතභාවයට 0-5 දක්වා ලකුණු ප්‍රමාණයක් ලබාදිය හැක.
+
+			0 - Nonexistent 
+			1 - Initial
+			2 - Repeatable
+			3 - Defined
+			4 - Managed
+			5 - Optimised	
+
+	* අපි දැන් මේ ලකුණු ලබාදිය යුත්තේ කෙසේ දැයි බලමු.
+
+
+
+
+[Slide 16] ‘0’ Non-existent 
+
+	* ආයතනයේ කිසිම Management එකක් නැත්නම්
+	* ආයතනයේ Top Management එක IT Decitions ගැනීමට සහභාගී වෙන්නේ නැත්නම්
+
+
+
+
+[Slide 17] ‘1’ Initial/Ad Hoc
+
+	 <pencil>
+	 	Ad Hoc === එවෙලේ ගහන Plan වලට අනුව තමා වැඩ කරන්නේ
+	 </pencil>
+
+	* එවෙලේ වෙන ප්‍රශ්න වලට එවෙලේ නම් උත්තර හොයන්නේ
+	* IT Staff එක, ආයතනයේ අනිත් ක්ෂේත්‍ර සමඟ කිසිම සම්බන්ධයක් නැත්නම්
+
+
+
+[Slide 18] ‘2’ Repeatable but intuitive
+	
+		
+	* එවෙලේ වෙන ප්‍රශ්න වලට එවෙලේ නම් උත්තර හොයන්නේ
+	* සාමාන්‍ය මට්ටමේ පරිපාලනයක් පවත්වනවා නම්
+
+
+[Slide 19] ‘3’ Defined process
+
+	* හොඳ මට්ටමේ IT පරිපාලනයක් පවතිනවා  නම්
+	* ප්‍රශ්නයක් එන්න කලින්ම එකට ලෑස්ති වෙලා ඉන්නවා නම්
+
+
+
+[Slide 20] ‘4’ Managed and measurable
+	* Bussiness Team එක හා IT Team එක, එකට එකතු වෙලා වැඩ කරනවා නම්
+	* Organization එකේ අවශ්‍යතා හොඳින් අඳුරගෙන, නම්
+
+
+[Slide 21] ‘5’ Optimised
+	* ඉතාමත් හොඳ IT පාලනයක් පවත්වාගෙන යයි නම්
+	* හොඳින් Risk එක Manage කරයි  නම්
+	* ව්‍යාපාරයට IT ක්ෂේත්‍රය ගැන පුර්ණ විශ්වාසය තැබිය හැක නම්
+
+
+
+
+
+
+
+	* Laffman ආකෘතියට අනුව, ආයතනයක පරිණතභාවයට 0-5 දක්වා ලකුණු ප්‍රමාණයක් ලබාදිය හැක.
+
+			Maturity Level 0 - නොපවතින අවස්තාවක් (Nonexistent) 				# Just Ignore this
+			Maturity Level 1 - දුර්වලයි (Initial/Ad hoc)
+			Maturity Level 2 - තරමක් හොඳයි (Repeatable)
+			Maturity Level 3 - මධ්‍යස්ත මට්ටමකට හොඳයි  (Defined)
+			Maturity Level 4 - හොඳයි (Managed)
+			Maturity Level 5 - ඉතා හොඳයි (Optimised)

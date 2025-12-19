@@ -1,0 +1,1419 @@
+									Information Systems Strategy and IT Governance
+					(තොරතුරු පද්ධති සාර්ථකව භාවිතා කරනා ක්‍රමවේදය සහ  තොරතුරු තාක්ෂණ පරිපාලනය)
+
+
+2024 April
+	Question 02)
+		A. List three (3) ITG frameworks that can be used by the organization.                                    [3 Marks] [OK]
+		B. Discuss two (2) potential risks and challenges associated with the lack of a structured ITG framework. [3 Marks] [OK]
+		C. Evaluate the impact of three (3) different organisational factors on selecting an appropriate IT 
+		   governance framework.                                                                                   [6 Marks]
+		D. Stakeholder involvement is crucial in the selection process of an IT governance framework. 
+		   Justify the statement with examples.                                                                    [6 Marks] [OK]
+		E. Provide a brief overview of the implementation plan for the selected IT governance framework 
+		   within the organization.                                                                                [7 Marks]
+
+
+
+2023 May
+	Question 2) 
+		A. How can you identify if an organisation's IT strategy is not aligned with its overall business 
+		   goals and objectives?                                                                                    [5 Marks]  [OK]
+		B. Discuss how multiple IT governance frameworks, such as COBIT, ITIL, and ISO 38500, can be 
+		   integrated within an organisation to increase IT governance.                                           [10 Marks]   [OK]
+		C. Evaluate the impact of different organisational factors on the selection of an appropriate IT 
+		   governance framework.                                                                                    [4 Marks]  [OK]
+		D. An organisation's level of IT maturity can have a significant impact on its ability to achieve 
+		   effective alignment between its IT strategy and overall business goals. Justify this statement.         [6 Marks]
+
+
+
+
+
+2022 June
+	තවම Past Paper එක හොයාගන්න බැරි වුනා.
+
+⚠️ Services කියන දේ තේරුනේ නෑ
+
+												Lession 02
+											IT Governance Frameworks
+
+[Slide 2] IT Governance Frameworks
+
+
+[Slide 4] Information Technology Governance Framework
+			(තොරතුරු තාක්ෂණ පරිපාලන Framework එක )
+
+	*  IT Governance Framework එකක් කියන්නේ, <red> ආයතනයක තාක්ෂණික පරිපාලනය (Technology governance එක) කොහොමද හරියටම Manage කරන්නේ කියලා පෙන්නන්න හදපු නීති-රීති මාලාවක්. </red>
+
+	<pencil>
+		---මේ ටික ලියන්න ඕන නෑ, ඕන නම් අහන් හිටියම ඇති. 
+
+		* මේ IT Governance Framework හදලා තියෙන්නේ, පරේක්ෂකයෝ සහ එක් එක් Fileds වල Experts ලා විසින්. ආයතන වල, IT 	ක්ෂේත්‍රය, Bussiness Goals ඉටු කරගන්න යොදාගන්න සහ එය වඩා හොඳට Manage කරන්න පුළුවන් වෙන්න
+	
+		* අද කාලේ, මේ IT Governance Frameworks ලෝකේ පුරා භාවිතා කරනවා. මොකද මේවා, Company එකේ Performance එක වැඩි කරන්න 	ගොඩක් උදව් වෙන නිසා.
+	
+		* ITG frameworks විසින්, ආයතනයේ නීති රීති මාලාවට අනුව වැඩ කරනවා කියලා විතරක් නෙවේ. ආයතනයේ Performance එක වැඩි 	කරන්නත් උදව් වෙනවා.
+	
+		* ඒ වගේම, ITG frameworks උදව් වෙනවා, IT කාර්යයන් Monitor කරන්න සහ Improve කරන්න. ඒ හරහා, Business Value එක වැඩි කරගන්න සහ Bussiness Risk එක අඩු කරගන්න.
+	</pencil>
+
+
+
+
+[Quiz] 2024 April
+
+	Question 02)
+		B. Discuss two (2) potential risks and challenges associated with the lack of a structured ITG framework. [3 Marks]
+			(ආයතනයක ITG Framework එකක් නැති වුවහොත්, මතුවිය හැකි අභියෝග 2ක් පිලිබඳ සාකච්ඡා කරන්න)
+
+												Answers
+
+
+
+			(1) IT ක්ෂේත්‍රය Bussiness Goals සමඟ Allign නොවීම
+					- IT ක්ෂේත්‍රය Bussiness Goals සමඟ Allign නොවීම නිසා, ආයතනයේ, Bussiness Objectives ඉටු නොවේ,
+			
+			(2) Resouces නාස්ති වීම
+					- අනවශ්‍ය ලෙස IT ක්ෂේත්‍රයට මුදල් යෙදවීම නිසා, මුදල් නාස්ති වේ.
+						
+			(3) Projects Fail වීම
+					- Projetcs වලට නිවැරදි Guidence එකක් නැති නිසා Projects Fail වේ
+
+
+
+[Quiz] 2023 May
+	Question 2) 
+		How can you identify if an organisation's IT strategy is not aligned with its overall business 
+		goals and objectives?  [5 Marks]
+
+		(ආයතනක IT ක්ෂේත්‍රය ආයතනයේ Bussiness Goals සහ Objectives එක්ක සමපාත වෙලා නෑ කියලා කොහොමද අඳුරන්නේ?)
+												
+												Answers
+
+
+		(1) IT ක්ෂේත්‍රයට Invest කරපු සල්ලි වලින්, Revenue එකක් ආවේ නැති වුනාම
+		(2) IT Resouces නාස්ති වීම
+		(3) ආයතනයේ, Bussiness Objectives ඉටු නොවීම
+		(4) Projects Fail වීම
+		(5) ආයතනයේ ආදායම අඩු වීම
+
+
+
+
+[Quiz] 2024 April
+	Question 02)
+	D. Stakeholder involvement is crucial in the selection process of an IT governance framework. Justify the statement with= examples.
+	[6 Marks]
+
+	
+	("ගැලපෙන ITG Framework එකක් තොරගනිද්දී, Stakeholder ලාගේ, සහභාගිත්වය, වැදගත් වෙනවා." මේ ප්‍රකාශය සත්‍යාපනය කරන්න)
+
+												Answers
+ 	ඔව්. මොකද,
+
+	(1) වෙනස් වෙනස් Stakeholders ලට තියෙන්නේ, වෙනස් වෙනස් අවශ්‍යතා හා අරමුණු නිසා
+			- එක් එක් Stakeholdersලට තියෙන්නේ, වෙනස් වෙනස් අරමුණු. එම නිසා, සමබර තීරණයක් ගන්න, මේ හැමෝගෙම අදහස් අවශ්‍ය වෙනවා. නැත්නම්, Baised Desition එකක් අරගෙන, වැරදි, Framework එක තෝරාගත්තොත් මුළු Company එකම අනතුරේ
+
+
+	(2) ආයතනයේ, Specific අවශ්‍යතා අනුව, Framework එක නිර්මානය කරගත හැකි නිසා
+			- Stakeholders ලගේ දායකත්වය නිසා, ආයතනයේ Specific Goals මොනවාද යන්න දැනගන්න පුළුවන්. මේ නිසා, Genaralized විදිහට,  Framework එකක් තෝරනවට වඩා, Specilized විදිහට, වඩාත්ම ගැලපෙන Framework එකක් තෝරාගන්න පුළුවන්. නැතිනම් දැනටමත් තිබෙන Framework එකක්, අවශ්‍ය පරිදි Customize කරගන්න පුළුවන්.
+
+	(3) ආයතනයේ අවධානම් හඳුනා ගත හැකි නිසා
+			- Stakeholders ලා සමඟ කතා කිරීමෙන් ආයතනයට මුහුණ දීමට සිදු වෙන, අවධානම් තත්ත්ව ගැන දැනගන්න පුළුවන්. එතකොට, Asssumptions පාදක කරගෙන Framework එකක් තෝරනවට වඩා, Stakeholdersලා පවසන පරිදි ඇති, අවධානම් පාදක කරගෙන Framework එකක් තෝරාගත හැකියි.
+
+
+
+
+
+
+2024 April
+[Slide 5] ITG Frameworks වලට උදාහරණ
+	
+	  		  (කොබිට්)
+	<red>  01. COBIT - Control Objectives for Information and Related Technologies </red>
+				* 	මේක, IT Resouces හරියට Manage කරන්න සහ Control කරන්න හදපු Framework එකක්. 	 
+	
+	<red>  02. ITIL - Information Technology Infrastructure Library </red>
+				* 	මේක, IT Services ලබා දෙන්න සහ Manage කරන්න හොඳම ක්‍රමවේද මොනවද කියලා පෙන්වන්න හදපු Framework 		එකක්.
+	
+	<red>  03. ISO 17999 - Information Technology – Code of Practice for Information Security Management </red>
+				* 	මේක, ආයතනයක තිබෙන, දත්ත හා තොරතුරු, ආරක්ෂා කරනගන්න අනුගමනය කරන්න ඕන නීති මොනවා දැයි 	    පෙන්වීමට හදපු Standed එකක්. (මේක ISO එකෙන්  හදුන්වලා දුන්නේ)
+
+	  		  (වැල් IT)
+	<red>  04. ValIT - Governance of IT Investments </red>
+				* 	මේක, IT වලට Invest කරන මුදලින්, හරි value එකක් ලැබෙනවද කියලා බලන්න හදපු Framework එකක්.
+
+
+
+
+
+[Quiz] 2024 April
+	
+	Question 02)
+		A. List three (3) ITG frameworks that can be used by the organization.                                    [3 Marks]
+
+								Answer
+		* COBIT
+		* ITIL
+		* ISO 17799
+
+
+
+
+
+
+			  (කොබිට්)
+[Slide 6] (01) COBIT - Control Objectives for Information and Related Technologies Framework එක
+
+	* COBIT frameworks එක, හඳුන්වා දුන්නේ "Information Systems Audit and Control Foundation" කියන සංවිධානය. 
+
+	* COBIT framework එක දැන් maintain කරන්නේ IT Governance Institute (ITGI) එකෙන්.
+
+
+	* COBIT කියන්නේ, IT Governce framework එකක් විතරක්ම නෙවෙයි. මෙත් එක්කම පාවිච්චි කරන්න පුළුවන්, Utility Tools කිහිපයකුත් තියෙනවා.
+			1. Maturity models
+					- මේකේන්, ආයතනය කොච්චර පරිණත වෙලාද කියලා මනින්න පුළුවන්
+			
+			2. Critical success factors
+					- මේකෙන් ආයතනය සාර්ථක වෙන්න අනිවාරෙන්ම තියෙන්න ඕන සාධක මොනාද කියලා තීරණය කරන්න පුළුවන්.
+			
+			3. Key goal indicators
+					- මේකේන්, ආයතයේ, Goals Achive වෙනවද කියලා බලන්න පුළුවන්.
+			
+			4. Key performance indicators (KPIs)
+					- ආයතනයේ, Performence එක කොහොමද කියලා මනින්න පුළුවන්.
+
+
+
+[Slide 7]
+	* හැම ආයතනයකම Top Management එකට විශ්වාසයක් හැදෙන්න ඕනේ , ආයතනයේ IT ක්ෂේත්‍රය විශ්වාස කරන්න පුළුවන් සහ IT වලට දාන මුදලින් හොඳ Positive Return එකක් ලැබෙයි කියලා.
+
+
+	* COBIT එක හඳුන්වලා දීලා තියෙන්නේ, Orgranization එකක, IT Field එක කොහොමද, Direct කරන්නේ සහ Manage කරන්නේ කියලා, වඩාත් හොඳ අවබෝධයක් ලබාගන්න. 
+
+	* COBIT එකෙන් පෙන්නනවා ඔයාට මොන වගේ වැඩද කරන්න තියෙන්නේ කියලා.
+
+
+	* COBIT කියන්නේ, ආයතනයකට උදව් කරන ToolSet එකක්. මේකෙන් Manages ලාට පුළුවන්, නීති-රීති (Control Objectives), Technical ප්‍රශ්න, business අවදානම් කියන දේවල් අතර තියෙන Gap එක Fill කරන්න.
+
+
+[Slide 8] 
+
+	* COBIT Framework එක හදලා තියෙන්නේ, ධූරාවලියක් විදිහට
+
+	#"COBIT Hierarchy.html" එක පොතේ කටුවට ඇන්දා. ඒක හරියට පොතේ අඳින්න.
+	#Domins කියන නම රතු පෑනෙන් ලියන්න
+
+
+
+[Slide 9]
+	
+	* මේ Diagram එකෙන් පෙන්නන්නේ, කොහොමද, COBIT Framework එක වැඩ කරන්නේ කියලා.
+	#මේක වැඩක් නෑ
+
+
+
+
+[Slide 10] COBIT Framework එක, බෙදෙන ප්‍රධාන කාණ්ඩ / Domains 04
+		   (COBIT Frameworks Domains And Objectives)
+
+	<pencil>
+		උඩ ඇන්ද Diagram එකේ, දෙවෙනි Hirachy එකේ, COBIT FRAMEWORK එක කොටස් 4කට බෙදලා තියෙන්නේ. ඒ මෙයාලා තමා. Diagram එක Follow කරන ගමන් මේකත් Follow කරන්න.
+	</pencil>
+			
+	<red>	1. Planning and organisation (PO) </red>
+			(සැලසුම් කිරීම සහ සංවිධානය කිරීම)
+
+
+		   	    (ඇකුසිෂන්)
+	<red>	2. Acquisition and implementation (AI) </red>
+			(මිලදී ගැනීම සහ ක්‍රියාත්මක කිරීම)
+	
+
+	<red>	3. Delivery and Support (DS) </red>
+			(බෙදා හැරීම සහ සහාය දැක්වීම)
+
+	
+	<red>	4. Monitoring and Evaluation (ME) </red>
+			(අධීක්ෂණය සහ ඇගයීම)
+
+
+	
+
+[Slide 11] (1) Planning and organisation (PO) </red>
+				(සැලසුම් කිරීම සහ සංවිධානය කිරීම)
+
+
+	* මේ Domain එකෙන් බලන්නේ, IT ක්ෂේත්‍රය කොහොමද, දිගු කාලීන plans (strategies) සහ කෙටි කාලීන plans (tactics) භාවිතා කරලා, ආයතනයේ Bussiness Goals Achive කරගන්නේ කියලා.
+
+	* අපි, ආයතනයේ, දැක්ම, ලඟා කරගන්න, IT ක්ෂේත්‍රය කොහොමද භාවිතා කරන්නේ කියලා හොඳට Plan කරන්න ඕනේ.
+
+	* සැලසුම් කිරීම සහ සංවිධානය කිරීමට, අයත් වෙන කාර්යයන් (Subdomains) 10ක් මේ වන විට හඳුනාගෙන තියෙනවා.
+				(1) Define an IT strategic plan
+				(2) Define the information architecture
+				(3) Define technology direction
+				(4) Define the IT organization
+				(5) Manage the IT investment
+				(6) Communicate aims and direction
+				(7) Manage human resources
+				(8) Assesses risks
+				(9) Manage projects
+				(10) Manage quality
+
+	* සැලසුම් කිරීම සහ සංවිධානය කිරීමේදී, අවධානය යොමු කළ යුතු කරුණු
+		- ආයතනයේ IT ක්ෂේත්‍රය හා Bussiness Plans එකට ගැලපෙනවද? 
+		- සම්පත්  (මුදල්, කාලය, තාක්ෂනය) නාස්ති නොවෙන විදිහට, හරියට පාවිච්චි වෙනවද?
+		- ආයතනයේ හැම කෙනාම, IT Goals මොනවද, ආයතනයට තියෙන අවධානම මොන වගේද, කියලා තේරුම් අරන්ද ඉන්නේ?
+		- IT ක්ෂේත්‍රයේ සහ Risks හරියට Manage කරනවද?
+
+
+
+
+
+    		    (ඇකුසිෂන්)
+[Slide 12] (2) Acquisition and implementation (AI) </red>
+		   (මිලදී ගැනීම සහ ක්‍රියාත්මක කිරීම)
+ 
+
+
+
+	* ආයතනයේ දිගු කාලීන plans (strategies) සාර්ථක කරගැනීමට, මොන වගේ IT Developmens (Solutions) ද කරන්න ඕනේ, කියලා හදුනාගන්න ඕනේ, ඒ හඳුනාගත්ත Developments කරන්න ඕනේ, නැත්නම්, වෙන තැනකින් මිලදී ගන්න ඕනේ. ඊට පස්සේ, ඒ Developments, ආයතනයේ, Bussiness Process වලට ඒකාබද්ධ කරන්න ඕනේ.
+
+
+	* මිලදී ගැනීම සහ ක්‍රියාත්මක කිරීමට, අයත් වෙන කාර්යයන් (Subdomains) 7ක් මේ වන විට හඳුනාගෙන තියෙනවා.
+			(1) Identify solutions
+			(2) Acquire & maintain applications
+			(3) Acquire & maintence infrastructure
+			(4) Develop & maintain procedures
+			(5) Install and accredit systems
+			(6) Manage changes
+			(7) Procure IT resouræs
+
+
+	* ඒ වගේම, ආයතනවල භාවිතා වෙන Systems වල, Maintenance, Enhancements Retirements පවා සම්පුර්ණයෙන්ම මේ Domin එක හරහා සිදු කරගන්න පුළුවන්.
+
+	* මේ Domain එකේදී, IT Developments (Solutions), Services බවට පත් කිරීමට කරනවා.
+	
+
+	* මිලදී ගැනීම සහ ක්‍රියාත්මක කිරීමේදී, අවධානය යොමු කළ යුතු කරුණු
+		- අලුත් Projects වලින්, ව්‍යාපාරික අවශ්‍යතා සපුරාලනවද සහ Budget එක ඇතුලත Deliver කරනවද? සහ වෙලාවට වැඩේ වෙනවද?
+
+
+
+[Slide 13] (3) Delivery and Support (DS)
+			(බෙදා හැරීම සහ සහාය දැක්වීම)
+
+
+	* මේ Domin එකෙන් බලන්නේ, ආයතනයේ, stakeholders ලට, අවශ්‍ය IT services හරියට ලබා දෙනවද කියලා. මේ Services වලට අයිති වෙන්නේ, සේවා ලබා දීම, Technical සහාය දීම, හොඳ performance එකක් maintain කිරීම, ආරක්ෂාව සහ Technical පුහුණුව වගේ දේවල්.
+
+
+	* බෙදා හැරීම සහ සහාය දැක්වීමට, අයත් වෙන කාර්යයන් (Subdomains) 13ක් මේ වන විට හඳුනාගෙන තියෙනවා.
+			(1) Define & manage service levels
+			(2) Manage third-party services
+			(3) Manage performance & capacity
+			(4) Ensure continuous service
+			(5) Ensure systems security
+			(6) Identify & allocate costs
+			(7) Educate & train users
+			(8) Assist & advise customers
+			(9) Manage the configuration
+			(10) Manage problems and incidents
+			(11) Manage data
+			(12) Manage facilities
+			(13) Manage operations 
+ 
+
+
+
+
+	* බෙදා හැරීම සහ සහාය දැක්වීමේදී, අවධානය යොමු කළ යුතු කරුණු
+		 - IT ක්ෂේත්‍රයට යන වියදම් අඩු කරගෙන නිවැරදිව manage කරලා තියෙනවද? සේවකයෝ IT ක්ෂේත්‍රය හරියට (efficient) සහ ආරක්ෂිතව (safely) පාවිච්චි කරනවද?
+
+		 - ආරක්ෂණ ක්‍රම හරියට Implement කරලා තියෙනවද? Confidentiality, Integrity, Availability වගේ දේවල්.
+
+
+
+
+[Slide 14] (4) Monitoring and Evaluation (ME)
+			(අධීක්ෂණය සහ ඇගයීම)
+
+
+	* හැම IT Process එකක්ම, නිතිපතා Check කරන්න ඕනේ, ඒ Process එකේ, Quality එක රැක ගන්න
+
+	* අධීක්ෂණය සහ ඇගයීමට, අයත් වෙන කාර්යයන් (Subdomains) 4ක් මේ වන විට හඳුනාගෙන තියෙනවා.
+			- Monitor the processes
+			- Assess internal control adequacy
+			- Obtain independent assurance
+			- Provide for independent audit
+
+	* අධීක්ෂණය සහ ඇගයීමේදී, අවධානය යොමු කළ යුතු කරුණු
+		 - IT ක්ෂේත්‍රයේ, Performence එක නිතර Measure කරලා බලනවද, ප්‍රශ්න ගොඩක් කල් යනකල් තියන් ඉන්නවද
+		 - අවදානම (Risks), පාලනය (Control), අනුකූලතාව (Compliance), ක්‍රියාකාරීත්වය (Performance) කියන, මේ හතර දේවල් කොච්චරද කියලා මැනලා management එකට report කරනවද?
+
+
+
+
+
+[Slide 15-16] 	Metrics of COBIT 
+				(COBIT Framework එකේ භාවිතා කරන මිනුම් වර්ග)
+
+
+#මේ Slide දෙකේ පිළිවෙල මාරු වෙලා තිබ්බේ. පහල ඒක හදලා තියෙනවා
+
+
+
+
+* COBIT Framework එකේදී, භාවිතා කරනා මිනුම් වර්ග 02ක් පවතී.
+		(a) Key <red> goal </red> indicators (KGIs) 
+			(අරමුණු දර්ශකය)
+				
+
+
+		(b) Key <red> Performance </red> Indicators (KPI)
+			(කාර්ය සාධක දර්ශක)
+			
+				
+
+
+
+
+
+[Slide ] (a) Key  <red>  Goal  </red>  Indicators (KGIs) 
+			 (අරමුණු දර්ශකය)
+
+	
+	* මේ මිනුමෙන්, Bussiness එක, ඔවුන්ගේ අරමුණට ගමන් කරනවා දැයි බලයි
+			
+			උදා:- 
+					- Bussiness අවශ්‍යතා වලට අවශ්‍ය වෙන තොරතුරු, ඕනෑම වෙලාවක access කරන්න පුලුවන්ද?
+					- අපේ තොරතුරු Safe ද?
+					- පවතින තොරතුරු සහ සම්පත් විශ්වාසදායකද?
+
+					වැනි තොරතුරු මෙහිදී පරික්ෂා කරයි.
+
+
+
+[Slide ] (b) Key   <red>    Performance   </red>    Indicators (KPI)
+			 (කාර්ය සාධන දර්ශක)
+
+
+	* මේ මිනුමෙන්, Bussiness එක, අරමුණට ගමන් කිරීමට, කළ යුතු සියලු දේ සිදු කරනවා දැයි බලයි
+				උදා:- Sales Target එක  (මේක Bussiness එකේ, ලාභ ලැබීමේ අරමුණට, ගමන් කිරීමට අත්‍යාවශ්‍ය දෙයක්)
+
+						- කොච්චර Sales වෙලා තියෙනවද? 
+						- Target එක Achive වෙලාද? 
+						- අතීතයේ Sales කොච්චර හොඳට වෙලා තියෙනවද? 
+
+						මේ වගේ දත්ත භාවිතා කරලා, ආයතනයේ Team එක Motivate කරලා, Sale එක වැඩි කරගන්න පුළුවන්. එතකොට, Bussiness එකේ ලාභ ලැබීමේ අරමුණට ගමන් කිරීම පහසුයි.
+						
+
+
+	කහපාට කොටුව විස්තර කිරීම 
+		- Doctor කෙනෙක්, ලෙඩෙක්ගේ, Blood pressure එක, Cholesterol වගේ දේවල් බලනවා වගේ, කාර්ය සාධන දර්ශකයෙන් තමා, (Key Performance Indicators) ආයතනක තත්වය බලන්නේ.
+
+
+
+2025 Exam Prediction
+[Slide 18] (02) Information Technology Infrastructure Library (ITIL)
+
+	* ITIL (Information Technology Infrastructure Library) කියන්නේ, බ්‍රිතාන්‍යයේ රජයෙන් හදපු Framework එකක්. මේක හදන්න හේතුව තමා, රජයේ, IT ක්ෂේත්‍රයට අදාළ කටයුතු කාර්යක්ෂමව හා ඵලදායිව කරගන්න එක
+
+	* 2000 වසරේදී, British Standards Institute (BSI) කියන ආයතනය එකතු වෙලා, මේ Framework එක යාවත්කාලින කරලා තියෙනවා. ඊට පස්සේ මේක, බ්‍රිතාන්‍යයේ, standard එකක් බවට පත් කරනවා. 
+
+	* මේකේ, "පොත් (Books)" කියලා, Consepet එකක් තියෙනවා. මෙතන පොත් 8ක් තියෙනවා. මේ පොත් වල තියෙනවා, IT ක්ෂේත්‍රය කොහොමද Manage කරන්න ඕනේ? සහ කොහොමද IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්න ඕනේ කියලා.
+
+	* ITIL Framework එකේ විශේෂත්වය තමයි, මේක ප්‍රධානව Focus කරන්නේ, IT ක්ෂේත්‍රය කොහොමද Manage කරන්න ඕනේ? සහ කොහොමද IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්න ඕනේ කියන එක ගැන.
+
+
+
+
+[Slide 19] 
+
+	* මේ ITIL Framework එකෙන්, IT Governance කියන සම්පුර්ණ ක්ෂේත්‍රයම ආවරණය වෙන්නේ නෑ. සහ IT Management වලට අදාලව සිදු වෙන  සමහර තීරණ ගැනීම් ආවරණය වෙන්නෙත් නෑ. 
+			- මේක IT ක්ෂේත්‍රයට පොඩි Support එකක් තමා දෙන්නේ. නමුත්, ලෝකය පුරා ලොකු පිළිගැනීමක් තියෙනවා මේ Framework එකට.
+
+	* ITIL Framework එක කියන්නේ Process-oriented Framework එකක්. ඒ කියන්නේ, මේකෙන් Focus කරන්නේ, ආයතන වලට IT ක්ෂේත්‍රය තුල පවත්වා ගත යුතු Best Pratises මොනවද වගේ දේවල්.
+
+	* මේ Framework එකෙන්, IT ක්ෂේත්‍රය තුලදී, "මොන වගේ දෙයක්ද ද කරන්න ඕනේ? (WHAT to do)" කියලා දෙනවා. නමුත් "එය කොහොමද කරන්නේ? (HOW to do)" කියන දේ කියලා දෙන්නේ නෑ. 
+
+
+	* මේ framwork එකෙන් කරන්නේ, ලෝකයේ වෙනත් ආයතන විසින්, IT ක්ෂේත්‍රය පරිපාලනය කිරීමට භාවිතා කරපු ක්‍රම, මොනවද කියලා, කියලා දෙන එක.
+
+
+
+[Slide 20-23] Diagram එක පැහැදිලි කිරීම
+
+	<pencil>
+		පින්තුරයේ, වම හා දකුණ හා මැද ක්‍රීම් පාට විශාල Focus කරන්න 
+	</pencil>
+
+	
+	* 	මේ Diagram එකේ මුලිකවම පෙන්වන්නේ, ආයතයේ, Bussiness Side එක හා Technology Side එක අතර, ආයතනයේ IT ක්ෂේත්‍රය (ක්‍රීම් 		පාට	කොටස) පාලමක් වගේ ක්‍රියා කරන බව. 
+			---"bridge_diagram.png" එකේ පින්තුරය මෙතන අඳින්න
+
+	
+	
+	* 	මේ Diagram එකේ, කොටු එකිනෙක Overlap (එක උඩ, එක උඩ පවතිම) වීමට ලොකු තේරුමක් තියෙනවා. මේ උදාහරණය බැලුවම මේක 		පැහැදිලි වෙයි.
+			 ---"overlapping_expained.png" පින්තුරය මෙතන ඇඳගන්න.
+			 ---"Explanation using Real ITIL Diagram.png" එකත් මෙතන ඇඳගන්න
+	
+
+	* මේ Diagram එකේ පොත් 8ක් තියෙනවා
+			" The business perspective "
+			" Services management"
+			" Service Support"
+			" Service Delivery"
+			" Security Management"
+			" ICT Infrastructure Management "
+			" Application Management"
+	
+
+	* 	අපි දැන් බලමු, මේ පොත් (Books) ඇතුලේ මොනවද තියෙන්නේ කියලා.
+			---"What inside the books.png" එක ඇඳගන්න
+			
+
+
+[Slide 24-25] (03) ISO 17999 Framework එක
+
+	ISO 17999 - Information Technology – Code of Practice for Information Security Management </red>
+		* 	මේක, ආයතනයක තිබෙන, දත්ත හා තොරතුරු, ආරක්ෂා කරනගන්න අනුගමනය කරන්න ඕන නීති මොනවා දැයි 	    
+			පෙන්වීමට හදපු Standed එකක්. (මේක ISO එකෙන්  හදුන්වලා දුන්නේ)
+
+
+		#අපිට මේක ගැන ඉගෙනගන්න නෑ.
+
+
+
+
+
+
+[Slide 26] COBIT vs ITIL
+			(COBIT Framework එකද හොඳ?, ITIL Framework එකද හොඳ?)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+							COBIT 								|								ITIL
+--------------------------------------------------------------------------------------------------------------------------------------
+*	IT Governace Framework එකකි 								|	* Service Management Framework එකක්.
+																|	  (මේක Directly IT Governace Framework එකක් නෙවෙයි)
+---------------------------------------------------------------------------------------------------------------------------------------
+*	IT Field එක කොහොමද, Direct කරන්නේ සහ 				|
+	Manage කරන්නේ කියලා, බලනවා. 							|	* IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්න කොහොමද කියලා බලනවා
+---------------------------------------------------------------------------------------------------------------------------------------
+*	COBIT වල Focus කරන්නේ,  කොහොමද  						|	* ITIL වල Focus කරන්නේ, මොනවද කරන්න ඕනේ කියලා
+	දෙයක් කරන්නේ කියලා										|	
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+	* මේ Framwork දෙකෙක් හොඳ මොකද්ද?
+		- ඇත්තමටම, මේ Framework දෙකම එක වගේ හොඳයි. මේ දෙක අතර කිසිම තරඟයක් නෑ. ඒ නිසා, අපිට මේ Framework දෙකම එකතු කරලා ඉතාමත් Powerful Model එකක් හදන්න පුළුවන්.
+
+
+
+2023 May
+[Slide 27]  Use of combination of Frameworks
+			(අපි දැනට ඉගෙනගත්තු Frameworks 3ම එකට එකතු කලොත් මොනවා වෙයිද?)
+
+
+	---"capabilities.png" එක මෙතන අඳින්න.
+
+	* COBIT Framework එකේ: 
+		- IT Field එක කොහොමද, Direct කරන්නේ කියලා බැලුවට, Security Management එක ගැන බලන්නේ නෑ
+
+	* ITIL Framework එකේ:
+		- IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්න කොහොමද කියලා බැලුවට, IT Field එක කොහොමද, Direct කරන්නේ කියලා බලන්නේ නෑ
+
+	* ISO 17999 Framework එකේ:
+		- Security Management එක තිබ්බට, IT Field එක කොහොමද, Direct කරන්නේ කියලා බලන්නේ නෑ.
+
+
+
+	- මෙතනින් හොඳම Option එක වන්නේ, මේ Frameworks සියල්ලම, එකතු කිරීමයි.
+
+
+
+
+
+[Quiz] 2023 May
+	Question 2) 
+
+	B. Discuss how multiple IT governance frameworks, such as COBIT, ITIL, and ISO 38500, can be  integrated within an organisation to increase IT governance. [10 Marks]
+
+	(COBIT, ITIL, සහ ISO 38500 වගේ, IT governance frameworks කිහිපයක් එකට භාවිතා කරලා, ආයතනයක IT පරිපාලනය දියුණු කරගන්නේ කොහොමද කියලා විස්තර කරන්න)
+
+										Answers
+
+	* COBIT, ITIL, සහ ISO 38500 Frameworks 3හි පවතින්නේ වෙනස් වෙනස්, ලක්ෂණ වේ.
+
+	* උදාහරණයක් ලෙස, COBIT Framwork එක ගමු. මෙහි ඇති ලක්ෂණ වන්නේ, 
+			- IT Field එක කොහොමද, Direct කරන්නේ කියලා බලනවා
+			- IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්නේ කොහොමද කියලා බලන්නේ නෑ
+			- Security Management එක ගැන බලන්නේ නෑ
+
+
+	* උදාහරණයක් ලෙස, ITIL Framwork එක ගමු. මෙහි ඇති ලක්ෂණ වන්නේ, 
+			- IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්නේ කොහොමද කියලා බලනවා
+			- IT Field එක කොහොමද, Direct කරන්නේ කියලා බලන්නේ නෑ
+			- Security Management එක ගැන බලන්නේ නෑ
+
+	* උදාහරණයක් ලෙස, ISO 38500 Framwork එක ගමු. මෙහි ඇති ලක්ෂණ වන්නේ, 
+			- Security Management එක ගැන බලනවා.
+			- IT Field එක කොහොමද, Direct කරන්නේ කියලා බලනවා.
+			- IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්නේ කොහොමද කියලා බලන්නේ නෑ.
+			
+
+	* මේ වගුවෙන් සරලව පෙන්වන්නේ මේක
+			---"capabilities.png" එක මෙතන අඳින්න.
+
+
+	* මේ නිසා, මේ Frameworks 3ම එකට භාවිතා කලොත්, අපිට, හැම Framework එකේම තියෙන ලක්ෂණ එකතු කරලා, Gaps නැති කරලා, වඩාත් හොඳ IT පරිපාලනයකට, වඩාත් හොඳ Model එකක් නිර්මාණය කරගන්න පුළුවන්.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------මේවා ලියන්න එපා----------------------------------------------------
+
+
+	
+
+
+									Information Systems Strategy and IT Governance
+					(තොරතුරු පද්ධති සාර්ථකව භාවිතා කරනා ක්‍රමවේදය සහ  තොරතුරු තාක්ෂණ පරිපාලනය)
+
+
+2024 April
+	Question 02)
+		A. List three (3) ITG frameworks that can be used by the organization.                                    [3 Marks] [OK]
+		B. Discuss two (2) potential risks and challenges associated with the lack of a structured ITG framework. [3 Marks]
+		C. Evaluate the impact of three (3) different organisational factors on selecting an appropriate IT 
+		   governance framework.                                                                                   [6 Marks]
+		D. Stakeholder involvement is crucial in the selection process of an IT governance framework. 
+		   Justify the statement with examples.                                                                    [6 Marks]
+		E. Provide a brief overview of the implementation plan for the selected IT governance framework 
+		   within the organization.                                                                                [7 Marks]
+
+
+
+2023 May
+	Question 2) 
+		A. How can you identify if an organisation's IT strategy is not aligned with its overall business 
+		   goals and objectives?                                                                                    [5 Marks]
+		B. Discuss how multiple IT governance frameworks, such as COBIT, ITIL, and ISO 38500, can be 
+		   integrated within an organisation to increase IT governance.                                           [10 Marks]
+		C. Evaluate the impact of different organisational factors on the selection of an appropriate IT 
+		   governance framework.                                                                                    [4 Marks]
+		D. An organisation's level of IT maturity can have a significant impact on its ability to achieve 
+		   effective alignment between its IT strategy and overall business goals. Justify this statement.         [6 Marks]
+
+												Lession 02
+											IT Governance Frameworks
+
+[Slide 2] IT Governance Frameworks
+
+
+[Slide 4] Information Technology Governance Framework
+			(තොරතුරු තාක්ෂණ පරිපාලන Framework එක )
+
+	*  IT Governance Framework එකක් කියන්නේ, <red> ආයතනයක තාක්ෂණික පරිපාලනය (Technology governance එක) කොහොමද හරියටම Manage කරන්නේ කියලා පෙන්නන්න හදපු නීති-රීති මාලාවක්. </red>
+
+	* *  IT Governance Framework එකක් කියන්නේ, <red> ආයතනයක තාක්ෂණය (Computer Systems, Networks, Softwares වගේ දේවල) කොහොමද හරියටම Manage කරන්නේ කියලා පෙන්නන්න හදපු නීති-රීති මාලාවක්. </red>
+
+	<pencil>
+		---මේ ටික ලියන්න ඕන නෑ, ඕන නම් අහන් හිටියම ඇති. 
+
+		* මේ IT Governance Framework හදලා තියෙන්නේ, පරේක්ෂකයෝ සහ එක් එක් Fileds වල Experts ලා විසින්. ආයතන වල, IT 	ක්ෂේත්‍රය, Bussiness Goals ඉටු කරගන්න යොදාගන්න සහ එය වඩා හොඳට Manage කරන්න පුළුවන් වෙන්න
+	
+		* අද කාලේ, මේ IT Governance Frameworks ලෝකේ පුරා භාවිතා කරනවා. මොකද මේවා, Company එකේ Performance එක වැඩි කරන්න 	ගොඩක් උදව් වෙන නිසා.
+	
+		* ITG frameworks විසින්, ආයතනයේ නීති රීති මාලාවට අනුව වැඩ කරනවා කියලා විතරක් නෙවේ. ආයතනයේ Performance එක වැඩි 	කරන්නත් උදව් වෙනවා.
+	
+		* ඒ වගේම, ITG frameworks උදව් වෙනවා, IT කාර්යයන් Monitor කරන්න සහ Improve කරන්න. ඒ හරහා, Business Value එක වැඩි කරගන්න සහ Bussiness Risk එක අඩු කරගන්න.
+	</pencil>
+
+
+
+2024 April
+[Slide 5] ITG frameworks වලට උදාහරණ
+	
+	  		  (කොබිට්)
+	<red>  01. COBIT - Control Objectives for Information and Related Technologies </red>
+				* 	මේක, IT Resouces හරියට Manage කරන්න සහ Control කරන්න හදපු Framework එකක්. 	 
+	
+	<red>  02. ITIL - Information Technology Infrastructure Library </red>
+				* 	මේක, IT Services ලබා දෙන්න සහ Manage කරන්න හොඳම ක්‍රමවේද මොනවද කියලා පෙන්වන්න හදපු Framework 		එකක්.
+	
+	<red>  03. ISO 17999 - Information Technology – Code of Practice for Information Security Management </red>
+				* 	මේක, ආයතනයක තිබෙන, දත්ත හා තොරතුරු, ආරක්ෂා කරනගන්න අනුගමනය කරන්න ඕන නීති මොනවා දැයි 	    පෙන්වීමට හදපු Standed එකක්. (මේක ISO එකෙන්  හදුන්වලා දුන්නේ)
+
+	  		  (වැල් IT)
+	<red>  04. ValIT - Governance of IT Investments </red>
+				* 	මේක, IT වලට Invest කරන මුදලින්, හරි value එකක් ලැබෙනවද කියලා බලන්න හදපු Framework එකක්.
+
+
+
+
+
+[Quiz] 2024 April
+	
+	Question 02)
+		A. List three (3) ITG frameworks that can be used by the organization.                                    [3 Marks]
+
+								Answer
+		* COBIT
+		* ITIL
+		* ISO 17799
+
+
+
+
+
+
+			  (කොබිට්)
+[Slide 6] (01) COBIT - Control Objectives for Information and Related Technologies Framework එක
+
+	* COBIT frameworks එක, හඳුන්වා දුන්නේ Information Systems Audit and Control Foundation කියන සංවිධානය. 
+
+	* මේක IT governance framework එකක් වගේම, ආයතනයක තියෙන IT වැඩ කටයුතු හරියට වෙනවද කියලා බලන්නත් පුළුවන් මේ Framework එකෙන්ම.
+
+	* COBIT එක හඳුන්වලා දීලා තියෙන්නේ, Orgranization එකක, IT Field එක කොහොමද, Direct කරන්නේ සහ Manage කරන්නේ කියලා, වඩාත් හොඳ අවබෝධයක් ලබාගන්න. 
+
+	* COBIT එකෙන් පෙන්නනවා ඔයාට මොන වගේ වැඩද කරන්න තියෙන්නේ කියලා.
+
+	* COBIT කියන්නේ, ආයතනයකට උදව් කරන ToolSet එකක්. මේකෙන් Manages ලාට පුළුවන්,  control කරන්න ඕන අවශ්‍යතා, 
+	technical ප්‍රශ්න, business අවදානම් අතර තියෙන Gap එක Fill කරන්න.
+
+
+
+
+
+
+
+
+
+
+
+Planning to Implement 
+				- ආයතනකයක ITTL Framwork එක පටන් ගද්දි බලන්න ඕන පිරිවිතර 
+					
+			
+			The business perspective 
+				- ආයතනයේ Bussiness Golas ඉටු කරගන්න, IT ක්ෂේත්‍රයේ භාවිතය සම්බන්ධයෙන් බලන්න ඕන පිරිවිතර
+
+			Services management
+				- IT Service Manage කරද්දී අනුගමනය කරන්න ඕන Best Practises
+
+
+			Service Support
+				- Customorට / Admin Panel එකට, අවශ්‍ය IT සේවා ලබා ගැනීමට සහය දැක්වීමට පිළිපැදිය යුතු උපදෙස්.
+
+
+			Service Delivery
+				- Bussiness Requrements IT ක්ෂේත්‍රය හරහා තුලින් ඉටු කරගැනීමට කිරීමට බලන පිරිවිතර
+
+
+			 Security Management
+			 	- Secure IT Service එකක් වෙනවා දැයි බලන පිරිවිතර
+
+
+			 ICT Infrastructure Management 
+			 	- IT ක්ෂේත්‍රයේ සියලුම යටිතල පහසුකම්, Manage කරන ආකාරය පිලිබඳ පිරිවිතර
+
+
+			 Application Management
+			 	- ආයතනයේ IT ක්ෂේත්‍රයට අවශ්‍ය Softwares, Systems වැනි දෑ Manage කිරීමට අදාළ පිරිවිතර
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		* මේක IT governance framework එකක් වගේම, ආයතනයක තියෙන IT වැඩ කටයුතු හරියට වෙනවද කියලා බලන්නත් පුළුවන් මේ Framework එකෙන්ම.
+
+detailed control objectives (නීති රීති)
+domin ()
+high-level control objectives (ඉහල මට්ටමේ නීති)
+
+
+
+318 specific guidelines for controlling IT
+ 
+4 main categories
+34 general guidelines
+
+
+ආයතනයක IT ක්ෂේත්‍රය පාලනය කිරීමට, විශේෂ නීති රීති 318ක් තියෙනවා. 
+මේක කොටස් දෙකකට බෙදෙනවා.
+
+
+(1) ප්‍රධාන කාණ්ඩ 4කට
+(2) සාමාන්‍ය නීති රීති 34ක් විදිහට
+
+
+
+
+
+								ආයතනයක IT ක්ෂේත්‍රය පාලනය කිරීමට, අදාළ වූ විශේෂ නීති-රීති 318
+											(318 Detailed control objectives)
+														|
+														|
+						-----------------------------------------------------------------------------
+						|																			|
+				ප්‍රධාන Domains 4කට 											සාමාන්‍ය නීති-රීති 34කට
+				(4 domains) 												(34 high-level control objectives 34)
+
+
+
+
+
+
+[Slide 15-16] 	Metrics of COBIT 
+				(COBIT Framework එකේ භාවිතා කරන මිනුම් වර්ග)
+
+
+* COBIT Framework එකේදී, භාවිතා කරනා මිනුම් වර්ග 02ක් පවතී.
+		(a) Key <red> goal </red> indicators (KGIs) 
+			(අරමුණු දර්ශකය)
+				
+
+		(b) Key <red> Performance </red> Indicators (KPI)
+			(කාර්ය සාධන දර්ශක)
+				
+
+
+
+
+
+[Slide ] (a) Key  <red>  Goal  </red>  Indicators (KGIs) 
+			 (අරමුණු දර්ශකය)
+
+	
+	* මොනවද මේ මිනුමෙන් මනින්නේ?
+		Bussiness එක අරමුණට යන ගමනද තියෙන්නේ කියා බලයි
+			උදා:- 
+				- Bussiness අවශ්‍යතා වලට අවශ්‍ය වෙන තොරතුරු, ඕනෑම වෙලාවක access කරන්න පුලුවන්ද?
+				- අපේ තොරතුරු Safe ද?
+				- පවතින තොරතුරු සහ සම්පත් විශ්වාසදායකද?
+
+
+
+
+
+[Slide ] (b) Key   <red>    Performance   </red>    Indicators (KPI)
+			 (කාර්ය සාධන දර්ශක)
+
+	කහපාට කොටුව විස්තර කිරීම 
+		- KPI කියන්නේ, 
+
+
+
+
+
+
+
+[Quiz] 2024 April
+
+	Question 02)
+		B. Discuss two (2) potential risks and challenges associated with the lack of a structured ITG framework. [3 Marks]
+			(ආයතනයක ITG Framework එකක් නැති වුවහොත්, මතුවිය හැකි අභියෝග 2ක් පිලිබඳ සාකච්ඡා කරන්න)
+
+												Answers
+
+
+
+			(1) IT ක්ෂේත්‍රය Bussiness Goals සමඟ Allign නොවීම
+					- IT ක්ෂේත්‍රය Bussiness Goals සමඟ Allign නොවීම නිසා, ආයතනයේ, Bussiness Objectives ඉටු නොවේ,
+			
+			(2) Resouces නාස්ති වීම
+					- අනවශ්‍ය ලෙස IT ක්ෂේත්‍රයට මුදල් යෙදවීම නිසා, මුදල් නාස්ති වේ.
+						
+			(3) Projects Fail වීම
+					- Projetcs වලට නිවැරදි Guidence එකක් නැති නිසා Projects Fail වේ
+
+
+
+[Quiz] 2023 May
+	Question 2) 
+		How can you identify if an organisation's IT strategy is not aligned with its overall business 
+		goals and objectives?  [5 Marks]
+
+		(ආයතනක IT ක්ෂේත්‍රය ආයතනයේ Bussiness Goals සහ Objectives එක්ක සමපාත වෙලා නෑ කියලා කොහොමද අඳුරන්නේ?)
+												
+												Answers
+
+
+		(1) IT ක්ෂේත්‍රයට Invest කරපු සල්ලි වලින්, Revenue එකක් ආවේ නැති වුනාම
+		(2) IT Resouces නාස්ති වීම
+		(3) ආයතනයේ, Bussiness Objectives ඉටු නොවීම
+		(4) Projects Fail වීම
+		(5) ආයතනයේ ආදායම අඩු වීම
+
+
+
+
+
+
+[Quiz] 2024 April
+	Question 02)
+	D. Stakeholder involvement is crucial in the selection process of an IT governance framework. Justify the statement with= examples.
+	[6 Marks]
+
+	
+	("ITG Framework එකක් Select කරද්දී, Stakeholder ලා, ඒ වැඩේට දක්වන දායකත්වය, වැදගත් වෙනවා." මේ ප්‍රකාශය සත්‍යාපනය කරන්න)
+
+												Answers
+ 	ඔව්. මොකද,
+
+	(1) වෙනස් වෙනස් Stakeholders ලට තියෙන්නේ, වෙනස් වෙනස් අවශ්‍යතා හා අරමුණු නිසා
+			- එක් එක් Stakeholdersලට තියෙන්නේ, වෙනස් වෙනස් අරමුණු. එම නිසා, සමබර තීරණයක් ගන්න, මේ හැමෝගෙම අදගස් අවශ්‍ය වෙනවා. නැත්නම්, Baised Desition එකක් අරගෙන, වැරදි, Framework එක තෝරාගත්තොත් මුළු Company එකම අනතුරේ
+
+
+	(2) ආයතනයේ, Specific අවශ්‍යතා අනුව, Framework එක නිර්මානය කරගත හැකි නිසා
+			- Stakeholders ලගේ දායකත්වය නිසා, ආයතනයේ Specific Goals මොනවාද යන්න දැනගන්න පුළුවන්. මේ නිසා, Genaralized විදිහට,  Framework එකක් තෝරනවට වඩා, Specilized විදිහට, වඩාත්ම ගැලපෙන Framework එකක් තෝරාගන්න පුළුවන්. නැතිනම් දැනටමත් තිබෙන Framework එකක්, අවශ්‍ය පරිදි Customize කරගන්න පුළුවන්.
+
+	(3) ආයතනයේ අවධානම් හඳුනා ගත හැකි නිසා
+			- Stakeholders ලා සමඟ කතා කිරීමෙන් ආයතනයට මුහුණ දීමට සිදු වෙන, අවධානම් තත්ත්ව ගැන දැනගන්න පුළුවන්. එතකොට, Asssumptions පාදක කරගෙන Framework එකක් තෝරනවට වඩා, Stakeholdersලා පවසන පරිදි ඇති, අවධානම් පාදක කරගෙන Framework එකක් තෝරාගත හැකියි.
+
+
+
+2023 May
+	Question 2) 
+
+	B. Discuss how multiple IT governance frameworks, such as COBIT, ITIL, and ISO 38500, can be  integrated within an organisation to increase IT governance. [10 Marks]
+
+	(COBIT, ITIL, සහ ISO 38500 වගේ, IT governance frameworks කිහිපයක් එකට භාවිතා කරලා, ආයතනයක IT පරිපාලනය දියුණු කරගන්නේ කොහොමද කියලා විස්තර කරන්න)
+
+										Answers
+
+	* COBIT, ITIL, සහ ISO 38500 Frameworks 3හි පවතින්නේ වෙනස් වෙනස්, ලක්ෂණ වේ.
+
+	* උදාහරණයක් ලෙස, COBIT Framwork එක ගමු. මෙහි ඇති ලක්ෂණ වන්නේ, 
+			- IT Field එක කොහොමද, Direct කරන්නේ කියලා බලනවා
+			- IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්නේ කොහොමද කියලා බලන්නේ නෑ
+			- Security Management එක ගැන බලන්නේ නෑ
+
+
+	* උදාහරණයක් ලෙස, ITIL Framwork එක ගමු. මෙහි ඇති ලක්ෂණ වන්නේ, 
+			- IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්නේ කොහොමද කියලා බලනවා
+			- IT Field එක කොහොමද, Direct කරන්නේ කියලා බලන්නේ නෑ
+			- Security Management එක ගැන බලන්නේ නෑ
+
+	* උදාහරණයක් ලෙස, ISO 38500 Framwork එක ගමු. මෙහි ඇති ලක්ෂණ වන්නේ, 
+			- Security Management එක ගැන බලනවා.
+			- IT Field එක කොහොමද, Direct කරන්නේ කියලා බලනවා.
+			- IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්නේ කොහොමද කියලා බලන්නේ නෑ.
+			
+
+	* මේ වගුවෙන් සරලව පෙන්වන්නේ මේක
+			---"capabilities.png" එක මෙතන අඳින්න.
+
+
+	* මේ නිසා, මේ Frameworks 3ම එකට භාවිතා කලොත්, අපිට, හැම Framework එකේම තියෙන ලක්ෂණ එකතු කරලා, Gaps නැති කරලා, වඩාත් හොඳ IT පරිපාලනයකට, වඩාත් හොඳ Model එකක් නිර්මාණය කරගන්න පුළුවන්.
+
+
+
+
+
+
+[Quiz] 2023 May
+	Question 2) 
+		C. Evaluate the impact of different organisational factors on the selection of an appropriate IT 
+		   governance framework. [4 Marks]
+
+		   (නිවැරදි IT governance framework එකක් තොරගනිද්දී, ආයතනයක, මොන වගේ සාධක ගැනද බලන්න ඕනේ?)
+
+		   									Answer
+
+		 (1) ආයතනයේ Stakeholders ලා ගැන 
+		 (2) ආයතනයේ සංකීර්ණත්වය
+		 (3) ආයතනයේ Maturity Level එක
+		 (4) ආයතනයේ පවතින නීති රීති 
+		 (5) ආයතනයේ විශාලත්වය
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+			Information Systems Strategy and IT Governance
+					(තොරතුරු පද්ධති සාර්ථකව භාවිතා කරනා ක්‍රමවේදය සහ  තොරතුරු තාක්ෂණ පරිපාලනය)
+
+
+2024 April
+	Question 02)
+		A. List three (3) ITG frameworks that can be used by the organization.                                    [3 Marks] [OK]
+		B. Discuss two (2) potential risks and challenges associated with the lack of a structured ITG framework. [3 Marks]
+		C. Evaluate the impact of three (3) different organisational factors on selecting an appropriate IT 
+		   governance framework.                                                                                   [6 Marks]
+		D. Stakeholder involvement is crucial in the selection process of an IT governance framework. 
+		   Justify the statement with examples.                                                                    [6 Marks]
+		E. Provide a brief overview of the implementation plan for the selected IT governance framework 
+		   within the organization.                                                                                [7 Marks]
+
+
+
+2023 May
+	Question 2) 
+		A. How can you identify if an organisation's IT strategy is not aligned with its overall business 
+		   goals and objectives?                                                                                    [5 Marks]
+		B. Discuss how multiple IT governance frameworks, such as COBIT, ITIL, and ISO 38500, can be 
+		   integrated within an organisation to increase IT governance.                                           [10 Marks]
+		C. Evaluate the impact of different organisational factors on the selection of an appropriate IT 
+		   governance framework.                                                                                    [4 Marks]
+		D. An organisation's level of IT maturity can have a significant impact on its ability to achieve 
+		   effective alignment between its IT strategy and overall business goals. Justify this statement.         [6 Marks]
+
+												Lession 02
+											IT Governance Frameworks
+
+[Slide 2] IT Governance Frameworks
+
+
+[Slide 4] Information Technology Governance Framework
+			(තොරතුරු තාක්ෂණ පරිපාලන Framework එක )
+
+	*  IT Governance Framework එකක් කියන්නේ, <red> ආයතනයක තාක්ෂණික පරිපාලනය (Technology governance එක) කොහොමද හරියටම Manage කරන්නේ කියලා පෙන්නන්න හදපු නීති-රීති මාලාවක්. </red>
+
+	<pencil>
+		---මේ ටික ලියන්න ඕන නෑ, ඕන නම් අහන් හිටියම ඇති. 
+
+		* මේ IT Governance Framework හදලා තියෙන්නේ, පරේක්ෂකයෝ සහ එක් එක් Fileds වල Experts ලා විසින්. ආයතන වල, IT 	ක්ෂේත්‍රය, Bussiness Goals ඉටු කරගන්න යොදාගන්න සහ එය වඩා හොඳට Manage කරන්න පුළුවන් වෙන්න
+	
+		* අද කාලේ, මේ IT Governance Frameworks ලෝකේ පුරා භාවිතා කරනවා. මොකද මේවා, Company එකේ Performance එක වැඩි කරන්න 	ගොඩක් උදව් වෙන නිසා.
+	
+		* ITG frameworks විසින්, ආයතනයේ නීති රීති මාලාවට අනුව වැඩ කරනවා කියලා විතරක් නෙවේ. ආයතනයේ Performance එක වැඩි 	කරන්නත් උදව් වෙනවා.
+	
+		* ඒ වගේම, ITG frameworks උදව් වෙනවා, IT කාර්යයන් Monitor කරන්න සහ Improve කරන්න. ඒ හරහා, Business Value එක වැඩි කරගන්න සහ Bussiness Risk එක අඩු කරගන්න.
+	</pencil>
+
+
+
+2024 April
+[Slide 5] ITG Frameworks වලට උදාහරණ
+	
+	  		  (කොබිට්)
+	<red>  01. COBIT - Control Objectives for Information and Related Technologies </red>
+				* 	මේක, IT Resouces හරියට Manage කරන්න සහ Control කරන්න හදපු Framework එකක්. 	 
+	
+	<red>  02. ITIL - Information Technology Infrastructure Library </red>
+				* 	මේක, IT Services ලබා දෙන්න සහ Manage කරන්න හොඳම ක්‍රමවේද මොනවද කියලා පෙන්වන්න හදපු Framework 		එකක්.
+	
+	<red>  03. ISO 17999 - Information Technology – Code of Practice for Information Security Management </red>
+				* 	මේක, ආයතනයක තිබෙන, දත්ත හා තොරතුරු, ආරක්ෂා කරනගන්න අනුගමනය කරන්න ඕන නීති මොනවා දැයි 	    පෙන්වීමට හදපු Standed එකක්. (මේක ISO එකෙන්  හදුන්වලා දුන්නේ)
+
+	  		  (වැල් IT)
+	<red>  04. ValIT - Governance of IT Investments </red>
+				* 	මේක, IT වලට Invest කරන මුදලින්, හරි value එකක් ලැබෙනවද කියලා බලන්න හදපු Framework එකක්.
+
+
+
+
+
+[Quiz] 2024 April
+	
+	Question 02)
+		A. List three (3) ITG frameworks that can be used by the organization.                                    [3 Marks]
+
+								Answer
+		* COBIT
+		* ITIL
+		* ISO 17799
+
+
+
+
+
+
+			  (කොබිට්)
+[Slide 6] (01) COBIT - Control Objectives for Information and Related Technologies Framework එක
+
+	* COBIT frameworks එක, හඳුන්වා දුන්නේ "Information Systems Audit and Control Foundation" කියන සංවිධානය. 
+
+	* COBIT framework එක දැන් maintain කරන්නේ IT Governance Institute (ITGI) එකෙන්.
+
+
+	* COBIT කියන්නේ, IT Governce framework එකක් විතරක්ම නෙවෙයි. මෙත් එක්කම පාවිච්චි කරන්න පුළුවන්, Utility Tools කිහිපයකුත් තියෙනවා.
+			1. Maturity models
+					- මේකේන්, ආයතනය කොච්චර පරිණත වෙලාද කියලා මනින්න පුළුවන්
+			
+			2. Critical success factors
+					- මේකෙන් ආයතනය සාර්ථක වෙන්න අනිවාරෙන්ම තියෙන්න ඕන සාධක මොනාද කියලා තීරණය කරන්න පුළුවන්.
+			
+			3. Key goal indicators
+					- මේකේන්, ආයතයේ, Goals Achive වෙනවද කියලා බලන්න පුළුවන්.
+			
+			4. Key performance indicators (KPIs)
+					- ආයතනයේ, Performence එක කොහොමද කියලා මනින්න පුළුවන්.
+
+
+
+[Slide 7]
+	* හැම ආයතනයකම Top Management එකට විශ්වාසයක් හැදෙන්න ඕනේ , ආයතනයේ IT ක්ෂේත්‍රය විශ්වාස කරන්න පුළුවන් සහ IT වලට දාන මුදලින් හොඳ Positive Return එකක් ලැබෙයි කියලා.
+
+
+	* COBIT එක හඳුන්වලා දීලා තියෙන්නේ, Orgranization එකක, IT Field එක කොහොමද, Direct කරන්නේ සහ Manage කරන්නේ කියලා, වඩාත් හොඳ අවබෝධයක් ලබාගන්න. 
+
+	* COBIT එකෙන් පෙන්නනවා ඔයාට මොන වගේ වැඩද කරන්න තියෙන්නේ කියලා.
+
+
+	* COBIT කියන්නේ, ආයතනයකට උදව් කරන ToolSet එකක්. මේකෙන් Manages ලාට පුළුවන්, නීති-රීති (Control Objectives), Technical ප්‍රශ්න, business අවදානම් කියන දේවල් අතර තියෙන Gap එක Fill කරන්න.
+
+
+[Slide 8] 
+
+	* COBIT Framework එක හදලා තියෙන්නේ, ධූරාවලියක් විදිහට
+
+	#"COBIT Hierarchy.html" එක පොතේ කටුවට ඇන්දා. ඒක හරියට පොතේ අඳින්න.
+	#Domins කියන නම රතු පෑනෙන් ලියන්න
+
+
+
+[Slide 9]
+	
+	* මේ Diagram එකෙන් පෙන්නන්නේ, කොහොමද, COBIT Framework එක වැඩ කරන්නේ කියලා.
+	#මේක වැඩක් නෑ
+
+
+
+
+[Slide 10] COBIT Framework එක, බෙදෙන ප්‍රධාන කාණ්ඩ / Domains 04
+		   (COBIT Frameworks Domains And Objectives)
+
+	<pencil>
+		උඩ ඇන්ද Diagram එකේ, දෙවෙනි Hirachy එකේ, COBIT FRAMEWORK එක කොටස් 4කට බෙදලා තියෙන්නේ. ඒ මෙයාලා තමා. Diagram එක Follow කරන ගමන් මේකත් Follow කරන්න.
+	</pencil>
+			
+	<red>	1. Planning and organisation (PO) </red>
+			(සැලසුම් කිරීම සහ සංවිධානය කිරීම)
+
+
+		   	    (ඇකුසිෂන්)
+	<red>	2. Acquisition and implementation (AI) </red>
+			(මිලදී ගැනීම සහ ක්‍රියාත්මක කිරීම)
+	
+
+	<red>	3. Delivery and Support (DS) </red>
+			(බෙදා හැරීම සහ සහාය දැක්වීම)
+
+	
+	<red>	4. Monitoring and Evaluation (ME) </red>
+			(අධීක්ෂණය සහ ඇගයීම)
+
+
+	
+
+[Slide 11] (1) Planning and organisation (PO) </red>
+				(සැලසුම් කිරීම සහ සංවිධානය කිරීම)
+
+
+	* මේ Domain එකෙන් බලන්නේ, IT ක්ෂේත්‍රය කොහොමද, දිගු කාලීන plans (strategies) සහ කෙටි කාලීන plans (tactics) භාවිතා කරලා, ආයතනයේ Bussiness Goals Achive කරගන්නේ කියලා.
+
+	* අපි, ආයතනයේ, දැක්ම, ලඟා කරගන්න, IT ක්ෂේත්‍රය කොහොමද භාවිතා කරන්නේ කියලා හොඳට Plan කරන්න ඕනේ.
+
+	* සැලසුම් කිරීම සහ සංවිධානය කිරීමට, අයත් වෙන කාර්යයන් (Subdomains) 10ක් මේ වන විට හඳුනාගෙන තියෙනවා.
+				(1) Define an IT strategic plan
+				(2) Define the information architecture
+				(3) Define technology direction
+				(4) Define the IT organization
+				(5) Manage the IT investment
+				(6) Communicate aims and direction
+				(7) Manage human resources
+				(8) Assesses risks
+				(9) Manage projects
+				(10) Manage quality
+
+	* සැලසුම් කිරීම සහ සංවිධානය කිරීමේදී, අවධානය යොමු කළ යුතු කරුණු
+		- ආයතනයේ IT ක්ෂේත්‍රය හා Bussiness Plans එකට ගැලපෙනවද? 
+		- සම්පත්  (මුදල්, කාලය, තාක්ෂනය) නාස්ති නොවෙන විදිහට, හරියට පාවිච්චි වෙනවද?
+		- ආයතනයේ හැම කෙනාම, IT Goals මොනවද, ආයතනයට තියෙන අවධානම මොන වගේද, කියලා තේරුම් අරන්ද ඉන්නේ?
+		- IT ක්ෂේත්‍රයේ සහ Risks හරියට Manage කරනවද?
+
+
+
+
+
+    		    (ඇකුසිෂන්)
+[Slide 12] (2) Acquisition and implementation (AI) </red>
+		   (මිලදී ගැනීම සහ ක්‍රියාත්මක කිරීම)
+ 
+
+
+
+	* ආයතනයේ දිගු කාලීන plans (strategies) සාර්ථක කරගැනීමට, මොන වගේ IT Developmens (Solutions) ද කරන්න ඕනේ, කියලා හදුනාගන්න ඕනේ, ඒ හඳුනාගත්ත Developments කරන්න ඕනේ, නැත්නම්, වෙන තැනකින් මිලදී ගන්න ඕනේ. ඊට පස්සේ, ඒ Developments, ආයතනයේ, Bussiness Process වලට ඒකාබද්ධ කරන්න ඕනේ.
+
+
+	* මිලදී ගැනීම සහ ක්‍රියාත්මක කිරීමට, අයත් වෙන කාර්යයන් (Subdomains) 7ක් මේ වන විට හඳුනාගෙන තියෙනවා.
+			(1) Identify solutions
+			(2) Acquire & maintain applications
+			(3) Acquire & maintence infrastructure
+			(4) Develop & maintain procedures
+			(5) Install and accredit systems
+			(6) Manage changes
+			(7) Procure IT resouræs
+
+
+	* ඒ වගේම, ආයතනවල භාවිතා වෙන Systems වල, Maintenance, Enhancements Retirements පවා සම්පුර්ණයෙන්ම මේ Domin එක හරහා සිදු කරගන්න පුළුවන්.
+
+	* මේ Domain එකේදී, IT Developments (Solutions), Services බවට පත් කිරීමට කරනවා.
+	
+
+	* මිලදී ගැනීම සහ ක්‍රියාත්මක කිරීමේදී, අවධානය යොමු කළ යුතු කරුණු
+		- අලුත් Projects වලින්, ව්‍යාපාරික අවශ්‍යතා සපුරාලනවද සහ Budget එක ඇතුලත Deliver කරනවද? සහ වෙලාවට වැඩේ වෙනවද?
+
+
+
+[Slide 13] (3) Delivery and Support (DS)
+			(බෙදා හැරීම සහ සහාය දැක්වීම)
+
+
+	* මේ Domin එකෙන් බලන්නේ, ආයතනයේ, stakeholders ලට, අවශ්‍ය IT services හරියට ලබා දෙනවද කියලා. මේ Services වලට අයිති වෙන්නේ, සේවා ලබා දීම, Technical සහාය දීම, හොඳ performance එකක් maintain කිරීම, ආරක්ෂාව සහ Technical පුහුණුව වගේ දේවල්.
+
+
+	* බෙදා හැරීම සහ සහාය දැක්වීමට, අයත් වෙන කාර්යයන් (Subdomains) 13ක් මේ වන විට හඳුනාගෙන තියෙනවා.
+			(1) Define & manage service levels
+			(2) Manage third-party services
+			(3) Manage performance & capacity
+			(4) Ensure continuous service
+			(5) Ensure systems security
+			(6) Identify & allocate costs
+			(7) Educate & train users
+			(8) Assist & advise customers
+			(9) Manage the configuration
+			(10) Manage problems and incidents
+			(11) Manage data
+			(12) Manage facilities
+			(13) Manage operations 
+ 
+
+
+
+
+	* බෙදා හැරීම සහ සහාය දැක්වීමේදී, අවධානය යොමු කළ යුතු කරුණු
+		 - IT ක්ෂේත්‍රයට යන වියදම් අඩු කරගෙන නිවැරදිව manage කරලා තියෙනවද? සේවකයෝ IT ක්ෂේත්‍රය හරියට (efficient) සහ ආරක්ෂිතව (safely) පාවිච්චි කරනවද?
+
+		 - ආරක්ෂණ ක්‍රම හරියට Implement කරලා තියෙනවද? Confidentiality, Integrity, Availability වගේ දේවල්.
+
+
+
+
+[Slide 14] (4) Monitoring and Evaluation (ME)
+			(අධීක්ෂණය සහ ඇගයීම)
+
+
+	* හැම IT Process එකක්ම, නිතිපතා Check කරන්න ඕනේ, ඒ Process එකේ, Quality එක රැක ගන්න
+
+	* අධීක්ෂණය සහ ඇගයීමට, අයත් වෙන කාර්යයන් (Subdomains) 4ක් මේ වන විට හඳුනාගෙන තියෙනවා.
+			- Monitor the processes
+			- Assess internal control adequacy
+			- Obtain independent assurance
+			- Provide for independent audit
+
+	* අධීක්ෂණය සහ ඇගයීමේදී, අවධානය යොමු කළ යුතු කරුණු
+		 - IT ක්ෂේත්‍රයේ, Performence එක නිතර Measure කරලා බලනවද, ප්‍රශ්න ගොඩක් කල් යනකල් තියන් ඉන්නවද
+		 - අවදානම (Risks), පාලනය (Control), අනුකූලතාව (Compliance), ක්‍රියාකාරීත්වය (Performance) කියන, මේ හතර දේවල් කොච්චරද කියලා මැනලා management එකට report කරනවද?
+
+
+
+
+
+[Slide 15-16] 	Metrics of COBIT 
+				(COBIT Framework එකේ භාවිතා කරන මිනුම් වර්ග)
+
+
+#මේ Slide දෙකේ පිළිවෙල මාරු වෙලා තිබ්බේ. පහල ඒක හදලා තියෙනවා
+
+
+
+
+* COBIT Framework එකේදී, භාවිතා කරනා මිනුම් වර්ග 02ක් පවතී.
+		(a) Key <red> goal </red> indicators (KGIs) 
+			(අරමුණු දර්ශකය)
+				
+
+
+		(b) Key <red> Performance </red> Indicators (KPI)
+			(කාර්ය සාධක දර්ශක)
+			
+				
+
+
+
+
+
+[Slide ] (a) Key  <red>  Goal  </red>  Indicators (KGIs) 
+			 (අරමුණු දර්ශකය)
+
+	
+	* මේ මිනුමෙන්, Bussiness එක, ඔවුන්ගේ අරමුණට ගමන් කරනවා දැයි බලයි
+			
+			උදා:- 
+					- Bussiness අවශ්‍යතා වලට අවශ්‍ය වෙන තොරතුරු, ඕනෑම වෙලාවක access කරන්න පුලුවන්ද?
+					- අපේ තොරතුරු Safe ද?
+					- පවතින තොරතුරු සහ සම්පත් විශ්වාසදායකද?
+
+					වැනි තොරතුරු මෙහිදී පරික්ෂා කරයි.
+
+
+
+[Slide ] (b) Key   <red>    Performance   </red>    Indicators (KPI)
+			 (කාර්ය සාධන දර්ශක)
+
+
+	* මේ මිනුමෙන්, Bussiness එක, අරමුණට ගමන් කිරීමට, කළ යුතු සියලු දේ සිදු කරනවා දැයි බලයි
+				උදා:- Sales Target එක  (මේක Bussiness එකේ, ලාභ ලැබීමේ අරමුණට, ගමන් කිරීමට අත්‍යාවශ්‍ය දෙයක්)
+
+						- කොච්චර Sales වෙලා තියෙනවද? 
+						- Target එක Achive වෙලාද? 
+						- අතීතයේ Sales කොච්චර හොඳට වෙලා තියෙනවද? 
+
+						මේ වගේ දත්ත භාවිතා කරලා, ආයතනයේ Team එක Motivate කරලා, Sale එක වැඩි කරගන්න පුළුවන්. එතකොට, Bussiness එකේ ලාභ ලැබීමේ අරමුණට ගමන් කිරීම පහසුයි.
+						
+
+
+	කහපාට කොටුව විස්තර කිරීම 
+		- Doctor කෙනෙක්, ලෙඩෙක්ගේ, Blood pressure එක, Cholesterol වගේ දේවල් බලනවා වගේ, කාර්ය සාධන දර්ශකයෙන් තමා, (Key Performance Indicators) ආයතනක තත්වය බලන්නේ.
+
+
+
+
+[Slide 18] (02) Information Technology Infrastructure Library (ITIL)
+
+	* ITIL (Information Technology Infrastructure Library) කියන්නේ, බ්‍රිතාන්‍යයේ රජයෙන් හදපු Framework එකක්. මේක හදන්න හේතුව තමා, රජයේ, IT ක්ෂේත්‍රයට අදාළ කටයුතු කාර්යක්ෂමව හා ඵලදායිව කරගන්න එක
+
+	* 2000 වසරේදී, British Standards Institute (BSI) කියන ආයතනය එකතු වෙලා, මේ Framework එක යාවත්කාලින කරලා තියෙනවා. ඊට පස්සේ මේක, බ්‍රිතාන්‍යයේ, standard එකක් බවට පත් කරනවා. 
+
+	* මේකේ, "පොත් (Books)" කියලා, Consepet එකක් තියෙනවා. මෙතන පොත් 8ක් තියෙනවා. මේ පොත් වල තියෙනවා, IT ක්ෂේත්‍රය කොහොමද Manage කරන්න ඕනේ? සහ කොහොමද IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්න ඕනේ කියලා.
+
+	* ITIL Framework එකේ විශේෂත්වය තමයි, මේක ප්‍රධානව Focus කරන්නේ, IT ක්ෂේත්‍රය කොහොමද Manage කරන්න ඕනේ? සහ කොහොමද IT ක්ෂේත්‍රයට අදාළ Services ලබා දෙන්න ඕනේ කියන එක ගැන.
+
+
+
+
+[Slide 19] 
+
+	* මේ ITIL Framework එකෙන්, IT Governance කියන සම්පුර්ණ ක්ෂේත්‍රයම ආවරණය වෙන්නේ නෑ. සහ IT Management වලට අදාලව සිදු වෙන  සමහර තීරණ ගැනීම් ආවරණය වෙන්නෙත් නෑ. 
+			- මේක IT ක්ෂේත්‍රයට පොඩි Support එකක් තමා දෙන්නේ. නමුත්, ලෝකය පුරා ලොකු පිළිගැනීමක් තියෙනවා මේ Framework එකට.
+
+	* ITIL Framework එක කියන්නේ Process-oriented Framework එකක්. ඒ කියන්නේ, මේකෙන් Focus කරන්නේ, ආයතන වලට IT ක්ෂේත්‍රය තුල පවත්වා ගත යුතු Best Pratises මොනවද යන්නයි.
+
+	* මේ Framework එකෙන්, IT ක්ෂේත්‍රය තුලදී, "මොන වගේ දෙයක්ද ද කරන්න ඕනේ? (WHAT to do)" කියලා දෙනවා. නමුත් "එය කොහොමද කරන්නේ? (HOW to do)" කියන දේ කියලා දෙන්නේ නෑ. 
+
+
+	* මේ framwork එකෙන් කරන්නේ, ලෝකයේ වෙනත් ආයතන විසින්, IT ක්ෂේත්‍රය පරිපාලනය කිරීමට භාවිතා කරපු ක්‍රම, මොනවද කියලා, කියලා දෙන එක.
+
+
+
+[Slide 20] Diagram එක පැහැදිලි කිරීම
+
+	<pencil>
+		පින්තුරයේ, වම හා දකුණ හා මැද ක්‍රීම් පාට විශාල Focus කරන්න 
+	</pencil>
+
+	
+	* 	මේ Diagram එකේ මුලිකවම පෙන්වන්නේ, ආයතයේ, Bussiness Side එක හා Technology Side එක අතර, ආයතනයේ IT ක්ෂේත්‍රය (ක්‍රීම් 		පාට	කොටස) පාලමක් වගේ ක්‍රියා කරන බව. 
+			#"bridge_diagram.png" එකේ පින්තුරය මෙතන අඳින්න
+
+
+	* 	මේ Diagram එකේ, කොටු හැඩයන් වලින් නිරුපනය වෙන්නේ, Books (පොත්) 8යි.
+
+	
+	* 	මේ Diagram එකේ, Unique ගතියක් තමා කොටු එකිනෙක Overlap වීම.
+	
+	
+	* 	කොටු එකිනෙක Overlap වීමෙන් නිරුපනය වෙන්නේ, එක කොටුවකින් කරන කාර්යයට, සම්බන්ධ වෙලා තියෙන අනිත් කොටුත් වැදගත් 		වෙනවා කියලා. මේ උදාහරණය බැලුවම මේක පැහැදිලි වෙයි.
+			 #"overlapping_expained.png" පින්තුරය මෙතන ඇඳගන්න.
+
+	
+	* 
+
+
+

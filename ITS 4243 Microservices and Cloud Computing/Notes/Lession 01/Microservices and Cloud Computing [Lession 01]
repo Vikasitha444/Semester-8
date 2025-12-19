@@ -1,0 +1,1049 @@
+									Microservices and Cloud Computing
+											Lession 01
+											Introduction
+2023 May
+Question 1)
+	A. Briefly explain your understanding on Software Architectural Style. 							(02 marks)
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+									Microservices and Cloud Computing
+											Lession 01
+								The Emergence of Microservices Architecture
+								 (Microservices Architecture ක්‍රමවේදයේ මතු වීම)
+
+#Architecture == Software හදන ක්‍රමය
+
+#Architecture කියන්නේ ගෙයක් හදනවා කියන තේරුම
+#Software Arcvhitectrue කියන්නේ, Software එකක් හදනවා කියන තේරුම
+
+#Slide 32 Unsatisfed
+
+
+
+
+
+
+[Slide ] Microservices Architecture කියන්නේ මොකද්ද?
+	
+	* Microservices Architecture කියන්නේ, "මෘදුකාංග නිර්මාණය කරන්න භාවිතා කරන ක්‍රමවේදයක්"
+	* එහෙනම්, දැන් අපි බලමු, මොනවද මේ, "මෘදුකාංග නිර්මාණය කරන්න පාවිච්චි කරන ක්‍රමවේද" කියලා?
+	
+
+
+2023 May
+[Slide 4] Introduction to Software Architectures / Software Architectural Styles
+			(මොනවද මේ "මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රම" කියන්නේ?)
+
+	* Software එකක්, Organize කරන්න සහ හදන්න පාවිච්චි කරන සම්මත ක්‍රමවේද වලට තමා, මේ, "මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රමවේද" කියන්නේ.
+
+	*  මේකෙන්, Software එක කොහොමද, ගොඩනගන්න ඕනේ? කොහොමද බෙදා හරින්න (Deploy කරන්න) ඕනේ? සහ කොහොමද Maintain කරන්න ඕනේ කියලා කියලා දෙනවා.
+
+	* හොඳ මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රමවේදයකට (Achitecture එකකට) Software එකක, Scalability එක, Maintainability එක සහ Performance එක පවත්වාගෙන යන්න පුළුවන්.
+
+
+	* අලුත් Software එකක් නිර්මාණය වෙන්නේ, මේ ප්‍රධාන ක්‍රම 03 භාවිතා කිරීමෙන්	
+			• <red> Monolithic Architecture එක :- මුළු Program එකම, තනි කොටසක් විදිහට හදන ක්‍රමය </red>
+			• <red> Service-Oriented Architecture එක :- Services වෙනම දෙන ක්‍රමය  </red>
+			• <red> Microservices Architecture එක :- Program එක, කුඩා කෑලි වලට වෙන් කර හදන ක්‍රමය </red>
+
+
+
+
+
+[Slide 5] බහුලව භාවිතා වන, "මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රම"
+		 (Common Software Architectural Styles)
+	+-----+---------------------------+------------------------------------------+--------------------------------+
+	| අං. | Architecture වර්ගය        | විස්තරය                                  	| උදාහරණ                        |
+	+-----+---------------------------+------------------------------------------+--------------------------------+
+	| 01  | Layered (N-Tier)          | Layers වලට බෙදා නිර්මාණය කරයි          	| බැංකු පද්ධති, විශාල Systems   |
+	|     |                           | (Presentation, Business Logic, etc.)       	|                                |
+	+-----+---------------------------+------------------------------------------+--------------------------------+
+	| 02  | Client-Server             | Client ඉල්ලීම, Server විසින් ලබා දේ    		| Websites, Email, WhatsApp      |
+	+-----+---------------------------+------------------------------------------+--------------------------------+
+	| 03  | Monolithic                | මුළු System එකම එක unit එකක් ලෙස       | Calculators, Unit convertors   |
+	|     | 			              | සාදයි                                    	|                                |
+	+-----+---------------------------+------------------------------------------+--------------------------------+
+	| 04  | Service-Oriented (SOA)    | නැවත භාවිතා කළ හැකි services භාවිතයෙන් | Payment Gateways, Google Maps  |
+	|     |                           | නිර්මාණය කරයි                            	|                                |
+	+-----+---------------------------+------------------------------------------+--------------------------------+
+	| 05  | Microservices             | කුඩා, ස්වාධීන services වලට බෙදා        	| PickMe Food (User, Restaurant,|
+	|     | 				    	  | නිර්මාණය කරයි                            	| Order, Payment Services ) 	|
+	+-----+---------------------------+------------------------------------------+--------------------------------+	|
+	| 06  | Event-Driven              | සිදුවීම් (Events) වලට අනුව ප්‍රතිචාර    		| Share market apps, Betting,   |
+	|     |                           | දක්වන ආකාරයට නිර්මාණය කරයි            | IoT systems                   |
+	+-----+---------------------------+------------------------------------------+--------------------------------+
+	| 07  | Pipe-and-Filter           | දත්ත processing steps (filters)         	| Image processing,          	|
+	|     |                           | මාලාවක් හරහා ගලායන ආකාරයට නිර්මාණය  |        						|
+	+-----+---------------------------+------------------------------------------+--------------------------------+				
+
+
+
+[Slide 6] Why Architecture Matters?
+			(ඇයි මේ "මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රමයන්" භාවිතා කිරීම වැදගත් වෙන්නේ?)
+
+	* Software එකේ සෑම කොටසක්ම, වෙන වෙනම පවත්වාගෙන යන්න උදව් කරන නිසා
+			- database එක, frontend එක, backend එක, වගේ Software එකේ කොටස් වෙන වෙනම තියෙන්නේ. මේ නිසා, එක කොටසක Bug එකක් ආවත් අනෙක් කොටස් වැඩ කරනවා.
+
+	* Team එකට, Software එක Develop කරන ප්‍රමාණය, වැඩි කරන්න පුළුවන් වෙන නිසා.
+			- Team එකේ අයට, වෙන වෙනම, Software එකේ කොටස් බෙදලා දෙන්න පුළුවන් Develop කරගෙන යන්න. මේ නිසා කාර්යක්ෂමවතාව වැඩියෙන් Software එක Develop කරනන පුළුවන්.
+
+	* තාක්ෂණික දෝෂ අඩු කරන්න සහ Update දෙන්න පහසු වෙන නිසා
+			- ගැලපෙන "මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රමයක්" භාවිතා කලොත්, Code එක Update කරන එක, Bugs හදන එක ගොඩක් ලේසි වෙනවා.
+
+	* තාක්ෂණික පරිණාමයට හැඩ ගැහෙන්න පුළුවන් නිසා
+
+
+
+	* නිවැරදි "මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රමය" භාවිතා කිරීම, Software එකේ, cost එකට, performance එකට, සහ reliability එකට බලපාන නිසා.
+		
+
+
+
+
+
+
+[Slide 7] Evolution : Monolithic → SOA → Microservices
+		("මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රම"වල පරිණාමය)
+
+
+
+	* "මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රම" පරිණාමය වී ඇත්තේ පහත ආකාරයටය.
+
+			Monolithic Architecture එක 
+			(මුළු Program එකම, තනි කොටසක් විදිහට හදන ක්‍රමය) 
+							|
+							v
+			Service-Oriented Architecture එක 
+			(Services වෙනම දෙන ක්‍රමය )
+							|
+							v
+			Microservices Architecture එක 
+			(Program එක, කුඩා කෑලි වලට වෙන් කර හදන ක්‍රමය)
+
+
+	<pencil>
+		* මේකෙදි, පරිණාමයක් වුනාට, Monolithic Architecture එක වගේ පරණ Achitectures, භාවිතයෙන් අයින් වෙලා නෑ. තාම මේවා භාවිතා 	වෙනවා.
+
+		* මේකෙදි, අපි Project එකට ගැලපෙන ආකාරයට Architecture තෝරාගන්න ඕනේ.
+				උදා:- 	- Calculatorයක් වගේ පොඩි Software එකකට, Monolithic Architecture එක ගැලපෙනවා
+						- E commarce Site එකක් වගේ ලොකු Software එකකට, Microservices Architecture එක ගැලපෙනවා
+	</pencil>
+
+
+
+------------------------------------------------------------------------------------------------------------ -----------------------------
+	මෘදුකාංග		|		විස්තරය 			|	Program එකේ, වෙන වෙනම ඇති 	|		වාසි  			 |			අවාසි
+	නිර්මාණය	 	|							|	Module හෝ Functiion			|						 |
+	කිරීමේ ක්‍රමය 	|							|	අතර කතා කරන ක්‍රමය 			|						 |
+------------------------------------------------------------------------------------------------------------ -----------------------------
+					|							|									|						 |
+					|							|									|						 |
+Monolithic 			|	මුළු Program එකම, 		|	එකම Program එක තුල ඇති  	|	සරලයි 				 |	Scale කරන්න අමාරුයි
+Architecture එක 	|	තනි කොටසක් විදිහට  	|	Function අතර Commucation 		|	පහසුයි 				 |	Maintain කරන්න අමාරුයි
+					|	හදන ක්‍රමය 				|	කිරීමක් අවශ්‍ය නැත 				|						 |
+------------------------------------------------------------------------------------------------------------ -----------------------------
+					|							|									|						 |
+Service-Oriented 	|	Services වෙනම 			|	 XML/ HTTP වලින් 				|	නැවත නැවත 		 |	Scale කරන්න අමාරුයි	
+Architecture එක 	|	දෙන ක්‍රමය  			|									|	භාවිතා කරන්න 		 |	Bottlenekcs එන්න පුළුවන්
+					|							|									|	පුළුවන්				 |
+					|							|									|						 |
+------------------------------------------------------------------------------------------------------------ -----------------------------
+					|							|									|						 |
+					|							|									|						 |
+Microservices 		|	Program එක, කුඩා 		|	HTTP REST, gRPC 				|	Scale කරන්න පුළුවන් | 	Complex
+Architecture එක 	|	කෑලි වලට  				|	messaging						|	Flexible			 |
+					|	වෙන් කර හදන ක්‍රමය 	|	වලින්							|						 |
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+[Slide 8] 	(01) Monolithic Architecture
+				 (මුළු Program එකම, තනි කොටසක් විදිහට හදන ක්‍රමය)
+
+
+	* Monolithic Architecture එක කියන්නේ, මුළු Program එකම, තනි කොටසක් විදිහට හදන ක්‍රමයකට.
+
+	* මේ ක්‍රමයේදී, User interfaces, Business logic, Data access layers වගේ හැම කොටසක්ම එක Program එකක් විදිහට හදනවා, භාවිතා කරනවා,  සහ Maintain කරනවා.
+
+
+
+	<pencil>
+		පින්තුරය පැහැදිලි කිරීම
+			* මේකේ, Clients ලා E Commarce Website එකට එනවා පේනවා.
+			* ඊට පස්සේ E commanrce Srvices Access කරනවා
+			* මේකෙදි, ඔක්කොම Services පෙන්වලා තියෙන්නේ එක තනි Box එකක් ඇතුලේ
+			* එකෙන් පෙන්වන්නේ මේ E comarce website එක Monilitic Architecture එකට හදලා තියෙන්නේ කියලා
+	</pencil>
+
+
+
+
+[Slide 9] 
+		
+		* මේ ක්‍රමය භාවිතයෙන්, Software එකක් මුලින්ම නිර්මාණය කරන්න ලේසියි. නමුත් Maintain කරන්න අමාරුයි
+
+		* Monolithic Architecture එකේ, Service එකකට, තව Service එකක් බැඳී පවතී (Tight coupling). මේ නිසා, Updates හා Deployments කරද්දී, ඉතා ප්‍රවේශමෙන්, අනිත් Services වලට බලපෑමක් නොවන ලෙස කරන්න ඕනේ.
+
+		* මේ ක්‍රමය, සරල හා පටන් ගන්න පහසු නිසා ජනප්‍රිය වෙලා තියෙනවා.
+
+		* මේක ගොඩක් රළු Mehtord එකක් නිසා, Scale කරන්න සහ Maintain කරන්න අමාරුයි.
+
+
+[Slide 10] Importance of Monolithic Systems
+			(Monolithic Systems වල වාසි)
+
+	* සරල බව
+	* පිරිවැය අවමයි
+	* වේගවත්
+	* ආරක්ෂාව හොඳයි 
+	* පරණ System වලට සහය දක්වයි
+
+
+[Slide 11] Characteristics of Monolithic Architecture
+			(Monolithic Architecture එකේ ලක්ෂණ)
+
+	* සම්පුර්ණ Project එකම එක Code එකක් තුල පවතී
+	* එක Service එකකට, තව Service එකක් බැඳී පවතී (Tight coupling)
+	* හැම Function එකකටම, එකම Memory එක Share කරගනී. (Shared Memory)
+	* සියලුම දත්ත එක Database එකකට Save වේ
+	* Scale කරන්න අපහසුය
+	* Layers වලින් සැදී ඇත (Presentation layer (UI), Business layer (logic), Data layer (database) වගේ layers වලින්, Program එක organize කර තිබේ) 
+
+
+
+
+
+[Slide 12] Key Components of Monolithic Architecture
+			(Monolithic Architecture එකේ පවතින ප්‍රධාන සංරචක)
+
+	* User Interface (UI) එකක්
+	
+	* Application Logic Layer එකක්
+		 - මේ Layer එක, Software එකේ Logic එක තීරණය කරයි	
+		 	උදා:- 	- Button එකක් Click කළාම වෙන්න ඕනේ මොකද?
+		 			- Data ටික Save වෙන්න ඕනේ කොහෙටද?
+
+	* Data Access Layer එකක්
+		- මේ Layer එක Database එක සමඟ ගනුදෙනු කරයි
+
+
+	* Database එකක්
+
+	* External Dependencies 
+		- මේවා, වෙන applications වලට Connect වෙන්න භාවිතා කරයි
+
+	* Middleware
+		- Software එක සමඟ ගැටෙන Usersලට උදව් කරන්න භාවිතා කරයි.
+		  උදා:- Authentication / logging වගේ දේවල්
+
+
+
+
+[Slide 13] Design Principles of Monolithic Systems
+		(Monolithic Architecture එක භාවිතයෙන් Software එකක් නිර්මාණය කරන විට, පිළිපැදිය යුතු මුලධර්ම)
+
+
+	* Code එක කොටස් වලට බෙදන්න ඕනේ (Modularity)
+	* ඒ එක එක කොටස් වෙන වෙනම හදන්න ඕනේ (Separation of Concerns)
+	* අනාගතයේදී, Scale කරන්න පුළුවන් වෙන විදිහට හදන්න ඕනේ
+	* එක Function / Module එකක තිබෙන තොරතුරු, අනිත් Function / Module එකට Access කරන්න බැරි විය යුතුයි (Encapsulation)
+	* Code එක පිළිවෙලට තියෙන්න ඕනේ (Consistency)
+
+
+
+[Slide 14] Challenges in deploying Monolithic Architecture
+			(Monolithic Architecture එකේ අවාසි)
+
+	* හදපු Software එක Deploy කරන්න වැඩි කාලයක් ගතවේ
+	
+	* Software එක Down වෙන ප්‍රමාණය වැඩි විය හැක
+		 - සම්පුර්ණ Project එකම එක Code එකක් තුල පවතින නිසා, පොඩි Update එකක් ලබාදෙන්නත්, සම්පුර්ණ Software එකම Down කළ යුතු වේ.
+
+
+	* Scalability එක අඩුය
+	
+	* සම්පත් භාවිතය වැඩිය
+
+	* Flexibility එක අඩුය
+
+
+
+
+[Slide 15] (02) Service-Oriented Architecture (SOA)
+				(Services වෙනම දෙන ක්‍රමය)
+
+	#rapidAPI website එක උදාහරණක් විදිහට ගන්න
+
+	* Service-Oriented Architecture එක කියන්නේ, Services වෙනම දෙන ක්‍රමයකට. මේකෙදි, Software එකේ විවිධ කොටස් නැවත නැවත භාවිතා කරන්න පුළුවන් වෙන විදිහට හදනවා.
+
+	* සාමානයෙන්, SOA වල, Softwares හදන්න, Services ලබා දෙනවා. මේ Servies Access කරන්න Internet එක හරහා අදාළ Service එකට කතා කරන්න ඕනේ. SOA හී, එක හැම Service එකක්ම, Function එකක් ලෙස සැලකේ. SOA ක්‍රමය හදලා තියෙන්නේ, Developers ලට, පහසුවෙන්, භාවිතා කල හැකි පරිදිය.
+
+
+
+
+[Slide 16] 
+
+	* SOA ක්‍රමය මඟින්, දැනටමත් පවතින Services එකතු කර නව Application එකක් නිර්මාණය කරන්න පුළුවන්.
+			උදා:- 	Payment Service 
+					User Login Service
+					Email Service
+
+					කියන මේ Service 3 එකතු කරලා, E commarce Website එකක් හදන්න පුළුවන්.
+
+	* SOA හී System එකක් නිර්මාණය කිරීමේදී, අනුගමනය කළ යුතු, නිර්මාණ මූලධර්ම (design principles) පවතී. 
+	  <pencil> මේ මුලධර්ම ගැන අපිට නෑ </pencil>
+
+
+
+[Slide 17] The different characteristics of SOA are as follows
+			(SOA ක්‍රමයේ විවිධ ලක්ෂණ)
+
+
+	* විවිධ Services වලට එකිනෙකට කතා කරන්න පුළුවන් බව.
+
+	* Services මඟින් , encapsulation කිරීම, Servies සොයාගැනීම, Services එකතු කරලා අලුත් Services ලබා දීම (composition) සඳහා විවිධ 	   	 ක්‍රම පැවතීම.
+
+	* Services නැවත භාවිතා කිරීමේ සහ ඒකාබද්ධ කිරීමේ හැකියාව පැවතීම
+
+	* Service එකකට ලබාදෙන, Service Level Agreement (SLA) එකෙන්, Service එකේ, සේවා ගුණාත්මක බව {Quality of Services (QoS) එක}  	 සහතික කිරීම.
+
+	* SOA ක්‍රමය මඟින්, Loosely coupled services ලබාදීම
+
+	* Service එක ලෝකේ කොහේ Run වුනත්, Service එක ලබා ගත හැකි වීම.
+
+
+[Slide 18] 
+
+
+	* Service Oriented Architecture එකේ ප්‍රධාන භූමිකා 02ක් පවතී.
+		(1)  Service Provider (සේවා සපයන්නා)
+				- සේවා සපයන්නො කියන්නේ, Service එක නිර්මාණය සහ නඩත්තු කරන පිරිසට. මෙයාලා "Services registry" කියන තැනක, මෙයාලගේ Services Publish කරනවා
+				
+
+		(2)	 Service Consumer (සේවාව භාවිතා කරන්නා)
+				- "Services registry" එකේ Publish කරලා තියෙන, Services භාවිතා කරන්නේ මෙයාලා. 
+
+
+
+[Slide 19]
+	පින්තුරය පැහැදිලි කිරීම
+		# මුලින්ම දකුණේ Service Consumerගේ පැත්තෙන් පටන් ගන්න
+
+
+		1. Service Consumer (සේවාව භාවිතා කරන්නා) විසින් 	→ Service request (ඉල්ලීමක්) යවනවා 	→ Service Provider (සේවා සපයන්නා)ට
+		2. Service Provider (සේවාව සපයන්නා) විසින් 		→ Service response (පිළිතුර) ලබාදෙනවා 	→ Service Consumer (භාවිතා කරන්නා)
+
+
+[Slide 20] 
+	* මෙහිදී, Service ගොඩක් එකතු කිරීමෙන්, "Workflows" කියන දේ නිර්මාණය කරගත හැක.
+
+	* ප්‍රධාන "Workflows" වර්ග 02ක් ඇත.
+			(1) සේවා මධ්‍යගත පාලනය (Service Orchestration)
+					- සේවා මධ්‍යගත පාලනයේදී, එක ප්‍රධාන Service/Controller එකක් විසින්, අනෙක් Services පාලනය කරනු ලබයි.
+
+			(2) සේවා විමධ්‍යගත පාලනය (Service Choreography)
+					- සේවා වීමධ්‍යගත පාලනයේදී, සේවාවන් පාලනය කරන්න කවුරුත් නෑ
+		
+
+
+
+
+
+[Slide 21]
+		#SOA Diagram.png එක මෙතන අඳින්න.
+
+
+
+
+[Slide 22] SOA ක්‍රමය භාවිතා කිරීමේදී, පිළිපදින, ප්‍රධාන මුලධර්ම 07
+			(Guiding Principles of SOA)
+
+	
+	01) ප්‍රමිතියකින් යුතුව හදපු, Service Contract එකක් තියෙන්න ඕනේ
+		(Standardized service contract)
+			- 	Service එකක් භාවිතා කරන ආකාරය, නිවැරදිව Document කරලා තියෙන්න ඕනේ. මේකෙදි, හැමෝම, එකම Standed එක භාවිතා 	 කරන්න ඕනේ.
+
+
+	02) Services එකිනෙකට Loose coupling වෙලා තියෙන්න ඕනේ
+		(Loose coupling)
+			- 	එක Service එකක් නිසා, තවත් Service එකකට ප්‍රශ්නයක් නොවෙන විදිහට Servies තියෙන්න ඕනේ.
+
+
+	03) Service එකේ Backend එක User නොදකින්න ඕනේ
+		(Abstraction)
+			- User විසින් Service එකේ Backend එක නොදකින්න ඕනේ.
+
+
+	04) නැවත භාවිතා කළ හැකි බව
+		(Reusability)
+			- එකම Service එක, විවිධ තැන්වල, විවිධ Usersලට භාවිතා කළ හැකි වෙන්න ඕනේ.
+
+
+	05) Service එකට තනියෙන් වැඩ කරන්න පුළුවන් වෙන්න ඕනේ
+		(Autonomy)
+			- Service එකකට, වෙනත් Services වල බලපෑමකින් තොරව තනියෙම වැඩ කරන්න පුළුවන් වෙන්න ඕනේ.
+
+
+	06) Service එක Consumersලට පහසුවෙන් හොයාගන්න පුළුවන් වෙන්න ඕනේ
+		(Discoverability)
+
+
+	07) Services ගොඩක් එකතු කරන්න පුළුවන් වෙන්න ඕනේ
+		(Composability)
+			- Service ගොඩක් එකතු කරලා, Complex වැඩ කරගන්න පුළුවන් වෙන්න ඕනේ.
+
+
+[Slide 23] 	SOA ක්‍රමයේ වාසි
+			(Advantages of SOA)
+
+	* Service නැවත නැවත භාවිතා කළ හැකි වීම
+	* පහසුවෙන් නඩත්තු කළ හැකි වීම
+	* Platform independent වීම (කිසිම OS එකක් මත රඳා නොපැවතීම)
+	* ඕනෑම අවස්ථාවකදී භාවිතා කළ හැකි බව (Availability)
+	* විශ්වාසනීයත්වය
+	* Scalability එක
+	
+
+
+[Slide 24] SOA ක්‍රමයේ අවාසි
+			(Disadvantages of SOA)
+
+	* Service එකකට ඇති, Load එක වැඩි වන විට, Service එකේ Response Time එක වැඩි වීම
+	* SOA Services මිලදී ගැනීමට, විශාල මුදලක් අවශ්‍ය වීම
+	* Services විශාල ප්‍රමාණයක් තියෙද්දී, ඒවා manage කිරීම අපහසු වීම
+
+
+
+[Slide 25] SOA ක්‍රමයේ ප්‍රායෝගික භාවිත
+			(Practical applications of SOA)
+
+
+	* බොහෝ ගුවන් හමුදා, SOA ක්‍රමවේදය භාවිතා කරලා, "situational awareness systems" නිර්මාණය කරනවා
+	* සෞක්‍ය ක්ෂේත්‍රයේ සේවා වැඩි දියුණු කිරීමට SOA භාවිතා කරනු ලබයි
+	* බොහෝ Apps හා Games වල SOA භාවිතා වෙනවා
+
+
+
+[Slide 26] (03) Microservices Architecture
+				(Program එක, කුඩා කෑලි වලට වෙන් කර හදන ක්‍රමය)
+
+	* Microservices Architecture එක කියන්නේ, Program එක, කුඩා කෑලි වලට වෙන් කර හදන ක්‍රමයට.
+	* මේ කුඩා කෑලි (Microservices), Network එකක් හරහා එකිනෙකා අතර කතා කරගන්නවා.
+	* මෙහිදී එක Services එකක් Focus කරන්නේ, එක හැකියාවකට පමණයි (Bussiness capability)
+
+
+
+[Slide 27] 
+
+	* ඔක්කොම දේවල් එක Code එකක් ඇතුලේ තියෙන, Monolitic ක්‍රමයට, විශාල Application එකක් හදනවා වෙනුවට, Microservices භාවිතා කරලා සම්පුර්ණ Program එක කුඩා කොටස් වලට කඩලා නිර්මාණය කරන්න පුළුවන්
+
+	* මේ Microservices(Program එක බෙදුව කොටස්) ඕන Programing Language එකකින් ලියන්න පුළුවන්. 
+
+
+[Slide 28] 
+	* මේකෙදි, කුඩා සහ loosely coupled විදිහට තමා Microservices වෙන් කරන්නේ. 
+	* එක Microservices එකක්, එක, කාර්යයක් විතරයි කරන්නේ (Bussiness Goal)
+	* මේකෙදි, එක එක Microservices වෙන වෙනම, develop කරන්න සහ deploy කරන්න පුලුවන්.
+
+
+	* කොහොමද මේ Microservices වැඩ කරන්නේ?
+		- එක් එක් Microservice විශේෂිත කාර්යයක් (Bussiness Goal එකක්) සඳහා පමණයි නිර්මාණය කරන්නේ 
+		- ඊට පස්සේ මේ Microservices APIs හරහා interact වෙනවා
+		- මේ සඳහා විවිධ technologies භාවිතා කරන්න පුළුවන්
+		- ඒ වගේම, Microservices ස්වාධීනව update කරන්න පුළුවන්	
+
+	
+
+
+[Slide 29] Main components of Microservices Architecture
+			(Microservice Archtiecture ක්‍රමයෙහි ප්‍රධාන සංරචක)
+	
+	1. Microservice එක (Program එක බෙදුව කොටස්)
+	
+	2. API Gateway එක
+		- Client විසින් Software එකට කරන ලද Request එක මුලින්ම එවන්නේ මෙතනට. මෙතනින් තමා තීරණය කරන්නේ, මොන Microservice එකටද ඒ Request එක යවන්න ඕනේ කියලා.
+
+	3. Service Registry එක සහ Discovery එක
+		- මේකේ තමා සියලුම Microservices වල Addess ගබඩා කරගෙන තියෙන්නේ.
+
+	4. Load Balancer එක
+		- මේකෙන්, Microservice එකකට පැමිණෙන Load එක Manage කරනවා.
+
+	5. Containerization එක
+		- "Docker" හා "Kubernets" යනුවෙන් ඇති සේවාවන් සඳහා මෙය භාවිතා කරයි.
+
+
+	6. Event Bus/Message Broker
+		- මේකෙන්, Microservices අතර පණිවිඩ හුවමාරු කර Commucation එක පහසු කරයි.
+
+
+	7. Database එක
+		- හැම Microservice එකටම වෙනම Database එකක් පවතී. 
+
+	8. Cacheing
+		- Microservice එකට නිතර අවශ්‍ය වෙන දත්ත ළඟ තබා ගැනීම සිදු කරයි.
+
+
+							(රෙසිලියන්ස්)
+	9. Fault Tolerance and Resilience Components
+		- Microservice එක බිඳ වැටුනොත් නැවත යථා තත්වයට පත් කිරීමට මේවා උපකාරී වේ.
+
+
+
+
+[Slide 30] Real-World Example of Microservices
+			(Microservices ඇත්ත ලෝකයේ භාවිතා වෙන තැන්)
+	
+
+	* අපි Amazon E-Commerce Website එක උදාහරණය විදිහට ගෙන, Microservices ඇත්ත ලෝකයේ භාවිතා වෙන්නේ කොහොමද කියලා තේරුම් ගමු.
+
+	* Amazon එකේ, E-Commerce website එක, run වෙන්නේ, කුඩා, සහ විශේෂිත Microservices වලින්. මේ හැම Microservice එකක්ම, විශේෂිත Task එකක් කරනවා. මේ හැම Microservice එකක්ම, එකට වැඩ කරලා, අපිට Smooth Shoping අද්දැකීමක් ලබාදෙනවා.
+
+	
+
+[Slide 31] 
+	Amazon E-Commerce Website එකේ පවතින Microservices පහත පරිදි වේ.
+
+		* User Service (User Accounts Handle කරයි)
+		* Search Service (Products Search කරයි)
+		* Cart Service (Shoping Cart සේවාව පවත්වාගෙන යයි)
+		* Wishlist Service (ඉදිරියට ගන්න යන බඩු පිලිබඳ සිදු කරයි)
+		* Order Taking Service (Order එක පවතින ස්ථානය Track කිරීම සිදු කරයි)
+		* Order Processing Service (Order එක Process කිරීම සිදු කරයි)
+		* Payment Service (Payment එක Process කිරීම කරයි)
+	
+
+
+[Slide 32-33] How to migrate from Monolithic to Microservices Architecture?
+			  (Monolithic Architecture එකෙන් Microservice Architectrue එකට මාරු වෙන්නේ කොහොමද?)
+
+	පියවර 01 :	පළමුව, Program එකේ, Microservices වලට කඩන්න පුළුවන් Component මොනවද කියලා අඳුරගන්න.
+
+	
+	පියවර 02 :	දෙවනුව, එක්, Microservice එකකින් එක Task එකක් පමණක් (Bussiness Goal එකක්) ඉටුවෙන විදිහට, Microservices (කුඩා කෑලි) වලට කඩන්න.
+
+																										(ස්ට්රැන්ග්ලර්)
+	පියවර 03 :	තෙවනුව, Program එකේ තියෙන, Components ටිකෙන් ටික, Microservices බවට පත් කරන්න. (Strangler Pattern එක අනුගමනය 			 කරන්න). මෙහෙම කරද්දී Risk එක අඩු වෙනවා.
+
+
+	පියවර 04 :	Microservice අතර Commucation එක සිදු කිරීමට, හොඳ API එකක් නිර්මාණය කරගන්න. 
+
+	
+	පියවර 05 : ඉන්පසුව CI/CD Pipelines භාවිතා කර, Testing සිදු කරනගන්න. (CI/CD Pipeline මඟින්, Testing Automate කරගත 				හැක.)
+
+	
+	පියවර 06 : ඉන්පසුව, Microservices හොයාගන්න පුළුවන් වෙන විදිහට ක්‍රමවේදයක් නිර්මාණය කරන්න
+
+	පියවර 07 : : "Centralized logging" සහ "monitoring tools set up" භාවිතා කරන්න. මේකෙන්, Microservices එකේ Performnce එක ගැන දල අවබෝධයක් ගන්න පුළුවන්.
+
+	පියවර 08 : ඉන්පසු, Systetm එකේ විශ්වාසනීයත්වය Maintain කරන්න,  "Cross-cutting concerns", "security" සහ "authentication" වගේ දේවල් වගේ දේවල් භාවිතා කරන්න. 
+
+	පියවර් 09 : නැවත නැවත මේ Process එක Repeat කරන්න
+
+
+
+
+[Slide 34] Applications of Microservices
+			(Microservice ක්‍රමයේ භාවිත)
+
+	*  	E-commerce websites වල (මේවා නිර්මාණය කර ඇත්තේ, Microservices ක්‍රමවෙදයටය)
+	*	බැංකු සේවා වල (Accounting, transactions, fraud detection, සහ customer support වගේ Microservices මේවාගේ පවතිනවා)
+	* 	Netflix, Spotify වගේ Streaming services වල
+	* 	Travel හා Booking systems වල
+	* 	Healthcare systems වල
+	*	Social media platforms වල
+
+	මේ කියන හැමතැනම වගේ භාවිතා වෙන්නේ Microservice Architecture එක 
+
+
+
+[Slide 35-36]  Benefits and Challenges of using Microservices Architecture
+				(Microservices Architecture එකේ ඇති වාසි අවාසි)
+
+		වාසි
+			* Development Team එකේ එකේ අයට, එකම වෙලාවේ, වෙනස් වෙනස් Microservices, develop කරන්න පුළුවන්.
+
+			* එක Microservice එකක තිබෙන ගැටළුවක් අනික් Microservice එඅක්ට බලපාන්නේ නෑ
+
+			* එක එක Microservice එකේ අවශ්‍යතාව අනුව, Microservice එක Scale කරන්න පුළුවන්
+
+			* System එක වෙනස්වෙන workload එකට, ඉක්මනින් Adopt කරගන්න පුළුවන
+
+			* Development Team එකට, හැම Microservice එකක් සඳහාම, වඩාත්ම ගැලපෙන Technologies Stack එකක් භාවිතා කරන්න පුළුවන්
+					උදා:- 	Frontend: React, Angular
+							Backend: Node.js, Python, Java 
+							Database: MongoDB, MySQL
+							Cloud: AWS, Google Cloud 
+
+
+[Slide 36]
+		අවාසි
+			* Microservices අතර සිදුවන communication  එක සිදු කිරීම තරමක් අපහසු වීම. මෙතැනදී, network latency (N) එක අඩුවෙන් පවත්වාගෙන, Microservices අතර පණිවිඩ හුවමාරු කරගත යුතුවේ.
+
+			* Software එකක්, microservices වලට කඩනකොට, ඒ Software එකේ, Development, Testing, deployment කරන Process වල සංකීර්ණත්වය වැඩි වේ
+
+			*  Microservices අතර සිදුවෙන communication  එකේ, Network Latency එක වැඩි නම්, Errors Handle කිරීම අපහසු වේ.
+
+
+			* Microservices Architecture ක්‍රමවේදය සරල Software සඳහා නොගැලපීම
+
+			* සංකීර්ණත්වය වැඩි වීම
+
+			* ඉතාමත් වැඩි Resouces ප්‍රමාණයක් භාවිතා කිරීම
+
+
+[Slide 37-38]  	Monolithic vs Microservices
+				(Monolitic ක්‍රමයේ සහ Microservice ක්‍රමයේ වෙනස්කම්)
+
+<pencil>
+	* මෙතැනදී, කිසිම ක්‍රමයක් එකකට වඩා හොඳයි කියන්න බැහැ. 
+	* දෙකම අද තාමත් අද කාලයේ භාවිතා කරන ජනප්‍රිය "මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රම"
+</pencil>
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+				Monolitic ක්‍රමය 										|							Microservice ක්‍රමය
+-----------------------------------------------------------------------------------------------------------------------------------
+			* 	සරලයි 												|					* 	සංකීර්ණයි
+----------------------------------------------------------------------------------------------------------------------------------------
+			* 	ආරම්භ කිරීමට පහසුයි 								|					* 	ආරම්භ කිරීමට යම් දැනුමක් අවශ්‍යයි
+----------------------------------------------------------------------------------------------------------------------------------------
+			*	කුඩා Programs සඳහා ගැලපේ	 						|					* 	විශාල Programs සඳහා ගැලපේ
+----------------------------------------------------------------------------------------------------------------------------------------
+			* 	මුළු Software එකම තනි 								|					* 	Software එක කුඩා කොටස් වලට 					Code එකක් සේ ලියයි															(Microservices) වලට වෙන් කර ලියයි
+----------------------------------------------------------------------------------------------------------------------------------------
+			 * 	tightly couple වේ 									|					* 	Loosely Couple වේ
+----------------------------------------------------------------------------------------------------------------------------------------
+			 * 	අඩු Resouces ප්‍රමාණයක් වැයවේ 						|					* 	වැඩි Resouces ප්‍රමාණයක් 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------මේවා ලියන්න  එපා---------------------------------------------------------------
+
+# Micro services සහ Cloud Computing වල Definition එක ලියන්න
+					
+
+[Slide ] මොනවද මේ "මෘදුකාංග නිෂ්පාධන ශෛලීන්" කියන්නේ?
+		 (What Are Software Architectural Styles?)
+
+* 	මෘදුකාංග නිෂ්පාධන ශෛලීන් කියන්නේ, මෘදුකාංග පද්ධතියක් (කුඩා කොටස් බොහොමයක් එකතු වී සෑදෙන මෘදුකාංග), Organize කරන්න සහ සංවිධානය  කරන්න යොදාගන්න සම්මත ක්‍රමවේදයක්.
+(A software architectural style [or architecture pattern] is a standard way of organizing and structuiing software systems.)
+
+
+
+මේවා උදව් වෙනවා,
+	* Codes සහ Components, සංවිධානය කරන්න.
+	* Modules අතර සන්නිවේදනය plan කරන්න
+	* Scalability, reliability සහ performance එක manage කරන්න
+	* අවශ්‍ය Tools, databases සහ technologies තෝරාගන්න
+
+
+
+
+[Slide ] ප්‍රසිද්ධ, "මෘදුකාංග නිෂ්පාධන ශෛලීන්" වර්ග
+		Common Software Architectural Styles
+
+
+01) Layered (N-Tier) Architecture 
+	* මෙහිදී, System එක, Layers වලට බෙදා නිර්මාණය කරනු ලබයි.
+
+		- Presentation Layer 
+			උදා:- UI එක
+		
+		- Business Logic Layer 
+			උදා:- Programing logics
+		
+		- Data Layer 
+			උදා:- Database
+
+
+
+
+02) Client-Server Architecture 
+	(සේවාදායකයා-සේවාලාභියා ක්‍රමය)
+
+	* මෙහිදී, Client ඉල්ලන Service එක, Server එක විසින් ලබා දේ.
+
+	උදා:- Websites, Email පද්ධති, WhatsApp
+
+
+
+
+03) Monolithic 
+	(ඒකක ක්‍රමය)
+
+	* මුළු System එකම, එක unit එකක් විදිහට සාදයි
+
+	උදා:- පොඩි Applications
+		  startup projects
+
+
+
+04) Service-Oriented Architecture (SOA) 
+	(සේවා-මූලික ස්ථාපත්‍යය)
+
+		* නැවත නැවත භාවිතා කරන්න පුළුවන් services භාවිතා කර පද්ධතිය නිර්මාණය කරයි
+
+
+	උදා:- 	Payment Gateways
+			බැංකු systems
+
+
+
+05) Microservices
+	(ක්ෂුද්‍ර සේවා ක්‍රමය)
+
+* Application එක කුඩා, ස්වාධීන services වලට බෙදා වෙන් කර පද්ධතිය නිර්මාණය කරයි
+	උදා:-
+		Food delivery app එකක් (PickMe Food වගේ):
+
+			User Service - Login/register වෙන එක
+			Restaurant Service - අවන්හල් list කරන එක
+			Order Service - ඇණවුම් manage කරන එක
+			Payment Service - payment handle කරන එක
+			Delivery Service - delivery track කරන එක
+
+	හැම service එකක්ම වෙන වෙනම වැඩ කරනවා, එකක් වැඩ නොකලත්, අනිත් ඒවා වැඩ කරනවා.
+
+
+
+
+06) Event-Driven Architecture 
+	(සිදුවීම්-මූලික ස්ථාපත්‍යය)
+		* මෙහිදී, System එක මුහුණ පාන, සිදු වීම් (Events) වලට අනුව, System එක ප්‍රතිචාර දක්වන ආකාරයට නිර්මාණය කරයි
+
+
+		උදා:-  Share market trading apps 
+				IoT systems
+				Facebook notifications
+
+
+
+07) Pipe-and-Filter
+	(නළ සහ පෙරහන ක්‍රමය)
+		* දත්ත, processing steps (filters) මාලාවක් හරහා ගලායන ආකාරයට නිර්මාණය කරයි.
+		
+		* උදාහරණයක් විදිහට ජලය පිරිසිදු කරන Filter එකක් වගේ එකක් වගේ:
+
+					1.පළමු filter - ලොකු කසළ අයින් කරනවා
+					2.දෙවන filter - වැලි/මඩ අයින් කරනවා
+					3.තෙවන filter - chemicals දානවා
+
+		උදා:- 	Image processing 
+				Compiler design
+				Data transformation
+
+
+
+
+
+
+
+
+---------------------------------------මේවාත් ලියන්න එපා--------------------------------
+
+
+
+
+
+2023 May
+[Slide ] What Are Software Architectural Styles?
+		(මොනවද මේ "මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රමවේද" කියන්නේ?)
+		 
+
+* 	Software Architectural Styles (මෘදුකාංග නිර්මාණ ක්‍රමවේද) කියන්නේ, Software System එකක්, Organize කරන්න සහ 				ගොඩනගන්න පාවිච්චි සම්මත ක්‍රමවේදයක්.
+	(A software architectural style [or architecture pattern] is a standard way of organizing and structuiing software systems.)
+
+
+
+	මේවා උදව් වෙනවා,
+		* Codes සහ Components, සංවිධානය කරන්න.
+		* Modules අතර සන්නිවේදනය plan කරන්න
+		* Scalability, reliability සහ performance එක manage කරන්න
+		* අවශ්‍ය Tools, Databases සහ technologies තෝරාගන්න
+
+
+
+
+[Slide ] ප්‍රසිද්ධ, "මෘදුකාංග නිර්මාණ ක්‍රමවේද" වර්ග
+		 (Common Software Architectural Styles)
++-----+---------------------------+------------------------------------------+--------------------------------+
+| අං. | Architecture වර්ගය        | විස්තරය                                  	| උදාහරණ                        |
++-----+---------------------------+------------------------------------------+--------------------------------+
+| 01  | Layered (N-Tier)          | Layers වලට බෙදා නිර්මාණය කරයි          	| බැංකු පද්ධති, විශාල Systems   |
+|     |                           | (Presentation, Business Logic, etc.)       	|                                |
++-----+---------------------------+------------------------------------------+--------------------------------+
+| 02  | Client-Server             | Client ඉල්ලීම, Server විසින් ලබා දේ    		| Websites, Email, WhatsApp      |
++-----+---------------------------+------------------------------------------+--------------------------------+
+| 03  | Monolithic                | මුළු System එකම එක unit එකක් ලෙස       | Calculators, Unit convertors   |
+|     | (ඒකක ක්‍රමය)             | සාදයි                                    	|                                |
++-----+---------------------------+------------------------------------------+--------------------------------+
+| 04  | Service-Oriented (SOA)    | නැවත භාවිතා කළ හැකි services භාවිතයෙන් | Payment Gateways, Google Maps  |
+|     |                           | නිර්මාණය කරයි                            	|                                |
++-----+---------------------------+------------------------------------------+--------------------------------+
+| 05  | Microservices             | කුඩා, ස්වාධීන services වලට බෙදා        	| PickMe Food (User, Restaurant,|
+|     | (ක්ෂුද්‍ර සේවා ක්‍රමය)    	  | නිර්මාණය කරයි                            	| Order, Payment Services ) 	|
++-----+---------------------------+------------------------------------------+--------------------------------+	|
+| 06  | Event-Driven              | සිදුවීම් (Events) වලට අනුව ප්‍රතිචාර    		| Share market apps, Betting,   |
+|     |                           | දක්වන ආකාරයට නිර්මාණය කරයි            | IoT systems                   |
++-----+---------------------------+------------------------------------------+--------------------------------+
+| 07  | Pipe-and-Filter           | දත්ත processing steps (filters)         	| Image processing,          	|
+|     |                           | මාලාවක් හරහා ගලායන ආකාරයට නිර්මාණය  |        						|
++-----+---------------------------+------------------------------------------+--------------------------------+				
+
+
+
+* Monolithic ක්‍රමය දියුණු වීමෙන්, Microservices ක්‍රමය බිහිවුණා. දැන් Microservices ක්‍රමය දියුණු වීමෙන්, Event-Driven Architecture ක්‍රමය බිහි වී තිබේ.
+						Monolithic
+							  |
+						Microservices
+							  |
+						Event-Driven Architecture
+
+
+
+
+
+[Slide ] මොකද්ද මේ ක්ෂුද්‍ර-සේවා ක්‍රමය කියන්නේ?
+			(What are Micro services?)
+
+	<pencil>
+	
+		ක්ෂුද්‍ර-සේවා ක්‍රමය (Microservices) කියන්නේ, මෘදුකාංග නිර්මාණ ක්‍රමවේදයකට
+
+
+	</pencil>
+
+
+	
+	* සාමාන්‍යයෙන් අපි එකපාරටම විශාල application එකක් හදනවා වගේ නෙමෙයි, මේකෙදී කරන්නේ,
+			විශාල System එකක් කුඩා කොටස් වලට බෙදලා හදනවා,
+			හැම කුඩා කොටසක්ම ස්වාධීනව වැඩ කරනවා,
+			මේ කොටස් එකිනෙකට APIs හරහා කතා කරනවා,
+
+			මෙහෙම තමා, "ක්ෂුද්‍ර-සේවා ක්‍රමය" වැඩ කරන්නේ.
+
+
+
+	Micro services Architecture එකේ, ප්‍රධාන විශේෂාංග:
+		* හැම Service එකක්ම එක වැඩ කටයුත්තක්ට පමණක් අවධානය යොමු කරන්නේ.
+		* හැම Service එකක්ම, වෙන වෙනම develop කරන්න, deploy කරන්න, scale එක වැඩි කරන්න හැකියාව තියෙනවා.
+		* හැම Services එකටම, තමන්ට අනන්‍ය වූ database එකක් තියෙනවා.
+		
+				
+
+	වාසි:
+		* එක් කොටසකට ප්‍රශ්නයක් වුනොත් වුනාම මුළු system එක නතර වෙන්නේ නෑ
+		* කොටස් වෙන වෙනම update කරන්න පුළුවන්
+		* Scale කරන්න ලේසි
+
+
+
+
+
+[Slide ]
+
+Microservices (ක්ෂුද්‍ර-සේවා) භාවිතා කරන සමාගම් සඳහා උදාහරණ
+	* Netflix
+	* Amazon
+	* Alibaba
+	* eBay
+
+
+ඇයි මෙයාලා Microservices භාවිතා කරන්නේ?
+	* නව features එකතු කරන්න මුළු system එක නතර කරන්න අවශ්‍ය නැති නිසා.
+	* එක service එකක් fail වුනත් අනිත් ඒවා වැඩ කරනවා. මේ නිසා 99.99% uptime එකක් පවත්වාගන්න පුළුවන් නිසා
+	* මිලියන ගණන් Users ලා හැමදාම එකතු වෙන නිසා, හැම කොටසම වෙන වෙනම Scale කරන්න පුළුවන් නිසා
+
+
+
+
+
+[Slide ] Cloud Computing කියන්නේ මොකක්ද?
+
+Cloud computing කියන්නේ, computing services ලබාදීමයි  —  එනම්, Services, අපේ computer එකේ හෝ අපේ local servers වල run කරනවා වෙනුවට, servers, storage, databases, networking, software, සහ analytics වගේ දේවල් internet එක හරහා ("cloud" එක හරහා) ලබා දීමයි.
+
+
+සරලවම
+
+ඔයාගේම Hardware හෝ Software මිලදී ගන්නවා වෙනුවට, ඔයා, Cloud Provider කෙනෙක්ගෙන්, ඒවා Hardware හෝ Software කිරීම, Cloud Computing කියලා කියන්න පුළුවන්. (AWS, Azure, හෝ Google Cloud වගේ). මේවගේ අපි පාවිච්චි කරන ප්‍රමාණයට විතරයි, සල්ලි ගෙවන්න ඕනේ.
+
+
+
+[Slide ] 
+
+ඔයා Could Computing භාවිතා කරනවා නම්, ඔයාට,
+
+	(1) Physical Servers Maintain කරන්න හෝ නිර්මාණය කරන්න ඕන නෑ
+	(2) Softwares Locally Install කරන්න ඕනේ නෑ
+	(3) Scale එක සහ Secrutity එක ගැන කරදර වෙන්න ඕන නෑ
+
+	මොකද, Clould Manager විසින් මේ ඔක්කොම Manage කරනවා. ඔයටා ඔයාගේ Application එකට විතරක් Focus එක දෙන්න පුළුවන්
+
+
+
+[Slide ] Excerisce
+
+
+	
+(We are going to design a library application using microservices principles. The goal is to break down the system into small, independent services that can work together.)
+
+#පොතේ හදපු මේ ගාන මෙතන ලියන්න
+
+
+
+
+2025 Predictin
+[Slide ] 
+
+* මුලින්ම Netfilx එක, DVD Rental Website එකක් විදිහට හැදුවේ. මේක Monolithic Architecture එකට (මුළු System එකම, එක Program එකක් විදිහට) තමා හදලා තියෙන්නේ.
+
+* මේක ලොකු JAVA Program එකක්. Scale එක වැඩි වෙන්න, වැඩි වෙන්න, මේක Control කරන්න බැරි වෙලා තියෙනවා. මේ නිසා, Netfilx එකට වෙලා තියෙනවා, Monolithic Architecture එකෙන්, Microservices Architecture එකට මාරු වෙන්න.
+
+

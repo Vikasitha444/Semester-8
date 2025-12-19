@@ -1,0 +1,87 @@
+මම ඔයාට මේ assignment එක ගැන සිංහලෙන් සරලව කියන්නම්:
+
+## කළ යුතු දේ කොහොමද කියලා සරලව:
+
+**මොකක්ද මේ assignment එක?**
+ඔයාට AI ගැන research paper එකක් හෝ article එකක් තෝරාගෙන, ඒක ගැන විස්තර කරලා, real world එකේ use කරන්න තිබෙන problems හොයාගෙන, ඒවාට විසඳුම් suggest කරන්න ඕන.
+
+---
+
+### **Task 1: Paper එකක් තෝරන්න (10%)**
+
+**කරන්න ඕන දේ:**
+- 2022-2025 අතර publish වුණ AI research paper එකක් හෝ article එකක් තෝරන්න
+- arXiv.org, Google Scholar වගේ websites වලින් තෝරාගන්න පුළුවන්
+
+**Topics:**
+- ChatGPT වගේ විශාල AI models
+- Mobile phones වල use කරන AI
+- Electricity අඩුවෙන් use කරන AI
+- Privacy හරි federated learning
+- AI safety හරි fairness
+
+---
+
+### **Task 2: Summary එකක් ලියන්න (20%)**
+
+**කරන්න ඕන දේ:**
+ඔයා තෝරාගත්ත paper එකේ මේවා explain කරන්න:
+
+1. **මොන problem එකකට විසඳුමක් දෙනවද?** (උදාහරණ: AI models වලට memory වැඩියි)
+2. **කොහොමද ඒ problem එක solve කරන්නේ?** (උදාහරණ: model එක compress කරලා size එක අඩු කරනවා)
+3. **මොන results හරි benefits තියෙනවද?** (උදාහරණ: 50% speed එක වැඩි වෙනවා)
+
+---
+
+### **Task 3: Challenges හොයාගන්න (35%)**
+
+**කරන්න ඕන දේ:**
+Real world එකේ use කරද්දී තියෙන **අඩුපාඩු 2ක්** හොයාගන්න.
+
+**උදාහරණ challenges:**
+- GPU memory නැති වෙනවා (වැඩිපුර RAM ඕන වෙනවා)
+- Response එක එන්න කාලය වැඩියි (slow response)
+- Electricity bill වැඩියි
+- Model එක හරියට වැඩ කරන්නේ නෑ (errors තියෙනවා)
+
+---
+
+### **Task 4: විසඳුම් suggest කරන්න (25%)**
+
+**කරන්න ඕන දේ:**
+ඔයා හොයාගත්ත challenges වලට **practical විසඳුම්** suggest කරන්න.
+
+**උදාහරණ විසඳුම්:**
+- Model එක compress කරලා size එක අඩු කරන්න (quantization)
+- Cloud computing use කරන්න
+- Better hardware use කරන්න
+- Model එක retrain කරන automatic system එකක් හදන්න
+
+---
+
+### **Task 5: Reflection (10%)**
+
+**කරන්න ඕන දේ:**
+කෙටි paragraph එකක් ලියන්න:
+- මේ research එක AI වල future එකට කොහොමද relevant වෙන්නේ?
+- Infrastructure challenges solve කරන එක important ඇයි?
+
+---
+
+## **Deadline & Format:**
+
+- **Deadline:** November 30, 2025 (11.59pm)
+- **File type:** PDF
+- **File name:** ET_A2_YourName.pdf (උදාහරණ: ET_A2_Janith.pdf)
+
+---
+
+## **සරලව කියනවා නම්:**
+
+1. AI paper එකක් තෝරාගන්න
+2. ඒකේ මොකද කියන්නේ කියලා ලියන්න
+3. Real world එකේ problems 2ක් හොයාගන්න
+4. ඒ problems වලට විසඳුම් suggest කරන්න
+5. Future එකට මේක කොහොමද වැදගත් කියලා ලියන්න
+
+සරල නේද? ඔයාට කරන්න තියෙන්නේ AI related paper එකක් කියවලා, ඒක ගැන ඔයාගේම වචන වලින් analysis එකක් ලියන්න විතරයි! 📝

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC 4172 - Exam Slides විශ්ලේෂණය</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .year-section {
+            margin-bottom: 50px;
+            border-left: 5px solid #667eea;
+            padding-left: 30px;
+        }
+        
+        .year-title {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .question-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #764ba2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .question-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .question-title {
+            color: #764ba2;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .question-text {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-style: italic;
+            border-left: 3px solid #667eea;
+        }
+        
+        .slides-used {
+            margin-top: 20px;
+        }
+        
+        .slides-label {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .slides-label::before {
+            content: "📊";
+            margin-right: 10px;
+            font-size: 1.3em;
+        }
+        
+        .slide-group {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 3px solid #764ba2;
+        }
+        
+        .slide-group h4 {
+            color: #764ba2;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .slide-range {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        
+        .summary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        
+        .summary h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .summary-content {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .summary-item {
+            margin: 15px 0;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background: rgba(255,255,255,0.3);
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .important-note {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .important-note h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .year-section {
+                padding-left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 ITC 4172 Exam Slides විශ්ලේෂණය</h1>
+            <p>Entrepreneurship and Small Business Management</p>
+            <p>Feasibility Analysis - Slides 1-48</p>
+        </div>
+        
+        <div class="content">
+            <!-- 2023 Exam -->
+            <div class="year-section">
+                <div class="year-title">🎓 2023 May Exam</div>
+                
+                <div class="question-card">
+                    <div class="question-title">Question 2(a) - [8 Marks]</div>
+                    <div class="question-text">
+                        "Feasibility analysis is the process of determining whether a business idea is viable." Evaluate four (04) main components of feasibility analysis with their subcomponents.
+                    </div>
+                    
+                    <div class="slides-used">
+                        <div class="slides-label">භාවිතා කළ Slides:</div>
+                        
+                        <div class="slide-group">
+                            <h4>🔹 Introduction & Overview</h4>
+                            <span class="slide-range">Slide 11</span> - What is Feasibility Analysis?<br>
+                            <span class="slide-range">Slide 12</span> - When to Conduct<br>
+                            <span class="slide-range">Slide 13</span> - Role in Business Ideas<br>
+                            <span class="slide-range">Slide 14</span> - Four Forms of Feasibility<br>
+                            <span class="slide-range">Slide 15</span> - Comprehensive Outline
+                        </div>
+                        
+                        <div class="slide-group">
+                            <h4>🔹 Product/Service Feasibility</h4>
+                            <span class="slide-range">Slides 16-28</span> - Desirability, Demand, Concept Statement, Buying Intentions Survey, Research Methods
+                        </div>
+                        
+                        <div class="slide-group">
+                            <h4>🔹 Industry/Target Market Feasibility</h4>
+                            <span class="slide-range">Slides 30-35</span> - Industry Attractiveness, Target Market Attractiveness
+                        </div>
+                        
+                        <div class="slide-group">
+                            <h4>🔹 Organizational Feasibility</h4>
+                            <span class="slide-range">Slides 36-40</span> - Management Prowess, Resource Sufficiency
+                        </div>
+                        
+                        <div class="slide-group">
+                            <h4>🔹 Financial Feasibility</h4>
+                            <span class="slide-range">Slides 41-46</span> - Start-up Cash, Financial Performance, Overall Attractiveness
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2024 Exam -->
+            <div class="year-section">
+                <div class="year-title">🎓 2024 April Exam</div>
+                
+                <div class="question-card">
+                    <div class="question-title">Question 2(a) - [12 Marks]</div>
+                    <div class="question-text">
+                        "Feasibility analysis is the process of determining whether a business idea is viable." Evaluate four (04) main components of feasibility analysis with their subcomponents.
+                    </div>
+                    
+                    <div class="slides-used">
+                        <div class="slides-label">භාවිතා කළ Slides:</div>
+                        
+                        <div class="important-note">
+                            <h3>⚠️ වැදගත්:</h3>
+                            2024 exam එකටත් 2023 exam එකේ වගේම එකම slides භාවිතා වෙනවා. ප්‍රශ්නය සමාන නිසා answer structure එකත් සමානයි.
+                        </div>
+                        
+                        <div class="slide-group">
+                            <h4>🔹 සියලුම Components සඳහා</h4>
+                            <span class="slide-range">Slides 11-15</span> - Introduction & 4 Forms<br>
+                            <span class="slide-range">Slides 16-28</span> - Product/Service Feasibility<br>
+                            <span class="slide-range">Slides 30-35</span> - Industry/Target Market<br>
+                            <span class="slide-range">Slides 36-40</span> - Organizational Feasibility<br>
+                            <span class="slide-range">Slides 41-46</span> - Financial Feasibility
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Summary Section -->
+            <div class="summary">
+                <h2>📋 සාරාංශය</h2>
+                <div class="summary-content">
+                    <div class="summary-item">
+                        <strong>🎯 ප්‍රධාන Slide Range:</strong><br>
+                        Feasibility Analysis ප්‍රශ්න සඳහා <span class="highlight">Slides 11-46</span> භාවිතා වෙනවා
+                    </div>
+                    
+                    <div class="summary-item">
+                        <strong>📊 Exam Pattern:</strong><br>
+                        2023 සහ 2024 දෙකෙදීම <span class="highlight">එකම ප්‍රශ්නය</span> සහ <span class="highlight">එකම slides</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <strong>🎓 අධ්‍යයනය කළ යුතු ප්‍රධාන කොටස්:</strong><br>
+                        1️⃣ Feasibility Analysis Definition & Importance<br>
+                        2️⃣ Product/Service Feasibility (Desirability + Demand)<br>
+                        3️⃣ Industry/Target Market Feasibility<br>
+                        4️⃣ Organizational Feasibility (Management + Resources)<br>
+                        5️⃣ Financial Feasibility (3 Sub-components)
+                    </div>
+                    
+                    <div class="summary-item">
+                        <strong>✅ Recommendation:</strong><br>
+                        Slides 11-48 දක්වා හොඳින් අධ්‍යයනය කරන්න. සෑම component එකකම subcomponents සහ examples මතක තබා ගන්න!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

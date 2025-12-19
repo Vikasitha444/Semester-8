@@ -1,0 +1,1796 @@
+																		Microservices and Cloud Computing
+																				Lession 03
+																		MICROSERVICES DESIGN PRINCIPLES Part 2
+																(Microservices ක්‍රමවේදයේ නිර්මාණ මුලධර්ම - දෙවෙනි කොටස)
+
+
+⚠️ Lecture Slide වල තියෙන නීති වල Numbers, ඉගැන්වීමේ පහසුවට වෙනස් කරලා තියෙන්නේ.
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+[Slide 3]						Rule 08
+			Asynchronous Communication & Event-Driven Patterns
+		(අසමමුහුර්ථ සන්නිවේදය සහ "දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමය භාවිතා කල යුතුය)
+			
+
+
+
+	මොකද්ද මේ සමමුහුර්ථ(Synchronous) සහ අසමමුහුර්ථ(Asynchronous) සන්නිවේදනය කියන්නේ?
+	(What Is Asynchronous and synchronous Communication?)
+		---"sync-vs-async.png" එක Open කරගන්න.
+
+		- Synchronous Communication එක කියන්නේ, Microservice එක විසින් යවන ලද, Message එක හෝ, Event එකකට අදාළ ප්‍රතිචාරය ලැබෙන තුරු බලා හිඳ, එම ප්‍රතිචාරය ලැබුණු පසු පමණක්, ඊලඟ පණිවිඩය යැවීමයි. මෙය <red> Program එකක් තනි thred එකක, Run කරන, Single threding ක්‍රමයට සමාන වේ. </red> 
+
+		- අපි Synchronous Communication එකට උදව් වෙන API එකට නමක් කියනවා, "REST API" කියලා.
+
+
+
+
+		- Asynchronous Communication එක කියන්නේ, Microservice එකක් විසින්, Message එකක් හෝ Event එකක් යවා, ඒ Message එකට, ප්‍රතිචාරයක් ලැබෙන තුරු බලා  <red> නොඉඳ </red>, තවත් පණිවිඩ යැවීමයි. මෙය <red> Program එකක් threds කිහිපයක Pararally Run කරන Multi threding ක්‍රමයට සමාන වේ. </red> 
+
+		- Asynchronous Communication වලදී, Messages හිර වීමක් සිදු වෙන්නේ නැත (non-blocking), එමෙන්ම, එක Service එකක් Complete වෙන්න, තවත් Service එකක බලපෑමක් නොමැත (Loosely Coyupled/Decoupled), සහ වඩා ලොකු Message Load එකකට ඔරොත්තු දීමට මෙයට හැකියාව පවතී (Scalable)
+
+
+		<pencil>
+			Asynchoruns 	== Multi threding
+			Synchoruns	   == Single Threding
+		</pencil>
+
+
+[Slide 4] පින්තුරය පැහැදිලි කිරීම
+
+		Synchronous 																			Asynchronous 
+		Communication																			Communication
+		පැත්ත 																					පැත්ත
+
+Message එක හෝ, Event එකකට අදාළ ප්‍රතිචාරය ලැබෙන තුරු බලා ඉඳලා,  			Message එකක් හෝ Event එකක් යවා, ඒ Message එකට, 
+ඒ ප්‍රතිචාරය ලැබුනට පස්සේ පමණක්, ඊලඟ පණිවිඩය යවනවා. 						ප්‍රතිචාරයක් ලැබෙන තුරු බලා  <red> නොඉඳ </red>
+																									තවත් පණිවිඩ එක දිගට යැවීමයි.
+			
+
+
+
+[Slide 5] Asynchronous Communication vs Synchronous Communication
+		  {සමමුහුර්ථ(Synchronous) සහ අසමමුහුර්ථ(Asynchronous) සන්නිවේදනය අතර වෙනස}
+
++-------------------------+------------------------------------------+------------------------------------------+
+| Aspect                 	| Synchronous                              	| Asynchronous                             |
+| (සලකා බලන කරුණ)    	|                                          	|                                          |
++-------------------------+------------------------------------------+------------------------------------------+
+| සන්නිවේදනය            	| Request හා Response based වේ            	| Message හෝ Event Based වේ                |
+| (Commucation)           	| (Service එකට Request එකක් යැවීමෙන්     	| (Service එකට Message හෝ Event එකක්     |
+|                         	| සහ Service එක විසින් Response එකක්     | යැවීමෙන් සන්නිවේදනය සිදු කරයි.)         |
+|                         	| එවීමෙන් සන්නිවේදනය සිදු කරයි.)          	|                                          |
++-------------------------+------------------------------------------+------------------------------------------+
+| එක Service එකකට      	| වැඩියි                                   	| අඩුයි                                    |
+| අනිත් Service එකෙන්    	|                                          	|                                          |
+| ලැබෙන බලපෑම          	|                                          	|                                          |
+| (Coupling)              	|                                          	|                                          |
++-------------------------+------------------------------------------+------------------------------------------+
+| Message එක delever,     	| ලබන්නා මත Depend වෙනවා                | ලබන්නා නැති වුනත්, Messages, Queue      |
+| වීමට ඇති හැකියාව        	| (ලබන්නා නැත්තනම් Message එක           | එකකට Save වේ. එම නිසා, ලබන්නා Avilable
+| (Availability)      	    |   යන්නෙත් නෑ)                            | වෙලාවට, එයාට Message එක ලැබෙනවා.)	|
++-------------------------+------------------------------------------+------------------------------------------+	|
+| උදා:-                   	| "Order-Service" එක Complete වෙනකන්,    | "Order" කියන Microservice එක විසින් 
+| "Order Service"         	| "Payment Service" එකට ඉන්න වෙනවා.     | Oder එක Complete වුනාම, "Order Completed" 		|
+| "Payment Service"       	|                                          	| කියලා දැනුම්දෙනවා. ඒ Service එක, Subscribe  				|
+| ලෙස, Microservices      	|                                          	| කරපු Microservices කිහිපයකට වුනත්,     	|
+| දෙකක් ඇති බව           	|                                          	| එක පාරම මේ Message එක බලන්න පුළුවන්. |
+| උපකල්පනය කරන්න       |                                          	| (කලින් පාඩමේ Slide 34 බලන්න)           |
++-------------------------+------------------------------------------+------------------------------------------+
+
+
+
+
+
+[Slide 6]
+	#කලින් ලිව්ව එක මෙතන ලියන්න
+
+
+
+[Slide 7] Common Asynchronous Communication Patterns
+		  (අසමමුහුර්ථ ආකාරයට, Microservice අතර දත්ත හුවමාරු කරන්න භාවිතා කරන ක්‍රමවේද 4)
+
+
+1. <red> Event-Driven Architecture (EDA) </red>
+   <red> ("දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමය ) </red>
+
+2. <red> Message Queue Architecture</red>
+   <red> (Message පෝලිම් ක්‍රමය)	</red>
+
+3. <red> Event Streaming Architecture </red>
+   <red> ("දැනුම්-දීම් Real Time දෙන" දත්ත හුවමාරු කරන ක්‍රමය) </red>
+
+
+4. <red> Event Sourcing Architecture </red>
+   <red> ("දැනුම් දීම්-මුලාශ" දත්ත හුවමාරු කරන ක්‍රමය) </red>
+
+
+
+
+
+
+
+1. 	"දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමය 
+	(Event-Driven Architecture {EDA})
+ 
+	<pencil>
+		*  ICT වලදී, "Event" එකක් කියන්නේ, <red> මොකක් හරි වැදගත් දෙයක් ගැන (Microservice එකක් Crash වීම, Microservice එකකින් Message එකක් පැමිණීම වගේ දෙයක්) දැනුම් දෙන්න යවන පණිවිඩ වලට </red>
+	</pencil>
+	
+
+	* "API හරහා, Microservices අතර දත්ත හුවමාරු කිරීමේ" ක්‍රමයට වඩා, "දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමය" ක්‍රමය වඩා කාර්යක්ෂම වේ.
+
+	* මේ Diagram එකෙන් එය පැහැදිලි කරගත හැක
+		---"Traditional API and Event Driven Approch.png" එක මෙතන අඳින්න
+
+		<pencil>
+			මේක Youtube Video බලන එකට සමාන කරන්න පුළුවන්.
+
+			OrderService : Chanux bro
+			Broker : Youtbue
+			Notifiction service : Pawan
+			Payment service : Sijja
+			User Login Service : Sucksporu
+
+			Pawan හා Sijja Chanux broව Subcscribe කරලා තියෙන්නේ
+			Sucksporu කරලා නෑ
+		</pencil>
+
+
+
+	* මෙහිදී, එක් එක් Microservices වලට, වෙන වෙනම Messgae යවනවාට වඩා, මෙහිදී, Event එක Broadcast කිරීම සිදු වේ. එහිදී, event එක අවශ්‍ය Microservices වලට එම Event එකේ Updates ලබාගැනීමට, Event එක Subscribe කළ හැක.
+
+
+
+
+
+[Slide 8]  "දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමය පිලිබඳ උදාහරණයක්
+			(Event-Driven Architecture {EDA})
+
+#"slide8 explanation.png" කියන පින්තුරය පෙන්වන්න
+ 
+"Order-Service කියන Microservice එක විසින්,																								
+'OrderCreated කියන නමින්, දැනුම්දීමක් (Event එකක්) කරනවා"		
+							↓
+
+"Inventory-Service" කියන Microservice එක විසින් මේ Event එක Subscribe කරලා තියෙන්නේ.
+'OrderCreated' වුන ගමන් Stock එක Update කරනවා
+							↓
+
+"Email-Service" කියන Microservice එක විසිනුත්, 'OrderCreated' Event එක Subscribe කරලා තියෙන්නේ.
+'OrderCreated' වුන ගමන්, Email එකක් යවනවා
+							↓
+
+"Analytics-Service" කියන Microservice එඅක් විසිනුත්, 'OrderCreated' Event එක Subscribe කරලා තියෙන්නේ.
+'OrderCreated' වුන ගමන්, Order එකට අදාළ දත්ත, Analysis එක සඳහා එකතු කරනවා.
+
+
+
+
+--- මෙතැනදී කෙලින්ම [Slide 13] ට යනවා.
+
+
+
+
+[Slide 13]
+
+	- Skip this slide
+	- [Slide 8] තිබ්බ උදාහරනේමයි  Slide එකෙත් දාලා තියෙන්නේ.
+	- ආයේ මෙතනට දාලා තියෙන්නේ වැරදීමකින් වෙන්න පුළුවන්.
+
+
+
+
+[Slide 14] 	"දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමයේ වාසි 
+			(Event-Driven Architecture {EDA}) 
+
+	* එක Service එකක් Crash වුනත්, අනෙක් Services වලට බලපෑමක් වෙන්නේ නෑ (No single point of failure).
+	* Microservices වෙන වෙනම Scale කරන්න පුළුවන් (Services can scale independently).
+	* එක Microservice එකක් Slow වුනත්, ඒක අනිත් Microservies වලට බලපාන්නේ නෑ (Events processed at different speeds).
+
+
+
+
+
+
+
+[Slide 9] 2. Message Queue Pattern
+			(Message පෝලිම් ක්‍රමය)	
+
+
+
+
+	<pencil>
+		---"post office example.png" එක Open කරගන්න
+
+		- මේක හරියට, Post office එකක් වගේ. 
+		- හැම ගෙදරකම ලියුම් Post office එකට එවනවා.
+		- Post office එකේ ලියුම් රඳවාගෙන තියාගෙන ඉන්නවා
+		- පස්සේ, Post office එකෙන් මේ ලියුම් නිවැරදි ස්ථානයට යවනවා 
+
+
+	</pencil>
+	
+	---"Message Queue.png" එක Open කරගන්න
+
+	* Message පෝලිම් ක්‍රමය (Message Queue Pattern) කියන්නේ, Microservices දෙකක් අතර Messages හුවමාරු කරගන්න භාවිතා කරන තවත් ක්‍රමයක්.
+	* මේ ක්‍රමයේදී, Messages හුවමාරු කරගැනීමට, "Message Broker කෙනෙක්" භාවිතා කරනවා
+	* සියලුම Microservice වලින්, Messsages "Message Broker" ට එවනවා.
+	* Message Broker විසින්, Microsevice වලින් එවපු හැම Message එකකටම ආදාළ Queue එකක් හදලා තියෙනවා.
+	* ඊට පස්සේ, නිවැරදි, Microservice එකට එම Message එක ලබා දෙනවා.
+
+
+	උදා:- "Notification-service" කියන Microservice එක විසින්, Message Queue එකේ, Messages රඳවලා තියෙනවා.
+		   පස්සේ "Email-Service" එක සහ "SMS-Service" කියන Microservice දෙක, ස්වාධීනව මේ Queue එකේ තියෙන Messages, Access කරනවා.
+
+
+
+
+[Slide 10] 3. Event Streaming
+			 ("දැනුම්-දීම් Real Time දෙන" දත්ත හුවමාරු කරන ක්‍රමය)
+
+
+	* මේක <red> Real Time </red> Microservices අතර, පණිවිඩ හුවමාරු කරගැනීමට නිර්මාණය කර ඇති ක්‍රමයක්.
+	* මේ සඳහා Apache Kafka, Pulsar, හෝ Google Pub වගේ Tools භාවිතා කරන්න පුළුවන්.
+	
+
+	උදා:- 
+	Netfix එක විසින්, "Kafka"  Tool එක භාවිතා කරනවා, User කෙනෙක්, බලන Videos වල, විස්තර, Real Time Track කරලා, Netflix එකේ, Recomandation Algoritham එකට දෙන්න.
+
+
+
+
+
+
+[Slide 11]  4. Event Sourcing
+		("දැනුම් දීම්-මුලාශ" දත්ත හුවමාරු කරන ක්‍රමය)
+
+	<pencil>
+		මේක හරියට Whatsapp Chat එකක් වගේ.
+		Whatsapp Chat එකක, දෙන්නක් අතර හුවමාරු වුන, හැම Messaage එකක්ම ගබඩා වෙලා තියෙනවා වගේ,
+		ඒ වගේ, මේ ක්‍රමයේදී, <red> Microservice දෙකක් අතර </red> හුවමාරු වුන සෑම Message එකක්ම ගබඩා කරගෙන තියාගෙන ඉන්නවා.
+
+
+	</pencil>
+
+	* මේ ක්‍රමයේදී, <red> Microservice දෙකක් අතර </red> හුවමාරු වුන සෑම Message එකක්ම ගබඩා කරගෙන තබා ගනී.
+	
+
+		උදා:-  
+				ගෙවීම ආරම්භ කළා (PaymentInitiated)
+				ගෙවීම process කළා (PaymentProcessed)
+				ගෙවීම සම්පූර්ණ කළා (PaymentCompleted)
+
+			  	මේ ආකාරයට Microservices දෙකක් හරහා හුවමාරු වුන හැම Messaage එකක්ම ගබඩා කර ගනී.
+
+
+
+
+
+[Slide 12] Key Technologies
+			(ඉහතදී කතා කල, ක්‍රමවේද 4හි භාවිතා කරන Tools සහ Softwares)
+
+		01) Message Broker සඳහා භාවිතා කරන Tools හා Softwares. : 
+				RabbitMQ, ActiveMQ
+
+		
+		02) "දැනුම්-දීම් Real Time දෙන" දත්ත හුවමාරු කරන ක්‍රමය (Event Streaming) සඳහා භාවිතා කරන Tools හා Softwares : 
+				Apache Kafka, Redpanda, Google Pub/Sub
+
+		
+		03) Microservices අතර සිදු වන, සියලු Events වලින් ලැබුණු තොරතුරු, Analys කර  තීරණ ගැනීම (Event Processing) සඳහා 
+		    භාවිතා කරන Tools හා Softwares : 
+				Apache Flink, Spark Streaming, KSQL
+		
+		
+		04) Microservices අතර සිදු වන, සියලු Events ගැන අවධානයෙන් සිටීම (Event Tracing) සඳහා භාවිතා කරන Tools හා Softwares : 
+				OpenTelemetry, Jaeger
+
+		
+		05) Microservices එකිනෙක Connect කිරීම (Integration) සඳහා භාවිතා කරන Tools හා Softwares : 
+				Spring Cloud Stream, Kafka Streams, Debezium
+
+
+
+
+
+
+[Slide 13 - 14]
+
+	- Skip this slide
+	- " Event-Driven " ක්‍රමය කතා කරලා ඉවරයි
+	- ආයේ මෙතනට දාලා තියෙන්නේ වැරදීමකින් වෙන්න පුළුවන්.
+	- [Slide 8] තිබ්බ උදාහරනේමයි  Slide එකෙත් දාලා තියෙන්නේ.
+	- මෙතැනදී කෙලින්ම [Slide 15] ට යනවා
+
+
+
+
+[Slide 15]  Best Practices for Implementing Asynchronous Communication
+			(අසමමුහුර්ථ ආකාරයට, Microservice අතර දත්ත හුවමාරු කරද්දී, කරන්න ඕන Best Practises)
+
+	01) පැහැදිලි "Event Schema ?" එකක් හදන්න.
+				
+				~ මොකද්ද මේ Event Schema එකක් කියන්නේ?
+						-	Event Schema එකක් කියන්නේ, Microservice අතර 
+							හුවමාරු කරගන්නා පණිවිඩ, ලියනු ලබන සම්මත ක්‍රමවේදයකි.
+						  	මෙය Microservice එකෙන් Microservice එකට වෙනස් වේ.
+							
+							උදා:- මෙහි පෙන්වා ඇත්තේ, "Order" හා "Notification Service" දෙක අතර පණිවිඩ හුවමාරු කරගන්නා Format එකයි.
+									{
+									  "OrderID": "______",
+									  "Item Name": "______",
+									  "Location" : "_________"
+									  
+									}
+
+
+
+
+	02) එකම Microservice එක, කිහිප වතාවක් භාවිතා කරද්දී, එකම Event එක දෙපාරක් Execute නොවෙන විදිහට වැඩ කරන්න. නැතිනම් ප්‍රශ්න ගොඩක් මතු වීමට ඉඩ තියෙනවා.
+			උදා:- "payment" Microservice එක, දෙපාරක් Run වී, Customorගෙන් දෙවතාවක් සල්ලි අය කරගැනීම. 
+
+
+	03) Version Control සිදු කරන්න
+
+
+
+
+
+
+
+
+
+[Slide 16] Real-World Examples
+			(අසමමුහුර්ථ ආකාරයට, Microservice අතර දත්ත හුවමාරු කරගන්නා ක්‍රමය, ඇත්ත ලෝකයේ භාවිතා වෙන ස්ථාන)
+
+	01) Netflix 
+			- Netfix එක විසින්, "Kafka"  Tool එක භාවිතා කරනවා, Usersලා Microservices අතර හුවමාරු කරගන්නා දත්ත, ට්‍රිලියනයකට අධික ප්‍රමාණයක් 
+			 Monotor කරලා, එයාලගේ Recomandation System වලට දාන්න. මෙතැනදී භාවිතා වෙන්නේ, "දැනුම්-දීම් Real Time දෙන (Event- Stream)" Asynchronous දත්ත හුවමාරු ක්‍රමය.
+
+
+	02) Uber: 
+			- Uber ඒකෙ, Customor කෙනෙක්, Ride එකක් Book කලාම, Driver කොහෙද ඉන්නේ? කොච්චර කාලයක් යයිද? වගේ හැම Update එකක්ම Real Time, Events හරහා ලැබෙනවා. 
+			මෙතැනදී භාවිතා වෙන්නේ, "දැනුම්-දීම් Real Time දෙන (Event- Stream)" Asynchronous දත්ත හුවමාරු ක්‍රමය.
+
+	03) Amazon : 
+			- Amazon එකේ, "Orders, shipments, inventory" වගේ සියලුම Events, වලට භාවිතා වෙන්නේ, "දැනුම්-දීම් Real Time දෙන (Event- Stream)" Asynchronous දත්ත හුවමාරු ක්‍රමය.
+
+
+
+[Slide 17] Summary Table
+			(අසමමුහුර්ථ ආකාරයට, Microservice අතර දත්ත හුවමාරු කරගන්නා ක්‍රම වල සාරාංශය)
+
++--------------------------------------------------+------------------------------------------------------+----------------------------------+
+| දත්ත හුවමාරු කරගන්නා ක්‍රමය                     | විස්තරය                                               	| මේ සඳහා භාවිතා කරන Tools සහ    |
+|                                                 	|                                                      		| Softwares                        |
++--------------------------------------------------+------------------------------------------------------+----------------------------------+
+| Event-Driven Architecture (EDA)                  	| දැනුම් දීම් (Events) මුලික කරගෙන                     		| Kafka, RabbitMQ                  |
+| ("දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු         	| දත්ත හුවමාරු කරයි                                     	|                                  |
+| කරන ක්‍රමය)                                      |                                                      		|                                  |
++--------------------------------------------------+------------------------------------------------------+----------------------------------+
+| Message Queue                                    	| "Message Broker කෙනෙක්" භාවිතා කර                   	| ActiveMQ, SQS                    |
+| (Message පෝලිම් ක්‍රමය)                          	| දත්ත හුවමාරු කරයි                                     	|                                  |
++--------------------------------------------------+------------------------------------------------------+----------------------------------+
+| Event Streaming                                  	| "දැනුම්-දීම් (Events) Real Time ලබා දෙමින්" දත්ත හුවමාරු   | Kafka, Pulsar                    |
+| ("දැනුම්-දීම් Real Time දෙන" දත්ත හුවමාරු      	| දත්ත හුවමාරු කරයි                                     	|                                  |
+| කරන ක්‍රමය)                                      |                                                      		|                                  |
++--------------------------------------------------+------------------------------------------------------+----------------------------------+
+| Event Sourcing                                   	| Microservice දෙකක් අතර හුවමාරු වුන සෑම Message       	| EventStoreDB                     |
+| ("දැනුම් දීම්-මුලාශ" දත්ත හුවමාරු              		| එකක්ම ගබඩා කරගෙන තබා ගෙන දත්ත හුවමාරු කරයි.    |                                  |
+| කරන ක්‍රමය)                                      |                                                      		|                                  |
++--------------------------------------------------+------------------------------------------------------+----------------------------------+-----
+
+
+
+
+
+[Slide 18] 				Rule 09
+					Observability
+		(Microservice එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට, නිර්මාණය කර තිබිය යුතුය)
+
+
+		<pencil>
+			මේක හරියට Securty කෙනෙක් වගේ 
+		</pencil>
+
+මොකද්ද මේ, "Microservice එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට තිබිය යුතුයි" කියන නීතියෙන් (Observability) කියන්නේ?
+	
+	- "Microservice එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට තිබිය යුතුයි" කියන නීතියෙන් (Observability) කියන්නේ, System එකක් ඇතුලේ තියෙන Microservices වල, මොකද්ද වෙන්නේ කියලා හොයාගන්න්න පුළුවන් වෙන විදිහට, System එකක් නිර්මාණය කල යුතුයි යන්නයි.
+
+	- Microservices ගොඩක් තියෙද්දී, මොන Service එකේද ප්‍රශ්නයක් තියෙන්නේ? කියලා, පහසුවෙන් හොයාගන්න තමා මේ නිතිය වැදගත් වෙන්නේ.
+
+	<pencil>
+		සාම්ප්‍රදායික Microservices නිරීක්ෂණ ක්‍රමවේද වලදී, Microservice එක වැඩ කරනවාද කියලා විතරයි බලන්නේ. 
+		නමුත් මේ නීතියෙන්, Microservice එක වැඩ කරනවාද යන්න වගේම, ඒක වැඩ කරන විදිහත් බලනවා.
+	</pencil>					
+
+
+
+
+[Slide 19] "Microservice එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට තිබිය යුතුයි" කියන නීතිය නොපිළිපැදීමෙන් මතුවන ගැටළු
+			(Why Observability Matters in Microservices)
+
+
+	ගැටලුව 1	:
+		  * 	Monolitic System එකක, සම්පූර්ණ System එකම, තනි, Application එකක් ලෙස පවතින නිසා, System එක ඇතුලත සිදු වෙන දේ, Manually නිරීක්ෂණය 		 කිරීම පහසුය.
+		  
+		  * 	නමුත් Microservice System එකක,  Services ගණනාවක සිදු වන දේවල් Manually නිරීක්ෂණය කිරීම අපහසු වේ.
+
+		  			
+
+	ගැටලුව 2	:
+			*	 එක, Task එකකට, Microservices විශාල ප්‍රමාණයක්, සම්බන්ධ වෙන නිසා, එම Task එක අක්‍රිය වුනොත්, ගැටලුව සහිත Microservice එක 						 සොයාගැනීම අසීරු වේ
+						උදා:- E Commrace Website එකක, "Order" Process එක වැඩ කරන්නේ නැත්නම්, ප්‍රශ්නය තිබෙන, Microservice එක කුමක් දැයි 
+								(payment-srevice එකද?, notification-service එකද? යන්න) ඍජුවම හඳුනාගත නොහැක.
+
+
+
+	ගැටලුව 3 : 
+			* Development Team එකේ සාමාජිකයන් අතරේ, Microservices බෙදා දෙන නිසා, මොන Team එකේ, මොන Memeberගේ, මොන Microsevice එකේද ගැටලුව තියෙන්නේ කියලා සොයාගැනීම ඉතා අසීරු වේ.
+						
+
+
+
+	මේ නිසා, "ක්‍රියාකාරකම්" Monitor කළ හැකි විදිහට, නිර්මාණය කර තිබිය යුතුය" කියන නිතිය පිළිපැදීම අනිවාර්ය වේ.
+
+
+
+
+
+[Slide 20] The Three Pillars of Observability
+			("Microservice එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට තිබිය යුතුයි" කියන නීතිය ක්‍රියාත්මක කරන ප්‍රධාන ක්‍රම 03)
+			
+
+	<red> (a) Logging (පද්ධතියේ සිදු වන සියලු ක්‍රියාකාරකම් සටහන් කර ගැනීමෙන් ) </red>
+	<red> (b) Metrics  (පද්ධතියේ කාර්යක්ෂමතාව, සංඛ්‍යාත්මකව මැනීමෙන්.) </red>
+	<red> (c) Tracing	 (Microservice අතර හුවමාරු වෙන Messages ගැන අවධානයෙන් සිටීමෙන්) </red>
+ 
+
+
+
+
+		(a)  පද්ධතියේ සිදු වන සියලු ක්‍රියාකාරකම් සටහන් කර ගැනීම 
+			 	(Logging)
+
+
+	* මෙහිදී, System එකේ සිදු වුනු සෑම ක්‍රියාකාරකමක්ම සටහන් කර ගැනීම සිදු වේ.
+
+
+	* මෙහි විවිධ වර්ගයේ සටහන් කරගැනීම් ආකාර පවතී (Logging Types)
+			01) System එක පිළිබඳව සිදු කරන සටහන් කරගැනීම් (Application Logs)
+			02) System එක භාවිතා කළ අය පිළිබඳව සිදු කරන සටහන් කර ගැනීම් (Access logs)
+			03) System එකේ Security එකට බලපාන දේවල්, පිලිබඳ සිදු කරන සටහන් කර ගැනීම් (Audit logs)
+
+	* Log සටහන් කිරීමේදී, අනුගමනය කලයුතු Best Practises
+		- Log සටහන් ලිවීමේදී, JSON වගේ Format එකක් Use කරන්න.
+		- සෑම Log සටහනකටම, Unique ID එකක් භාවිතා කරන්න. 
+		- හැම Microservice එකකම, Log සටහන්, එක තැනකට එකතු කරන්න.
+
+
+
+
+
+[Slide 21] පින්තුරය පැහැදිලි කිරීම
+
+	* මේක, JSON Format එකෙන් ලිව්ව, Log එකක්. 
+	* මේ සටහනේ තියෙන්නේ, System එකක සිදු වෙච්ච, Error එකක් ගැන.
+
+	* ඒකෙදි, Error එක සිදු වුන, 
+								වෙලාව, 
+								Error එක සිදු වුන Microservice එක, 
+								Error එකේ Piority Level එක, 
+								Error Message එක, 
+								Error එකේ ID එක , 
+
+								කියන සියලුම විස්තර සටහන් කරලා තියෙනවා.
+
+
+	* ඒ වගේම, Log සටහන් ලිවීමට පහත Tools භාවිතා කරන්න පුළුවන් 
+			ELK Stack, 
+			Grafana Loki, 
+			Cloud Logging, 
+			AWS CloudWatch 
+
+
+
+
+
+
+[Slide 22] (b) පද්ධතියේ කාර්යක්ෂමතාව, සංඛ්‍යාත්මකව මැනීම.
+					 (Metrics) 
+
+
+	* මෙහිදී, කාලයත් සමඟ පද්ධතියේ කාර්යක්ෂමතාව, සංඛ්‍යාත්මක ලෙස නිරුපනය කරයි.
+		
+		උදා: - 	CPU එක භාවිතා වෙන ප්‍රමාණය
+					යම් කිසි කාලයකදී, Process වුන, Orders ප්‍රමාණය
+					Microservices එකක් ක්‍රියාත්මක වීමට ගත වූ කාලය
+					Microservices දෙකක් අතර Message එකක් හුවමාරු වීමට ගත වූ කාලය
+
+	* මෙහිදී, පද්ධතියේ කාර්යක්ෂමතාව මැනීමේ අරමුණ වන්නේ, පද්ධතියේ පවතින අසාමාන්‍යතා සොයාගැනීමයි
+
+
+
+
+[Slide 23] 	Tools
+				(පද්ධතියේ කාර්යක්ෂමතාව, සංඛ්‍යාත්මකව මැනීම සඳහා භාවිතා කරන Tools හා Softwares)
+
+
+		  (ප්‍රොමිතියස්)
+		* Prometheus 									: පද්ධතියක කාර්යක්ෂමතාව මැනීමට අවශ්‍ය දත්ත එකතු කිරීමට භාවිතා කරයි.
+
+		* Grafana 										: සංඛ්‍යාත්මක දත්ත Visualize කිරීමට භාවිතා කරයි
+
+		* Micrometer									: Java/Spring Boot applications වලට, මිනුම් Import කරන Library එකක් ලෙස භාවිතා කරයි.
+
+		* Cloud-native metrics 						: Could Servces වල, මිනුම් සමඟ වැඩ කිරීමට භාවිතා කරයි
+
+
+
+
+
+[Slide 24] 
+
+
+	පින්තුරය පැහැදිලි කිරීම
+		- 	මේකේ පෙන්වන්නේ, Prometheus Tool එක භාවිතයෙන් ලියනු ලැබූ Alert Message එකක්.
+		
+		# මේකෙන් කියන්නේ, ලැබෙන HTTP Errors ප්‍රමාණය , මිනිත්තු 5කට වඩා තියෙනවා නම්, ඒ Detect වුන වෙලාවේ ඉඳන්, මිනිත්තු 2ක් ඇතුලත Alert එකක් 			එවන්න කියලා. තේරුනේ නැත්නම් හිතන්න එපා.
+
+
+
+[Slide 25]  (c) Microservice අතර හුවමාරු වෙන Messages ගැන අවධානයෙන් සිටීම
+					(Tracing)
+
+	* Tracing වලින් බලන්නේ, Microservice අතර හුවමාරු වෙන, එක එක Message වල, ගමනාන්තය ගැනයි.
+
+	* Tracing වල අරමුණ වෙන්නේ, Microservice අතර හුවමාරු වෙන, Message එකක් , 
+								Microservices කියක් අතර යනවද? 
+								කොතනද ප්‍රශ්නයක් තියෙන්නේ? 
+								කොච්චර කාලයක් ගත වෙනවද? 
+
+								කියන දේවල් Track කරන එක.
+
+
+
+[Slide 26]			
+
+		උදා:- 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+				Microservice දෙකක් අතර හුවමාරු කරගන්නා පණිවිඩය 									|			ඒ පණිවිඩය හුවමාරු කිරීමට ගත වී ඇති කාලය
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+	"Order-Service කියන Microservice එක විසින්,															|									20µs
+	'OrderCreated කියන නමින්, දැනුම්දීමක් (Event එකක්) කරනවා"									|
+---------------------------------------------------------------------------------------------------------------------------------------------
+																														|
+	"Email-Service" කියන Microservice එක විසිනුත්, 													|
+	"payment-details" Service එකට Message එකක් යවනවා 												|									80µs
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+																														|
+	"Inventory-Service" කියන Microservice එක විසින් "Stock-update"  								|									20,000µs 
+	කියන Microservice එකට Message එකක් යවනවා														|										⚠️
+																														|		(මේ Microservce එකට, බොහෝ වෙලාවක් ගත වී ඇත. 					එනම් මේ Microservice එකේ යම්කිසි ගැටළුවක් පවතී.)
+----------------------------------------------------------------------------------------------------------------------------------------------------------				
+	
+
+	*	එනම්, Microservices දෙකක් අතර, Messsages හුවමාරු වීමට ගත වන කාලය පිලිබඳ අවධානයෙන් සිටීමෙන්, ගැටළු සහිත Microservice එක පහසුවෙන් 				සොයාගත හැක.
+
+
+
+	* Tracing පිළිබඳව ඇති පාරිභාෂික වචන
+			(1) Trace ID : සෑම Message එකක්ම Uniqueව හඳුනාගැනීමට ලබාදෙන ID එක
+
+			(2) Span : විශාල Task එකක් බෙදා ඇති කුඩා Microservice එකකට.
+							
+							---"span.png" එක Open කරන්න
+
+							උදා:- "Order" Task එකේ, "Order-Save" වෙන Microservice එක පමණක් එක Span එකක්.
+									"Payment" Task එකේ "card-valuidate" වෙන Microservice එක පමණක් එක Span එකක්.
+
+
+			(3) Parent/Child Relationship : Microservices වල, Parent / Child Relationship එක, ධුරාවලියක් ලෙස සකස් කිරීමයි
+														---"Parent and Child Relationship.png" එක Open කරන්න.
+  
+
+
+
+
+
+	* Tracing සඳහා භාවිතා කරන Tools:
+			Jaeger, Zipkin, OpenTelemetry, Honeycomb
+
+
+
+[Slide 27] 
+			පින්තුරය පැහැදිලි කිරීම
+				- මේකේ පෙන්නලා තියෙන්නේ, එක එක Microservices වල, Parent / Child Relationship එක, ධුරාවලියක් විදිහට.
+				- ඒ වගේම, එක එක Microservices අතර, Messages හුවමාරු කරගැනීමට ගත වී ඇති කාලයයි. 
+
+
+
+
+
+
+[Slide 28] 					Rule 10
+					Resiliency & Fault Tolerance
+			(Software එකේ ප්‍රශ්න, හෝ errors ආවත්, System එක නොනවත්වා වැඩ කරන්න පුළුවන් වෙන විදිහට තිබිය යුතුය)
+
+
+
+
+මොකද්ද මේ, "Software එකේ ප්‍රශ්න, හෝ errors ආවත්, System එක නොනවත්වා වැඩ කරන්න පුළුවන් වෙන විදිහට තිබිය යුතුය" කියන නීතියෙන් 
+(Resiliency & Fault Tolerance) කියන්නේ?
+
+		- මේ නීතියෙන් කියන්නේ, Software එකේ එකේ අඛන්ඩතාවය (Stableව) පවත්වා ගත යුතු යන්නයි.
+
+
+
+
+
+මොකද්ද මේ "Domino Effect එක වැලැක්වීම" කියන්නේ?
+		
+		# Domino කියන්නේ, Dominos කියන පොඩි කෑලි එක එක පෙලට තියලා වට්ටන Game එක. ඒකෙදි, එකක් වැටුනම පේලියට ඔක්කොම වැටීගෙන යනවා නේ. එහෙම නොවී, එක Microservice එකක් Down වුනා කියලා, ඒක නිසා, මුළු System එකම crash නොවී තියන්න ඕනේ. ("dominos.png" එක open කරන්න)
+
+		* එක Microservice එකක තිබෙන ගැටළුවක් නිසා, නිසා මුළු System එකම Down නොවී පවත්වාගැනීම, <red> "Domino Effect එක වැලැක්වීම" </red> 
+		  ලෙස හඳුන්වයි.
+				උදා: - "payment-service" එක Crash වුනත් මුළු System එකම Crash වෙන්න බෑ
+						  "Order-service" එක Crash වුනත් මුළු System එකම Crash වෙන්න බෑ
+				
+				
+
+								
+
+
+[Slide 29] Why It's Important in Microservices
+				(ඇයි මේ නිතිය, Microservice වලදී වැදගත් වෙන්නේ?)
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+ගැටලුව 			 										මේ ගැටලුව නිසා, System එකට,	|									උපකල්පිත උදාහරණ
+													|		සිදු වෙන බලපෑම 						|
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+													|													|
+													|													|
+Microservice එකක් fail වීම 				|		Task එකේ, ගලායාමට බාධා වීම 	|				"payement-service" එක down වුනාම, සම්පුර්ණ Payment Process
+													|													|				 එකම Down වීම
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+													|													|
+													|													|
+Microservice එකට  							|		User Experience එක අඩු වීම 		|				"item-list" microservice එක Load වෙන්න පරක්කු වුනොත්
+ලැබෙන Network slow වීම						|													|				User විසින් Producs Details බැලීම අතහැර දැමීම
+													|													|
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Microservice එක 								|		 Data loss වීම හෝ errors			|				 "save-order" Microservice එක, Order එකේ දත්ත 
+Crash වීම 										|		මතු වීම 									|				 Save කර මොහොතේ Crash වීම නිසා, එම Order
+													|													|				එක පිලිබඳ දත්ත, Database එකේ නොමැති වීම.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+													|													|
+Microservices එකකට  						|		System එකට දාරා ගත 				|				Black Friday වගේ, Sales තියෙන දවස් වලට, Load එක 
+පැමිණෙන Messages 		 					|		නොහැකි Load එකක්					|				දරාගන්න අමාරු නිසා, Microservices Crash වීම.
+වල Traffic එක වැඩි වීම 					|		පැමිණීම 									|				
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+																										
+																										
+																										
+
+
+* එම නිසා, මේ හැම ගැටළුවකටම හොඳම විසඳුම වන්නේ, "Software එකේ ප්‍රශ්න, හෝ errors ආවත්, System එක නොනවත්වා වැඩ කරන්න පුළුවන් වෙන විදිහට තිබිය යුතුය" නිතිය අනුගමනය කිරීමයි.
+
+
+
+[Slide 30] "Resiliency" හා "Fault Tolerance" අතර වෙනස
+				("දෝෂ අනුව හැඩගැසීම" හා "දෝෂ වලට ඔරොත්තු දීම")
+
+#කලින් අපි, Resiliency" හා "Fault Tolerance කියන වචන දෙකම එකක් විදිහට නේ කතා කලේ. අපි දැන් බලමු මේ දෙකේ වෙනස මොකද්ද කියලා.
+
+#අපිට කොළඹ ඉඳන්, මාතර යන්න ඕනේ, හැබැයි, මාතරට යන පාර කැඩිලා කියලා හිතන්න.
+#දෝෂ අනුව හැඩගැසීම කියන්නේ (Resiliency), වෙන විකල්ප පාරක් භාවිතා කරලා මාතරට යන එක. 
+ (කෙල්ලෙක් බූටක් තිබ්බොත් වෙන කෙල්ලෙක් එක්ක සෙට් වෙනවා වගේ)
+#දෝෂ වලට ඔරොත්තු දීම කියන්නේ (Fault Tolerance), ඒ පාර හරහාම මාතරට යන එක
+(බූට තියපු කෙල්ල පස්සෙන්ම යනවා වගේ)
+
+
+
+
+							Resiliency 	 													|									Fault Tolerance		
+---------------------------------------------------------------------------------------------------------------------------------------------------
+																								|
+			System එකේ Failures වලට හැඩ ගැසේ. 									|					System එකේ Failures වලට ඔරොත්තු දේ
+---------------------------------------------------------------------------------------------------------------------------------------------------
+																								|
+			Software Level එකේ පවතී													|					Hardware Level එකේ පවතී
+---------------------------------------------------------------------------------------------------------------------------------------------------
+			Code එකේ Implement කරයි 													|					Infastuctrue තුල Impelment කරයි
+																								|
+---------------------------------------------------------------------------------------------------------------------------------------------------
+																								|
+		Resiliency වලට උදාහරණ : 													|	Fault Tolerance භාවිතා වෙන අවස්ථා වලට උදාහරණ
+			- Message එකක් යැවීම Fail වුනාම, නැවත Try කිරීම වගේ  		|		- System එකේ Traffic එක වැඩි වුන වෙලාවට, භාවිතා කරන Servers ගණන වැඩි 
+			  දේවල්.																			|		  කරනවා
+																								|
+			- Message එකක් යවන්න අවශ්‍ය Path එක, Block නම්,				|     - Backup Systems හාවිතා කරනවා.
+			  වෙනත් පාරවල් වලින්, ඒ Message එක යැවීම වගේ දේවල්			|
+			  																					|
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+[Slide 31] Common "Resilience" Patterns
+				(බහුලව භාවිතා වෙන "දෝෂ අනුව හැඩගැසීමේ" ක්‍රම)
+
+
+			a. Circuit Breaker Pattern (Circuit බ්‍රේකර් ක්‍රමය)
+			b. Retry Pattern (නැවත උත්සහ කිරීමේ ක්‍රමය)
+			c. Fallback Pattern (පසුබැසීමේ ක්‍රමය)
+
+
+
+
+			a. Circuit Breaker Pattern
+				(Circuit බ්‍රේකර් ක්‍රමය)
+						* මේක ගෙදරක තියෙන, "Circit බ්‍රේකර්" එකකට සමානයි. 
+								#"Circuit breaker.webp" එක Open කරන්න
+
+						* බ්‍රේකර් එකක් Off වුනාට මුළු ගෙදරම විදුලිය විසන්ධි වෙන්නේ නෑ
+						* ඒ වගේ, එක Microservice එකක් අක්‍රිය වුනොත්, මුළු, System එකටම ඒක බලනොපාන විදිහට හදන්න මේ ක්‍රමයට අනුව පුළුවන්.
+						* මේක බහුලව භාවිතා වෙන "දෝෂ අනුව හැඩගැසීමේ" ක්‍රමයක්
+						* මේ ක්‍රමෙයන් Domino Effect එක වළක්වනවා.
+							
+						මෙහිදී භාවිතා කරන Tools
+							Resilience4j, Spring Cloud Circuit Breaker
+
+
+			
+
+[Slide 32] පින්තුරය පැහැදිලි කිරීම
+	
+	* මෙතන පෙන්වන්නේ, Circuit බ්‍රේකර් ක්‍රමය Code එකක වැඩ කරන විදිහ
+	#Code එක දැනගැනීම අනිවාර්ය නෑ
+
+
+
+[Slide 33]  
+
+		b. Retry Pattern
+			(නැවත උත්සහ කිරීමේ ක්‍රමය)
+					* මේ ක්‍රමයේදී කරන්නේ, Microservcies දෙකක් අතර යවන, Message එක (Request එක) Fail වුනොත්, නැවත කිහිප වතාවක් Try කිරීමයි.
+
+						#උදා:- අපි කාට හරි Call එකක් ගද්දි එක පාර ඉස්සුවේ නැත්නම්, කිහිප වතාවක් Call ගහනවා වගේ.
+
+
+					* මේ ක්‍රමය වැඩිපුරම භාවිතා වෙන්නේ,
+										 	Microservices වල, Network එක තාවකාලිකව Disconnet වුන වෙලාවට, 
+											Microservice එකක් Busy වුන වෙලාවට
+											Microservice එකක්, Timeout වුනාම
+
+											වගේ, තාවකාලික ගැටළු(Transient errors) නිරාකරණය කරන්න.
+																			(ට්‍රාන්සියන්ට්)																			
+
+
+					පින්තුරය පැහැදිලි කිරීම්
+							* මෙතන පෙන්වන්නේ, "Retry Pattern" එක Code කරන විදිහ
+
+
+
+
+
+
+[Slide 34] 
+	
+		c. Fallback Pattern
+			(පසුබැසීමේ ක්‍රමය)
+					* මේ ක්‍රමයේදී කරන්නේ, Microservice එකක් වැඩ කරන්නේ නැත්නම්, එයට විකල්පයක් ලෙස, "Message" එකක් Userට පෙන්වීමයි. නැත්නම්, දැනට Cache Memoryයේ ඇති දත්ත වලින්, User ට අවශ්‍ය කාර්යය ඉටු කර දීමයි.
+
+								උදා:- * "product-list" Microservice එක වැඩ කරන්නේ නැත්නම්,  userට, "Service unavailable" කියලා Message එකක් පෙන්නනනවා 
+											නැත්නම්, දැනට "Cache Memory" එකේ තියෙන, Product List එක Userට පෙන්නනනවා වගේ.
+
+					* මෙහි ප්‍රධාන අරමුණ වන්නේ, User Experience එක අඛණ්ඩව පවත්වාගෙන යාමයි.
+
+
+⚠️Note the slide
+[Slide 36] Best Practices
+				("දෝෂ අනුව හැඩගැසීමේ (Resilience)" ක්‍රම භාවිතා කරද්දී, අනුගමනය කල යුතු Best Practises)
+
+
+	01) Microservices, Fail වෙන්න පුළුවන් කියලා හිතාගෙන වැඩ කරන්න
+	02) "දෝෂ අනුව හැඩගැසීමේ ක්‍රම" කිහිපයක් එකවර භාවිතා කරන්න (Circuit Breaker Pattern + Retry Pattern වගේ)
+	03) Retry Pattern එක නිතර භාවිතා කරන්න එපා
+	04) Microservices Monitor කරන්න
+
+
+
+
+
+[Slide 35] Fault Tolerance Mechanisms
+				(බහුලව භාවිතා වෙන, "දෝෂ වලට ඔරොත්තු දීමේ" යාන්ත්‍රණ)
+
+
+
+* මේවා, Software Level එකට එහා ගොස්, Hardware Level එකේ(Infrastucture Level එකේ) භාවිතා කරන යාන්ත්‍රණ වේ.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+"දෝෂ වලට ඔරොත්තු දීමේ" යාන්ත්‍රණය		|					යාන්ත්‍රණය ක්‍රියාත්මක කරන විදිහ
+----------------------------------------------------------------------------------------------------------------------------------------------------
+														|
+1. Load Balancing									|		- Microservice එකට ලැබෙන පණිවිඩ (Requests), Servers කිහිපයක් හරහා යැවීමෙන්.
+ 	(Load එක Balance කිරීම)					|				  උදා:- Microservice එකට, Requst 100ක් ලැබෙනවා නම් එය 33 බැගින් Servers 3ක් හරහා යැවීම
+----------------------------------------------------------------------------------------------------------------------------------------------------
+														|
+														|
+2. Replication  									|		- එකම Microservice එකේ, Copies කිහිපයක් Run කිරීමෙන්								
+  (පිටපත් කිරීම)									|				උදා:- "payment-details" Microservice එක, Servers කිහිපයක Run කිරීම.
+														|
+----------------------------------------------------------------------------------------------------------------------------------------------------
+														|
+3. Failover 										|		- Primary Service එක Down වුනාම, ස්වයංක්‍රියව Backup Service එක ක්‍රියාත්මක කිරීමෙන්
+	(ආපසු මාරු වීම)								|				උදා:- Primary Database එක අක්‍රිය වුනාම, Backup Database එක Run වීම
+														|
+														|
+----------------------------------------------------------------------------------------------------------------------------------------------------
+														|
+3. Redundancy										|		- System එකේ වැදගත් Components, Duplicate කර තබා ගැනීමෙන් 
+	(සමතිරික්තතාව) 								|				උදා:- Database එකේ Copy දෙකක් තබා ගැනීමෙන්
+														|
+----------------------------------------------------------------------------------------------------------------------------------------------------
+														|
+														|
+4. Auto-scaling 									|		- System එකේ Traffic එක වැඩි වුන වෙලාවට, භාවිතා කරන Servers ගණන වැඩි කිරීමෙන්
+	(ස්වයංක්‍රීයව විශාල වීම)  					|				උදා:- Black Friday වගේ දවස් වලට, Servers ගණන දෙගුණයකින් වැඩි කිරීමෙන්.
+														|
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+* මේවා තමා බහුලව භාවිතා වෙන දෝෂ වලට ඔරොත්තු දීමේ ක්‍රම
+
+
+
+
+
+
+		[Slide 37 -38] Rule 11
+						Automation 
+					(Deploy කිරීම්, Test කිරීම් CI/CD Pipelines භාවිතා කර, Automate කර තිබිය යුතුය)
+
+		
+
+
+ 				What is CI/CD Pipelines?
+				(මොකද්ද මේ CI/CD Pipelines කියන්නේ?)
+
+
+
+
+* මේක, Softwares, Compile කරන්න, Test කරන්න, Deploy කරන්න, කියන සම්පුර්ණ Process එකම, Automate කරන ක්‍රමයක්.
+			
+	 * (CI) Continuous Integration කියන්නේ, Code එකක්, Compile කිරීම, Test කිරීම, Errors Check කිරීම, කියන Process එක, Automate කරලා හදපු සේවාවක්
+	 * (CD) Continuous Deploy කියන්නේ, Code එක, Deploy කිරීමේ Process එක, Automate කරලා හදපු සේවාවක්.
+
+
+ඇයි Microservices වලට, CI/CD Pipelines අත්‍යාවශ්‍ය?
+	- මොකද, System එකක, Microservices සිය ගණනක් ගණනක් භාවිතා වෙන නිසා, මේ හැම Microservices එකක්ම, වෙන වෙනම, Build කිරීම, Test කිරීම, Deploy කිරීම, ප්‍රායෝගික අපහසු වෙන නිසා.
+
+
+
+[Slide 39] පින්තුරය පැහැදිලි කිරීම
+
+<pencil>
+
+ CI Cycle (රතු කොටස):
+ 
+  - Plan කරනවා
+  - Code ලියනවා (GitHub/GitLab)
+  - Build කරනවා (Gradle/Webpack)
+  - Test කරනවා (Jest/JUnit)
+  - Release කරන්න ready කරනවා
+ 
+ CD Cycle (නිල් කොටස):
+ 
+ - Deploy කරනවා (Docker/Kubernetes)
+ - Operate කරනවා (infrastructure manage කරනවා)
+ - Monitor කරනවා (errors, performance track කරනවා)
+
+</pencil>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------මේවා ලියන්න එපා------------------------------------------------------
+Microservices and Cloud Computing
+																				Lession 03
+																			MICROSERVICES DESIGN PRINCIPLES Part 2
+																(Microservices ක්‍රමවේදයේ නිර්මාණ මුලධර්ම - දෙවෙනි කොටස)
+
+
+
+
+[Slide 3]						Rule 08
+			Asynchronous Communication & Event-Driven Patterns
+		(අසමමුහුර්ථ සන්නිවේදය සහ "දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමය භාවිතා කල යුතුය)
+			
+
+
+
+	මොකද්ද මේ සමමුහුර්ථ(Synchronous) සහ අසමමුහුර්ථ(Asynchronous) සන්නිවේදනය කියන්නේ?
+	(What Is Asynchronous and synchronous Communication?)
+		---"sync-vs-async.png" එක Open කරගන්න.
+
+		- Synchronous Communication එක කියන්නේ, Microservice එක විසින් යවන ලද, Message එක හෝ, Event එකකට අදාළ ප්‍රතිචාරය ලැබෙන තුරු බලා හිඳ, එම ප්‍රතිචාරය ලැබුණු පසු පමණක්, ඊලඟ පණිවිඩය යැවීමයි. මෙය <red> Program එකක් තනි thred එකක, Run කරන, Single threding ක්‍රමයට සමාන වේ. </red> 
+
+		- අපි Synchronous Communication එකට උදව් වෙන API එකට නමක් කියනවා, "REST API" කියලා.
+
+
+
+
+		- Asynchronous Communication එක කියන්නේ, Microservice එකක් විසින්, Message එකක් හෝ Event එකක් යවා, ඒ Message එකට, ප්‍රතිචාරයක් ලැබෙන තුරු බලා  <red> නොඉඳ </red>, තවත් පණිවිඩ යැවීමයි. මෙය <red> Program එකක් threds කිහිපයක Pararally Run කරන Multi threding ක්‍රමයට සමාන වේ. </red> 
+
+		- Asynchronous Communication වලදී, Messages හිර වීමක් සිදු වෙන්නේ නැත (non-blocking), එමෙන්ම, එක Service එකක් Complete වෙන්න, තවත් Service එකක බලපෑමක් නොමැත (Loosely Coyupled/Decoupled), සහ වඩා ලොකු Message Load එකකට ඔරොත්තු දීමට මෙයට හැකියාව පවතී (Scalable)
+
+
+		<pencil>
+			Asynchoruns 	== Multi threding
+			Synchoruns	   	== Single Threding
+		</pencil>
+
+
+[Slide 4] පින්තුරය පැහැදිලි කිරීම
+
+		Synchronous 																			Asynchronous 
+		Communication																			Communication
+		පැත්ත 																					පැත්ත
+
+Message එක හෝ, Event එකකට අදාළ ප්‍රතිචාරය ලැබෙන තුරු බලා ඉඳලා,  			Message එකක් හෝ Event එකක් යවා, ඒ Message එකට, 
+ඒ ප්‍රතිචාරය ලැබුනට පස්සේ පමණක්, ඊලඟ පණිවිඩය යවනවා. 						ප්‍රතිචාරයක් ලැබෙන තුරු බලා  <red> නොඉඳ </red>
+																				තවත් පණිවිඩ එක දිගට යැවීමයි.
+			
+
+
+
+[Slide 5] Asynchronous Communication vs Synchronous Communication
+		  {සමමුහුර්ථ(Synchronous) සහ අසමමුහුර්ථ(Asynchronous) සන්නිවේදනය අතර වෙනස}
+
++-------------------------+------------------------------------------+------------------------------------------+
+| Aspect                 	| Synchronous                              	| Asynchronous                             |
+| (සලකා බලන කරුණ)    	|                                          	|                                          |
++-------------------------+------------------------------------------+------------------------------------------+
+| සන්නිවේදනය            	| Request හා Response based වේ            	| Message හෝ Event Based වේ                |
+| (Commucation)           	| (Service එකට Request එකක් යැවීමෙන්     	| (Service එකට Message හෝ Event එකක්     |
+|                         	| සහ Service එක විසින් Response එකක්     | යැවීමෙන් සන්නිවේදනය සිදු කරයි.)         |
+|                         	| එවීමෙන් සන්නිවේදනය සිදු කරයි.)          	|                                          |
++-------------------------+------------------------------------------+------------------------------------------+
+| එක Service එකකට      	| වැඩියි                                   	| අඩුයි                                    |
+| අනිත් Service එකෙන්    	|                                          	|                                          |
+| ලැබෙන බලපෑම          	|                                          	|                                          |
+| (Coupling)              	|                                          	|                                          |
++-------------------------+------------------------------------------+------------------------------------------+
+| Message එක delever,     	| ලබන්නා මත Depend වෙනවා                | ලබන්නා නැති වුනත්, Messages, Queue      |
+| වීමට ඇති හැකියාව        	| (ලබන්නා නැත්තනම් Message එක           | එකකට Save වේ. එම නිසා, ලබන්නා Avilable
+| (Availability)      	    |   යන්නෙත් නෑ)                            | වෙලාවට, එයාට Message එක ලැබෙනවා.)	|
++-------------------------+------------------------------------------+------------------------------------------+	|
+| උදා:-                   	| "Order-Service" එක Complete වෙනකන්,    | "Order" කියන Microservice එක විසින් 
+| "Order Service"         	| "Payment Service" එකට ඉන්න වෙනවා.     | Oder එක Complete වුනාම, "Order Completed" 		|
+| "Payment Service"       	|                                          	| කියලා දැනුම්දෙනවා. ඒ Service එක, Subscribe  				|
+| ලෙස, Microservices      	|                                          	| කරපු Microservices කිහිපයකට වුනත්,     	|
+| දෙකක් ඇති බව           	|                                          	| එක පාරම මේ Message එක බලන්න පුළුවන්. |
+| උපකල්පනය කරන්න       |                                          	| (කලින් පාඩමේ Slide 34 බලන්න)           |
++-------------------------+------------------------------------------+------------------------------------------+
+
+
+
+
+
+[Slide 6]
+	#කලින් ලිව්ව එක මෙතන ලියන්න
+
+
+
+[Slide 7] Common Asynchronous Communication Patterns
+		  (අසමමුහුර්ථ ආකාරයට, Microservice අතර දත්ත හුවමාරු කරන්න භාවිතා කරන ක්‍රමවේද 4)
+
+
+1. <red> Event-Driven Architecture (EDA) </red>
+   <red> ("දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමය ) </red>
+
+2. <red> Message Queue Architecture</red>
+   <red> (Message පෝලිම් ක්‍රමය)	</red>
+
+3. <red> Event Streaming Architecture </red>
+   <red> ("දැනුම්-දීම් Real Time දෙන" දත්ත හුවමාරු කරන ක්‍රමය) </red>
+
+
+4. <red> Event Sourcing Architecture </red>
+   <red> ("දැනුම් දීම්-මුලාශ" දත්ත හුවමාරු කරන ක්‍රමය) </red>
+
+
+
+
+
+
+
+1. 	"දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමය 
+	(Event-Driven Architecture {EDA})
+ 
+	<pencil>
+		*  ICT වලදී, "Event" එකක් කියන්නේ, <red> මොකක් හරි වැදගත් දෙයක් ගැන (Microservice එකක් Crash වීම, Microservice එකකින් Message එකක් පැමිණීම වගේ දෙයක්) දැනුම් දෙන්න යවන පණිවිඩ වලට </red>
+	</pencil>
+	
+
+	* "API හරහා, Microservices අතර දත්ත හුවමාරු කිරීමේ" ක්‍රමයට වඩා, "දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමය" ක්‍රමය වඩා කාර්යක්ෂම වේ.
+
+	* මේ Diagram එකෙන් එය පැහැදිලි කරගත හැක
+		---"Traditional API and Event Driven Approch.png" එක මෙතන අඳින්න
+
+		<pencil>
+			මේක Youtube Video බලන එකට සමාන කරන්න පුළුවන්.
+
+			OrderService : Chanux bro
+			Broker : Youtbue
+			Notifiction service : Pawan
+			Payment service : Sijja
+			User Login Service : Sucksporu
+
+			Pawan හා Sijja Chanux broව Subcscribe කරලා තියෙන්නේ
+			Sucksporu කරලා නෑ
+		</pencil>
+
+
+
+	* මෙහිදී, එක් එක් Microservices වලට, වෙන වෙනම Messgae යවනවාට වඩා, මෙහිදී, Event එක Broadcast කිරීම සිදු වේ. එහිදී, event එක අවශ්‍ය Microservices වලට එම Event එකේ Updates ලබාගැනීමට, Event එක Subscribe කළ හැක.
+
+
+
+
+
+[Slide 8]  "දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමය පිලිබඳ උදාහරණයක්
+			(Event-Driven Architecture {EDA})
+
+#"slide8 explanation.png" කියන පින්තුරය පෙන්වන්න
+ 
+"Order-Service කියන Microservice එක විසින්,																								
+'OrderCreated කියන නමින්, දැනුම්දීමක් (Event එකක්) කරනවා"		
+							↓
+
+"Inventory-Service" කියන Microservice එක විසින් මේ Event එක Subscribe කරලා තියෙන්නේ.
+'OrderCreated' වුන ගමන් Stock එක Update කරනවා
+							↓
+
+"Email-Service" කියන Microservice එක විසිනුත්, 'OrderCreated' Event එක Subscribe කරලා තියෙන්නේ.
+'OrderCreated' වුන ගමන්, Email එකක් යවනවා
+							↓
+
+"Analytics-Service" කියන Microservice එඅක් විසිනුත්, 'OrderCreated' Event එක Subscribe කරලා තියෙන්නේ.
+'OrderCreated' වුන ගමන්, Order එකට අදාළ දත්ත, Analysis එක සඳහා එකතු කරනවා.
+
+
+
+
+--- මෙතැනදී කෙලින්ම [Slide 13] ට යනවා.
+
+
+
+
+[Slide 13]
+
+	- Skip this slide
+	- [Slide 8] තිබ්බ උදාහරනේමයි  Slide එකෙත් දාලා තියෙන්නේ.
+	- ආයේ මෙතනට දාලා තියෙන්නේ වැරදීමකින් වෙන්න පුළුවන්.
+
+
+
+
+[Slide 14] 	"දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු කරන ක්‍රමයේ වාසි 
+			(Event-Driven Architecture {EDA}) 
+
+	* එක Service එකක් Crash වුනත්, අනෙක් Services වලට බලපෑමක් වෙන්නේ නෑ (No single point of failure).
+	* Microservices වෙන වෙනම Scale කරන්න පුළුවන් (Services can scale independently).
+	* එක Microservice එකක් Slow වුනත්, ඒක අනිත් Microservies වලට බලපාන්නේ නෑ (Events processed at different speeds).
+
+
+
+
+
+
+
+[Slide 9] 2. Message Queue Pattern
+			(Message පෝලිම් ක්‍රමය)	
+
+
+
+
+	<pencil>
+		---"post office example.png" එක Open කරගන්න
+
+		- මේක හරියට, Post office එකක් වගේ. 
+		- හැම ගෙදරකම ලියුම් Post office එකට එවනවා.
+		- Post office එකේ ලියුම් රඳවාගෙන තියාගෙන ඉන්නවා
+		- පස්සේ, Post office එකෙන් මේ ලියුම් නිවැරදි ස්ථානයට යවනවා 
+
+
+	</pencil>
+	
+	---"Message Queue.png" එක Open කරගන්න
+
+	* Message පෝලිම් ක්‍රමය (Message Queue Pattern) කියන්නේ, Microservices දෙකක් අතර Messages හුවමාරු කරගන්න භාවිතා කරන තවත් ක්‍රමයක්.
+	* මේ ක්‍රමයේදී, Messages හුවමාරු කරගැනීමට, "Message Broker කෙනෙක්" භාවිතා කරනවා
+	* සියලුම Microservice වලින්, Messsages "Message Broker" ට එවනවා.
+	* Message Broker විසින්, Microsevice වලින් එවපු හැම Message එකකටම ආදාළ Queue එකක් හදලා තියෙනවා.
+	* ඊට පස්සේ, නිවැරදි, Microservice එකට එම Message එක ලබා දෙනවා.
+
+
+	උදා:- "Notification-service" කියන Microservice එක විසින්, Message Queue එකේ, Messages රඳවලා තියෙනවා.
+		   පස්සේ "Email-Service" එක සහ "SMS-Service" කියන Microservice දෙක, ස්වාධීනව මේ Queue එකේ තියෙන Messages, Access කරනවා.
+
+
+
+
+[Slide 10] 3. Event Streaming
+			 ("දැනුම්-දීම් Real Time දෙන" දත්ත හුවමාරු කරන ක්‍රමය)
+
+
+	* මේක <red> Real Time </red> Microservices අතර, පණිවිඩ හුවමාරු කරගැනීමට නිර්මාණය කර ඇති ක්‍රමයක්.
+	* මේ සඳහා Apache Kafka, Pulsar, හෝ Google Pub වගේ Tools භාවිතා කරන්න පුළුවන්.
+	
+
+	උදා:- 
+	Netfix එක විසින්, "Kafka"  Tool එක භාවිතා කරනවා, User කෙනෙක්, බලන Videos වල, විස්තර, Real Time Track කරලා, Netflix එකේ, Recomandation Algoritham එකට දෙන්න.
+
+
+
+
+
+
+[Slide 11]  4. Event Sourcing
+		("දැනුම් දීම්-මුලාශ" දත්ත හුවමාරු කරන ක්‍රමය)
+
+	<pencil>
+		මේක හරියට Whatsapp Chat එකක් වගේ.
+		Whatsapp Chat එකක, දෙන්නක් අතර හුවමාරු වුන, හැම Messaage එකක්ම ගබඩා වෙලා තියෙනවා වගේ,
+		ඒ වගේ, මේ ක්‍රමයේදී, <red> Microservice දෙකක් අතර </red> හුවමාරු වුන සෑම Message එකක්ම ගබඩා කරගෙන තියාගෙන ඉන්නවා.
+
+
+	</pencil>
+
+	* මේ ක්‍රමයේදී, <red> Microservice දෙකක් අතර </red> හුවමාරු වුන සෑම Message එකක්ම ගබඩා කරගෙන තබා ගනී.
+	
+
+		උදා:-  
+				ගෙවීම ආරම්භ කළා (PaymentInitiated)
+				ගෙවීම process කළා (PaymentProcessed)
+				ගෙවීම සම්පූර්ණ කළා (PaymentCompleted)
+
+			  	මේ ආකාරයට Microservices දෙකක් හරහා හුවමාරු වුන හැම Messaage එකක්ම ගබඩා කර ගනී.
+
+
+
+
+
+[Slide 12] Key Technologies
+			(ඉහතදී කතා කල, ක්‍රමවේද 4හි භාවිතා කරන Tools සහ Softwares)
+
+		01) Message Broker සඳහා භාවිතා කරන Tools හා Softwares. : 
+				RabbitMQ, ActiveMQ
+
+		
+		02) "දැනුම්-දීම් Real Time දෙන" දත්ත හුවමාරු කරන ක්‍රමය (Event Streaming) සඳහා භාවිතා කරන Tools හා Softwares : 
+				Apache Kafka, Redpanda, Google Pub/Sub
+
+		
+		03) Microservices අතර සිදු වන, සියලු Events වලින් ලැබුණු තොරතුරු, Analys කර  තීරණ ගැනීම (Event Processing) සඳහා 
+		    භාවිතා කරන Tools හා Softwares : 
+				Apache Flink, Spark Streaming, KSQL
+		
+		
+		04) Microservices අතර සිදු වන, සියලු Events ගැන අවධානයෙන් සිටීම (Event Tracing) සඳහා භාවිතා කරන Tools හා Softwares : 
+				OpenTelemetry, Jaeger
+
+		
+		05) Microservices එකිනෙක Connect කිරීම (Integration) සඳහා භාවිතා කරන Tools හා Softwares : 
+				Spring Cloud Stream, Kafka Streams, Debezium
+
+
+
+
+
+
+[Slide 13 - 14]
+
+	- Skip this slide
+	- " Event-Driven " ක්‍රමය කතා කරලා ඉවරයි
+	- ආයේ මෙතනට දාලා තියෙන්නේ වැරදීමකින් වෙන්න පුළුවන්.
+	- [Slide 8] තිබ්බ උදාහරනේමයි  Slide එකෙත් දාලා තියෙන්නේ.
+	- මෙතැනදී කෙලින්ම [Slide 15] ට යනවා
+
+
+
+
+[Slide 15]  Best Practices for Implementing Asynchronous Communication
+			(අසමමුහුර්ථ ආකාරයට, Microservice අතර දත්ත හුවමාරු කරද්දී, කරන්න ඕන Best Practises)
+
+	01) පැහැදිලි "Event Schema ?" එකක් හදන්න.
+				
+				~ මොකද්ද මේ Event Schema එකක් කියන්නේ?
+						-	Event Schema එකක් කියන්නේ, Microservice අතර 
+							හුවමාරු කරගන්නා පණිවිඩ, ලියනු ලබන සම්මත ක්‍රමවේදයකි.
+						  	මෙය Microservice එකෙන් Microservice එකට වෙනස් වේ.
+							
+							උදා:- මෙහි පෙන්වා ඇත්තේ, "Order" හා "Notification Service" දෙක අතර පණිවිඩ හුවමාරු කරගන්නා Format එකයි.
+									{
+									  "OrderID": "______",
+									  "Item Name": "______",
+									  "Location" : "_________"
+									  
+									}
+
+
+
+
+	02) එකම Microservice එක, කිහිප වතාවක් භාවිතා කරද්දී, එකම Event එක දෙපාරක් Execute නොවෙන විදිහට වැඩ කරන්න. නැතිනම් ප්‍රශ්න ගොඩක් මතු වීමට ඉඩ තියෙනවා.
+			උදා:- "payment" Microservice එක, දෙපාරක් Run වී, Customorගෙන් දෙවතාවක් සල්ලි අය කරගැනීම. 
+
+
+	03) Version Control සිදු කරන්න
+
+
+
+
+
+
+
+
+
+[Slide 16] Real-World Examples
+			(අසමමුහුර්ථ ආකාරයට, Microservice අතර දත්ත හුවමාරු කරගන්නා ක්‍රමය, ඇත්ත ලෝකයේ භාවිතා වෙන ස්ථාන)
+
+	01) Netflix 
+			- Netfix එක විසින්, "Kafka"  Tool එක භාවිතා කරනවා, Usersලා Microservices අතර හුවමාරු කරගන්නා දත්ත, ට්‍රිලියනයකට අධික ප්‍රමාණයක් 
+			 Monotor කරලා, එයාලගේ Recomandation System වලට දාන්න. මෙතැනදී භාවිතා වෙන්නේ, "දැනුම්-දීම් Real Time දෙන (Event- Stream)" Asynchronous දත්ත හුවමාරු ක්‍රමය.
+
+
+	02) Uber: 
+			- Uber ඒකෙ, Customor කෙනෙක්, Ride එකක් Book කලාම, Driver කොහෙද ඉන්නේ? කොච්චර කාලයක් යයිද? වගේ හැම Update එකක්ම Real Time, Events හරහා ලැබෙනවා. 
+			මෙතැනදී භාවිතා වෙන්නේ, "දැනුම්-දීම් Real Time දෙන (Event- Stream)" Asynchronous දත්ත හුවමාරු ක්‍රමය.
+
+	03) Amazon : 
+			- Amazon එකේ, "Orders, shipments, inventory" වගේ සියලුම Events, වලට භාවිතා වෙන්නේ, "දැනුම්-දීම් Real Time දෙන (Event- Stream)" Asynchronous දත්ත හුවමාරු ක්‍රමය.
+
+
+
+[Slide 17] Summary Table
+			(අසමමුහුර්ථ ආකාරයට, Microservice අතර දත්ත හුවමාරු කරගන්නා ක්‍රම වල සාරාංශය)
+
++--------------------------------------------------+------------------------------------------------------+----------------------------------+
+| දත්ත හුවමාරු කරගන්නා ක්‍රමය                     | විස්තරය                                               	| මේ සඳහා භාවිතා කරන Tools සහ    |
+|                                                 	|                                                      		| Softwares                        |
++--------------------------------------------------+------------------------------------------------------+----------------------------------+
+| Event-Driven Architecture (EDA)                  	| දැනුම් දීම් (Events) මුලික කරගෙන                     		| Kafka, RabbitMQ                  |
+| ("දැනුම් දීම්-මුලික" කරගත් දත්ත හුවමාරු         	| දත්ත හුවමාරු කරයි                                     	|                                  |
+| කරන ක්‍රමය)                                      |                                                      		|                                  |
++--------------------------------------------------+------------------------------------------------------+----------------------------------+
+| Message Queue                                    	| "Message Broker කෙනෙක්" භාවිතා කර                   	| ActiveMQ, SQS                    |
+| (Message පෝලිම් ක්‍රමය)                          	| දත්ත හුවමාරු කරයි                                     	|                                  |
++--------------------------------------------------+------------------------------------------------------+----------------------------------+
+| Event Streaming                                  	| "දැනුම්-දීම් (Events) Real Time ලබා දෙමින්" දත්ත හුවමාරු   | Kafka, Pulsar                    |
+| ("දැනුම්-දීම් Real Time දෙන" දත්ත හුවමාරු      	| දත්ත හුවමාරු කරයි                                     	|                                  |
+| කරන ක්‍රමය)                                      |                                                      		|                                  |
++--------------------------------------------------+------------------------------------------------------+----------------------------------+
+| Event Sourcing                                   	| Microservice දෙකක් අතර හුවමාරු වුන සෑම Message       	| EventStoreDB                     |
+| ("දැනුම් දීම්-මුලාශ" දත්ත හුවමාරු              		| එකක්ම ගබඩා කරගෙන තබා ගෙන දත්ත හුවමාරු කරයි.    |                                  |
+| කරන ක්‍රමය)                                      |                                                      		|                                  |
++--------------------------------------------------+------------------------------------------------------+----------------------------------+-----
+
+
+
+
+
+[Slide 18] 				Rule 09
+					Observability
+		(Microservice එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට, නිර්මාණය කර තිබිය යුතුය)
+
+
+		<pencil>
+			මේක හරියට Securty කෙනෙක් වගේ 
+		</pencil>
+
+මොකද්ද මේ, "Microservice එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට තිබිය යුතුයි" කියන නීතියෙන් (Observability) කියන්නේ?
+	
+	- "Microservice එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට තිබිය යුතුයි" කියන නීතියෙන් (Observability) කියන්නේ, System එකක් ඇතුලේ තියෙන Microservices වල, මොකද්ද වෙන්නේ කියලා හොයාගන්න්න පුළුවන් වෙන විදිහට, System එකක් නිර්මාණය කල යුතුයි යන්නයි.
+
+	- Microservices ගොඩක් තියෙද්දී, මොන Service එකේද ප්‍රශ්නයක් තියෙන්නේ? කියලා, පහසුවෙන් හොයාගන්න තමා මේ නිතිය වැදගත් වෙන්නේ.
+
+	<pencil>
+		සාම්ප්‍රදායික Microservices නිරීක්ෂණ ක්‍රමවේද වලදී, Microservice එක වැඩ කරනවාද කියලා විතරයි බලන්නේ. 
+		නමුත් මේ නීතියෙන්, Microservice එක වැඩ කරනවාද යන්න වගේම, ඒක වැඩ කරන විදිහත් බලනවා.
+	</pencil>					
+
+
+
+
+[Slide 19] "Microservice එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට තිබිය යුතුයි" කියන නීතිය නොපිළිපැදීමෙන් මතුවන ගැටළු
+			(Why Observability Matters in Microservices)
+
+
+	ගැටලුව 1	:
+		  * 	Monolitic System එකක, සම්පූර්ණ System එකම, තනි, Application එකක් ලෙස පවතින නිසා, System එක ඇතුලත සිදු වෙන දේ, Manually නිරීක්ෂණය 		 කිරීම පහසුය.
+		  
+		  * 	නමුත් Microservice System එකක,  Services ගණනාවක සිදු වන දේවල් Manually නිරීක්ෂණය කිරීම අපහසු වේ.
+
+		  			
+
+	ගැටලුව 2	:
+			*	 එක, Task එකකට, Microservices විශාල ප්‍රමාණයක්, සම්බන්ධ වෙන නිසා, එම Task එක අක්‍රිය වුනොත්, ගැටලුව සහිත Microservice එක 						 සොයාගැනීම අසීරු වේ
+						උදා:- E Commrace Website එකක, "Order" Process එක වැඩ කරන්නේ නැත්නම්, ප්‍රශ්නය තිබෙන, Microservice එක කුමක් දැයි 
+								(payment-srevice එකද?, notification-service එකද? යන්න) ඍජුවම හඳුනාගත නොහැක.
+
+
+
+	ගැටලුව 3 : 
+			* Development Team එකේ සාමාජිකයන් අතරේ, Microservices බෙදා දෙන නිසා, මොන Team එකේ, මොන Memeberගේ, මොන Microsevice එකේද ගැටලුව තියෙන්නේ කියලා සොයාගැනීම ඉතා අසීරු වේ.
+						
+
+
+
+	මේ නිසා, "ක්‍රියාකාරකම්" Monitor කළ හැකි විදිහට, නිර්මාණය කර තිබිය යුතුය" කියන නිතිය පිළිපැදීම අනිවාර්ය වේ.
+
+
+
+
+
+[Slide 20] The Three Pillars of Observability
+			("Microservice එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට තිබිය යුතුයි" කියන නීතිය ක්‍රියාත්මක කරන ප්‍රධාන ක්‍රම 03)
+			
+
+	<red> (a) Logging (පද්ධතියේ සිදු වන සියලු ක්‍රියාකාරකම් සටහන් කර ගැනීමෙන් ) </red>
+	<red> (b) Metrics  (පද්ධතියේ කාර්යක්ෂමතාව, සංඛ්‍යාත්මකව මැනීමෙන්.) </red>
+	<red> (c) Tracing	 (Microservice අතර හුවමාරු වෙන Messages ගැන අවධානයෙන් සිටීමෙන්) </red>
+ 
+
+
+
+
+		(a)  පද්ධතියේ සිදු වන සියලු ක්‍රියාකාරකම් සටහන් කර ගැනීම 
+			 	(Logging)
+
+
+	* මෙහිදී, System එකේ සිදු වුනු සෑම ක්‍රියාකාරකමක්ම සටහන් කර ගැනීම සිදු වේ.
+
+
+	* මෙහි විවිධ වර්ගයේ සටහන් කරගැනීම් ආකාර පවතී (Logging Types)
+			01) System එක පිළිබඳව සිදු කරන සටහන් කරගැනීම් (Application Logs)
+			02) System එක භාවිතා කළ අය පිළිබඳව සිදු කරන සටහන් කර ගැනීම් (Access logs)
+			03) System එකේ Security එකට බලපාන දේවල්, පිලිබඳ සිදු කරන සටහන් කර ගැනීම් (Audit logs)
+
+	* Log සටහන් කිරීමේදී, අනුගමනය කලයුතු Best Practises
+		- Log සටහන් ලිවීමේදී, JSON වගේ Format එකක් Use කරන්න.
+		- සෑම Log සටහනකටම, Unique ID එකක් භාවිතා කරන්න. 
+		- හැම Microservice එකකම, Log සටහන්, එක තැනකට එකතු කරන්න.
+
+
+
+
+
+[Slide 21] පින්තුරය පැහැදිලි කිරීම
+
+	* මේක, JSON Format එකෙන් ලිව්ව, Log එකක්. 
+	* මේ සටහනේ තියෙන්නේ, System එකක සිදු වෙච්ච, Error එකක් ගැන.
+
+	* ඒකෙදි, Error එක සිදු වුන, 
+								වෙලාව, 
+								Error එක සිදු වුන Microservice එක, 
+								Error එකේ Piority Level එක, 
+								Error Message එක, 
+								Error එකේ ID එක , 
+
+								කියන සියලුම විස්තර සටහන් කරලා තියෙනවා.
+
+
+	* ඒ වගේම, Log සටහන් ලිවීමට පහත Tools භාවිතා කරන්න පුළුවන් 
+			ELK Stack, 
+			Grafana Loki, 
+			Cloud Logging, 
+			AWS CloudWatch 
+
+
+
+
+
+
+[Slide 22] (b) පද්ධතියේ කාර්යක්ෂමතාව, සංඛ්‍යාත්මකව මැනීම.
+					 (Metrics) 
+
+
+	* මෙහිදී, කාලයත් සමඟ පද්ධතියේ කාර්යක්ෂමතාව, සංඛ්‍යාත්මක ලෙස නිරුපනය කරයි.
+		
+		උදා: - 	CPU එක භාවිතා වෙන ප්‍රමාණය
+					යම් කිසි කාලයකදී, Process වුන, Orders ප්‍රමාණය
+					Microservices එකක් ක්‍රියාත්මක වීමට ගත වූ කාලය
+					Microservices දෙකක් අතර Message එකක් හුවමාරු වීමට ගත වූ කාලය
+
+	* මෙහිදී, පද්ධතියේ කාර්යක්ෂමතාව මැනීමේ අරමුණ වන්නේ, පද්ධතියේ පවතින අසාමාන්‍යතා සොයාගැනීමයි
+
+
+
+
+[Slide 23] 	Tools
+				(පද්ධතියේ කාර්යක්ෂමතාව, සංඛ්‍යාත්මකව මැනීම සඳහා භාවිතා කරන Tools හා Softwares)
+
+
+		  (ප්‍රොමිතියස්)
+		* Prometheus 									: පද්ධතියක කාර්යක්ෂමතාව මැනීමට අවශ්‍ය දත්ත එකතු කිරීමට භාවිතා කරයි.
+
+		* Grafana 										: සංඛ්‍යාත්මක දත්ත Visualize කිරීමට භාවිතා කරයි
+
+		* Micrometer									: Java/Spring Boot applications වලට, මිනුම් Import කරන Library එකක් ලෙස භාවිතා කරයි.
+
+		* Cloud-native metrics 						: Could Servces වල, මිනුම් සමඟ වැඩ කිරීමට භාවිතා කරයි
+
+
+
+
+
+[Slide 24] 
+
+
+	පින්තුරය පැහැදිලි කිරීම
+		- 	මේකේ පෙන්වන්නේ, Prometheus Tool එක භාවිතයෙන් ලියනු ලැබූ Alert Message එකක්.
+		
+		# මේකෙන් කියන්නේ, ලැබෙන HTTP Errors ප්‍රමාණය , මිනිත්තු 5කට වඩා තියෙනවා නම්, ඒ Detect වුන වෙලාවේ ඉඳන්, මිනිත්තු 2ක් ඇතුලත Alert එකක් 			එවන්න කියලා. තේරුනේ නැත්නම් හිතන්න එපා.
+
+
+
+[Slide 25]  (c) Microservice අතර හුවමාරු වෙන Messages ගැන අවධානයෙන් සිටීම
+					(Tracing)
+
+	* Tracing වලින් බලන්නේ, Microservice අතර හුවමාරු වෙන, එක එක Message වල, ගමනාන්තය ගැනයි.
+
+	* Tracing වල අරමුණ වෙන්නේ, Microservice අතර හුවමාරු වෙන, Message එකක් , 
+								Microservices කියක් අතර යනවද? 
+								කොතනද ප්‍රශ්නයක් තියෙන්නේ? 
+								කොච්චර කාලයක් ගත වෙනවද? 
+
+								කියන දේවල් Track කරන එක.
+
+
+
+[Slide 26]			
+
+		උදා:- 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+				Microservice දෙකක් අතර හුවමාරු කරගන්නා පණිවිඩය 									|			ඒ පණිවිඩය හුවමාරු කිරීමට ගත වී ඇති කාලය
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+	"Order-Service කියන Microservice එක විසින්,															|									20µs
+	'OrderCreated කියන නමින්, දැනුම්දීමක් (Event එකක්) කරනවා"									|
+---------------------------------------------------------------------------------------------------------------------------------------------
+																														|
+	"Email-Service" කියන Microservice එක විසිනුත්, 													|
+	"payment-details" Service එකට Message එකක් යවනවා 												|									80µs
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+																														|
+	"Inventory-Service" කියන Microservice එක විසින් "Stock-update"  								|									20,000µs 
+	කියන Microservice එකට Message එකක් යවනවා														|										⚠️
+																														|		(මේ Microservce එකට, බොහෝ වෙලාවක් ගත වී ඇත. 					එනම් මේ Microservice එකේ යම්කිසි ගැටළුවක් පවතී.)
+----------------------------------------------------------------------------------------------------------------------------------------------------------				
+	
+
+	*	එනම්, Microservices දෙකක් අතර, Messsages හුවමාරු වීමට ගත වන කාලය පිලිබඳ අවධානයෙන් සිටීමෙන්, ගැටළු සහිත Microservice එක පහසුවෙන් 				සොයාගත හැක.
+
+
+
+	* Tracing පිළිබඳව ඇති පාරිභාෂික වචන
+			(1) Trace ID : සෑම Message එකක්ම Uniqueව හඳුනාගැනීමට ලබාදෙන ID එක
+
+			(2) Span : විශාල Task එකක් බෙදා ඇති කුඩා Microservice එකකට.
+							
+							---"span.png" එක Open කරන්න
+
+							උදා:- "Order" Task එකේ, "Order-Save" වෙන Microservice එක පමණක් එක Span එකක්.
+									"Payment" Task එකේ "card-valuidate" වෙන Microservice එක පමණක් එක Span එකක්.
+
+
+			(3) Parent/Child Relationship : Microservices වල, Parent / Child Relationship එක, ධුරාවලියක් ලෙස සකස් කිරීමයි
+														---"Parent and Child Relationship.png" එක Open කරන්න.
+  
+
+
+
+
+
+	* Tracing සඳහා භාවිතා කරන Tools:
+			Jaeger, Zipkin, OpenTelemetry, Honeycomb
+
+
+
+[Slide 27] 
+			පින්තුරය පැහැදිලි කිරීම
+				- මේකේ පෙන්නලා තියෙන්නේ, එක එක Microservices වල, Parent / Child Relationship එක, ධුරාවලියක් විදිහට.
+				- ඒ වගේම, එක එක Microservices අතර, Messages හුවමාරු කරගැනීමට ගත වී ඇති කාලයයි. 
+
+
+
+
+[Slide 28] 					Rule 10
+					Resiliency & Fault Tolerance
+			(Software එකේ ප්‍රශ්න, හෝ errors ආවත්, System එක නොනවත්වා වැඩ කරන්න පුළුවන් වෙන විදිහට තිබිය යුතුය)
+
+
+
+
+මොකද්ද මේ, "Software එකේ ප්‍රශ්න, හෝ errors ආවත්, System එක නොනවත්වා වැඩ කරන්න පුළුවන් වෙන විදිහට තිබිය යුතුය" කියන නීතියෙන් 
+(Resiliency & Fault Tolerance) කියන්නේ?
+
+		- මේ නීතියෙන් කියන්නේ, Software එකේ එකේ අඛන්ඩතාවය (Stableව) පවත්වා ගත යුතු යන්නයි.
+
+
+
+
+
+මොකද්ද මේ "Domino Effect එක වැලැක්වීම" කියන්නේ?
+		
+		# Domino කියන්නේ, Dominos කියන පොඩි කෑලි එක එක පෙලට තියලා වට්ටන Game එක. ඒකෙදි, එකක් වැටුනම පේලියට ඔක්කොම වැටීගෙන යනවා නේ. එහෙම නොවී, එක Microservice එකක් Down වුනා කියලා, ඒක නිසා, මුළු System එකම crash නොවී තියන්න ඕනේ. ("dominos.png" එක open කරන්න)
+
+		* එක Microservice එකක තිබෙන ගැටළුවක් නිසා, නිසා මුළු System එකම Down නොවී පවත්වාගැනීම, <red> "Domino Effect එක වැලැක්වීම" </red> 
+		  ලෙස හඳුන්වයි.
+				උදා: - "payment-service" එක Crash වුනත් මුළු System එකම Crash වෙන්න බෑ
+						  "Order-service" එක Crash වුනත් මුළු System එකම Crash වෙන්න බෑ
+				
+				
+
+								
+
+
+[Slide 29] Why It's Important in Microservices
+				(ඇයි මේ නිතිය, Microservice වලදී වැදගත් වෙන්නේ?)
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+ගැටලුව 			 										මේ ගැටලුව නිසා, System එකට,	|									උපකල්පිත උදාහරණ
+													|		සිදු වෙන බලපෑම 						|
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+													|													|
+													|													|
+Microservice එකක් fail වීම 				|		Task එකේ, ගලායාමට බාධා වීම 	|				"payement-service" එක down වුනාම, සම්පුර්ණ Payment Process
+													|													|				 එකම Down වීම
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+													|													|
+													|													|
+Microservice එකට  							|		User Experience එක අඩු වීම 		|				"item-list" microservice එක Load වෙන්න පරක්කු වුනොත්
+ලැබෙන Network slow වීම						|													|				User විසින් Producs Details බැලීම අතහැර දැමීම
+													|													|
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Microservice එක 								|		 Data loss වීම හෝ errors			|				 "save-order" Microservice එක, Order එකේ දත්ත 
+Crash වීම 										|		මතු වීම 									|				 Save කර මොහොතේ Crash වීම නිසා, එම Order
+													|													|				එක පිලිබඳ දත්ත, Database එකේ නොමැති වීම.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+													|													|
+Microservices එකකට  						|		System එකට දාරා ගත 				|				Black Friday වගේ, Sales තියෙන දවස් වලට, Load එක 
+පැමිණෙන Messages 		 					|		නොහැකි Load එකක්					|				දරාගන්න අමාරු නිසා, Microservices Crash වීම.
+වල Traffic එක වැඩි වීම 					|		පැමිණීම 									|				
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+																										
+																										
+																										
+
+
+* එම නිසා, මේ හැම ගැටළුවකටම හොඳම විසඳුම වන්නේ, "Software එකේ ප්‍රශ්න, හෝ errors ආවත්, System එක නොනවත්වා වැඩ කරන්න පුළුවන් වෙන විදිහට තිබිය යුතුය" නිතිය අනුගමනය කිරීමයි.
+
+
+
+[Slide 30] "Resiliency" හා "Fault Tolerance" අතර වෙනස
+				("දෝෂ මඟ හැරීම" හා "දෝෂ වලට ඔරොත්තු දීම")
+
+
+
+
+							Resiliency 	 													|									Fault Tolerance		
+---------------------------------------------------------------------------------------------------------------------------------------------------
+																								|
+			System එකේ Failures වලට හැඩ ගැසේ. 									|					System එකේ Failures වලට ඔරොත්තු දේ
+---------------------------------------------------------------------------------------------------------------------------------------------------
+																								|
+			Software Level එකේ පවතී													|					Hardware Level එකේ පවතී
+---------------------------------------------------------------------------------------------------------------------------------------------------
+			Code එකේ Implement කරයි 													|					Infastuctrue තුල Impelment කරයි
+																								|
+---------------------------------------------------------------------------------------------------------------------------------------------------
+																								|
+		Resiliency වලට උදාහරණ : 													|	Fault Tolerance භාවිතා වෙන අවස්ථා වලට උදාහරණ
+			- Message එකක් යැවීම Fail වුනාම, නැවත Try කිරීම වගේ  		|		- එක Service එකක් Fail වුනොත්, ඒ Service එකේ Copies හදනවා 
+			  දේවල්.																			|		- Backup Systems හාවිතා කරනවා.
+																								|
+			- Message එකක් යවන්න අවශ්‍ය Path එක, Block නම්,				|
+			  වෙනත් පාරවල් වලින්, ඒ Message එක යැවීම වගේ දේවල්			|
+			  																					|
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+[Slide 31] Common "Resilience" Patterns
+				(බහුලව භාවිතා වෙන "දෝෂ අනුව හැඩගැසීමේ" ක්‍රම)
+
+			a. Circuit Breaker Pattern
+				(Circuit බ්‍රේකර් ක්‍රමය)
+						* මේක ගෙදරක තියෙන, "Circit බ්‍රේකර්" එකකට සමානයි. 
+								#"Circuit breaker.webp" එක Open කරන්න
+
+						* බ්‍රේකර් එකක් Off වුනාට මුළු ගෙදරම විදුලිය විසන්ධි වෙන්නේ නෑ
+						* ඒ වගේ, එක Microservice එකක් අක්‍රිය වුනොත්, මුළු, System එකටම ඒක බලනොපාන විදිහට Microservices හදන්න ඕනේ.
+						* මේක බහුලව භාවිතා වෙන "දෝෂ අනුව හැඩගැසීමේ" ක්‍රමයක්
+						* මේ ක්‍රමෙයන් Domino Effect එක වළක්වනවා.
+							
+						මෙහිදී භාවිතා කරන Tools
+							Resilience4j, Spring Cloud Circuit Breaker
+
+
+			
+
+[Slide 32] පින්තුරය පැහැදිලි කිරීම
+	
+	* මෙතන පෙන්වන්නේ, Circuit බ්‍රේකර් ක්‍රමය Code එකක වැඩ කරන විදිහ
+	#Code එක දැනගැනීම අනිවාර්ය නෑ
+
+
+
+[Slide 33]  
+
+		b. Retry Pattern
+			(නැවත උත්සහ කිරීමේ ක්‍රමය)
+					* මේ ක්‍රමයේදී කරන්නේ, Microservcies දෙකක් අතර යවන, Message එක (Request එක) Fail වුනොත්, නැවත කිහිප වතාවක් Try කිරීමයි.
+
+						#උදා:- අපි කාට හරි Call එකක් ගද්දි එක පාර ඉස්සුවේ නැත්නම්, කිහිප වතාවක් Call ගහනවා වගේ.
+
+
+					* මේ ක්‍රමය වැඩිපුරම භාවිතා වෙන්නේ,
+										 	Microservices වල, Network එක තාවකාලිකව Disconnet වුන වෙලාවට, 
+											Microservice එකක් Busy වුන වෙලාවට
+											Microservice එකක්, Timeout වුනාම
+
+											වගේ, තාවකාලික ගැටළු(Transient errors) නිරාකරණය කරන්න.
+																			(ට්‍රාන්සියන්ට්)																			
+
+
+					පින්තුරය පැහැදිලි කිරීම්
+							* මෙතන පෙන්වන්නේ, "Retry Pattern" එක Code කරන විදිහ
+
+
+
+
+
+
+[Slide 34] 
+	
+		c. Fallback Pattern
+			(පසුබැසීමේ ක්‍රමය)
+					* මේ ක්‍රමයේදී කරන්නේ, Microservice එකක් වැඩ කරන්නේ නැත්නම්, එයට විකල්පයක් ලෙස, "Message" එකක් Userට පෙන්වීමයි. නැත්නම්, දැනට Cache Memoryයේ ඇති දත්ත වලින්, User ට අවශ්‍ය කාර්යය ඉටු කර දීමයි.
+
+								උදා:- * "product-list" Microservice එක වැඩ කරන්නේ නැත්නම්,  userට, "Service unavailable" කියලා Message එකක් පෙන්වීම 
+										*  දැනට Cache Memory එකේ තියෙන, Product List එක Userට පෙන්වීම
+
+											වගේ දේවල්.
+
+					* මෙහි ප්‍රධාන අරමුණ වන්නේ, User Experience එක අඛණ්ඩව පවත්වාගෙන යාමයි.
+

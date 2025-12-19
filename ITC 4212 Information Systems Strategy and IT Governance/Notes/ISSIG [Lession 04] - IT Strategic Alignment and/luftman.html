@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luftman's IT Maturity Model - ලෙෂ්මාන් IT පරිණත භාව ආකෘතිය</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .matrix-section {
+            margin-top: 30px;
+        }
+        
+        .matrix-title {
+            text-align: center;
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        
+        .matrix-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+        
+        .matrix-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.1em;
+            vertical-align: middle;
+        }
+        
+        .matrix-table td {
+            background: #f8f9ff;
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+        }
+        
+        .matrix-table td:hover {
+            background: #e8e9ff;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .matrix-table td.selected {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.08);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+        }
+        
+        .level-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            color: white !important;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: default !important;
+        }
+        
+        .level-header:hover {
+            transform: none !important;
+            box-shadow: none !important;
+        }
+        
+        .tick-mark {
+            font-size: 2em;
+            opacity: 0;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .selected .tick-mark {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        
+        .info-box {
+            background: #f8f9ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+        
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .info-box p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1em;
+        }
+        
+        .info-box strong {
+            color: #667eea;
+        }
+
+        .instructions {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .matrix-table {
+                font-size: 0.9em;
+            }
+            
+            .matrix-table th,
+            .matrix-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Luftman's IT Maturity Model</h1>
+           
+        </div>
+        
+        <!-- <div class="instructions">
+            👆 Tick කරන්න
+        </div> -->
+        
+        <div class="matrix-section">
+            <h2 class="matrix-title">ආයතනයක පරිණතභාවය මැනිය යුතු, Areas 06</h2>
+            
+            <table class="matrix-table">
+                <tr>
+                    <th style="background: transparent;"></th>
+                    <th>සන්නිවේදනය<br>(Communication)</th>
+                    <th>ශක්‍යතාව<br>(Competence)</th>
+                    <th>පරිපාලනය<br>(Governance)</th>
+                    <th>සහයෝගීතාව<br>(Partnership)</th>
+                    <th>තාක්ෂනය සහ වපසරිය<br>(Architecture & Scope)</th>
+                    <th>හැකියා<br>(Skills)</th>
+                </tr>
+                <tr>
+                    <td class="level-header">Level 5<br>(ඉතා හොඳයි)</td>
+                    <td class="cell" data-dimension="communication" data-level="5">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="competence" data-level="5">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="governance" data-level="5">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="partnership" data-level="5">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="architecture" data-level="5">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="skills" data-level="5">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="level-header">Level 4<br>(හොඳයි)</td>
+                    <td class="cell" data-dimension="communication" data-level="4">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="competence" data-level="4">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="governance" data-level="4">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="partnership" data-level="4">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="architecture" data-level="4">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="skills" data-level="4">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="level-header">Level 3<br>(මධ්‍යස්තයි)</td>
+                    <td class="cell" data-dimension="communication" data-level="3">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="competence" data-level="3">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="governance" data-level="3">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="partnership" data-level="3">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="architecture" data-level="3">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="skills" data-level="3">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="level-header">Level 2<br>(තරමක් හොඳයි)</td>
+                    <td class="cell" data-dimension="communication" data-level="2">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="competence" data-level="2">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="governance" data-level="2">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="partnership" data-level="2">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="architecture" data-level="2">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="skills" data-level="2">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="level-header">Level 1<br>(දුර්වලයි)</td>
+                    <td class="cell" data-dimension="communication" data-level="1">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="competence" data-level="1">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="governance" data-level="1">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="partnership" data-level="1">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="architecture" data-level="1">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                    <td class="cell" data-dimension="skills" data-level="1">
+                        <span class="tick-mark">✅</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- <div class="info-box">
+            <h3>🎯 මෙම Model එක භාවිතා කරන්නේ කොහොමද?</h3>
+            <p>
+                <strong>පියවර 1:</strong> ආයතනයේ තත්වය විමසන්න - dimensions 6 යටතේ තියන තත්වය බලන්න<br>
+                <strong>පියවර 2:</strong> එක එක dimension එකකට level එකක් assign කරන්න (1-5 අතර)<br>
+                <strong>පියවර 3:</strong> Evidence භාවිතා කරලා ඔබේ rating එක justify කරන්න<br>
+                <strong>පියවර 4:</strong> Next level එකට යන්න strategies suggest කරන්න<br><br>
+                <strong>උදාහරණය:</strong> Ceylon AgroTech case එකේ Communication dimension එක බැලුවොත්, formal meetings නෑ, කතා කරන්නේ problems ආවම විතරයි - මේක <strong>Level 1 (Initial/Ad hoc)</strong> එකක් ගලපෙනවා!
+            </p>
+        </div> -->
+    </div>
+
+    <script>
+        // Get all clickable cells
+        const cells = document.querySelectorAll('.cell');
+        
+        // Add click event listener to each cell
+        cells.forEach(cell => {
+            cell.addEventListener('click', function() {
+                const dimension = this.getAttribute('data-dimension');
+                const level = this.getAttribute('data-level');
+                
+                // Remove 'selected' class from all cells in this dimension
+                const sameDimensionCells = document.querySelectorAll(`[data-dimension="${dimension}"]`);
+                sameDimensionCells.forEach(c => c.classList.remove('selected'));
+                
+                // Add 'selected' class to clicked cell
+                this.classList.add('selected');
+            });
+        });
+    </script>
+</body>
+</html>
