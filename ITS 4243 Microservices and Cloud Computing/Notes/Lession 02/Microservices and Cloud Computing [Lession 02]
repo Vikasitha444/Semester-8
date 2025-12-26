@@ -1096,7 +1096,11 @@ Rule 08) : 	Asynchronous Communication එක (හරියට Email එකක�
 
 
 
+<<<<<<< Updated upstream:ITS 4243 Microservices and Cloud Computing/Notes/Lession 02/Microservices and Cloud Computing [Lession 02]
 Rule 09) : 	Software එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට, නිර්මාණය කර තිබිය යුතුය
+=======
+Rule 09) : 	Software එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට, Logs නිර්මාණය කර තිබිය යුතුය
+>>>>>>> Stashed changes:Semester 8/ITS 4243 Microservices and Cloud Computing/Notes/Lession 02/Microservices and Cloud Computing [Lession 02]
 			(Observability)
 
 
@@ -1169,6 +1173,939 @@ Explanation
 Explanation
 (නිතිය විස්තර කිරීම)
 		* මේ නිතිය දාලා තියෙන්නේ, Domain-Driven Design (DDD) කියන Software නිර්මාණය කිරීමේ ක්‍රමවේදයෙන් 
+<<<<<<< Updated upstream:ITS 4243 Microservices and Cloud Computing/Notes/Lession 02/Microservices and Cloud Computing [Lession 02]
+=======
+		* හැම Microservice එකකම තමාගේ සීමාව ඇතුලත තියෙන, Variable Names, භුතාර්ථ, Function names වගේ දේවල් වලට, ඒ Microservice එක ඇතුලේ Unique තේරුමක් තියෙනවා. 
+
+			උදා:- Book කියන Variable එක,
+						- එක Microservice එකක, "පොතක්" හැඳින්වීමටද
+						- තව Microservice එකක, "හෝටලයක් වෙන් කිරීමටද" භාවිතා කරයි
+
+
+					 එම නිසා, මේ Microservies දෙක, Overlap වීමකින් තොරව, වෙන වෙනම පවත්වා ගත යුතුයි.
+
+		* එම නිසා, Microservice එකක සීමාව, පවත්වා ගැනීම ඉතා වැදගත් වේ. නැතහොත්, Variable Names, Conflict විය හැක.
+
+
+
+[Slide 9] 
+		"කාර්යයේ සීමාව (boundary එක) නිවැරදිව හඳුනා ගත යුතුයි."
+		මේ නිතිය පැවතීම නිසා ලැබෙන වාසි
+			- Variable Conflit වීම වලකිනවා
+			- Deveopment Team එකට තමන්ගේ පරාසය අඳුරගන්න පහසු වෙනවා
+
+
+
+		
+
+		පින්තුරය පැහැදිලි කිරීම
+			* Tempory Abonded
+
+
+
+[Slide 10] How SRP and Bounded Context work together
+			(මේ නීති දෙකම එකට වැඩ කලොත් කොහොමද?)
+
+		#මේ වගුව වැඩක් නෑ
+			+-------------------------------------------------------------------------------------------------------------------
+			|       නිතිය          		|  ඒ නීතියෙන් Focus කරන දේ   				 	|  ඒ නිතිය තියෙන එකේ වාසිය     	|
+			+------------------------------------------------------------------------------------------------------------------
+			| (1) Single Responsibility | එක Service එකකින් එක කාර්යයක් පමණක් කිරීම  	| Simple, independent            	|
+			|	  Principle (SRP) 		| 													| 									|
+			--------------------------------------------------------------------------------------------------------------------
+			| (2) Bounded Context       | එම කාර්යයේ සීමාව හඳුනා ගැනීම  			  		| Consistent, domain එක clear   	|
+			+-----------------------+-----------------------------+--------------------------------------------------------------
+						
+				
+				
+			මේක විස්තර ගැන කලින් Details ඇතුව කතා කලා.
+
+
+
+
+	* මේ නීති දෙකම එකට වැඩ කරද්දී සහතික වෙනවා, 
+			- එක Service එකක් තවත් Service එකක් මත Depend නොවීම
+			- Team එක Manage කරගන්න පහසු වීම
+			- Code එක Maintain කරන්න පහසු වීම
+			- Reliability එක වැඩි වීම
+
+
+
+
+	# දැන් අපි නීති දෙකක් ගැන කතා කලා. දැන් යමු 3 වෙනි නීතියට 
+
+
+[Slide 11] 			Rule 03
+				Loose Coupling
+		(හැම Microservice එකක්ම, එකිනෙකා මත Depend නොවිය යුතුය)
+
+
+Explanation
+(නිතිය විස්තර කිරීම)
+		- 	එක Service එකක වෙනසක් වෙද්දී එක අනිත් Services වලට බලපෑමක් වෙන්න බෑ
+
+		-  මෙහිදී Microservice අතර Messages හුවමාරු විය යුත්තේ API හරහා පමණි. Database හෝ Classes අතර දත්ත හුවමාරුව සිදු නොකළ 	යුතුය
+			
+		- මේ නිතිය පැනවීමේ අරමුණ තමා, Service එක ස්වාධීනව Develop කිරීම.
+
+
+
+[Slide 12] Technical Practices for Loose Coupling:
+			(Loose Coupling නිතිය Maintain කිරීම සඳහා, උදව් වෙන හොඳ පුරුදු)
+
+	* APIs හදද්දී "OpenAPI standard format" කියන Format එකට අනුව නිර්මාණය කරන්න.
+	* එක Microservise එකක Database එක, අනිත් Services වලට, Share කිරීමෙන් වලකින්න
+	* API එක Update කරනකොට, Version Number එකත් Update කරන්න
+	* Service එක තනියෙන් developer කෙනෙකුට භාවිතා කරන්න පුළුවන් විදිහට හදන්න
+
+
+
+	* දැන් යමු 4 වෙනි නීතියට 
+
+
+[Slide 13]			Rule 04
+				  High Cohesion
+		(Microservice එකක් ඇතුලේ තියෙන, Classes, Modules, Functions කියන හැමදේම, එකම අරමුණක් වෙනුවෙන් වැඩ කරන්න ඕනේ)
+
+
+
+Explanation
+(නිතිය විස්තර කිරීම)
+	* Service එක ඇතුලත, Code එකට අදාළ නැති හෝ ප්‍රයෝජනයකට නැති දේවල් ඇතුලත් කිරීමෙන් වලකින්න ඕනේ
+	* මේ නිතිය නිසා, Code එක Maintain කරන්න, Read කරන්න ලේසි වෙනවා
+
+
+
+
+[Slide 14] 
+
+	* එක, Microservice එකක් සිදු කරන්නේ එක Task එකක් පමණයි නම්, මේ Microservice එකේ Cohesion එක වැඩිය
+			උදා:- Order Microservice එකක් තියෙනවා කියලා උපකල්පනය කරන්න. මේකේ,
+					 order service එක
+					 update service එක
+					 shipping status track කරන service එක, 
+
+					 මේ වගේ, Order කියන Task එකට අදාළ Microservices පමණයි මෙතන තියෙන්නේ. ඒ නිසා, මේ Software එකේ, Cohesion එක වැඩියි.
+
+
+	* එක Microservice එකකින් තමාට අදාළ නොවන Tasks කරනවා නම්, මේ Microservice එකේ Cohesion එක අඩුය
+			උදා:- Order Microservice එකක් තියෙනවා කියලා උපකල්පනය කරන්න. මේකේ,
+					order service එක
+					 User Loging Service එක
+					 Payment Service එක,
+
+
+					 මේ වගේ, Order කියන Task එකට අදාළ නොවන Microservices මේ Software එකේ පවතින නිසා, මෙහි Cohesion එක අඩු වේ.
+
+
+
+	* High Cohesion එක වැඩි වීමේ වාසි
+		- Code එක තේරුම් ගන්න, Test කරන්න සහ Modify කරන්න ලේසියි
+		- Code එකේ එක තැනක් වෙනස් කරද්දී, මුළු Program එකටම Bug එකක් එන්න තියෙන අවස්තාව අඩුයි
+		- Code එක Orgranize කරන්න ලේසියි.
+
+
+[Slide 15] 
+		උදාහරණයක් විදිහට Car එකක් ගැන හිතන්න. Car එක Microservices ගැන තේරුම් ගන්න හොඳ උදාහරණයක්
+				- Car එකේ, Engine, Brakes, Accelarators වගේ දේවල් එකතු වෙලා උදව් කරනවා, Car එක චලනය වෙන්න. මේක High Cohesion වලට හොඳ උදාහරණයක්
+
+				- ඒ වගේම Car එකේ අංග එකිනෙකට Connect වෙලා තියෙන්නේ. නමුත් එකිනෙකා මත Depend වෙන්නේ නෑ. උදාහරණයක් විදිහට, Car එකේ, Brake වැඩ නැති වුනත්, Engine එක Start වෙනවා. මේක Losse coupling වලට හොඳ උදාහරණයක්.
+
+
+
+
+[Slide 16] Relationship Between the Two
+			(Cohesion හා Losse coupling අතර පවතින, සම්බන්දතාව)
+
+
+		* මේ දෙකම එකට එකතු වුනාම සහතික කරන්න පුළුවන් Software එකට,
+			- ස්වයං පාලනයක් තියෙන බව (Autonomy)
+			- Scale කරන්න පුළුවන් බව (Scalability)
+			- Maintain කරන්න පුළුවන් බව (Maintainability)
+
+
+			තියෙන බව
+
+
+
+
+[Slide 17] Best Practices Summary
+			(Microservices හදද්දී, පවත්වාගන්න ඕන Best Practices  මොනවද)
+
+
+	* 	Microservices කඩද්දි, "UI එකට වෙනම, Database එකට වෙනම, Backend එකට වෙනම"  වගේ Technical කොටස් වලට Microservices 		කඩන්න එපා. ඒ වෙනුවට, Tasks අනුව (Bussiness Goals අනුව ) කඩන්න.
+	
+
+	* 	Microservice එකක ඇතුලත වෙන වැඩේ, පිටත අයට දැනගන්න දෙන්න එපා. 
+			උදා :- ATM එක වගේ 
+
+
+	* 	පුළුවන් හැම වෙලේම Asynchronous ක්‍රමයට, Microservices අතර පණිවිඩ හුවමාරු කරගන්න (හරියට Email එකක් වගේ) .
+	
+	* 	එක් එක් කණ්ඩායම් වලට ස්වාධීනව, Microservices Develop කරගෙන යාමට ඇති හැකියාව ලබාදෙන්න
+
+
+
+[Slide 18]				Rule 05
+					Service Autonomy
+		(එක Microservice එකකට, තනියෙන් ස්වාධීනව වැඩ කරන්න පුළුවන් විදිහට Microservices නිර්මාණය කළ යුතුය)
+			
+
+Explanation
+(නිතිය විස්තර කිරීම)
+
+	* මේ නීතියෙන් කියන්නේ, සරලවමව, Microservice එකකට තනියෙන්,
+		- Run වෙන්න පුළුවන් වෙන්න ඕනේ.
+		- අනිත් Services වලට බලපෑමකින් තොරව, Fail වෙන්න පුළුවන් වෙන්න ඕනේ
+		- ස්වාධීනව Evolve වෙන්න පුළුවන් වෙන්න ඕනේ.
+
+
+
+
+
+[Slide 19] Key Dimensions of Autonomy
+			(Microservice එකකට, තනිවම කරගත හැකිවිය යුතු මුලික දේවල්)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+	Aspect 						|				Discription 							|			Example								|
+	(හැකියාව)					| 				(හැකියාව ගැන විස්තරයක්)				|		(උපකලිපිත උදාහරණයක්)				|
+								|														|	 											|
+-----------------------------------------------------------------------------------------------------------------------------------------
+(Deployment Autonomy) 			|		අනිත් Microservices වලට බලපෑමක් නොවී  		|	"User Service" කියන Service එක Deploy 	|
+								|		Microservices ස්වාධීනව, Deploy කළ හැකි  		|	කරන්න පුළුවන් වෙන්න ඕනේ, "Order-Service"|
+ස්වාධිනව Deploy කිරීමේ 					විය යුතුයි. 										|	කියන Service එකට බලපෑමක් කරන්නේ නැතුව	
+හැකියාව 																				| 	
+ 								|														|												|
+--------------------------------|--------------------------------------------------------------------------------------------------------
+								| 														| 												|
+(Runtime Autonomy)				| 		අනිත් Microservices වලට බලපෑමක් නොවී 		|	"Notification-Service" කියන Services එක,
+								|		Microservice එක Run කිරීමට හැකි විය යුතුය		|	"Email-Service" කියන Service එක නැති වුනත් |
+Run කිරීමේ ස්වාධින බව			| 														| 	 Run වෙනවා. 								
+----------------------------------------------------------------------------------------------------------------------------------------
+(Data Autonomy)					|		එක Service එකකට, එක බැගින් Databases		|	 "Payment" Service එකේ දත්ත				|
+					 			| 		භාවිතා කරන නිසා, ඕනෑම Service එකකට 		|	 "Order" database එකේ Save වෙනවා			|
+දත්ත Access කිරීමේ				|		ස්වාධීනව දත්ත Access කළ හැකිය				|												|
+ස්වාධින බව						| 														| 												|
+								| 														| 												|
+----------------------------------------------------------------------------------------------------------------------------------------
+(Team Autonomy)					|		හැම Microservice එකක්ම Team එකකට			|					 														 	|		ස්වාධීනව Develop කරන්න පුළුවන් වෙන්න ඕනේ 	|								
+කණ්ඩායමේ						| 														| 										ස්වාධිනත්වය						|																						
+								| 														| 								
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+[Slide 20] Why Service Autonomy Matters
+			(ඇයි මේ, ස්වාධීනව වැඩ කරන්න පුළුවන් විදිහට Microservices නිර්මාණය කිරීම වැදගත්?)
+
+	- Independently Develop කරන්න පුළුවන් නිසා
+	- ස්වාධීනව Deploy කරන්න පුළුවන් නිසා
+	- එක Service එකක් Fail වුනත්, අනිත් Service වලට මේක බලනොපාන නිසා
+	- Team එකට අවශ්‍ය ඕනෑම " techology stack" එකක් භාවිතා කරන්න පුළුවන් නිසා
+
+
+[Slide 21] Practical Example
+		(ස්වාධීනව වැඩ කරන්න පුළුවන් විදිහට Microservices නිර්මාණය කිරීමේ නිතිය ප්‍රායෝගිකව භාවිතා වෙන තැන්)
+
+	* E-commerce system එකක් හිතන්න
+
+	* මේකේ, පහත Microservices තියෙනවා යයි උපකල්පනය කරන්න
+			- Order Service
+			- Payment Service
+			- Notification Service
+
+	* මේ System එකේ, "Notification-Service" එක Crash වුනත්, "Orders" හා "Payment" කියන අනිත් Microservice දෙක Run වෙනවා.
+	  ඒ වගේම, ආයේ "Notification-Service" එක හැදුවට පස්සේ, Pending වෙලා තිබ්බ, Notifications යවනවා.
+
+
+	* මෙහෙම තමා ස්වාධීනව Mircoservices වැඩ කරන්නේ.
+
+
+
+
+[Slide 22] Techniques to Achieve Autonomy
+			(ස්වාධීනව වැඩ කරන්න පුළුවන් විදිහට Microservices නිර්මාණය කරන්න පුළුවන් ක්‍රම)
+
+1. එක Service එකකට එක Database එක ගානේ භාවිතා කිරීමෙන්
+
+2. Asynchronous Communication එක භාවිතා කිරීමෙන් 
+
+
+3. API එක නිර්මාණය කිරීම සඳහා හොඳ ගිවිසුමක් භාවිතයෙන්
+		
+		<pencil>
+			API එකේ ගිවිසුම කියන්නේ, 
+					* API එකෙන් ඉල්ලන Inputs(Requests) හා Outputs (Results) ගැන, විස්තර තියෙන Code එකක්. 
+					* API එක Stable විදිහට තියෙන විදිහට, Inputs හා Outputs Handle කරන්න ඕනේ.
+		</pencil>
+
+		-  "OpenAPI" හෝ  "gRPC" වැනි ගිවිසුම් වලට යටත්, API එකක් භාවිතා කිරීමෙන්, Stable API එකක් නිර්මාණය කරගත හැක. එවිට, Microservices වලට Comminucate කිරීම පහසු වේ. 
+
+4. Dockerization, Kubernetes යන පහසුකම් භාවිතා කිරීමෙන්
+		- මෙයින්, අදාළ Software එක Run වීමට පමණක් අවශ්‍ය Hardware කොටස වෙනම වෙන් කරගත හැක. එවිට ස්වාධිනව වැඩ කරන්න පුළුවන්.
+
+
+
+
+
+[Slide 23] 
+
+		* මෙතන පෙන්වන්නේ, පහත Senario එකට අදාලව, Microservices කොහොමද වැඩකරන්නේ කියලා
+
+						Customor භාණ්ඩයක්	->	ඒ භාණ්ඩය සඳහා 	->	මුදල් ගෙවූ බවට
+						Order කරනවා  			මුදල් ගෙවනවා 			Notification එකක් එනවා
+	
+						------------------+      +------------------+      +------------------+
+						| Order Service   | -->  | Payment Service  | -->  | Notification Svc |
+මේ හැම Service ----->	 (Own DB, Deploy) |      | (Own DB, Deploy) |      | (Own DB, Deploy) |
+එකකටම				+------------------+      +------------------+      +------------------+
+තමන්ගේ						  ↑                         ↑                         ↑
+Database එකක්			Order Service එක			Payment Service එක 	Notification Service එක		
+සහ						අනිත් Services වලට			Scale එක වැඩි කලත් 	Fail වුනත්, අනිත් Services 
+තමාටම					බලපෑමක් නොවෙන 			ඒක  					වලට බලපෑමක් නෑ.
+ස්වාධීනව				විදිහට, Deploy				අනිත් Service දෙකට
+Deploy වීමට				කරන්න පුළුවන්				ඒක බලපාන්නේ නෑ
+හැකියාවක් ඇත
+
+				
+				* මේ නිසා, මේ සේවාවන් ස්වාධීනව වැඩ කරනවා කියලා කියන්න පුළුවන්
+
+
+
+
+
+[Slide 24] 		Rule 06
+			  API-First Design
+		(මුලින්ම API එක නිර්මාණය කළ යුතුය)
+
+
+<pencil>
+	API එකේ ගිවිසුම කියන්නේ, 
+			API එකෙන් ඉල්ලන Inputs(Requests) හා Outputs (Results) ගැන, විස්තර තියෙන Code එකක්. 
+</pencil>
+
+
+ * API-First Design එක කියන්නේ, Microservice එක හදන්න කලින්, Microservice API එකේ ගිවිසුම (API එකට, එවිය යුතු Request, හා API එකෙන් Output කරන Result එක ගැන, විස්තර තියෙන Code එකක්. ) Design කිරීමයි. මේ නිසා, API එක, Microservice එකේ, මුලින්ම කළ යුතු නිෂ්පාධනය (Primary Product එක) විදිහට හඳුන්වනවා.
+
+ * මේකේ සරලම අදහස තමා:
+ 	- API එක තමා, Microservice හා Development Team එක අතර තියෙන Interface එක
+
+
+ * "මුලින්ම API එක නිර්මාණය කළ යුතුය" කියන නීතිය පැනවීමේ අරමුණ තමා:
+ 		- මුලින්ම API එක නිර්මාණය කළාම, System එක හැසිරෙන විදිහ උපකල්පනය කරන්න පුළුවන්.
+ 		- මුලින්ම API එක නිර්මාණය කළාම, පස්සේ API එකට සිදු කරන්න වෙන වෙනස්කම් අඩු කරගන්න පුළුවන්.
+ 		- මුලින්ම API එක නිර්මාණය කළාම, Developers ලට පහසුවෙන් මේක තේරුම් ගන්න පුළුවන්
+
+
+
+
+[Slide 25] Why API-First?
+			(මොනවද මේ "මුලින්ම API එක නිර්මාණය කළ යුතුය" කියන නීතියේ තිබෙන වාසි)
+
+	* 	සම්පුර්ණ Team එකටම, එක් සම්මත API එකක් භාවිතා කළ හැකි වීම.
+	* 	- 
+
+	* 	Developers ලට පැහැදිලි ගිවිසුමක් මුලදීම නිර්මාණය කර ගත හැකි වීම
+ 			- 	එවිට, Backend Developersලා හා Frontend Developersලා දෙගොල්ලොම දන්නවා, මොනවද API එකෙන් ඉල්ලන Inputs හා Outputs 	 කියලා.
+
+ 	*  API එක පළමු අවධියේම Testing හා Automate කළ හැකි වීම
+
+ 	* 	Oraganization එකේ Follow කරන්න ඕන Standed ගැන අවබෝධයක් ලබා ගත හැකි වීම.
+
+ 	*	කලින්ම නිර්මාණය කරගත් API එක, නැවත නැවත භාවිතා කරන්න හැකි වීම.
+
+
+
+
+
+ [Slide 26] The API-First Workflow
+ 			("මුලින්ම API එක නිර්මාණය කළ යුතුය" කියන නීතියේ ගලායාම)
+
+ 	පියවර 01: නිර්මාණය (Design)
+ 				* මේ පියවරෙන් කරන්නේ, API එක කොහොමද වැඩ කරවන්න බලාපොරොත්තු වෙන්නේ කියලා, Plan එකක් හදන එක
+ 				* මෙහිදී, Resouecs (සම්පත්), Methords (ක්‍රමවේද), යනාදී දේවල් හඳුන්වාදෙනවා
+ 				* මෙහිදී "OpenAPI/Swagger" හෝ "AsyncAPI" වැනි API Contract ක්‍රම මේ සඳහා භාවිතා කරයි.
+
+ 	පියවර 02: API එක Review කිරීම සහ අනුමැතිය ලබාදීම
+ 				* මේ පියවරේදී වෙන්නේ, හැම Development Team එකක්ම එකතු වෙලා, Coding Part එක පටන් ගන්න කලින්, API ගිවිසුම  Check කරනවා
+ 				
+ 				* මේ සඳහා Mock Servers (Practise වීම සඳහා තියෙන Servers) භාවිතා කරනවා.
+
+
+
+ 	පියවර 03: ක්‍රියාත්මක කිරීම (Implement)
+ 				* මේ පියවරේදී වෙන්නේ, අනුමැතිය ලබාදුන්න, API Contact එකට අනුව, Microservice Develop කිරීම සිදු කිරීමයි.
+ 				* - 
+
+ 	පියවර 04: (Validate)
+ 				* මේ පියවරේදී වෙන්නේ, API එකේ ක්‍රියාකාරිත්වය Check කිරීමයි. මේ සඳහා, "Swagger UI, Postman, හෝ Insomnia" වගේ Tools භාවිතා කරන්න පුළුවන්.
+
+ 				* -
+
+
+
+
+[Slide 27] 
+		පින්තුරය පැහැදිලි කිරීම 
+			* මේ පින්තුරයෙන් පෙන්වන්නේ, "OpenAPI" Contract එකක්.
+			* මේ Document එකෙන් පෙන්වනවා,
+					- API එකෙන් මොකද කරන්නේ?
+					- මොන වගේ Data ද එවන්න ඕනේ?
+					- මොන වගේ Data ද, Result එක විදිහට ලැබෙන්නේ?
+
+			* මේ Document එක තමා, Developerලා, Quality Assuence ලා, Clientsලා කියන හැමෝම පරිශීලනය කරන්නේ
+
+
+
+[Silde 28] 
+
+	* API ආශ්‍රිත ක්‍රියාකාරකම් වලට, නිතර භාවිතා කරන Tools
+		- API Design කිරීමට සහ Documentation සෑදීමට 				: SwaggerHub, Stoplight Studio, Postman, Insomnia 
+		- APIs Practise කරන්න සහ Test කරන්න 					: Prism, WireMock, PACT 
+		- API එකේ වලංගුතාව පරික්ෂා කිරීම දෝෂ පරික්ෂා කිරීම 		: Spectral 
+		- API එකට අදාලව Code Genarate කිරීම 						: OpenAPI Generator
+
+	* API Versioning කරද්දී, සිදු කරන Best Practises
+		- හැම වෙලේම ඔබේ API එක Version කරන්න
+				උදා:- 
+					1. URL එකේම Versioning කිරීම :  /api/v1/orders
+					2. Header එකේ Versioning කිරීම : Accept: application/vnd.myapp.v1+json
+
+	* API Governance (for large teams)
+		* API Governance කියන්නේ, ලොකු Organizations වල, APIs හදන්න, සම්මතයන් (Standerds) හදාගන්න එක.
+		* මේකෙදි, API එකේ,
+			- නම
+			- Status Codes  (Success නම 200, Unsucess නම් 404 වගේ)
+			- Paginations 
+
+			වගේ දේවල් වලට Standereds නිර්මාණය කරනවා.
+
+	* API Governance එක Maintain කරන්නේ,
+		* API එක Deploy කරන්න කලින්, Check කිරීමෙන්.
+		* API එක Deploy කරන්න කලින්, Senior Developers ලගේ අවසර ගැනීමෙන්
+		* මෙතැනදී, "Central API catalog" කියලා එකක් Use කරනවා, නැවත භාවිතා කරන්න පුලුවන් APIs ගබඩා කරන්න.
+
+
+
+[Slide 29] 
+
+	API එකක් හදන්න කලින්..
+		Contract එක Deisgn කරන්න -> pracise හා Review එකක් කරන්න -> ක්‍රියාත්මක කරන්න -> වලංගුතාව පරික්ෂා කරන්න සහ Deploy කරන්න.
+
+	* API එකක් හදනකොට, පළවෙනියටම, Code කරන්න යන්න එපා. මුලින්ම Design එකක් හදාගෙන, ඊටපස්සේ Code කරන්න
+
+
+
+
+
+
+
+
+
+[Slide 30] 				Rule 07
+				Database per Service
+			(හැම Microservice එකකටම, තමාගේම Database එකක් පැවතිය යුතුය)
+			
+* එක Microservice එකකට, තමන්ට අනන්‍ය වූ Database එකක් තිබිය යුතුයි. එසේ නොමැතිව, Microservice දෙකක්, එකම Database එකකට Connect නොකළ යුතුයි. මේකෙන්, Loose Coupling (හැම Microservice එකක්ම, එකිනෙකා මත Depend නොවීම) සහ Service Autonomy (එක Microservice එකකට, තනියෙන් ස්වාධීනව වැඩ කරන්න පුළුවන් විදිහට Microservices නිර්මාණය කළ යුතුය.) යන නීති කැඩෙන්න පුළුවන්
+
+
+ඇයි මේ නිතිය වැදගත්?
+	* Monolitic System එකක, හැම Module එකකටම, එක Centerlized Database එකක් තමා තියෙන්නේ. එක Table එකක වෙනස්කමක් කලොත් ඒක මුළු Program එකටම බලපානවා. 
+
+	* නමුත් Microservice වල, තමන්ට වෙනම, දත්ත සහ එම දත්ත Store කරන Layer එකක් තියෙනවා (Persistence layer). මේ නිසා, Microservice එකක් ස්වාධීනව, Evaluate කරන්න, Scale කරන්න, සහ Develop කරන්න පුළුවන්.
+
+
+
+
+
+
+[Slide 31] 
+	* හැම Microservice එකකටම, Database එකක් (Schema එකක්) තියෙනවා. සහ අවශ්‍ය වෙලාවට දත්ත, API එකක් හෝ Event (Event එකක් කියන්නේ මොකද්ද කියලා අන්තිම Slide එකේ කියලා දෙනවා) එකක් හරහා ලබා දෙනවා.
+	(Each service owns its schema and only exposes necessary data via an API or event)
+
+		උදා:- 
+
+				+------------------+---------------+-------------------------------------------------------+
+				| Service එක       | Service එකට   | මේ Database එකේ ඇති දේවල් පිළිබද විස්තරයක්           |
+				|                  | අයත් Database |                                                       |
+				|                  | එකේ නම        |                                                       |
+				+------------------+---------------+-------------------------------------------------------+
+				| Order-Service    | Orders_db     | මේ Database එකේ, Orders, Order Status වගේ දේවල්      |
+				|                  |               | Save වෙනවා.                                          |
+				+------------------+---------------+-------------------------------------------------------+
+				| Product-Service  | products_db   | මේ Database එකෙන්, Stock Details Manage කරනවා.      |
+				+------------------+---------------+-------------------------------------------------------+
+				| Payment-Service  | payments_db   | ගනුදෙනු Handle කරනවා.                                |
+				+------------------+---------------+-------------------------------------------------------+
+
+
+				* එවිට "හැම Microservice එකකටම, තමාගේම Database එකක් පැවතිය යුතුය" කියන නිතිය, මෙතැනදී, උල්ලංඝනය නොවේ.
+
+
+
+
+[Slide 32] Benefits
+		  (හැම Microservice එකකටම, තමාගේම Database එකක් පැවතිය යුතුය යන නිතිය පැවතීමේ වාසි)
+
+	01) Loose Coupling
+		(හැම Microservice එකක්ම, එකිනෙකා මත Depend නොවිය යුතුය)
+
+	02) වෙන වෙනම Scale කළ හැකි වීම
+	03) වෙන වෙනම Deploy කළ හැකි වීම
+	04) තමන්ට කැමති Technology එකක් භාවිතා කළ හැකි වීම
+			උදා:- 	"Product Service" එකට, Mongo DB භාවිතා කරන්න පුළුවන්
+					"Order Service" එකට, Postgres SQL භාවිතා කරන්න පුළුවන්
+					"Analytics Service" එකට, Elasticsearch එක භාවිතා කරන්න පුළුවන්
+
+	05) දත්ත වලට හොඳ ආරක්ෂාවක් ලැබෙනවා
+
+
+[Slide 33] Challenges & Solutions
+			(අභියෝග සහ ඒවාට විසඳුම්)
+
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+	| අභියෝගය                                                       | විසඳුම                                                        |
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+	| (1) දත්ත Duplicate වීම                                      	| දත්ත, Database දෙකක, Duplicate වීම එතරම් ගැටළුවක් නොවේ.     |
+	|     (Data Duplication)                                       	|                                                               |
+	|     එකම දත්තය, Microservices දෙකකට අවශ්‍ය නම්,         	|                                                               |
+	|     එය, Database දෙකක ගබඩා වේ. මෙය Data Duplicate වීමකි |                                                               |
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+	| (2) Database දෙකක, දත්ත තිබෙන නිසා, Forign Keys           | API හරහා Database දෙකේම දත්ත වෙන වෙනම එකතු කරන්න.	
+	|     භාවිතා කළ නොහැකි වීම                             		 |                                                               |
+	|     (Cross-service Queries)                                  	 |                                                               |
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+	| (3) Database වල දත්ත සමමුහුර්ත (Sync) වීමේ                  | මේක සාමාන්‍ය දෙයක්. Kafka වගේ Message Broker කෙනෙක්         |
+	|     ප්‍රමාදයන් පැවතීම                                         	| මේකට භාවිතා කරන්න පුළුවන්.                                  |
+	|     (Data Consistency)                                        |                                                               |
+	+---------------------------------------------------------------+---------------------------------------------------------------+
+	| (4) එක එක දත්ත, එක එක, Databases වල තියෙන නිසා        | හැම Service එකකම, Data Copy කරලා, Data Warehouse 	      | 																	   එකකට දාන්න පුළුවන්
+	|     Report එකක් හදන්න අමාරුයි.                              |                              
++---------------------------------------------------------------+---------------------------------------------------------------+
+
+
+
+
+[Slide 34] Event-Driven Data Sharing ක්‍රමය
+			(Event Driven දත්ත හුවමාරු කරන ක්‍රමය)
+
+	* Microservice අතර දත්ත හුවමාරු කිරීමට, "API" මෙන්ම "Event Driven" ක්‍රමයද භාවිතා කළ හැක.
+
+	* මේ Diagram එකෙන් එය පැහැදිලි කරගත හැක
+		---"Traditional API and Event Driven Approch.png" එක මෙතන අඳින්න
+
+	* මෙහිදී, එක් එක් Microservices වලට, වෙන වෙනම Messgae යවනවාට වඩා, මෙහිදී, Event එක Broadcast කිරීම සිදු වේ. එහිදී, event එක අවශ්‍ය Microservices වලට එම Event එකේ Updates ලබාගැනීමට, Event එක Subscribe කළ හැක.
+
+
+
+
+
+[Quiz] 2024 April
+	Question 1
+		A) Briefly explain the "event-driven programming using an example in Microservices. (02 marks)
+		(Microservices පාදක කරගත් උදාහරණක් දක්වමින්, Event-driven programming එක ගැන කෙටියෙන් explain කරන්න)
+
+
+										Answer
+
+		---"Traditional API and Event Driven Approch.png" එක මෙතන අඳින්න
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------මේවා ලියන්න එපා-------------------------------------------------------------
+
+[Slide 6] (1) Single Responsibility Principle and Bounded Context (SRP)
+	(එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතු අතර, එම කාර්යයේ සීමාව (boundary එක) නිවැරදිව හඳුනාගෙන තිබිය යුතුය)
+
+
+
+
+
+		(i) 	එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතුයි
+				(Single Responsibility Principle)
+
+Explanation
+(නිතිය විස්තර කිරීම)
+	* මේ නිතිය වැටිලා තියෙන්නේ, Software Engineering වල තියෙන, "SRP" කියන Consept එකට අනුව.
+	* මේ නීතියෙන් කියන්නේ, එක Microservice එකක්, එක වැඩක් විතරක් කරන්න ඕනේ කියලා
+	* මේ නිතිය නිසා, Code එක Maintain කරන්න, Deploy කරන්න ලේසි වෙනවා
+	* මේ නිතිය නිසා, එක Service එකක වෙනස්කමක් කරද්දී, වෙන Service එකකට බලපාන්නේ නෑ
+
+
+			උදා:- : University Management system එකක් ගමු
+						Student-Service : මේ Service එකෙන්, studentsලා ගැන විතරයි බලන්නේ.
+						Course-Service : මේ Service එකෙන්, courses ගැන විතරයි බලන්නේ.
+						Payment-Service : මේ Service එකෙන්, payments ගැන විතරයි බලන්නේ.
+					
+					* Course Fees වෙනස් වුනොත්, "Payment-Service" එක විතරක් වෙනස් කළාම ඇති.
+
+
+
+
+
+[Slide 7] 
+
+	* 	"එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතුයි"
+		මේ නිතිය පැවතීම නිසා ලැබෙන වාසි
+			- Microservice එක සංකීර්ණ වෙන්නේ නෑ
+			- Service එකට ස්වාධීනව Scale එක වැඩි කරගන්න පුළුවන්
+			- එක Microservice එකක Error එකක් ආවත්, ඒක අනෙකුත් කාර්යයන් වලට බාධාවක් නොවේ
+
+
+
+	<pencil>
+		Microservices ක්‍රමය භාවිතා කරන විට කරන පොදු වරදක්
+			- 	Miroservice නිර්මාණය කරද්දී, Program එක අනවශ්‍ය ලෙස කුඩා කොටස් වලට බෙදා, "Nano services" මට්ටමට කඩාගන්න එපා. 	 එතකොට නිසා, Program එක, අනවශ්‍ය ලෙස Complecated වෙනවා.
+	</pencil>
+
+
+
+
+
+[Slide 8]
+		(ii)	එම කාර්යයේ සීමාව (boundary එක) නිවැරදිව හඳුනා ගැනීම.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+[Slide ] Rule (1) : Single Responsibility Principle and Bounded Context (SRP)
+	(එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතු අතර, එම කාර්යයේ සීමාව (boundary එක) නිවැරදිව හඳුනාගෙන තිබිය යුතුය)
+
+
+		අපි දැන් මේ නීති දෙක පිළිබඳව වෙන වෙනම බලමු
+			(a) 	එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතුයි
+					(Single Responsibility Principle)
+
+
+			(b)		එම කාර්යයේ සීමාව (boundary එක) නිවැරදිව හඳුනා ගැනීම.
+					(Bounded Context)
+	
+	
+
+
+[Slide 6]	(a) 	එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතුයි
+					(Single Responsibility Principle)
+
+Explanation
+(නිතිය විස්තර කිරීම)
+	* මේ නිතිය වැටිලා තියෙන්නේ, Software Engineering වල තියෙන, "SRP" කියන Consept එකට අනුව.
+	* මේ නීතියෙන් කියන්නේ, එක Microservice එකක්, එක වැඩක් විතරක් කරන්න ඕනේ කියලා
+	* මේ නිතිය නිසා, Code එක Maintain කරන්න, Deploy කරන්න ලේසි වෙනවා
+	* මේ නිතිය නිසා, එක Service එකක වෙනස්කමක් කරද්දී, වෙන Service එකකට බලපාන්නේ නෑ
+
+
+			උදා:- : University Management system එකක් ගමු
+						Student-Service : මේ Service එකෙන්, studentsලා ගැන විතරයි බලන්නේ.
+						Course-Service : මේ Service එකෙන්, courses ගැන විතරයි බලන්නේ.
+						Payment-Service : මේ Service එකෙන්, payments ගැන විතරයි බලන්නේ.
+					
+					* Course Fees වෙනස් වුනොත්, "Payment-Service" එක විතරක් වෙනස් කළාම ඇති.
+
+
+
+[Slide 7] 
+
+	* 	"එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතුයි"
+		මේ නිතිය පැවතීම නිසා ලැබෙන වාසි
+			- Microservice එක සරල වෙනවා
+			- Service එකට ස්වාධීනව Scale එක වැඩි කරගන්න පුළුවන්
+			- එක Microservice එකක Error එකක් ආවත්, ඒක අනෙකුත් කාර්යයන් වලට බාධාවක් නොවේ
+
+
+	
+	* 	Microservices ක්‍රමය භාවිතා කරන විට කරන පොදු වරදක්
+			- 	Miroservice නිර්මාණය කරද්දී, Program එක අනවශ්‍ය ලෙස කුඩා කොටස් වලට බෙදා, "Nano services" මට්ටමට කඩාගන්න එපා. 	 එතකොට මේ නිසා, Program එක, අනවශ්‍ය ලෙස Complecated වෙනවා.
+	
+
+
+
+[Slide 8]  (b) කාර්යයේ සීමාව (boundary එක) නිවැරදිව හඳුනා ගත යුතුයි.
+			   (Bounded Context)
+
+
+Explanation
+(නිතිය විස්තර කිරීම)
+		* හැම Microservice එකකම තමාගේ සීමාව ඇතුලත තියෙන, Variable Names, භුතාර්ථ, Function names, අනිත් Microservices වලින් වෙනස් වේ. <pencil> හරියට ප්‍රාදේශීය ජනවහර වගේ </pencil>
+
+		* එම නිසා, Microservice එකක සීමාව, පවත්වා ගැනීම ඉතා වැදගත් වේ
+
+			උදා:- Order කියන Variable එක,
+						- එක්තරා Microservice එකක, Customor කෙනෙක් දමනු ලැබූ Order එකක් හඳුන්වන්න භාවිතා කර ඇත
+						- තව Microservice එකක, Supperler කෙනෙක් විසින් ඉල්ලනු ලැබූ Order එක හදුන්වන්න භාවිතා කර ඇත
+
+
+
+
+-------------------------------------------------මේවා ලියන්න එපා-------------------------------------------------
+								Microservices and Cloud Computing
+											Lession 02
+										MICROSERVICES DESIGN PRINCIPLES
+								 (Microservices ක්‍රමවේදයේ නිර්මාණ මුලධර්ම)
+
+2023 May
+Question 1
+	B. List down two (2) microservices Design principles and explain their application. 								(04 marks)	[OK]
+			
+
+2024 April
+Question 1
+	A) Briefly explain the "event-driven programming using an example in Microservices. 										(02 marks)
+
+
+	B) Discuss two (2) methods that can used to define the scope of the microservices and to "right-size" them. 				(04 marks)
+			
+
+
+
+
+
+#කලින් පාඩමේ, SOA හී නිර්මාණ මුලධර්ම ගැන කතා කලා. දැන් තියෙන්නේ Microservices වල , නිර්මාණ මුලධර්ම ගැන කතා කරන්න.
+#Definiton, Explanation, Example කියන Pattern එකට යන්නේ
+#Speed එක වැඩි කරන්න ඕන නිසා Note එකේ Quality එක ටිකක් අඩු කරලා තියෙන්නේ
+
+
+[Quiz] 2023 May
+Question 1
+	B. List down two (2) microservices Design principles and explain their application. (04 marks)
+		(Microservices, නිර්මාණ මුලධර්ම 02ක් ලැයිස්තුගත කර, ඒවා ප්‍රායෝගිකව යොදාගන්නා ආකාරය පැහැදිලි කරන්න)
+												
+												Answer
+
+Rule 01) :	එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතුය
+			(Single Responsibility Principle {SRP})
+
+			මේ නිතිය ප්‍රායෝගිකව යොදාගන්නා ආකාරය:- 	
+					- Payment Gateway Service වල (මේ Service එකෙන්, payments ගැන විතරයි බලන්නේ)
+					- User Login Service  වල (මේ Service එකෙන්, User Loging ගැන විතරයි බලන්නේ)
+					- User Registration Services වල (මේ Service එකෙන්, User Registration Services ගැන විතරයි බලන්නේ)
+					
+
+Rule 02) : 	එම කාර්යයේ සීමාව (boundary එක) නිවැරදිව හඳුනාගෙන තිබිය යුතුය
+			(Bounded Context)
+
+			මේ නිතිය ප්‍රායෝගිකව යොදාගන්නා ආකාරය:- 	
+					- Book කියන Variable එක,
+						+ එක Microservice එකක, "පොතක්" හැඳින්වීමටද
+						+ තව Microservice එකක, "හෝටලයක් වෙන් කිරීමටද" භාවිතා කරයි
+
+
+					 එම නිසා, මේ Microservies දෙක, Overlap වීමකින් තොරව, වෙන වෙනම පවත්වා ගත යුතුයි.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+[Slide 3] What is a Microservice?
+		 (මොකද්ද මේ Microservice එකක් කියන්නේ?)
+
+
+	* අපි දැනටමත් දන්නවා, Microservices එකක් කියන්නේ, "මෘදුකාංග නිර්මාණය කිරීමේ ක්‍රමයක්" කියලා. මේකෙදි, Software එක හදන්නේ, Network එකක් හරහා කතා කර ගන්නා, කුඩා හා ස්වාධින Microservices ගණනාවක එකතුවෙන්.
+
+	* එක Microservice එකක්, එක Task එකක් විතරයි Focus කරන්නේ
+
+	* Monolitic ක්‍රමයට විශාල Softwares හදනවට වඩා, Microservice ක්‍රමයෙන් Software එක කුඩා කොටස් වලට (Microservices වලට) කඩලා නිර්මාණය කරගන්න පුළුවන්. මේ Microservices, ඕනෑම, Framework එකකින්, Programing Language එකකින් ලියන්න පුළුවන්. එක එක Microservices තනියෙන් වැඩ කරන පොඩි Softwares වගේ 
+
+
+
+
+[Slide 4] Why choose microservices?
+			(ඇයි ඔයා Microservice ක්‍රමය තෝරාගන්න ඕනේ?)
+	
+	* ස්වාධීනව deploy කරන්න පුළුවන් වීම සහ ඉක්මනින්  Releases සිදු කළ හැකි වීම නිසා
+	* විවිධ Programing Lanaguages, Frameworks වගේ Technologies  එකට භාවිතා කළ හැකි වීම නිසා
+	* එක Microservice එකක් අවශ්‍ය ප්‍රමාණයට Scale කළ හැකි නිසා
+	* එක microservices එකක Error එකක් තිබුනත් ඒක අනිත් microservices වලට බලනොපාන නිසා
+	* Development Team එකට Organize වෙලා වැඩ කරන්න පහසු නිසා
+
+
+2023 May
+[Slide 5] 	12 Core Design Principles
+			(මුලික නිර්මාණ මුලධර්ම 12)
+
+
+	<pencil>
+		* Design Principles කියන්නේ, 
+				Microservice Architecture ක්‍රමයෙන් Software එකක් හදන කොට, අනුගමනය කරන්න ඕන නීති රීති වලට.
+
+		* මේ Principles නොමැතිව, Software එකක් හැදුවොත්, 
+					Code එක අවුල් ජාලාවක් වෙනවා, 
+					Bugs ගොඩක් එනවා වගේම
+					Troubleshoot කිරීම ගොඩක් අමාරු වෙනවා.
+
+		* එහෙනම් අපි බලමු මොනවද මේ නීති රීති කියලා
+	</pencil>
+
+	
+	
+
+Rule 01) :	එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතුය
+			(Single Responsibility Principle {SRP})
+
+Rule 02) : 	එම කාර්යයේ සීමාව (boundary එක) නිවැරදිව හඳුනාගෙන තිබිය යුතුය
+			(Bounded Context)
+
+
+Rule 03) :	හැම Microservice එකක්ම, එකිනෙකා මත Depend නොවිය යුතුය.
+			(Loose Coupling)
+
+
+Rule 04) :	Microservice එකක් ඇතුලේ තියෙන, Classes, Modules, Functions කියන හැමදේම, එකම අරමුණක් වෙනුවෙන් වැඩ කරන්න ඕනේ. 
+			(High Cohesion)
+
+
+Rule 05) : 	එක Microservice එකකට, තනියෙන් ස්වාධීනව වැඩ කරන්න පුළුවන් විදිහට Microservices නිර්මාණය කළ යුතුය.
+			(Service Autonomy)
+
+
+Rule 06) : 	මුලින්ම API එක නිර්මාණය කළ යුතුය
+			(API-first Design)
+
+
+Rule 07) :	හැම Microservice එකකටම, තමාගේම Database එකක් පැවතිය යුතුය.
+			(Database per Service)
+
+
+Rule 08) : 	Asynchronous Communication එක (හරියට Email එකක් යවනවා වගේ) සහ Event-driven Patterns (System එක විවිධ Events වලට 				ප්‍රතිචාර දක්වන ආකාරය) නිර්මාණය කළ යුතුය.
+			(Asynchronous Communication & Event-Driven Patterns)
+
+
+				<pencil>
+					* Asynchronous Communication කියන්නේ අලුත් වචනයක් නේ. අපි බලමු මේක කොහෙන්ද ආවේ කියලා.
+
+					* Microservices දෙකක් අතර පණිවිඩ හුවමාරු කරගන්නා විධි දෙකක් තිබේ
+														|
+								---------------------------------------------------------
+								| 														|
+							Synchronous 											Asynchronous
+					* 	Synchronous Commucation එක හරියට 					 	*	Asynchronous Commucation එක හරියට
+						Call එකක් ගන්නවා වගේ. එනම්, 						  	Email එකක් යවනවා වගේ. එනම්,
+						අපි Call එකක් අරන් කාගෙන් හෝ 							Email එකේ reply එක එනකන් බලාගෙන ඉන්නේ නෑ.
+						ප්‍රශ්නයක් ඇහුවම, උත්තරේ දෙනකන්ම  						ඒ Email එකට Reply එක එනකන්, තව Email යවන්නත් 	Call එකේ ඉන්න වෙනවා.									පුළුවන්
+					
+
+					* 	ඒ නිසා මේක Slow. 										* 	ඒ නිසා මේක Speed.
+
+
+					* මේ නිසා, Microservices වලට භාවිතා කරන්න ඕනේ, Asynchronous Communication ක්‍රමය
+
+				</pencil>
+
+
+
+
+Rule 09) : 	Software එකේ ක්‍රියාකාරකම් Monitor කළ හැකි විදිහට, Logs නිර්මාණය කර තිබිය යුතුය
+			(Observability)
+
+
+Rule 10) : 	Software එකේ ප්‍රශ්න, හෝ errors ආවත්, System එක නොනවත්වා වැඩ කරන්න පුළුවන් වෙන විදිහට තිබිය යුතුය
+			(Resiliency & Fault Tolerance)
+			(රෙසිලියන්සි)
+
+
+Rule 11) : 	Deploy කිරීම්, Test කිරීම් CI/CD Pipelines භාවිතා කර, Automate කර තිබිය යුතුය.
+			(Automation)
+
+
+Rule 12) :	මුල ඉඳන්ම Security එක ගැන අවධානෙන් Design එක සිදු කළ යුතුය
+			(Security by Design)
+
+
+
+# දැන් අපි මේ හැම නීතියක්ම විස්තර ඇතුව බලමු.
+
+
+
+
+
+
+
+
+
+[Slide 6]						Rule 01
+			එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතුයි
+			(Single Responsibility Principle)
+
+Explanation
+(නිතිය විස්තර කිරීම)
+	* මේ නිතිය වැටිලා තියෙන්නේ, Software Engineering වල තියෙන, "SRP" කියන Consept එකට අනුව.
+	* මේ නීතියෙන් කියන්නේ, එක Microservice එකක්, එක වැඩක් විතරක් කරන්න ඕනේ කියලා
+	* මේ නිතිය නිසා, Code එක Maintain කරන්න, Deploy කරන්න ලේසි වෙනවා
+	* මේ නිතිය නිසා, එක Service එකක වෙනස්කමක් කරද්දී, වෙන Service එකකට බලපාන්නේ නෑ
+
+
+			උදා:- : University Management system එකක් ගමු
+						Student-Service : මේ Service එකෙන්, studentsලා ගැන විතරයි බලන්නේ.
+						Course-Service : මේ Service එකෙන්, courses ගැන විතරයි බලන්නේ.
+						Payment-Service : මේ Service එකෙන්, payments ගැන විතරයි බලන්නේ.
+					
+					* Course Fees වෙනස් වුනොත්, "Payment-Service" එක විතරක් වෙනස් කළාම ඇති.
+
+
+
+[Slide 7] 
+
+	* 	"එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතුයි"
+		මේ නිතිය පැවතීම නිසා ලැබෙන වාසි
+			- Microservice එක සරල වෙනවා
+			- Service එකට ස්වාධීනව Scale එක වැඩි කරගන්න පුළුවන්
+			- එක Microservice එකක Error එකක් ආවත්, ඒක අනෙකුත් කාර්යයන් වලට බාධාවක් නොවේ
+
+
+	
+	* 	Microservices ක්‍රමය භාවිතා කරන විට කරන පොදු වරදක්
+			- 	Miroservice නිර්මාණය කරද්දී, Program එක අනවශ්‍ය ලෙස කුඩා කොටස් වලට බෙදා, "Nano services" මට්ටමට කඩාගන්න එපා. 	 එතකොට මේ නිසා, Program එක, අනවශ්‍ය ලෙස Complecated වෙනවා.
+	
+
+
+
+[Slide 8]					Rule 02
+			කාර්යයේ සීමාව (boundary එක) නිවැරදිව හඳුනා ගත යුතුයි.
+			(Bounded Context)
+
+
+Explanation
+(නිතිය විස්තර කිරීම)
+		* මේ නිතිය දාලා තියෙන්නේ, Domain-Driven Design (DDD) කියන Software නිර්මාණය කිරීමේ ක්‍රමවේදයෙන් 
+>>>>>>> Stashed changes:Semester 8/ITS 4243 Microservices and Cloud Computing/Notes/Lession 02/Microservices and Cloud Computing [Lession 02]
 		* හැම Microservice එකකම තමාගේ සීමාව ඇතුලත තියෙන, Variable Names, භුතාර්ථ, Function names වගේ දේවල්, අනිත් Microservices වලින් වෙනස් වෙන්න ඕනේ. <pencil> හරියට ප්‍රාදේශීය ජනවහර වගේ </pencil>
 
 		* එම නිසා, Microservice එකක සීමාව, පවත්වා ගැනීම ඉතා වැදගත් වේ. නැතහොත්, Variable Names, Conflict විය හැක.

@@ -204,7 +204,164 @@
 [Slide 11] 	Organisational Structure
 			(ආයතනික ව්‍යුහය)
 
-	* ආයතනික ව්‍යුහය කියන්නේ, 
+	* ආයතනික ව්‍යුහය කියන්නේ, Organization එකේ, වගකීම් බෙදී යන ආකාරයයි.
+	* මෙමඟින්, ආයතනයේ විවිධ කොටස් කොහොමද Connect වෙලා තියෙන්නේ කියලා පෙන්වනවා.
+
+
+
+
+
+
+[Slided 12] Organisational Structure Types
+			(ආයතනික ව්‍යුහ වර්ග)
+
+
+	1. Hierarchical Structure
+		(ධුරාවලි ආකෘතිය)
+
+
+	2. Flat Structure
+		(තිරස් ව්‍යුහය)
+
+
+	3. Matrix Structure
+		(න්‍යාස ව්‍යුහය)
+
+
+	4. Functional Structure
+		(ආයතනයේ කාර්යය අනුව වර්ග කරන ව්‍යුහය)
+
+
+
+	5. Divisional Structure
+		(ආයතනයේ Divisions අනුව වර්ග කරන ව්‍යුහය)
+
+
+	6. Network Structure
+		(ජාල ව්‍යුහය)
+
+
+
+
+
+
+
+
+[Slide 13] 1. Hierarchical Structure
+				(ධුරාවලි ආකෘතිය)
+
+
+  		* මේ Structure ඒකෙදි, ධුරාවලිවක් වගේ, පහලට වගකීම් බෙදී යයි. 
+        * ඉහලට ගමන් කරන විට වගකීම් වැඩි වේ
+        * මෙහි වගකීම් බෙදී යන විදිහ පැහැදිලිව දැකගත හැක
+        * විශාල Organizations සඳහා ගැලපේ
+
+
+    <pencil>                    
+			* මෙම ආකෘතිය පිරමිඩයක හැඩය ගනී.
+			* මෙම ආකෘතියේ, පැහැදිලිව, ආයතනයේ ඇති වගකීම්, Levels වශයෙන් දැකගත හැක.
+			*  පහල Level එකේ ඉන්න සේවකයන්, ඉහල Level වල ඉන්න සේවකයන්ට, එම Level එකේ සිදු වෙන කටයුතු Report කරන්න බැඳිලා ඉඳලා ඉන්නවා.
+	</pencil>
+
+
+
+[Slide 14] 2. Flat Structure
+			 (තිරස් ව්‍යුහය)
+	
+	* මේ Structure ඒකෙදි, තිරස් අතට, වගකීම් බෙදී යයි. එනම්, සියල්ලන්ටම සමාන වගකීම් පවතී. 
+    * කුඩා ව්‍යාපාර වලට සුදුසු වේ.
+	* සරල බෙදී යාමක් තිබෙන නිසා, තීරණ ගැනීම පහසු වේ.
+
+
+
+[Slided 15]  3. Matrix Structure
+				(න්‍යාස ව්‍යුහය)
+
+		---metrix.png එක Open කරගන්න
+
+		* මේ Structure එකේදී, එක පෙලේ සේවකයෙක්ව, ඉහල පෙළේ වගකීම් කිහිපයක් විසින්, අධීක්ෂණය කරනු ලබයි.
+		* මේ Structure එකේදී, Project එකක් ගැන හොඳින් Focus කළ හැක.
+		*  
+
+		
+
+
+
+
+
+[Slide 16] 4. Functional Structure
+			(ආයතනයේ කාර්යය අනුව වර්ග කරන ව්‍යුහය)
+
+		---"Functional.png" එක Open කරගන්න
+
+
+		* මේ Structure එකේදී, ආයතනයේ වගකීම්, ආයතනයේ සිදු කරන විවිධ Projetcs (Functions) අනුව බෙදා දේ.
+		* එම නිසා නිතරම ආයතයේ ව්‍යුහය වෙනස් වේ 		#කලින් උඩම Level එකේ හිටිය කෙනා දැන් යටම Level එකේ ඉන්නවා වෙන්න පුළුවන්.
+		* මෙම ක්‍රමයේ කාර්යක්ෂමතාව වැඩිය
+
+
+
+
+
+
+[Slide 17] 5. Divisional Structure
+	   		 (ආයතනයේ Divisions අනුව වර්ග කරන ව්‍යුහය)
+
+	   * මේ Structure එකේදී, ආයතනය වගකීම් අනුව වර්ග කරනවා වෙනුවට, ආයතනයේ, ශාඛා අනුව වර්ග කිරීම සිදුවේ.
+
+				   			උදා:- 								
+				   							# මේ තියෙන්නේ, Hirachy Stucture එක. 
+				   							#මෙතැනදී "යටතේ ඉන්නවා" කියන තේරුම ගන්න
+
+																   											   FOT
+																   												|
+																   					----------------------------------------------------------
+																   					| 														|
+																   				   Dean 												Chancellor
+																   				   	|
+																   	-------------------------------------
+																   	|									|
+																 Deputy 							Head of 
+																 Registar 							Departments
+
+
+
+
+
+								- මේ තියෙන්නේ, Division Stucture එක. වගකීම් අනුව වර්ග කරනවා වෙනුවට, ආයතනයේ, ශාඛා අනුව වර්ග කිරීම සිදුවේ.
+
+
+
+
+								   											   FOT
+								   												|
+								   					----------------------------------------------------------
+								   					| 														|
+								   			EGT Department 												ICT Department
+								   				   	|																
+								   	-------------------------------------
+								   	|									|
+								 Polimar 							Mecatronic
+								 Department 					    Departments
+
+
+
+
+				* මේ ක්‍රමයේදී, එක ශාඛාවකට හොඳින් Focus එක දිය හැකිය.
+				* ඉක්මනින් තීරණ ගන්න පුළුවන්
+				* නමුත් මේ ක්‍රමයේ Cost එක වැඩිය.
+
+
+
+
+
+[Slide 18] 6. Network Structure
+		(ජාල ව්‍යුහය)
+
+
+	*  මේ Structure එකේදී, ආයතනය, මධ්‍යගතව සිට, අනිකුත් ශාඛා පාලනය කරයි
+
+	---NSD.html එක Open කරගන්න 
 
 
 
@@ -218,6 +375,98 @@
 
 
 
+2024
+[Slide 19] 	IT organisational Structures
+			(IT ක්ෂේත්‍රයේ සංවිධාන වල, ආයතනික ව්‍යුහය)
+
+
+	* IT ක්ෂේත්‍රයේ සංවිධාන වල, ආයතනික ව්‍යුහය (organisational Structure), ආයතනයෙන් ආයතනයට වෙනස් වේ.
+	* පහත තිබෙන්නේ, ශ්‍රී ලංකාවේ IT ක්ෂේත්‍රයේ, බහුලව දක්නට ලැබෙන, ආයතනික ව්‍යුහ වේ.
+
+
+		<red>		1. Hierarchical Structure  				</red>
+		<red>			(ධුරාවලි ආකෘතිය)  					</red>
+
+
+		<red>		2. Flat Structure  						</red>
+		<red>			(තිරස් ව්‍යුහය)  						</red>
+
+
+		<red>		3. Matrix Structure  					</red>
+		<red>			(න්‍යාස ව්‍යුහය)  					</red>
+
+
+		<red>		4. Functional Structure  						 </red>
+		<red>			(ආයතනයේ කාර්යය අනුව වර්ග කරන ව්‍යුහය)  </red>
+
+
+					5.  Hybrid Structures
+						(මිශ්‍ර ආකෘතිය)
+
+					6. Virtual Structures
+						(අතත්‍ය ආකෘතිය)
+
+
+					7. Agile Teams
+						(Aglile ආකෘතිය)
+
+
+
+
+
+
+[Quiz] 2024 - April
+
+	Question 02) 
+			 b) Explain two (02) types of organizational structures you have observed in the Sri Lankan IT sector.               (6 marks)
+            	(ශ්‍රී ලංකාවේ IT ක්ෂේත්‍රයේ, ඔබ නිරීක්ෂණය කර ඇති, ආයතනික ව්‍යුහ 02ක් පැහැදිලි කරන්න)	
+
+
+            								Answer
+
+
+                   01) Hierarchical Structures
+                        Diagram:-
+                                      CEO
+                                        ↓
+                                    IT Manager
+                                        ↓
+                                    Project Manager
+                                        ↓
+                                    Senior Developer
+                                        ↓
+                                    Junior Developer
+
+
+                        * මේ Structure ඒකෙදි, ධුරාවලිවක් වගේ, පහලට වගකීම් බෙදී යයි. 
+                        * ඉහලට ගමන් කරන විට වගකීම් වැඩි වේ
+                        * මෙහි වගකීම් බෙදී යන විදිහ පැහැදිලිව දැකගත හැක
+                        * විශාල Organizations සඳහා ගැලපේ
+
+
+
+
+                            
+
+
+
+                   
+                   02) Flat Hierarchies 
+
+                           Diagram:-
+
+
+                                                        CEO
+                                                         |
+                                    -------------------------------------------
+                                    ↓                    ↓                  ↓
+                                IT Manager      Network Manager     Multimedia Manager
+
+
+
+                        * මේ Structure ඒකෙදි, තිරස් අතට, වගකීම් බෙදී යයි. එනම්, සියල්ලන්ටම සමාන වගකීම් පවතී. 
+                        * කුඩා ව්‍යාපාර වලට සුදුසු වේ.
+                        * සරල බෙදී යාමක් තිබෙන නිසා, තීරණ ගැනීම පහසු වේ.
 
 
 
@@ -227,6 +476,127 @@
 
 
 
+[Slide 20] 	Organisational Culture
+			(ආයතනයේ සංස්කෘතිය)
+
+	* ආයතනයේ සංස්කෘතිය කියන්නේ, ආයතනයක් තුල, කතාබහ කරන, හැසිරෙන, සහ වැඩ කළ යුතු ආකාරයයි.
+	* මෙය ආයතනයෙන් ආයතනට වෙනස් වේ.
+
+
+
+
+
+
+[Slided 21] Organisational Culture
+			(ආයතනයක සංස්කෘතිය ගැන, දල වශයෙන්, මොනවද දැනගන්න ඕනේ?)
+
+
+*	ආයතනයේ හැමෝම පිළිගත් එකඟතා මොනවද? 	
+	(Shared Values and Beliefs)
+	
+
+*	ආයතනය තුල හැසිරෙන්න ඕනේ කොහොමද?  
+	(Norms and Expectations)
+	
+
+*	ආයතනය ඇතුලත කොහොමද වැඩ කරන්න ඕනේ?  
+	(Attitudes and Behaviors)
+	
+
+*	ආයතනයේ අනිත් සේවකයන් සමඟ ගනුදෙනු කරන්න ඕනේ කොහොමද?  
+	(Social Dynamics and Relationships)
+	
+
+*	ආයතනය තුල අඳින්න ඕන Dress Code එක වගේ දේවල් මොනවද?  
+	(Artifacts and Symbols)
+	
+
+*	ආයතනය ඇතුලත වෙනස්වෙන තත්වයන්ට හැඩගැහෙන්නේ කොහොමද?  
+	(Adaptability and Change)
+	
+
+
+
+
+
+
+[Slide 22] Culture in IT Organisations
+			("IT ක්ෂේත්‍රයේ සංවිධාන වල" ආයතනික සංස්කෘතිය)
+
+
+
+    *   Innovation and Creativity
+        (අලුත් දේවල් නිර්මාණය කරන පරිසරයක් පවතී)
+                - IT Company වල ගොඩක් වෙලාවට කට්ටිය Motivate කරනවා, කොටුවෙන් පිට හිතන්න. ඒ වගේම අලුත් අලුත් දේවල් නිර්මාණය කරන්න. මේ නිසා, IT Company වල "අලුත් දේවල් නිර්මාණය කරන පරිසරයක්" පවතී.
+
+                    උදා:- Google එක විසින් සේවකයන්ට, වැඩ කරන Time එකෙන් 20%ක් දෙනවා, තමන්ගේම Creative දෙයක්         
+                          නිර්මාණය කරන්න
+
+
+    *   Agility and Adaptability
+        (ඉක්මනින් වෙනස් වීමේ හැකියාවක් පවතින පරිසරයක් පවතී)
+                - තාක්ෂනය, වෙළඳපොළ, සහ පාරිභෝගික අවශ්‍යතා වගේ දේවල් වෙනස් වෙනවාත් සමඟම, ඒවාට අනුව හැඩ ගැසීමට, ගැලපෙන වටපිටාවක් IT Compnay තුල පවතී.
+                        උදා:-   Pickme ආයතනයේ මුලින්ම Taxi සේවාවට හැඩ ගැසුනද, දැන්, Food Delivary සේවාවාටද හැඩ ගැසීමට සිදු 
+                                වී ඇත.
+
+
+    *   Collaboration and Teamwork
+        (Team එක සමඟ, එකට වැඩ කරන, පරිසරයක් පවතී)
+                - IT Comapny තුල Team එක සමඟ එකට එකතු වී, සාකච්ඡා කර වැඩ කරන පරිසරයක් පවතී. බොහෝ වෙලාවට, IT ක්ෂේතය තුල වැඩ කටයුතු සිදු වන්නේ, කණ්ඩායම් වශයෙනි
+                        උදා:- App එකක් Develop කිරීම සඳහා, IT Team එකක් පත් කිරීම
+
+
+
+    *   Meritocracy සහ Expertise
+        (හැකියාවට මුල් තැන දෙන පරිසයක් පවතී)
+                - IT Company වල Projects බෙදන විට, එකිනෙකාගේ හැකියාවට අනුව, Projects ලබා දෙන පරිසරයක් පවතී. එවිට, කාර්යක්ෂමතාව වැඩි කරගත හැක.
+                        උදා:-  Python වලින් Software එකක් හදන්න Python දැනුම තිබෙන සේවකයන් පත් කිරීම.
+
+
+
+
+    *   Flat Hierarchies සහ Open Communication
+        (දිග අතට පවතින Hirachy එකක් සහ විවෘතව කතා කරන්න පුළුවන් පරිසයක් පවතී)
+                -   ශ්‍රී ලංකාවේ IT Company වලින්, බොහෝමයක්, Startup Companies වේ. මේ නිසා, ආයතනයේ 
+                    CEO සමඟ වුනත්, Directly සුහදව කතා කල හැක.
+                    
+                         උදා:- ආයතනයේ CEOත්, Deveopment Team එක සමඟ Develoment කිරීම.
+
+
+
+
+
+
+[Quiz] 2024 - April
+
+	Questions 2) 
+	  c) Explain three (03) key components or characteristics commonly found in the organizational culture of IT companies. 				[6 marks]
+	     (IT සමාගම්වල පවතින, "ආයතනික සංස්කෘතිය (ආයතනය තුල වැඩ සිදුවෙන විදිහ) තුල ඇති", ප්‍රධාන අංග හෝ ලක්ෂණ තුනක් පැහැදිලි කරන්න)
+
+
+
+	     															Answer
+
+
+	    *   Innovation and Creativity
+	        (අලුත් දේවල් නිර්මාණය කරන පරිසරයක් පවතී)
+	                - IT Company වල ගොඩක් වෙලාවට කට්ටිය Motivate කරනවා, කොටුවෙන් පිට හිතන්න. ඒ වගේම අලුත් අලුත් දේවල් නිර්මාණය කරන්න. මේ නිසා, IT Company වල "අලුත් දේවල් නිර්මාණය කරන පරිසරයක්" පවතී.
+
+	                    උදා:- Google එක විසින් සේවකයන්ට, වැඩ කරන Time එකෙන් 20%ක් දෙනවා, තමන්ගේම Creative දෙයක්         
+	                          නිර්මාණය කරන්න
+
+
+	    *   Agility and Adaptability
+	        (ඉක්මනින් වෙනස් වීමේ හැකියාවක් පවතින පරිසරයක් පවතී)
+	                - තාක්ෂනය, වෙළඳපොළ, සහ පාරිභෝගික අවශ්‍යතා වගේ දේවල් වෙනස් වෙනවාත් සමඟම, ඒවාට අනුව හැඩ ගැසීමට, ගැලපෙන වටපිටාවක් IT Compnay තුල පවතී.
+	                        උදා:-   Pickme ආයතනයේ මුලින්ම Taxi සේවාවට හැඩ ගැසුනද, දැන්, Food Delivary සේවාවාටද හැඩ ගැසීමට සිදු 
+	                                වී ඇත.
+
+
+	    *   Collaboration and Teamwork
+	        (Team එක සමඟ, එකට වැඩ කරන, පරිසරයක් පවතී)
+	                - IT Comapny තුල Team එක සමඟ එකට එකතු වී, සාකච්ඡා කර වැඩ කරන පරිසරයක් පවතී. බොහෝ වෙලාවට, IT ක්ෂේතය තුල වැඩ කටයුතු සිදු වන්නේ, කණ්ඩායම් වශයෙනි
+	                        උදා:- App එකක් Develop කිරීම සඳහා, IT Team එකක් පත් කිරීම
 
 
 
@@ -235,7 +605,92 @@
 
 
 
+[Quiz] 2024 - April
+	   {සාමාන්‍ය දැනීම}
+	d) Discuss the role of organizational culture in shaping employee engagement and retention in the IT sector in Sri Lanka.			[10 marks]
+	   (ලංකාවේ IT Companies වල "සේවකයන්ට රැකියාව කිරීමට ඇති කැමැත්ත", "එම ආයතන වල තිබෙන සංස්කෘතිය මත රඳා පවතිනවද? )
 
+
+	   														Answer
+
+
+	   ඔව්.
+
+	   මොකද, ලංකාවේ IT Companies ගොඩක් ඒවා එකිනෙකට එකක් වෙනස්. එම එක එක Companies වල තියෙන්නේ, එක එක සංස්කෘතීන්. මෙම සංස්කෘතීන් නිර්මාණය කරනවිට, "සේවකයන්ට රැකියාව කිරීමට ඇති කැමැත්ත" වැඩි වන ආකාරයේ සංස්කෘතියක් නිර්මාණය කළ යුතු වේ. 
+
+		පහත දැක්වෙන කරුණු නිසා "සේවකයන්ට රැකියාව කිරීමට ඇති කැමැත්ත" වැඩි වේ
+		   (i)	 වැඩිය නීති රීති නැති නිදහස් පරිසරයක් පවතිනවා නම්
+		   (ii)  තමන්ගේ Carear එක වර්ධනය වෙනවා නම්
+		   (iii) නොදන්නා දෙයක් දන්නා අයගෙන් දැනගන්නට පුළුවන් නම්
+		   (iv)  මිත්‍රශීලි සේවකයන් පිරිසක් සිටිනවා නම්  
+
+		   	"සේවකයන්ට රැකියාව කිරීමට ඇති කැමැත්ත වැඩිවේ."
+
+
+
+
+[Quiz] 2025 - March
+
+
+	Question 02) 
+		d) 	Suppose you are starting an IT company that will handle multiple projects, including research and development, where meeting deadlines is crucial.
+			Additionally, you plan to hire primarily interns to help manage costs.
+
+			i) 	Discuss the organizational structure (or combination of structures) you are implementing to achieve your goals. Justify your choice by 			discussing how it supports efficiency, collaboration, and innovation.
+
+
+
+			ii) Asses the organizational culture you aim to adopt to create an environment conducive to achieving both organizational and project targets. 		Highlight key cultural values, practices, and their impact on performance and teamwork.			
+
+
+
+												Answer & Translation
+
+			ඔබ Reseachers හා Development සිදු කරන Company  එකක් ආරම්භ කරනවා කියලා හිතන්න. මේ Company එකෙන් කරන Projects, Deadline එකට කලින් බාර දෙන එක ඉතා වැදගත්. ඒ වගේම, Cost එක අඩු කරගන්න ප්‍රධාන වශයෙන් Interns ලා Hire කරලා මේ වැඩ ටික දෙන්න බලාපොරොත්තු වෙනවා.
+
+			
+			(i)  මෙම ඉලක්කය සාක්ෂාත් කර ගැනීම සඳහා, ඔබේ ආයතනයේ  ක්‍රියාත්මක කරන "ආයතනික ව්‍යුහය (Organisational Structure) හෝ ව්‍යුහ" ගැන සාකච්ඡා කරන්න. ඉන්පසු එම තෝරාගත් ව්‍යුහය (structure එක) නිසා, "ආයතනයේ, කාර්යක්ෂමතාවය, සහයෝගිතාවය සහ නවෝත්පාදනය"ට එය බලපාන ආකාරය විස්තර කරන්න.	
+
+													Answer
+
+					*  මෙම ඉලක්කය සාක්ෂාත් කර ගැනීම සඳහා, ඔබේ ආයතනයේ  ක්‍රියාත්මක කරන "ආයතනික ව්‍යුහය (Organisational Structure) මොකද්ද? 
+								- 	Functional Structure  						 
+									(ආයතනයේ කාර්යය අනුව වර්ග කරන ව්‍යුහය)
+
+					
+
+					* "ආයතනයේ, කාර්යක්ෂමතාවය, සහයෝගිතාවය සහ නවෝත්පාදනය"ට එය බලපාන ආකාරය විස්තර කරන්න?
+
+				  			- කාර්යක්ෂමතාවය 	: "Functional Structure (ආයතනයේ කාර්යය අනුව වර්ග කරන ව්‍යුහය)" ක්‍රමයේ කාර්යක්ෂමතාව වැඩි නිසා, 							  Deadline වලට කලින් Projects ලබාදෙන්න පුළුවන්
+				  			
+				  			- සහයෝගිතාවය 	:  	මේ ක්‍රමයේදී Projects අනුව, වගකීම් බෙදාදෙන නිසා, Project එකේ අනිත් සාමාජිකයන් එක්ක, ලඟින්, හා 							සහයෝගයෙන් කතා බහ කරලා Project එක නිර්මාණය කරන්න පුළුවන්. 
+
+				  			
+				  			- නවෝත්පාදනය 	: 	මේ Structure එකේදී, ආයතනයේ වගකීම්, ආයතනයේ සිදු කරන විවිධ Projetcs (Functions) අනුව බෙදා දෙන 							නිසා, Interns ලට, හැමදාම එකම වැඩේ නැතුව, විවිධ විවිධ වැඩ ඉගෙන ගෙන, තමන්ගේ නවෝත්පාදන
+				  									හැකියාව වර්ධනය කරගන්න පුළුවන්
+
+
+				  			
+
+
+					{සාමාන්‍ය දැනීම}
+			(ii)  "ආයතනයේ ඉලක්ක සපුරා ගන්න", වගේම, "ආයතනය විසින් කරන Projects සාර්ථක වෙන්න," හොඳ වටපිටාවක් නිර්මාණය වෙන විදිහට, ආයතනයේ Culture එක නිර්මාණය කරන විදිහ පැහැදිලි කරන්න. සහ එම Culture එක නිසා, ආයතනයේ ගොඩ නැගෙන, සාරධර්ම (Culture Values), හොඳ පුරුදු (Practices) වගේ දේවල් වලින්, ආයතනයේ Performance එකට හා Teamwork එකට සිදු වෙන බලපෑම විස්තර කරන්න
+
+
+																Answer
+
+
+
+
+			* අලුත් දේවල් ඉගෙන ගැනීම 
+			* වෙලාවට වැඩ කිරීම
+			* Commucation Skill එක 
+			* අවංක බව
+			* Team එකක් සමඟ වැඩ කිරීම
+			* 
+
+
+			
 
 
 
@@ -346,3 +801,754 @@
 
 	5. International Organisations
 		(ජාත්‍යන්තර සංවිධාන)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Profesional Practices in ICT
+														(ICT ක්ෂේත්‍රයේ පවත්වාගත යුතු හොඳ පුරුදු )
+										
+																Lession 06
+																Organitions
+																(සංවිධාන)
+
+
+
+
+⚠ මේ Note එක, "තේරුම් ගැනීමේ පහසුව" සළකා Singlish වලින් ලියා ඇත.
+	9.00AM
+
+
+
+
+[Slide 2 - 3] 	Organisations
+				(සංවිධාන)
+
+	* සංවිධානයක් කියන්නේ, පොදු අරමුණක් ඉටු කරන්න, එකට වැඩ කරන මිනිස්සු කණ්ඩායමක්.
+
+	* සංවිධාන, "Size, Scope, Purpose එක" අනුව වෙනස් වෙනවා. 
+
+	* කුඩා කණ්ඩායම් වල සිට,  විශාල Multinational Companies, දක්වා සංවිධාන (Organisations) පවතිනවා.
+
+
+
+
+
+
+වැදගත් නෑ
+[Slide 4] Why do we have Organisations?
+		  (ඇයි අපිට මේ සංවිධාන අවශ්‍ය වෙන්නේ?)
+
+		 #මෙතන කියලා තියෙන දේවල් මෙහෙම වෙන්නේ ඇයි කියලා මමවත් දන්නේ නෑ. ඒ නිසා මේ ටික Just අහගෙන ඉන්න
+
+		01) Achieving Common Goals
+			(පොදු අරමුණක් සාක්ෂාත් කරගන්න)
+
+		02) Efficiency
+			(කාර්යක්ෂමතාව වැඩි කරගන්න)
+					#කාර්යක්ෂමතාව වැඩි වෙන්නේ කොහොමද? :- කණ්ඩායමක් විදිහට වැඩ කරන නිසා, ඉක්මනින් වැඩක් කරගන්න පුළුවන්
+
+
+
+
+
+
+
+
+
+[Slide 5] 	Types of Organisations
+			(සංවිධාන වර්ග)
+
+
+	1. For-profit Organisations
+	   (ලාභ ලබන සංවිධාන)
+
+
+	2. Non-profit Organisations
+		(ලාභ නොලබන සංවිධාන)
+
+
+	3. Government Organisations
+		(රාජ්‍ය සංවිධාන)
+
+
+	4. Hybrid Organisations
+		(මිශ්‍ර සංවිධාන)
+
+
+	5. International Organisations
+		(ජාත්‍යන්තර සංවිධාන)
+
+
+
+
+
+
+
+[Slide 6] 	1. For-profit Organisations
+	   			(ලාභ ලබන සංවිධාන)
+
+
+
+	   * මෙම සංවිධාන, මුදල් ඉපයීම සහ ලාභ ලැබීම Focus කරයි
+	   
+	   * ලාභ ලබන සංවිධාන, ප්‍රධාන වශයෙන් කොටස් දෙකකට බෙදේ
+	   														|
+	   						----------------------------------------------------
+	   						|					 								|
+	   	1. කුඩා සහ මධ්‍යම ප්‍රමාණයේ ආයතන  (SMEs)  				2. විශාල ආයතන (Corporations)
+	   			උදා:- සිල්ලර කඩවල්											උදා:- 	Google
+	   				  කුඩා ප්‍රමාණයේ ආයතන 										Amazon
+	   				  Food city
+	   				  DSI																
+
+
+
+2024
+[Slide 7] 2. Non-profit Organisations
+			 (ලාභ නොලබන සංවිධාන)
+
+
+		 * මෙම සංවිධාන, මුදල් ඉපැයීමක් සිදු නොකරයි
+
+		 * ලාභ නොලබන සංවිධානද ප්‍රධාන වශයෙන් කොටස් දෙකකට බෙදේ.
+		 												|
+		 			--------------------------------------------------------------------
+		 			| 																	|
+		1. පුණ්‍ය කටයුතු සිදු කරන සංවිධාන											2. පදනම්
+		   (Charities)																(Foundations)
+		 		උදා:-  රතු කුරුස සංවිධානය												උදා::- Little Harts පදනම
+		 			   SOS ගම්මාන																ග්‍රේරු පදනම
+		 																						අපේක්ෂා පදනම
+
+
+
+
+
+
+
+
+
+
+
+[Quiz] 2024 - April
+
+
+	Questions 2) 
+	        a) Briefly explain the concept of non-profit organizations providing examples.										(3 marks)
+	            (උදාහරණ දක්වමින් ලාභ නොලබන සංවිධාන කියන්නේ මොනවද කියා කෙටියෙන් පැහැදිලි කරන්න?)
+
+	            					Answer
+
+	           * ලාභ නොලබන සංවිධාන කියන්නේ, ලාභ ලබා ගැනීම, මුලික අරමුණ නොවී, සමාජීය, අධ්‍යාපනික, ආගමික වැඩ කටයුතු සිදු කරනා ආයතන වේ.
+	           				උදා:- 	රතු කුරුස සංවිධානය
+	           						SOS ගම්මාන										
+	           						Little Harts පදනම
+	           						අපේක්ෂා පදනම
+
+
+
+
+
+
+
+
+[Slide 8] 3. Government Organisations
+			 (රාජ්‍ය සංවිධාන)
+
+
+	* මෙම සංවිධාන, රජය විසින් මහජනයාට සේවා සැපයීම පිණිස හදපු සංවිධාන වේ
+
+	* රාජ්‍ය සංවිධානද ප්‍රධාන වශයෙන් කොටස් දෙකකට බෙදේ.
+												|
+							----------------------------------------------------
+							|													|
+	1. 	රාජ්‍ය සංවිධාන  									 			2. රාජ්‍ය ආයතන
+		(Government Agencies) 											(Government Bodies)
+			උදා:- 	- 	ICTA (Information and Communication 					උදා:- 	- පාර්ලිමේන්තුව
+						Technology Agency of Sri Lanka)  								- අමාත්‍යංශ
+																						- දෙපාර්තමේන්තු
+					- 	NASA  ආයතනය												
+ 																							
+
+
+
+
+
+[Slide 9] 4. Hybrid Organisations
+			 (මිශ්‍ර සංවිධාන)
+
+
+	* මෙම සංවිධාන, මුදල් උපයන ගමන්, සමාජයටද සේවයක් කරනු ලබයි.
+
+	* මිශ්‍ර සංවිධානද කොටස් දෙකකට බෙදනු ලැබේ
+								|
+			---------------------------------------------------------
+			| 														|
+	1.  සමාජයට සේවයක් කරන ව්‍යාපාර						2. මුදල් උපයන ව්‍යාපාර
+		(Social Enterprises)									(B Corporations)
+
+
+
+
+
+[Slide 10] 5. International Organisations
+			  (ජාත්‍යන්තර සංවිධාන)
+
+	* මෙම සංවිධාන, ජාත්‍යන්තර මට්ටමේ, ගැටළු විසඳාගැනීම සඳහා නිර්මාණය කරගෙන ඇත.
+		උදා:- 	එක්සත් ජාතීන්ගේ සංවිධානය (UN)
+				ලෝක බැංකු සංවිධානය (World Bank)
+
+
+
+
+
+
+
+
+
+
+[Slide 11] 	Organisational Structure
+			(ආයතනික ව්‍යුහය)
+
+	* ආයතනික ව්‍යුහය කියන්නේ, Organization එකේ, වගකීම් බෙදී යන ආකාරයයි.
+	* මෙමඟින්, ආයතනයේ විවිධ කොටස් කොහොමද Connect වෙලා තියෙන්නේ කියලා පෙන්වනවා.
+
+
+
+
+
+
+[Slided 12] Organisational Structure Types
+			(ආයතනික ව්‍යුහ වර්ග)
+
+
+	1. Hierarchical Structure
+		(ධුරාවලි ආකෘතිය)
+
+
+	2. Flat Structure
+		(තිරස් ව්‍යුහය)
+
+
+	3. Matrix Structure
+		(න්‍යාස ව්‍යුහය)
+
+
+	4. Functional Structure
+		(ආයතනයේ කාර්යය අනුව වර්ග කරන ව්‍යුහය)
+
+
+
+	5. Divisional Structure
+		(ආයතනයේ Divisions අනුව වර්ග කරන ව්‍යුහය)
+
+
+	6. Network Structure
+		(ජාල ව්‍යුහය)
+
+
+
+
+
+
+
+
+[Slide 13] 1. Hierarchical Structure
+				(ධුරාවලි ආකෘතිය)
+
+
+  		* මේ Structure ඒකෙදි, ධුරාවලිවක් වගේ, පහලට වගකීම් බෙදී යයි. 
+        * ඉහලට ගමන් කරන විට වගකීම් වැඩි වේ
+        * මෙහි වගකීම් බෙදී යන විදිහ පැහැදිලිව දැකගත හැක
+        * විශාල Organizations සඳහා ගැලපේ
+
+
+    <pencil>                    
+			* මෙම ආකෘතිය පිරමිඩයක හැඩය ගනී.
+			* මෙම ආකෘතියේ, පැහැදිලිව, ආයතනයේ ඇති වගකීම්, Levels වශයෙන් දැකගත හැක.
+			*  පහල Level එකේ ඉන්න සේවකයන්, ඉහල Level වල ඉන්න සේවකයන්ට, එම Level එකේ සිදු වෙන කටයුතු Report කරන්න බැඳිලා ඉඳලා ඉන්නවා.
+	</pencil>
+
+
+
+[Slide 14] 2. Flat Structure
+			 (තිරස් ව්‍යුහය)
+	
+	* මේ Structure ඒකෙදි, තිරස් අතට, වගකීම් බෙදී යයි. එනම්, සියල්ලන්ටම සමාන වගකීම් පවතී. 
+    * කුඩා ව්‍යාපාර වලට සුදුසු වේ.
+	* සරල බෙදී යාමක් තිබෙන නිසා, තීරණ ගැනීම පහසු වේ.
+
+
+
+[Slided 15]  3. Matrix Structure
+				(න්‍යාස ව්‍යුහය)
+
+		---metrix.png එක Open කරගන්න
+
+		* මේ Structure එකේදී, එක පෙලේ සේවකයෙක්ව, ඉහල පෙළේ වගකීම් කිහිපයක් විසින්, අධීක්ෂණය කරනු ලබයි.
+		* මේ Structure එකේදී, Project එකක් ගැන හොඳින් Focus කළ හැක.
+		*  
+
+		
+
+
+
+
+
+[Slide 16] 4. Functional Structure
+			(ආයතනයේ කාර්යය අනුව වර්ග කරන ව්‍යුහය)
+
+		---"Functional.png" එක Open කරගන්න
+
+
+		* මේ Structure එකේදී, ආයතනයේ වගකීම්, ආයතනයේ සිදු කරන විවිධ Projetcs (Functions) අනුව බෙදා දේ.
+		* එම නිසා නිතරම ආයතයේ ව්‍යුහය වෙනස් වේ 		#කලින් උඩම Level එකේ හිටිය කෙනා දැන් යටම Level එකේ ඉන්නවා වෙන්න පුළුවන්.
+		* මෙම ක්‍රමයේ කාර්යක්ෂමතාව වැඩිය
+
+
+
+
+
+
+[Slide 17] 5. Divisional Structure
+	   		 (ආයතනයේ Divisions අනුව වර්ග කරන ව්‍යුහය)
+
+	   * මේ Structure එකේදී, ආයතනය වගකීම් අනුව වර්ග කරනවා වෙනුවට, ආයතනයේ, ශාඛා අනුව වර්ග කිරීම සිදුවේ.
+
+				   			උදා:- 								
+				   							# මේ තියෙන්නේ, Hirachy Stucture එක. 
+				   							#මෙතැනදී "යටතේ ඉන්නවා" කියන තේරුම ගන්න
+
+																   											   FOT
+																   												|
+																   					----------------------------------------------------------
+																   					| 														|
+																   				   Dean 												Chancellor
+																   				   	|
+																   	-------------------------------------
+																   	|									|
+																 Deputy 							Head of 
+																 Registar 							Departments
+
+
+
+
+
+								- මේ තියෙන්නේ, Division Stucture එක. වගකීම් අනුව වර්ග කරනවා වෙනුවට, ආයතනයේ, ශාඛා අනුව වර්ග කිරීම සිදුවේ.
+
+
+
+
+								   											   FOT
+								   												|
+								   					----------------------------------------------------------
+								   					| 														|
+								   			EGT Department 												ICT Department
+								   				   	|																
+								   	-------------------------------------
+								   	|									|
+								 Polimar 							Mecatronic
+								 Department 					    Departments
+
+
+
+
+				* මේ ක්‍රමයේදී, එක ශාඛාවකට හොඳින් Focus එක දිය හැකිය.
+				* ඉක්මනින් තීරණ ගන්න පුළුවන්
+				* නමුත් මේ ක්‍රමයේ Cost එක වැඩිය.
+
+
+
+
+
+[Slide 18] 6. Network Structure
+		(ජාල ව්‍යුහය)
+
+
+	*  මේ Structure එකේදී, ආයතනය, මධ්‍යගතව සිට, අනිකුත් ශාඛා පාලනය කරයි
+
+	---NSD.html එක Open කරගන්න 
+
+
+
+
+
+
+
+
+
+
+
+
+
+2024
+[Slide 19] 	IT organisational Structures
+			(IT ක්ෂේත්‍රයේ සංවිධාන වල, ආයතනික ව්‍යුහය)
+
+
+	* IT ක්ෂේත්‍රයේ සංවිධාන වල, ආයතනික ව්‍යුහය (organisational Structure), ආයතනයෙන් ආයතනයට වෙනස් වේ.
+	* පහත තිබෙන්නේ, ශ්‍රී ලංකාවේ IT ක්ෂේත්‍රයේ, බහුලව දක්නට ලැබෙන, ආයතනික ව්‍යුහ වේ.
+
+
+		<red>		1. Hierarchical Structure  				</red>
+		<red>			(ධුරාවලි ආකෘතිය)  					</red>
+
+
+		<red>		2. Flat Structure  						</red>
+		<red>			(තිරස් ව්‍යුහය)  						</red>
+
+
+		<red>		3. Matrix Structure  					</red>
+		<red>			(න්‍යාස ව්‍යුහය)  					</red>
+
+
+		<red>		4. Functional Structure  						 </red>
+		<red>			(ආයතනයේ කාර්යය අනුව වර්ග කරන ව්‍යුහය)  </red>
+
+
+					5.  Hybrid Structures
+						(මිශ්‍ර ආකෘතිය)
+
+					6. Virtual Structures
+						(අතත්‍ය ආකෘතිය)
+
+
+					7. Agile Teams
+						(Aglile ආකෘතිය)
+
+
+
+
+
+
+[Quiz] 2024 - April
+
+	Question 02) 
+			 b) Explain two (02) types of organizational structures you have observed in the Sri Lankan IT sector.               (6 marks)
+            	(ශ්‍රී ලංකාවේ IT ක්ෂේත්‍රයේ, ඔබ නිරීක්ෂණය කර ඇති, ආයතනික ව්‍යුහ 02ක් පැහැදිලි කරන්න)	
+
+
+            								Answer
+
+
+                   01) Hierarchical Structures
+                        Diagram:-
+                                      CEO
+                                        ↓
+                                    IT Manager
+                                        ↓
+                                    Project Manager
+                                        ↓
+                                    Senior Developer
+                                        ↓
+                                    Junior Developer
+
+
+                        * මේ Structure ඒකෙදි, ධුරාවලිවක් වගේ, පහලට වගකීම් බෙදී යයි. 
+                        * ඉහලට ගමන් කරන විට වගකීම් වැඩි වේ
+                        * මෙහි වගකීම් බෙදී යන විදිහ පැහැදිලිව දැකගත හැක
+                        * විශාල Organizations සඳහා ගැලපේ
+
+
+
+
+                            
+
+
+
+                   
+                   02) Flat Hierarchies 
+
+                           Diagram:-
+
+
+                                                        CEO
+                                                         |
+                                    -------------------------------------------
+                                    ↓                    ↓                  ↓
+                                IT Manager      Network Manager     Multimedia Manager
+
+
+
+                        * මේ Structure ඒකෙදි, තිරස් අතට, වගකීම් බෙදී යයි. එනම්, සියල්ලන්ටම සමාන වගකීම් පවතී. 
+                        * කුඩා ව්‍යාපාර වලට සුදුසු වේ.
+                        * සරල බෙදී යාමක් තිබෙන නිසා, තීරණ ගැනීම පහසු වේ.
+
+
+
+
+
+
+
+
+
+[Slide 20] 	Organisational Culture
+			(ආයතනයේ සංස්කෘතිය)
+
+	* ආයතනයේ සංස්කෘතිය කියන්නේ, ආයතනයක් තුල, කතාබහ කරන, හැසිරෙන, සහ වැඩ කළ යුතු ආකාරයයි.
+	* මෙය ආයතනයෙන් ආයතනට වෙනස් වේ.
+
+
+
+
+
+
+[Slided 21] Organisational Culture
+			(ආයතනයක සංස්කෘතිය ගැන, දල වශයෙන්, මොනවද දැනගන්න ඕනේ?)
+
+
+*	ආයතනයේ හැමෝම පිළිගත් එකඟතා මොනවද? 	
+	(Shared Values and Beliefs)
+	
+
+*	ආයතනය තුල හැසිරෙන්න ඕනේ කොහොමද?  
+	(Norms and Expectations)
+	
+
+*	ආයතනය ඇතුලත කොහොමද වැඩ කරන්න ඕනේ?  
+	(Attitudes and Behaviors)
+	
+
+*	ආයතනයේ අනිත් සේවකයන් සමඟ ගනුදෙනු කරන්න ඕනේ කොහොමද?  
+	(Social Dynamics and Relationships)
+	
+
+*	ආයතනය තුල අඳින්න ඕන Dress Code එක වගේ දේවල් මොනවද?  
+	(Artifacts and Symbols)
+	
+
+*	ආයතනය ඇතුලත වෙනස්වෙන තත්වයන්ට හැඩගැහෙන්නේ කොහොමද?  
+	(Adaptability and Change)
+	
+
+
+
+
+
+
+[Slide 22] Culture in IT Organisations
+			("IT ක්ෂේත්‍රයේ සංවිධාන වල" ආයතනික සංස්කෘතිය)
+
+
+
+    *   Innovation and Creativity
+        (අලුත් දේවල් නිර්මාණය කරන පරිසරයක් පවතී)
+                - IT Company වල ගොඩක් වෙලාවට කට්ටිය Motivate කරනවා, කොටුවෙන් පිට හිතන්න. ඒ වගේම අලුත් අලුත් දේවල් නිර්මාණය කරන්න. මේ නිසා, IT Company වල "අලුත් දේවල් නිර්මාණය කරන පරිසරයක්" පවතී.
+
+                    උදා:- Google එක විසින් සේවකයන්ට, වැඩ කරන Time එකෙන් 20%ක් දෙනවා, තමන්ගේම Creative දෙයක්         
+                          නිර්මාණය කරන්න
+
+
+    *   Agility and Adaptability
+        (ඉක්මනින් වෙනස් වීමේ හැකියාවක් පවතින පරිසරයක් පවතී)
+                - තාක්ෂනය, වෙළඳපොළ, සහ පාරිභෝගික අවශ්‍යතා වගේ දේවල් වෙනස් වෙනවාත් සමඟම, ඒවාට අනුව හැඩ ගැසීමට, ගැලපෙන වටපිටාවක් IT Compnay තුල පවතී.
+                        උදා:-   Pickme ආයතනයේ මුලින්ම Taxi සේවාවට හැඩ ගැසුනද, දැන්, Food Delivary සේවාවාටද හැඩ ගැසීමට සිදු 
+                                වී ඇත.
+
+
+    *   Collaboration and Teamwork
+        (Team එක සමඟ, එකට වැඩ කරන, පරිසරයක් පවතී)
+                - IT Comapny තුල Team එක සමඟ එකට එකතු වී, සාකච්ඡා කර වැඩ කරන පරිසරයක් පවතී. බොහෝ වෙලාවට, IT ක්ෂේතය තුල වැඩ කටයුතු සිදු වන්නේ, කණ්ඩායම් වශයෙනි
+                        උදා:- App එකක් Develop කිරීම සඳහා, IT Team එකක් පත් කිරීම
+
+
+
+    *   Meritocracy සහ Expertise
+        (හැකියාවට මුල් තැන දෙන පරිසයක් පවතී)
+                - IT Company වල Projects බෙදන විට, එකිනෙකාගේ හැකියාවට අනුව, Projects ලබා දෙන පරිසරයක් පවතී. එවිට, කාර්යක්ෂමතාව වැඩි කරගත හැක.
+                        උදා:-  Python වලින් Software එකක් හදන්න Python දැනුම තිබෙන සේවකයන් පත් කිරීම.
+
+
+
+
+    *   Flat Hierarchies සහ Open Communication
+        (දිග අතට පවතින Hirachy එකක් සහ විවෘතව කතා කරන්න පුළුවන් පරිසයක් පවතී)
+                -   ශ්‍රී ලංකාවේ IT Company වලින්, බොහෝමයක්, Startup Companies වේ. මේ නිසා, ආයතනයේ 
+                    CEO සමඟ වුනත්, Directly සුහදව කතා කල හැක.
+                    
+                         උදා:- ආයතනයේ CEOත්, Deveopment Team එක සමඟ Develoment කිරීම.
+
+
+
+
+
+
+[Quiz] 2024 - April
+
+	Questions 2) 
+	  c) Explain three (03) key components or characteristics commonly found in the organizational culture of IT companies. 				[6 marks]
+	     (IT සමාගම්වල පවතින, "ආයතනික සංස්කෘතිය (ආයතනය තුල වැඩ සිදුවෙන විදිහ) තුල ඇති", ප්‍රධාන අංග හෝ ලක්ෂණ තුනක් පැහැදිලි කරන්න)
+
+
+
+	     															Answer
+
+
+	    *   Innovation and Creativity
+	        (අලුත් දේවල් නිර්මාණය කරන පරිසරයක් පවතී)
+	                - IT Company වල ගොඩක් වෙලාවට කට්ටිය Motivate කරනවා, කොටුවෙන් පිට හිතන්න. ඒ වගේම අලුත් අලුත් දේවල් නිර්මාණය කරන්න. මේ නිසා, IT Company වල "අලුත් දේවල් නිර්මාණය කරන පරිසරයක්" පවතී.
+
+	                    උදා:- Google එක විසින් සේවකයන්ට, වැඩ කරන Time එකෙන් 20%ක් දෙනවා, තමන්ගේම Creative දෙයක්         
+	                          නිර්මාණය කරන්න
+
+
+	    *   Agility and Adaptability
+	        (ඉක්මනින් වෙනස් වීමේ හැකියාවක් පවතින පරිසරයක් පවතී)
+	                - තාක්ෂනය, වෙළඳපොළ, සහ පාරිභෝගික අවශ්‍යතා වගේ දේවල් වෙනස් වෙනවාත් සමඟම, ඒවාට අනුව හැඩ ගැසීමට, ගැලපෙන වටපිටාවක් IT Compnay තුල පවතී.
+	                        උදා:-   Pickme ආයතනයේ මුලින්ම Taxi සේවාවට හැඩ ගැසුනද, දැන්, Food Delivary සේවාවාටද හැඩ ගැසීමට සිදු 
+	                                වී ඇත.
+
+
+	    *   Collaboration and Teamwork
+	        (Team එක සමඟ, එකට වැඩ කරන, පරිසරයක් පවතී)
+	                - IT Comapny තුල Team එක සමඟ එකට එකතු වී, සාකච්ඡා කර වැඩ කරන පරිසරයක් පවතී. බොහෝ වෙලාවට, IT ක්ෂේතය තුල වැඩ කටයුතු සිදු වන්නේ, කණ්ඩායම් වශයෙනි
+	                        උදා:- App එකක් Develop කිරීම සඳහා, IT Team එකක් පත් කිරීම
+
+
+
+
+
+
+
+
+[Quiz] 2024 - April
+	
+	d) Discuss the role of organizational culture in shaping employee engagement and retention in the IT sector in Sri Lanka.			[10 marks]
+	   (ලංකාවේ IT Companies වල "සේවකයන්ට රැකියාව කිරීමට ඇති කැමැත්ත", "එම ආයතන වල තිබෙන සංස්කෘතිය මත රඳා පවතිනවද? )
+
+
+	   														Answer
+
+
+	   ඔව්.
+
+	   මොකද, ලංකාවේ IT Companies ගොඩක් ඒවා එකිනෙකට එකක් වෙනස්. එම එක එක Companies වල තියෙන්නේ, එක එක සංස්කෘතීන්. මෙම සංස්කෘතීන් නිර්මාණය කරනවිට, "සේවකයන්ට රැකියාව කිරීමට ඇති කැමැත්ත" වැඩි වන ආකාරයේ සංස්කෘතියක් නිර්මාණය කළ යුතු වේ. 
+
+		පහත දැක්වෙන කරුණු නිසා "සේවකයන්ට රැකියාව කිරීමට ඇති කැමැත්ත" වැඩි වේ
+		   (i)	 වැඩිය නීති රීති නැති නිදහස් පරිසරයක් පවතිනවා නම්
+		   (ii)  තමන්ගේ Carear එක වර්ධනය වෙනවා නම්
+		   (iii) නොදන්නා දෙයක් දන්නා අයගෙන් දැනගන්නට පුළුවන් නම්
+		   (iv)  මිත්‍රශීලි සේවකයන් පිරිසක් සිටිනවා නම්  
+
+		   	"සේවකයන්ට රැකියාව කිරීමට ඇති කැමැත්ත වැඩිවේ."
+
+
+
+
+[Quiz] 2025 - March
+
+
+	Question 02) 
+		d) 	Suppose you are starting an IT company that will handle multiple projects, including research and development, where meeting deadlines is crucial.
+			Additionally, you plan to hire primarily interns to help manage costs.
+
+			i) 	Discuss the organizational structure (or combination of structures) you are implementing to achieve your goals. Justify your choice by 			discussing how it supports efficiency, collaboration, and innovation.
+
+
+
+			ii) Asses the organizational culture you aim to adopt to create an environment conducive to achieving both organizational and project targets. 		Highlight key cultural values, practices, and their impact on performance and teamwork.			
+
+
+
+												Answer & Translation
+
+			ඔබ Reseachers හා Development සිදු කරන Company  එකක් ආරම්භ කරනවා කියලා හිතන්න. මේ Company එකෙන් කරන Projects, Deadline එකට කලින් බාර දෙන එක ඉතා වැදගත්. ඒ වගේම, Cost එක අඩු කරගන්න ප්‍රධාන වශයෙන් Interns ලා Hire කරලා මේ වැඩ ටික දෙන්න බලාපොරොත්තු වෙනවා.
+
+
+			(i)  මෙම ඉලක්කය සාක්ෂාත් කර ගැනීම සඳහා, ඔබේ ආයතනයේ  ක්‍රියාත්මක කරන "ආයතනික ව්‍යුහය (Organisational Structure) හෝ ව්‍යුහ" ගැන සාකච්ඡා කරන්න. ඉන්පසු එම තෝරාගත් ව්‍යුහය (structure එක) නිසා, "ආයතනයේ, කාර්යක්ෂමතාවය, සහයෝගිතාවය සහ නවෝත්පාදනය"ට එය බලපාන ආකාරය විස්තර කරන්න.	
+
+													Answer
+
+					*  මෙම ඉලක්කය සාක්ෂාත් කර ගැනීම සඳහා, ඔබේ ආයතනයේ  ක්‍රියාත්මක කරන "ආයතනික ව්‍යුහය (Organisational Structure) මොකද්ද? 
+								- 	Functional Structure  						 
+									(ආයතනයේ කාර්යය අනුව වර්ග කරන ව්‍යුහය)
+
+					
+
+					* "ආයතනයේ, කාර්යක්ෂමතාවය, සහයෝගිතාවය සහ නවෝත්පාදනය"ට එය බලපාන ආකාරය විස්තර කරන්න?
+
+				  			- කාර්යක්ෂමතාවය 	: "Functional Structure (ආයතනයේ කාර්යය අනුව වර්ග කරන ව්‍යුහය)" ක්‍රමයේ කාර්යක්ෂමතාව වැඩි නිසා, Deadline වලට කලින් Projects ලබාදෙන්න පුළුවන්
+				  			
+				  			- සහයෝගිතාවය 	:  	මේ ක්‍රමයේදී Projects අනුව, වගකීම් බෙදාදෙන නිසා, වැඩේට අදාළ අයත් එක්ක විතරක්, ලඟින්, හා 									සහයෝගයෙන් කතා බහ කරලා Project එක නිර්මාණය කරන්න පුළුවන්. 
+
+				  			
+				  			- නවෝත්පාදනය 	: 	මේ Structure එකේදී, ආයතනයේ වගකීම්, ආයතනයේ සිදු කරන විවිධ Projetcs (Functions) අනුව බෙදා දෙන 							නිසා, Interns ලට, හැමදාම එකම වැඩේ නැතුව, විවිධ විවිධ වැඩ ඉගෙන ගෙන, තමන්ගේ නවෝත්පාදන
+				  									හැකියාව වර්ධනය කරගන්න පුළුවන්
+
+
+				  			- මේ ක්‍රමයේ කාර්යක්ෂමතාව වැඩි නිසා, Deadline වලට කලින් Project එක දෙන එකට මේක බලපානවා.
+				  			- Project එකට හොඳින් Focus කරන්න පුළුවන්.
+				  			- මේ Structure එකේදී, ආයතනයේ වගකීම්, ආයතනයේ සිදු කරන විවිධ Projetcs (Functions) අනුව බෙදා දෙන නිසා, Interns ලට, 	හැමදාම එකම වැඩේ නැතුව, විවිධ විවිධ වැඩ ඉගෙන ගන්න පුළුවන්.
+
+
+
+					  		* 
+
+
+
+			(ii)  "ආයතනයේ ඉලක්ක සපුරා ගන්න", වගේම, "කරන Projects සාර්ථක වෙන්න," හොඳ වටපිටාවක් නිර්මාණය කරන්න, ආයතනයේ Culture එක නිර්මාණය කරන විදිහ පැහැදිලි කරන්න. සහ එම Culture එක නිසා, ආයතනයේ නිර්මාණය වෙන සාරධර්ම  (Culture Values), හොඳ පුරුදු
+			(practices) සහ ඒවාගෙන්, ආයතනයේ performance එකට හා Teamwork එකට සිදු වෙන බලපෑම  විස්තර කරන්න.
+
+
+			"ආයතනයේ ඉලක්ක සපුරා ගන්න", වගේම, "ආයතනය විසින් කරන Projects සාර්ථක වෙන්න," හොඳ වටපිටාවක් නිර්මාණය වෙන විදිහට, ආයතනයේ Culture එක නිර්මාණය කරන විදිහ පැහැදිලි කරන්න. සහ එම Culture එක නිසා, ආයතනයේ ගොඩ නැගෙන, සාරධර්ම (Culture Values), හොඳ පුරුදු
+			(Practices) වගේ දේවල් වලින්, ආයතනයේ Performance එකට හා Teamwork එකට සිදු වෙන බලපෑම විස්තර කරන්න.
+
+
+															
+
+
+
+			
+
+
+
+

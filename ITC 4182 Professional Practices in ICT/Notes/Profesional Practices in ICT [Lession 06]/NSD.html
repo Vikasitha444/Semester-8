@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///C:/Users/Vikasitha/Downloads/network_structure_diagram.html -->
+<html lang="si"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Structure Diagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        
+        .diagram-wrapper {
+            position: relative;
+            margin: 60px auto;
+            height: 600px;
+        }
+        
+        /* Center Hub */
+        .center-hub {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+            z-index: 10;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .center-hub h2 {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+        
+        .center-hub p {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+        
+        /* Partners */
+        .partner {
+            position: absolute;
+            width: 160px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 3px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .partner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-color: #667eea;
+        }
+        
+        .partner-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .partner h3 {
+            color: #2d3748;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+        
+        .partner p {
+            color: #718096;
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+        
+        /* Partner positions */
+        .partner-1 { top: 0; left: 50%; transform: translateX(-50%); }
+        .partner-2 { top: 20%; right: 5%; }
+        .partner-3 { bottom: 20%; right: 5%; }
+        .partner-4 { bottom: 0; left: 50%; transform: translateX(-50%); }
+        .partner-5 { bottom: 20%; left: 5%; }
+        .partner-6 { top: 20%; left: 5%; }
+        
+        /* Connection lines */
+        .connection {
+            position: absolute;
+            background: #cbd5e0;
+            height: 2px;
+            transform-origin: left center;
+            z-index: 1;
+        }
+        
+        .connection::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid #cbd5e0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+        
+        /* Responsibilities section */
+        .responsibilities {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .resp-box {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .resp-box h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .resp-box ul {
+            list-style: none;
+        }
+        
+        .resp-box li {
+            color: #4a5568;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .resp-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        /* Example section */
+        .example {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 30px;
+            border-radius: 15px;
+        }
+        
+        .example h3 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        
+        .flow {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .flow-item {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            font-weight: 500;
+            color: #2d3748;
+        }
+        
+        .arrow {
+            color: #667eea;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .diagram-wrapper {
+                height: 800px;
+            }
+            
+            .responsibilities {
+                grid-template-columns: 1fr;
+            }
+            
+            .partner {
+                width: 140px;
+                padding: 15px;
+            }
+            
+            .center-hub {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Network Structure</h1>
+        
+        
+        <div class="diagram-wrapper">
+            <!-- Center Hub -->
+            <div class="center-hub">
+                <h2>ShopLK</h2>
+                <p>Central Hub<br>කුඩා Team</p>
+            </div>
+            
+            <!-- Partners -->
+            <div class="partner partner-1">
+                <div class="partner-icon">🏭</div>
+                <h3>Manufacturing</h3>
+                <p>Garment Factory<br>Products හදනවා</p>
+            </div>
+            
+            <div class="partner partner-2">
+                <div class="partner-icon">📢</div>
+                <h3>Marketing</h3>
+                <p>Digital Agency<br>Ads run කරනවා</p>
+            </div>
+            
+            <div class="partner partner-3">
+                <div class="partner-icon">🚚</div>
+                <h3>Logistics</h3>
+                <p>Courier Service<br>Delivery කරනවා</p>
+            </div>
+            
+            <div class="partner partner-4">
+                <div class="partner-icon">💳</div>
+                <h3>Payment</h3>
+                <p>Payment Gateway<br>Payments handle</p>
+            </div>
+            
+            <div class="partner partner-5">
+                <div class="partner-icon">📞</div>
+                <h3>Customer Service</h3>
+                <p>Call Center<br>Support දෙනවා</p>
+            </div>
+            
+            <div class="partner partner-6">
+                <div class="partner-icon">💻</div>
+                <h3>IT Services</h3>
+                <p>Tech Company<br>Website/App maintain</p>
+            </div>
+        <div class="connection" style="width: 210.738px; left: 560.016px; top: 300px; transform: rotate(-90deg);"></div><div class="connection" style="width: 433.631px; left: 560.016px; top: 300px; transform: rotate(-12.0785deg);"></div><div class="connection" style="width: 433.631px; left: 560.016px; top: 300px; transform: rotate(12.0785deg);"></div><div class="connection" style="width: 210.738px; left: 560.016px; top: 300px; transform: rotate(90deg);"></div><div class="connection" style="width: 431.417px; left: 560.016px; top: 300px; transform: rotate(169.383deg);"></div><div class="connection" style="width: 431.74px; left: 560.016px; top: 300px; transform: rotate(-169.156deg);"></div></div>
+        
+        <div class="responsibilities">
+            
+            
+            
+        </div>
+        
+        
+    </div>
+    
+    <script>
+        // Draw connection lines dynamically
+        function drawConnections() {
+            const center = document.querySelector('.center-hub');
+            const partners = document.querySelectorAll('.partner');
+            const wrapper = document.querySelector('.diagram-wrapper');
+            
+            const centerRect = center.getBoundingClientRect();
+            const wrapperRect = wrapper.getBoundingClientRect();
+            
+            const centerX = centerRect.left + centerRect.width / 2 - wrapperRect.left;
+            const centerY = centerRect.top + centerRect.height / 2 - wrapperRect.top;
+            
+            partners.forEach(partner => {
+                const partnerRect = partner.getBoundingClientRect();
+                const partnerX = partnerRect.left + partnerRect.width / 2 - wrapperRect.left;
+                const partnerY = partnerRect.top + partnerRect.height / 2 - wrapperRect.top;
+                
+                const distance = Math.sqrt(Math.pow(partnerX - centerX, 2) + Math.pow(partnerY - centerY, 2));
+                const angle = Math.atan2(partnerY - centerY, partnerX - centerX) * 180 / Math.PI;
+                
+                const line = document.createElement('div');
+                line.className = 'connection';
+                line.style.width = distance + 'px';
+                line.style.left = centerX + 'px';
+                line.style.top = centerY + 'px';
+                line.style.transform = `rotate(${angle}deg)`;
+                
+                wrapper.appendChild(line);
+            });
+        }
+        
+        // Draw connections when page loads
+        window.addEventListener('load', drawConnections);
+        window.addEventListener('resize', () => {
+            document.querySelectorAll('.connection').forEach(el => el.remove());
+            drawConnections();
+        });
+    </script>
+
+
+</body></html>
