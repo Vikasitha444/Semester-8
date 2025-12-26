@@ -1,0 +1,304 @@
+Objective
+
+Design, implement, simulate, and optimize an adaptive fuzzy control system using programming (Python, MATLAB, or C++). The system must respond to real-world conditions and adapt based on environmental and process changes. All design steps, decisions,
+evaluations, and justifications must be explained clearly
+
+(Python, MATLAB හෝ C++ වලින්, වෙනස් වෙන, Fuzzy Control System එකක් හදන්න, එක test කරන්න සහ හොඳට වැඩ කරන විදියට හදන්න. System එක real දේවල් වලට react කරන්න ඕනේ සහ environment එක වෙනස් වෙද්දී එයාත් වෙනස් වෙන්න ඕනේ. ඔයා කරන හැම දෙයක්ම - කොහොමද හැදුවේ, ඇයි ඒ decisions ගත්තේ, කොහොමද test කළේ කියලා හරියටම explain කරන්න ඕනේ.)
+
+
+
+
+
+
+
+
+
+
+Assignment Scenario
+	You are assigned to develop a Smart Greenhouse Adaptive Fuzzy Climate Control
+	System. The greenhouse grows multiple plant species, each with different temperature
+	and humidity needs that vary with their growth stages.
+
+
+
+(Assignment Scenario එක:
+ඔයාට Smart Greenhouse Adaptive Fuzzy Climate Control System එකක් develop කරන්න ඕනේ. Greenhouse එකේ විවිධ plant species වගා කරනවා, ඒ හැම එකක්ම වෙනස් temperature සහ humidity requirements තියෙනවා ඒවායේ growth stages අනුව වෙනස් වෙනවා.)
+
+
+
+
+
+
+Inputs (Minimum 3 Required)
+	• Temperature (°C)
+	• Humidity (%)
+	• Plant Growth Stage (Seedling, Vegetative, Flowering)
+	
+
+Outputs (Minimum 2 Required)
+	• Heater/Cooling Fan Power Level (0%-100%)
+	• Misting System Intensity (0%-100%)
+
+
+(ආදාන (අවම වශයෙන් 3ක් අවශ්‍යයි)
+
+	උෂ්ණත්වය (°සෙල්සියස්)
+	ආර්ද්‍රතාව (%)
+	පැළ කොච්චර වැඩිලද - කුඩා පැළ (Seedling), වැඩෙනවා (Vegetative), මල් දානවා (Flowering)
+
+Outputs (අවම වශයෙන් 2ක් ඕනේ)
+
+	Heater/Cooling Fan Power Level (0%-100%)
+	Misting System Intensity (0%-100%) )
+
+
+
+
+
+
+
+Part 1: System Modeling (Manual Design Required)
+	1. Select at least three different plant species.
+	2. For each plant and each growth stage, define the ideal temperature and humidity ranges.
+	3. Create a comparison table showing differences in climate needs.
+	4. Explain why fuzzy logic is better than crisp logic or PID controllers for this system.
+
+
+(කොටස 1: System එක design කරන්නේ කොහොමද (ඔයාම හදන්න ඕනේ)
+
+	වෙනස් වගා කරන පැළ වර්ග තුනක් හෝ ඊට වැඩියෙන් තෝරගන්න.
+	හැම පැළ වර්ගයකටම, ඒ වගේම හැම growth stage එකකටම (පොඩි පැළ, වැඩෙනවා, මල් දානවා) කොච්චර උණුසුමක් සහ තෙතමනයක් ඕනේද කියලා ලියන්න (ranges වලින්).
+
+	Table එකක් හදන්න - පැළ වර්ග වලට අවශ්‍ය දේශගුණ වල වෙනස්කම් පෙන්නන්න.
+
+	මේ වගේ system එකකට normal logic (crisp logic) හෝ PID controllers වලට වඩා fuzzy logic එක හොඳ ඇයි කියලා හේතු සහිතව explain කරන්න.)
+
+
+
+
+
+
+Part 2: Fuzzy System Design
+	1. Define fuzzy membership functions for all input variables (minimum 5 fuzzy sets per input).
+	2. Design two separate controllers:
+		(a) Mamdani-based fuzzy controller
+		(b) Takagi-Sugeno-based fuzzy controller
+	3. Create at least 25 fuzzy rules for each controller.
+	4. Ensure proper fuzzification and defuzzification methods are selected and justified
+
+
+(කොටස 2: Fuzzy System එක හදන විදිය
+
+	ඔයා දාන සියලුම inputs වලට fuzzy membership functions හදන්න (එක් input එකකට අවම වශයෙන් fuzzy sets 5ක් - උදාහරණයක් විදියට: ගොඩක් අඩු, අඩු, 
+
+	මධ්‍යම, වැඩි, ගොඩක් වැඩි).
+	වෙනම controllers දෙකක් හදන්න:
+		(a) Mamdani type එකක්
+		(b) Takagi-Sugeno type එකක්
+	
+	හැම controller එකකටම අවම වශයෙන් fuzzy rules 25ක් ලියන්න (උදාහරණයක් විදියට: "IF temperature වැඩියි AND humidity අඩුයි THEN fan එක වැඩියෙන් වැඩ කරවන්න").
+	
+	Fuzzification (crisp values fuzzy වලට convert කරන එක) සහ defuzzification (fuzzy values ආපහු crisp වලට convert කරන එක) methods හොඳින් select කරලා ඇයි ඒවා තෝරගත්තේ කියලා explain කරන්න.
+
+
+
+
+
+
+
+
+
+Part 3: Programming Implementation
+Implement both Mamdani and Sugeno controllers using one of the following:
+	• Python (with skfuzzy or full custom code)
+	• MATLAB (using FIS tools or custom implementation)
+	• C++ (no use of fuzzy libraries; full manual coding required)
+
+
+
+කොටස 3: Programming කරන එක
+	* Mamdani සහ Sugeno controllers දෙකම මේ programming languages වලින් එකක් use කරලා code කරන්න:
+
+		Python (skfuzzy කියන library එක use කරන්න පුළුවන් හෝ ඔයාම ඔක්කොම code එක ලියන්න පුළුවන්)
+		MATLAB (FIS tools කියන ready-made මෙවලම් use කරන්න පුළුවන් හෝ ඔයාම code එක ලියන්න පුළුවන්)
+		C++ (මේකේ fuzzy libraries use කරන්න බෑ; ඔයාම හැම දෙයක්ම code කරන්න ඕනේ - ටිකක් අමාරුයි)
+
+
+
+
+
+
+
+
+Part 4: Dynamic Adaptation (Adaptive Feature)
+	1. Implement a mechanism to automatically adjust fuzzy sets and rules when plant
+	type or growth stage changes.
+	2. Clearly explain the adaptation logic.
+	3. Plot graphs of control outputs over time under different plant and weather conditions.
+	2
+	Part 5: Performance Evaluation (Simulation Required)
+	Conduct at least 20 random test simulations with changing weather conditions and compare the performance of both controllers using the following table:
+	Controller 
+
+
+
+
+කොටස 4: Automatic වෙනස් වෙන එක (Adaptive Feature)
+
+	පැළ වර්ගය හෝ growth stage එක වෙනස් වෙද්දී fuzzy sets සහ rules automatically වෙනස් වෙන system එකක් හදන්න.
+	
+	මේක වැඩ කරන්නේ කොහොමද කියලා හොඳින් explain කරන්න.
+	
+	වෙනස් වෙනස් පැළ වලට සහ කාලගුණය වෙනස් වෙද්දී කාලයත් එක්ක system එක control කරන විදිය පෙන්නන graphs හදන්න.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Part 5: Performance Evaluation (Simulation Required)
+	Conduct at least 20 random test simulations with changing weather conditions and compare the performance of both controllers using the following table:
+
+		<<Table Goes Here>>
+
+	Analyze which controller performs better and provide reasons.
+
+
+
+
+
+
+
+කාලගුණය වෙනස් වෙද්දී අවම වශයෙන් random test 20ක් run කරන්න. ඊට පස්සේ පහත table එක fill කරලා controllers දෙකම compare කරන්න:
+
+	<<Table Goes Here>>
+
+මේ දේවල් බලන්න:
+
+	සාමාන්‍ය Response Time = කොච්චර වේගයෙන් වෙනස්කම් වලට react කරනවද
+	සාමාන්‍ය Error = target එකට සාපේක්ෂව කොච්චර වැරැද්දක් තියෙනවද
+	Energy Usage = බලශක්තිය කොච්චර waste කරනවද
+	Smoothness Score = control එක කොච්චර smooth ද (එක පාරටම වැඩියෙන් වෙනස් වෙනවද නැද්ද)
+
+	
+	කුමන controller එක වඩා හොඳද කියලා විශ්ලේෂණය කරලා හේතු සහිතව explain කරන්න.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Part 6: Optimization
+Use any optimization technique (Genetic Algorithm, PSO, etc.) to improve fuzzy membership parameters. Present results before and after optimization
+
+
+කොටස 6: System එක තව හොඳ කරගන්න (Optimization)
+	Fuzzy membership parameters (ඔයා හැදුවේ fuzzy sets වලට දාපු values) තව හොඳ කරන්න optimization technique එකක් use කරන්න. උදාහරණ:
+
+	Genetic Algorithm (ජාන ඇල්ගොරිතම)
+	PSO (Particle Swarm Optimization)
+	හෝ වෙන ඕනෑම technique එකක්
+
+	ඔයා පෙන්නන්න ඕනේ:
+
+	Optimize කරන්න කලින් system එක කොහොමද වැඩ කළේ (results)
+	Optimize කරලා පස්සේ system එක කොහොමද වැඩ කරන්නේ (results)
+	කොච්චර improve වුනාද කියලා comparison එක
+
+
+
+
+
+
+
+
+
+
+
+
+Part 7: Final Report (Detailed Justification Required)
+	Your final report must include:
+		• System description and problem justification
+		• Membership function design reasoning
+		• Rule creation explanation
+		• Code implementation overview
+		• Adaptation strategy
+		• Performance comparison (Mamdani vs Sugeno)
+		• Optimization impact
+		• Real-world limitations and future improvements
+
+
+
+
+කොටස 7: අවසාන Report එක (හැම දෙයක්ම හේතු සහිතව explain කරන්න ඕනේ)
+	ඔයාගේ අවසාන report එකේ මේ සියලු දේවල් තියෙන්න ඕනේ:
+			1. System description සහ problem justification
+
+				ඔයා හැදුවේ මොකක්ද කියලා විස්තර කරන්න
+				ඇයි මේ system එක හදන්න ඕනේද, මොකක්ද problem එක කියලා explain කරන්න
+
+			2. Membership function design reasoning
+
+				Membership functions හැදුවේ කොහොමද සහ ඇයි ඒ විදියට හැදුවේ කියලා හේතු සහිතව කියන්න
+
+			3. Rule creation explanation
+
+				Fuzzy rules හැදුවේ කොහොමද, ඇයි ඒ rules තෝරගත්තේ කියලා explain කරන්න
+
+			4. Code implementation overview
+
+				Code එක ලිව්වේ කොහොමද කියලා සරලව overview එකක් දෙන්න
+
+			5. Adaptation strategy
+
+				System එක automatically adjust වෙන්නේ කොහොමද කියලා කියන්න
+
+			6. Performance comparison (Mamdani vs Sugeno)
+
+				Mamdani සහ Sugeno controllers දෙක compare කරලා කුමන එක හොඳද කියලා කියන්න
+
+			7. Optimization impact
+
+				Optimization කළාට පස්සේ මොනවද වෙනස් වුනේ, කොච්චර improve වුනාද කියලා කියන්න
+
+			8. Real-world limitations සහ future improvements
+
+	මේ system එකේ මොනවද අඩුපාඩු (limitations), අනාගතයේ තව මොනවද හොඳ කරන්න පුළුවන්ද කියලා කියන්න
+
+
+
+
+
+
+
+
+
+
+Bonus (Optional for Extra Marks)
+	• Create a GUI interface for live simulation.
+	• Add reinforcement learning to evolve fuzzy rules.
+
+
+Bonus (අමතර Marks සඳහා - කරන්න ඕනේ නම් විතරක්)
+
+	GUI interface එකක් හදන්න - live simulation එකක් දැක්කම හරි (buttons, graphs එක්ක visual interface එකක්)
+	Reinforcement learning add කරන්න - fuzzy rules automatically evolve වෙන්න (system එක තනියම ඉගෙන ගන්නවා වගේ)
