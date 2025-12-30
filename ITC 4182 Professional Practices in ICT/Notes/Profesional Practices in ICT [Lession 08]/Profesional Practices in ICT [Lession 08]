@@ -1,0 +1,78 @@
+															Profesional Practices in ICT
+														(ICT ක්ෂේත්‍රයේ පවත්වාගත යුතු හොඳ පුරුදු )
+										
+																Lession 08
+													Internet Issues, Privacy, and Data Protection
+													(අන්තර්ජාලය ආශ්‍රිත ප්‍රශ්න, පෞද්ගලිකත්වය සහ දත්ත ආරක්‍ෂණය)
+
+
+
+
+[Slide 13] Key Privacy and Data Protection Cases
+			()
+
+
+ 			ස්පාඤ්ඤ පුරවැසියෙකු වන "මාරියෝ කොස්ටෙජා ගොන්සාලස්" Google සෙවුම් ප්‍රතිඵල වලින් 
+            තමන් ගැන අතීතයේ පළ වී තිබූ පුවත් ලිපි ඉවත් කරන ලෙස ඉල්ලීමක් කළේය. එම පුවත් ඔහුගේ 
+            නිවසේ අත්අඩංගුවට ගැනීමක් පිළිබඳව සඳහන් කළ නමුත් ඒ ගැටළුව ඒ වන විට විසඳා තිබුණි. 
+            යුරෝපීය අධිකරණය තීන්දු කළේ පුද්ගලයන්ට තමන් ගැන යල්පැන ගිය තොරතුරු 
+            සෙවුම් යන්ත්‍ර වලින් ඉවත් කරන ලෙස ඉල්ලීමට අයිතියක් ඇති බවයි.
+
+
+
+             ඔස්ට්‍රියානු නීතිඥ මැක්ස් ෂ්‍රෙම්ස් Facebook විසින් එක්සත් ජනපදයට යවන ලද යුරෝපීය පරිශීලක දත්ත ප්‍රමාණවත් ලෙස ආරක්ෂා නොකරන බව අභියෝග කළේය. යුරෝපීය අධිකරණය Safe Harbor ගිවිසුම අවලංගු කළේය. 
+
+
+
+
+
+
+
+
+
+
+
+[Slide 25] Safeguarding Digital Privacy and Security
+			("ඩිජිටල් පෞද්ගලිකත්වය" ආරක්ෂා කිරීමට ගත හැකි පියවර)
+
+	01) Strong Passwords භාවිතා කිරීම
+	02) Licensed Sotware පමණක් භාවිතා කිරීම
+	03) Two-Factor Authentication භාවිතා කිරීම
+	04 	VPN භාවිතා කර, ආරක්‍ෂිත, ආකාරයට Browsing සිදු කිරීම
+	05) Anti Virus Software භාවිතා කිරීම
+	06) දත්ත Backup කිරීම
+
+
+
+
+
+
+
+[Quiz] 2024-April
+	
+	Question 03)
+		c) 	Suppose you lead an ICT project team facing an ethical issue related to the use of proprieury software without proper licensing. 
+            Describe three (03) steps you would take to address the edlical issue and mitigate its consequences.                                6 Marks
+
+            ( ඔබ proper license එකක් නැතිව proprietary software {සල්ලි ගෙවලා ගන්න තියෙන Software} භාවිතා කරන පිරිසක් ඉන්න, ICT project team එකක leader කෙනෙක් කියලා සිතන්න. මේ Ethical ගැටලුව විසඳන්න සහ එයින් සිදු වෙන බලපෑම් අවම කරන්න ඔබ ගන්නා steps තුනක් {03} විස්තර කරන්න.)	
+
+
+            											                 Answer
+
+
+
+
+            01) Cracked Softwares භාවිතයෙන් ඉවත් කිරීම
+                    - Cracked Softwares නිසා, දත්ත විනාශ වීමේ අවධානමක් තියෙනවා
+                    - Privacy එකටත් බලපානවා
+
+            
+            02) Software එකේ Trail Versions භාවිතා කිරීම
+                    - එවිට, Software එක කෙටි කාලෙකට වුවද, නිත්‍යානුකුලව භාවිතා කරන්න පුළුවන්
+                    - පසුව අවශ්‍ය නම්, මේ Softwares, නිත්‍යානුකුලව සල්ලි දීලා ගන්න පුළුවන්. 
+
+
+
+            03) Alternative Softwares භාවිතා කිරීම.
+                    - Software එක Licence කරන්න මුදල් මදි නම්, Alternative Softwares භාවිතා කිරීම සිදු කරන්න පුළුවන්
+

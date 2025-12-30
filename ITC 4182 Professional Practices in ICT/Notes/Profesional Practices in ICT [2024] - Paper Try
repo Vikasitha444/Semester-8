@@ -296,19 +296,37 @@ Question 03
 
 
 
+        
+
+
+
+
+        c) Suppose you lead an ICT project team facing an ethical issue related to the use of proprieury software without proper licensing. 
+            Describe three (03) steps you would take to address the edlical issue and mitigate its consequences.                                6 Marks
+
+            ( ඔබ proper license එකක් නැතිව proprietary software {සල්ලි ගෙවලා ගන්න තියෙන Software} භාවිතා කරන පිරිසක් ඉන්න, ICT project team එකක leader කෙනෙක් කියලා සිතන්න. මේ Ethical issue එක විසඳන්න සහ එයින් සිදු වෙන බලපෑම් අවම කරන්න ඔබ ගන්නා steps තුනක් {03} විස්තර කරන්න.)
+
+
+                                            Answer
+
+
+
+
+            01) Cracked Softwares භාවිතයෙන් ඉවත් කිරීම
+                    - Cracked Softwares නිසා, දත්ත විනාශ වීමේ අවධානමක් තියෙනවා
+                    - Privacy එකටත් බලපානවා
+
+            02) Software එකේ Trail Versions භාවිතා කිරීම
+                    - එවිට, Software එක කෙටි කාලෙකට වුවද, නිත්‍යානුකුලව භාවිතා කරන්න පුළුවන්
+
+
+
+            03) Alternative Softwares භාවිතා කිරීම.
+                    - Software එක Licence කරන්න මුදල් මදි නම්, Alternative Softwares භාවිතා කිරීම සිදු කරන්න පුළුවන්
+
+
+
 * ප්‍රශ්න ටික සිංහලට Transate කරලා බලන්න 
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -357,9 +375,43 @@ Questions 03)
 
 
 
-                    උදා:- 
+        c) Explain two (02) notable privacy and data protection cases worldwide that serve as exemplary decisions in the field. Discuss how these cases have influenced the development of data protection policies globally.
+        (ලෝකයේ ප්‍රසිද්ධ, privacy සහ data protection Cases එකක් විස්තර කරන්න. මේ Cases නිසා, data protection policies, Develop වීමට එය බලපෑ ආකාරය පැහැදිලි කරන්න)
+
+                                                    Answer
+            ස්පාඤ්ඤ පුරවැසියෙකු වන මාරියෝ කොස්ටෙජා ගොන්සාලස් Google සෙවුම් ප්‍රතිඵල වලින් 
+            තමන් ගැන අතීතයේ පුවත් ලිපි ඉවත් කරන ලෙස ඉල්ලීමක් කළේය. එම පුවත් ඔහුගේ 
+            නිවසේ අත්අඩංගුවට ගැනීමක් පිළිබඳව සඳහන් කළ නමුත් ඒ ගැටළුව විසඳා තිබුණි. 
+            යුරෝපීය අධිකරණය තීන්දු කළේ පුද්ගලයන්ට තමන් ගැන අදාළත්වය නැති හෝ යල්පැන 
+            ගිය තොරතුරු සෙවුම් යන්ත්‍ර වලින් ඉවත් කරන ලෙස ඉල්ලීමට අයිතියක් ඇති බවයි.
 
 
+                    බලපෑම: මෙම තීන්දුව "망각될 අයිතිය" නිර්මාණය කළ අතර GDPR තුළ ඇතුළත් කරන ලදී. 
+                            මෙය ගෝලීය වශයෙන් පුද්ගලික දත්ත ආරක්ෂණ ප්‍රතිපත්ති වල වැදගත් මූලධර්මයක් බවට 
+                            පත් වී ඇති අතර, විශේෂයෙන් පුද්ගලයන්ට තමන්ගේ ඩිජිටල් අතීතය පාලනය කිරීමේ 
+                            අයිතිය සහතික කරයි.
+
+
+        
+
+        d) With the assistance of relevant examples, critically analyze the effectiveness of Sri Lanka's legal and regulatory framework in protecting online privacy and ensuring data protection.
+        (උදාහරණ සපයමින්, ශ්‍රී ලංකාවේ නීති-රීති පද්ධතියෙන්, online privacy එක ආරක්ෂා කරන එකේ සහ data protection සහතික කරන එකේ effectiveness එක critically analyze කරන්න.)
+
+                                                            Answer
+
+
+            i.  Personal Data Protection Act 2022, Computer Crimes Act 2007, Electronic Transactions Act 2006.
+                පුද්ගලික දත්ත ආරක්ෂණ පනත 
+
+                        වාසි
+                            - අලුත් Frameowrk එකකි
+
+                        අවාසි   
+                            - Dialog හා Mobitel ආයතනයේ සිදු වූ, දත්ත Leak වුන වෙලාවේ, Actions අරගෙන තිබ්බේ නෑ
+                            - මිනිස්සු මේ පනත පිලිබඳ අඩුවෙන් දන්නේ
+
+
+                එම නිසා, මේ නිතිය, හොඳ නමුත්, ඇත්ත ලෝකයේ භාවිතා වීම ඉතා අඩුයි. අ නිසා, මේ නීතියේ  online privacy එක ආරක්ෂා කරන එකේ සහ data protection සහතික කරන එකේ effectiveness එක ගොඩක් අඩුයි කියලා කියන්න පුළුවන්.
 
 
 
@@ -377,7 +429,7 @@ Questions 03)
 
 
 
-
+framework == පද්ධතිය
 
 
 
