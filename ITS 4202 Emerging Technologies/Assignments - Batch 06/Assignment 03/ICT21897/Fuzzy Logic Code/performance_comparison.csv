@@ -1,0 +1,3 @@
+Controller Type,Avg Response Time (ms),Avg Error,Energy Usage,Smoothness Score
+Mamdani,36.020,11.42,37.87%,85.55
+Sugeno,35.531,10.42,34.44%,105.75

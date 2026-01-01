@@ -1,0 +1,10 @@
+Plant,Stage,Temp Range,Humidity Range
+Tomato,Seedling,20-25°C,65-75%
+Tomato,Vegetative,22-28°C,60-70%
+Tomato,Flowering,18-24°C,50-65%
+Lettuce,Seedling,15-20°C,70-80%
+Lettuce,Vegetative,15-22°C,65-75%
+Lettuce,Flowering,12-18°C,60-70%
+Orchid,Seedling,22-28°C,75-85%
+Orchid,Vegetative,24-30°C,70-80%
+Orchid,Flowering,20-26°C,65-75%
