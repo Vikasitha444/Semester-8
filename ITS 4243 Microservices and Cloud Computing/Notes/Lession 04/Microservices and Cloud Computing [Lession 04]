@@ -1,0 +1,308 @@
+												Microservices and Cloud Computing
+															Lession 04
+												Intercommunication Of Microservices
+											 (Microservices අතර සිදුවන අභ්‍යන්තර සන්නිවේදනය)
+
+
+												---"Intercommucation.png" එක Open කරගන්න
+
+
+⚠️ Slide 5,6,7, තිබ්බ, Examples අයින් කළා
+
+
+[Slide 2] Why Communication Between Microservices Matters
+			(ඇයි, Microservices අතර සන්නිවේදනය සිදු කිරීම වැදගත් වෙන්නේ?)
+
+	
+		# හැම Microservice එකටම, තමාට අදාළ දත්ත තියෙනවා. නමුත්, Task එකක් කරගන්න මේ දත්ත හුවමාරු කරගන්න ඕනේ. 
+
+		* 	Microservices අතර සන්නිවේදනය සිදු කිරීම වැදගත් වෙන්නේ, 
+			එමගින් Microservice අතර, <red> දත්ත </red> හුවමාරු කරගන්න පුළුවන් වෙන නිසා.
+
+
+[Slide 3] පින්තුරය පැහැදිලි කිරීම
+
+	* මෙම රුප සටහනෙන්, Microservices දෙකක් අතර සිදු වෙන සන්නිවේදනය පෙන්වයි
+
+	---"Inter 02.png" එක Open කරගන්න
+	---පින්තුරයේ අංකෙට අදාළ විස්තරය Note එකෙන් කියවන්න
+
+	(1) වෙනි කොටු දෙකෙන් පෙනෙන්නේ, Microservices දෙක:
+
+		MS1: Student-Service - students ගැන data handle කරනවා
+		MS2: Books-Service - books ගැන data handle කරනවා
+
+	(2) වෙනි කොටුවෙන් පෙනෙන්නේ, Microservices අතර කතා කරන්න, භාවිතා කරන ක්‍රම 03ක්:
+
+		Rest Template - පැරණි, සරල විදිය HTTP requests යවනවා
+		FeignClient - ඉතා සරල විදිය REST API call කරනවා 
+		WebClient - reactive විදිය asynchronous requests යවනවා
+
+	
+	(3) වෙනි කොටු දෙකෙන් පෙනෙන්නේ, Microservices අතර කතා කරන්න, භාවිතා කරන HTTP Methods:
+
+			GET (@GetMapping) - data බලන්න/ගන්න
+			POST (@PostMapping) - අලුත් data එකතු කරන්න
+			PUT (@PutMapping) - data update කරන්න
+			DELETE (@DeleteMapping) - data delete කරන්න
+			OPTIONS - කරන්න පුළුවන් දේවල් බලන්න
+
+		
+
+		වැඩ කරන හැටි:
+				Student-Service එකෙන් Books-Service එකට data යවන්න ඕන වෙනකොට,  
+				Microservices අතර කතා කරන්න, භාවිතා කරන ක්‍රම 03න් එකක් භාවිතා කරලා,
+				HTTP method එකක් (GET/POST/PUT/DELETE) මාර්ගයෙන් දත්ත යවනවා.
+
+
+
+
+
+[Slide 4] Types Of Inter- Service Communication
+		  (Microservices අතර සිදු වෙන සන්නිවේදන වර්ග)
+
+
+	01) Synchronous Communication
+		(සමමුහුර්ත සන්නිවේදනය)
+
+	02) Asynchronous Communication
+		(අසමමුහුර්ත සන්නිවේදනය)
+
+	03) Hybrid Communication
+		(දෙමුහුන් සන්නිවේදනය)
+
+
+
+
+
+[Slide 5] 01) Synchronous Communication
+			  (සමමුහුර්ත සන්නිවේදනය)
+
+
+														
+	* මෙහිදී, Message එක හෝ, Event එකකට අදාළ ප්‍රතිචාරය ලැබෙන තුරු බලා ඉඳලා, ඒ ප්‍රතිචාරය ලැබුනට පස්සේ පමණක්, ඊලඟ පණිවිඩය යවනවා. 
+	* මෙහිදී Microservices අතර Messages හුවමාරු කිරීමට, බොහෝ වෙලාවට, REST APIs, gRPC හෝ GraphQL වගේ Messaging ක්‍රම භාවිතා කරයි
+
+
+
+			
+					
+
+[Slide 6] 02) Asynchronous Communication
+			(අසමමුහුර්ත සන්නිවේදනය)	
+
+	* මෙහිදී, Message එකක් හෝ Event එකක් යවා, ඒ Message එකට, ප්‍රතිචාරයක් ලැබෙන තුරු බලා  <red> නොඉඳ </red> තවත් පණිවිඩ එක දිගට යවයි.
+	* මෙහිදී, Microservices අතර දත්ත හුවමාරු කිරීමට, RabbitMQ, Kafka, ActiveMQ වැනි, Message Queues භාවිතා වේ.
+
+			
+				
+
+
+[Slide 7] 03) Hybrid Communication
+			 (දෙමුහුන් සන්නිවේදනය)
+
+
+	* මෙහිදී, සමමුහුර්ත හා අසමමුහුර්ත ක්‍රම දෙකම එකතු මෙම ක්‍රමය නිර්මාණය වී ඇත.
+
+
+	* මේ ක්‍රමය භාවිතා කරන්නේ, Microservices දෙකක් අතර සිදු වන සන්නිවේදනයේ කාර්යක්ෂමතාව වැඩි කරගැනීමටයි. 
+	   -	මොකද, සමහර Messages, යවන්න ඕනේ, සමමුහුර්ත ක්‍රමයට, සමහර Messages යවන්න ඕනේ, අසමමුහුර්ත ක්‍රමයට. 
+	  	 	ඒ නිසා මොන වර්ගයේ Message එකක් ආවත්, ඒක යවන්න පුළුවන්, මේ Hybrid ක්‍රමය නිසා.
+
+
+
+	  		
+
+
+
+[Slide 8] 	Rest Template
+			(RestTemplate එක)
+
+
+	# 	- JAVA වල, "Template (ටෙම්ප්ලේට්)" කියන්නේ, අපේ වැඩ ලේසි කරන්න, නිර්මාණය කරලා තියෙන, Java Programs හෝ Class වලට
+		- මේකෙන්, Code එකේ සංකීර්ණ දේවල් ඔක්කොම ගැන බලාගන්නවා.
+		- අපිට තියෙන්නේ, මේක අපේ Code එකට Import කරන්න විතරයි.
+
+				උදා:- 	Secure විදිහට, Database එකට, Data යවන Code එක හැමතිස්සෙම Type කර කර ඉන්න ඕනේ නෑ. Template එකක් භාවිතා කලාම, අදාළ 			Input ටික විතරක් Template එකට දීලා, වැඩේ කරගන්න පුළුවන්.
+
+
+	මොකද්ද මේ RestTemplate එක කියන්නේ?
+		*  RestTemplate එක කියන්නේ,  Spring boot Framework(Practicle එකේදී මේක ගැන කළා) එකේදී අපිට හමුවෙන තියෙන "Java Class/Template" එකක්. 
+		*  මේ Template එකෙන් කරන්නේ,  HTTP requests (GET, POST, PUT, DELETE ) යවන එක
+		*  මේක Microservices දෙකක් අතර අතරමැදියෙක් විදිහට තමා වැඩ කරන්නේ.
+
+
+
+	ඇයි මේ RestTemplate එක භාවිතා කරන්නේ?
+		* Microservices අතර සන්නිවෙදය කිරීමට.
+		* JSON හෝ XML දත්ත, Microservices අතර හුවමාරු කරගන්න.
+		* imdB වගේ බාහිර API වලින්, Resouces ගන්න.
+
+
+
+[Slide 9] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------මේවා ලියන්න එපා------------------------------------------
+												Microservices and Cloud Computing
+															Lession 04
+												Intercommunication Of Microservices
+											 (Microservices අතර සිදුවන අභ්‍යන්තර සන්නිවේදනය)
+
+
+												---"Intercommucation.png" එක Open කරගන්න
+
+
+[Slide 2] Why Communication Between Microservices Matters
+			(ඇයි, Microservices අතර සන්නිවේදනය සිදු කිරීම වැදගත් වෙන්නේ?)
+
+	
+		# හැම Microservice එකටම, තමාට අදාළ දත්ත තියෙනවා. නමුත්, Task එකක් කරගන්න මේ දත්ත හුවමාරු කරගන්න ඕනේ. 
+
+		* 	Microservices අතර සන්නිවේදනය සිදු කිරීම වැදගත් වෙන්නේ, 
+			එමගින් Microservice අතර, <red> දත්ත </red> හුවමාරු කරගන්න පුළුවන් වෙන නිසා.
+
+
+[Slide 3] පින්තුරය පැහැදිලි කිරීම
+
+	* මෙම රුප සටහනෙන්, Microservices දෙකක් අතර සිදු වෙන සන්නිවේදනය පෙන්වයි
+
+	---"Inter 02.png" එක Open කරගන්න
+	---පින්තුරයේ අංකෙට අදාළ විස්තරය Note එකෙන් කියවන්න
+
+	(1) වෙනි කොටු දෙකෙන් පෙනෙන්නේ, Microservices දෙක:
+
+		MS1: Student-Service - students ගැන data handle කරනවා
+		MS2: Books-Service - books ගැන data handle කරනවා
+
+	(2) වෙනි කොටුවෙන් පෙනෙන්නේ, Microservices අතර කතා කරන්න, භාවිතා කරන ක්‍රම 03ක්:
+
+		Rest Template - පැරණි, සරල විදිය HTTP requests යවනවා
+		FeignClient - ඉතා සරල විදිය REST API call කරනවා 
+		WebClient - reactive විදිය asynchronous requests යවනවා
+
+	
+	(3) වෙනි කොටු දෙකෙන් පෙනෙන්නේ, Microservices අතර කතා කරන්න, භාවිතා කරන HTTP Methods:
+
+			GET (@GetMapping) - data බලන්න/ගන්න
+			POST (@PostMapping) - අලුත් data එකතු කරන්න
+			PUT (@PutMapping) - data update කරන්න
+			DELETE (@DeleteMapping) - data delete කරන්න
+			OPTIONS - කරන්න පුළුවන් දේවල් බලන්න
+
+		
+
+		වැඩ කරන හැටි:
+				Student-Service එකෙන් Books-Service එකට data යවන්න ඕන වෙනකොට,  
+				Microservices අතර කතා කරන්න, භාවිතා කරන ක්‍රම 03න් එකක් භාවිතා කරලා,
+				HTTP method එකක් (GET/POST/PUT/DELETE) මාර්ගයෙන් දත්ත යවනවා.
+
+
+
+
+
+[Slide 4] Types Of Inter- Service Communication
+		  (Microservices අතර සිදු වෙන සන්නිවේදන වර්ග)
+
+
+	01) Synchronous Communication
+		(සමමුහුර්ත සන්නිවේදනය)
+
+	02) Asynchronous Communication
+		(අසමමුහුර්ත සන්නිවේදනය)
+
+	03) Hybrid Communication
+		(දෙමුහුන් සන්නිවේදනය)
+
+
+
+
+
+[Slide 5] 01) Synchronous Communication
+			  (සමමුහුර්ත සන්නිවේදනය)
+
+
+														
+	* මෙහිදී, Message එක හෝ, Event එකකට අදාළ ප්‍රතිචාරය ලැබෙන තුරු බලා ඉඳලා, ඒ ප්‍රතිචාරය ලැබුනට පස්සේ පමණක්, ඊලඟ පණිවිඩය යවනවා. 
+	* මෙහිදී Microservices අතර Messages හුවමාරු කිරීමට, බොහෝ වෙලාවට, REST APIs, gRPC හෝ GraphQL වගේ Messaging ක්‍රම භාවිතා කරයි
+
+
+
+			උදා:-   "student-service" කියන, Microservice එක විසින්, "books-service" කියන Microservce එකට, Request එකක් යවලා, මේ Request එකට 
+					 Reply එක ආවට පස්සේ, තව Request එකක් යවනවා.
+
+					 #මේක හරියට, Batch Photo එක දවසේ, Green Screen එකේ Photo ගැහුවා වගේ. එක්කෙනෙක් ගිහිල්ලා Photo එක ගහලා ඉවර වුනාට පස්සේ 	 
+					 තමා අනිත් එක්කානාව දාන්නේ (One Task Only).
+
+
+[Slide 6] 02) Asynchronous Communication
+			(අසමමුහුර්ත සන්නිවේදනය)	
+
+	* මෙහිදී, Message එකක් හෝ Event එකක් යවා, ඒ Message එකට, ප්‍රතිචාරයක් ලැබෙන තුරු බලා  <red> නොඉඳ </red> තවත් පණිවිඩ එක දිගට යවයි.
+	* මෙහිදී, Microservices අතර දත්ත හුවමාරු කිරීමට, RabbitMQ, Kafka, ActiveMQ වැනි, Message Queues භාවිතා වේ.
+
+			උදා:- "student-service" කියන Microservice එක විසින්,  "Student කෙනෙක් Register වුනා!" කියලා, Messager Queue එකට යවනවා.
+					ඊට පස්සේ, ඒකට Reply එකක් එනතුරු බලා නොයිඳ, වෙන Request එකක් යවනවා.
+
+					#මේක හරියට, Batch Photo එක දවසේ, Group Photo ගැහුවා වගේ. පිළිවෙලක් නෑ. එන එන කෙනාගේ එහෙම නැත්නම් Group එකේ Photo ගහනවා
+
+
+
+[Slide 7] 03) Hybrid Communication
+			 (දෙමුහුන් සන්නිවේදනය)
+
+
+	* මෙහිදී, සමමුහුර්ත හා අසමමුහුර්ත ක්‍රම දෙකම එකතු මෙම ක්‍රමය නිර්මාණය වී ඇත.
+
+
+	* මේ ක්‍රමය භාවිතා කරන්නේ, Microservices දෙකක් අතර සිදු වන සන්නිවේදනයේ කාර්යක්ෂමතාව වැඩි කරගැනීමටයි. 
+	   -	මොකද, සමහර Messages, යවන්න ඕනේ, සමමුහුර්ත ක්‍රමයට, සමහර Messages යවන්න ඕනේ, අසමමුහුර්ත ක්‍රමයට. 
+	  	 	ඒ නිසා මොන වර්ගයේ Message එකක් ආවත්, ඒක යවන්න පුළුවන්, මේ Hybrid ක්‍රමය නිසා.
+
+
+
+	  		උදා:- "student-service" කියන Microservice එක විසින්,  "Student කෙනෙක් Register වුනා!" කියලා, Messager Queue එකට යවනවා.
+
+
+
+
+[Slide 8] 
