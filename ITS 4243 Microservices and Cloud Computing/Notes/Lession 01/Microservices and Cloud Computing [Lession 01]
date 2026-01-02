@@ -525,7 +525,7 @@ Architecture එක 	|	කෑලි වලට  				|	messaging						|	Flexible		
 	පියවර 02 :	දෙවනුව, එක්, Microservice එකකින් එක Task එකක් පමණක් (Bussiness Goal එකක්) ඉටුවෙන විදිහට, Microservices (කුඩා කෑලි) වලට කඩන්න.
 
 																										(ස්ට්රැන්ග්ලර්)
-	පියවර 03 :	තෙවනුව, Program එකේ තියෙන, Components ටිකෙන් ටික, Microservices බවට පත් කරන්න. (Strangler Pattern එක අනුගමනය 			 කරන්න). මෙහෙම කරද්දී Risk එක අඩු වෙනවා.
+	පියවර 03 :	අඩු වෙනවා.තෙවනුව, Program එකේ තියෙන, Components ටිකෙන් ටික, Microservices බවට පත් කරන්න. (Strangler Pattern එක අනුගමනය 			 කරන්න). මෙහෙම කරද්දී Risk එක 
 
 
 	පියවර 04 :	Microservice අතර Commucation එක සිදු කිරීමට, හොඳ API එකක් නිර්මාණය කරගන්න. 
