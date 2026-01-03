@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/User/AppData/Local/Temp/test.html -->
+<html lang="si"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactive Programming Interactive Diagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .method-box {
+            border: 3px solid #ddd;
+            border-radius: 15px;
+            padding: 30px;
+            background: #f9f9f9;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .method-box.traditional {
+            border-color: #ff6b6b;
+        }
+
+        .method-box.reactive {
+            border-color: #51cf66;
+        }
+
+        .method-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .traditional .method-title {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+        }
+
+        .reactive .method-title {
+            background: linear-gradient(135deg, #51cf66, #37b24d);
+        }
+
+        .task-container {
+            min-height: 400px;
+            position: relative;
+        }
+
+        .task {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin: 10px 0;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .task:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .task.processing {
+            background: #fff3bf;
+            border-color: #ffd43b;
+            animation: pulse 1s infinite;
+        }
+
+        .task.completed {
+            background: #d3f9d8;
+            border-color: #51cf66;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .task-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .task-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .task-status {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .timer {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #667eea;
+            font-family: 'Courier New', monospace;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        .btn-start {
+            background: linear-gradient(135deg, #51cf66, #37b24d);
+        }
+
+        .btn-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(81, 207, 102, 0.4);
+        }
+
+        .btn-reset {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+        }
+
+        .btn-reset:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+        }
+
+        .waiting { background: white; }
+        .processing-color { background: #fff3bf; }
+        .completed-color { background: #d3f9d8; }
+
+        @media (max-width: 968px) {
+            .comparison-container {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        .emoji {
+            font-size: 1.2em;
+        }
+
+        .info-box {
+            background: #e7f5ff;
+            border-left: 4px solid #339af0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            color: #1971c2;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 සමමුහුර්ත සන්නිවේදනය vs අසමමුහුර්ත සන්නිවේදනය 
+    <br> (Synchronous Communication vs Asynchronous Communication)
+</h1>
+        
+
+        
+
+        <div class="controls">
+            <button class="btn btn-start" id="startBtn" onclick="startSimulation()">
+                ▶️ Start Simulation
+            </button>
+            <button class="btn btn-reset" onclick="resetSimulation()">
+                🔄 Reset
+            </button>
+        </div>
+
+        
+
+        <div class="comparison-container">
+            <!-- Traditional Method -->
+            <div class="method-box traditional">
+                <div class="method-title">
+                    🐌 Synchronous Communication
+                </div>
+                <div class="timer" id="traditionalTimer">5.5s</div>
+                <div class="task-container" id="traditionalTasks">
+                    <div class="task completed" data-id="1">
+                        <span class="task-number">1</span>
+                        <span class="task-name">API Call 1</span>
+                        <span class="task-status">✅</span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="task completed" data-id="2">
+                        <span class="task-number">2</span>
+                        <span class="task-name">Database Query</span>
+                        <span class="task-status">✅</span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="task completed" data-id="3">
+                        <span class="task-number">3</span>
+                        <span class="task-name">API Call 2</span>
+                        <span class="task-status">✅</span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="task completed" data-id="4">
+                        <span class="task-number">4</span>
+                        <span class="task-name">File Processing</span>
+                        <span class="task-status">✅</span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="task completed" data-id="5">
+                        <span class="task-number">5</span>
+                        <span class="task-name">Send Response</span>
+                        <span class="task-status">✅</span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-label">සම්පූර්ණ කාලය</div>
+                        <div class="stat-value" id="traditionalTotal">5.5s</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">සම්පූර්ණ Tasks</div>
+                        <div class="stat-value" id="traditionalCompleted">5/5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reactive Method -->
+            <div class="method-box reactive">
+                <div class="method-title">
+                    ⚡ Asynchronous Communication
+                </div>
+                <div class="timer" id="reactiveTimer">1.1s</div>
+                <div class="task-container" id="reactiveTasks">
+                    <div class="task completed" data-id="1">
+                        <span class="task-number">1</span>
+                        <span class="task-name">API Call 1</span>
+                        <span class="task-status">✅</span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="task completed" data-id="2">
+                        <span class="task-number">2</span>
+                        <span class="task-name">Database Query</span>
+                        <span class="task-status">✅</span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="task completed" data-id="3">
+                        <span class="task-number">3</span>
+                        <span class="task-name">API Call 2</span>
+                        <span class="task-status">✅</span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="task completed" data-id="4">
+                        <span class="task-number">4</span>
+                        <span class="task-name">File Processing</span>
+                        <span class="task-status">✅</span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="task completed" data-id="5">
+                        <span class="task-number">5</span>
+                        <span class="task-name">Send Response</span>
+                        <span class="task-status">✅</span>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-label">සම්පූර්ණ කාලය</div>
+                        <div class="stat-value" id="reactiveTotal">1.1s</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">සම්පූර්ණ Tasks</div>
+                        <div class="stat-value" id="reactiveCompleted">5/5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+        let traditionalTimer = 0;
+        let reactiveTimer = 0;
+        let traditionalInterval;
+        let reactiveInterval;
+        let isRunning = false;
+
+        const TASK_DURATION = 1000; // 1 second per task
+
+        function startSimulation() {
+            if (isRunning) return;
+            
+            isRunning = true;
+            document.getElementById('startBtn').disabled = true;
+            resetSimulation();
+
+            // Start timers
+            startTraditionalSimulation();
+            startReactiveSimulation();
+        }
+
+        function startTraditionalSimulation() {
+            let currentTask = 1;
+            const tasks = document.querySelectorAll('#traditionalTasks .task');
+            
+            traditionalInterval = setInterval(() => {
+                traditionalTimer += 0.1;
+                document.getElementById('traditionalTimer').textContent = traditionalTimer.toFixed(1) + 's';
+
+                // Process tasks sequentially
+                if (currentTask <= 5) {
+                    const task = tasks[currentTask - 1];
+                    const progressBar = task.querySelector('.progress-fill');
+                    const currentProgress = parseFloat(progressBar.style.width || 0);
+
+                    if (currentProgress < 100) {
+                        task.classList.add('processing');
+                        task.querySelector('.task-status').textContent = '⚙️';
+                        progressBar.style.width = (currentProgress + 10) + '%';
+                    } else {
+                        task.classList.remove('processing');
+                        task.classList.add('completed');
+                        task.querySelector('.task-status').textContent = '✅';
+                        document.getElementById('traditionalCompleted').textContent = currentTask + '/5';
+                        currentTask++;
+                    }
+                }
+
+                if (currentTask > 5) {
+                    clearInterval(traditionalInterval);
+                    document.getElementById('traditionalTotal').textContent = traditionalTimer.toFixed(1) + 's';
+                }
+            }, 100);
+        }
+
+        function startReactiveSimulation() {
+            const tasks = document.querySelectorAll('#reactiveTasks .task');
+            let completedCount = 0;
+
+            // Start all tasks simultaneously
+            tasks.forEach(task => {
+                task.classList.add('processing');
+                task.querySelector('.task-status').textContent = '⚙️';
+            });
+
+            reactiveInterval = setInterval(() => {
+                reactiveTimer += 0.1;
+                document.getElementById('reactiveTimer').textContent = reactiveTimer.toFixed(1) + 's';
+
+                let allCompleted = true;
+                completedCount = 0;
+
+                tasks.forEach(task => {
+                    const progressBar = task.querySelector('.progress-fill');
+                    const currentProgress = parseFloat(progressBar.style.width || 0);
+
+                    if (currentProgress < 100) {
+                        allCompleted = false;
+                        // Random progress to simulate async behavior
+                        progressBar.style.width = Math.min(100, currentProgress + (Math.random() * 15 + 5)) + '%';
+                    } else {
+                        task.classList.remove('processing');
+                        task.classList.add('completed');
+                        task.querySelector('.task-status').textContent = '✅';
+                        completedCount++;
+                    }
+                });
+
+                document.getElementById('reactiveCompleted').textContent = completedCount + '/5';
+
+                if (allCompleted) {
+                    clearInterval(reactiveInterval);
+                    document.getElementById('reactiveTotal').textContent = reactiveTimer.toFixed(1) + 's';
+                    isRunning = false;
+                    document.getElementById('startBtn').disabled = false;
+                }
+            }, 100);
+        }
+
+        function resetSimulation() {
+            clearInterval(traditionalInterval);
+            clearInterval(reactiveInterval);
+
+            traditionalTimer = 0;
+            reactiveTimer = 0;
+            isRunning = false;
+
+            document.getElementById('traditionalTimer').textContent = '0.0s';
+            document.getElementById('reactiveTimer').textContent = '0.0s';
+            document.getElementById('traditionalTotal').textContent = '0s';
+            document.getElementById('reactiveTotal').textContent = '0s';
+            document.getElementById('traditionalCompleted').textContent = '0/5';
+            document.getElementById('reactiveCompleted').textContent = '0/5';
+            document.getElementById('startBtn').disabled = false;
+
+            // Reset all tasks
+            const allTasks = document.querySelectorAll('.task');
+            allTasks.forEach(task => {
+                task.classList.remove('processing', 'completed');
+                task.querySelector('.task-status').textContent = '⏳';
+                task.querySelector('.progress-fill').style.width = '0%';
+            });
+        }
+    </script>
+
+</body></html>

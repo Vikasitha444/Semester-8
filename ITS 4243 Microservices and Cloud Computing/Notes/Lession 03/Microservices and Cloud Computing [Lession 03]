@@ -18,7 +18,7 @@
 
 	මොකද්ද මේ සමමුහුර්ථ(Synchronous) සහ අසමමුහුර්ථ(Asynchronous) සන්නිවේදනය කියන්නේ?
 	(What Is Asynchronous and synchronous Communication?)
-		---"sync-vs-async.png" එක Open කරගන්න.
+		---"live_demo.html" එක Open කරගන්න.
 
 		- Synchronous Communication එක කියන්නේ, Microservice එක විසින් යවන ලද, Message එක හෝ, Event එකකට අදාළ ප්‍රතිචාරය ලැබෙන තුරු බලා හිඳ, එම ප්‍රතිචාරය ලැබුණු පසු පමණක්, ඊලඟ පණිවිඩය යැවීමයි. මෙය <red> Program එකක් තනි thred එකක, Run කරන, Single threding ක්‍රමයට සමාන වේ. </red> 
 

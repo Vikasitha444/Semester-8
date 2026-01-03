@@ -8,9 +8,7 @@
 
 
 ⚠️ Slide 5,6,7, තිබ්බ, Examples අයින් කළා
-Target 2.00PM
-Startd at 6.54AM
-1 slide 25mins
+⚠️ Review කලේ නෑ
 
 
 [Slide 2] Why Communication Between Microservices Matters
@@ -183,38 +181,14 @@ Startd at 6.54AM
 
 
 
-
-
 [Slide 11] පින්තුරය පැහැදිලි කිරීම
 
 	* මේ Slide එකේ තියෙන්නේ, "RestTemplate එක (HTTP Request යවන්න භාවිතා කරන Java Class එකක්)" Spring Boot වලදී භාවිතා කරන්නේ කොහොමද කියලා.
 
 
-
-
-[Slide 12] RestTemplate vs WebClient	
-			(RestTemplate එකද හොඳ WebClient ද හොඳ?)
-
-
----------------------------------------------------------------------------------------------------------------------------------
-		RestTemplate එක 										|							WebClient Template එක
----------------------------------------------------------------------------------------------------------------------------------
-																|
-		* සරලයි													|						* සංකීර්ණයි
-		* ඉගෙන ගන්න ලේසියි 	 								|						* ඉගෙන ගන්න අමාරුයි
-		* කාර්යක්ෂමතාව අඩුයි 									|						* කාර්යක්ෂමතාව වැඩියි 			
-		* සමමුහුර්ත සන්නිවේදනය සිදු කරයි 						|						* අසමමුහුර්ත සන්නිවේදනය සිදු කරයි
----------------------------------------------------------------------------------------------------------------------------------
-
-
-			
-
-	* "Spring Boot Framework" එකේදී, "RestTemplate එකට (HTTP requests යවන්න භාවිතා කරන, Java Class එකක්)" වඩා, 
-	"WebClient" කියන Tempalte එක භාවිතා කරන එක වඩාත්  කාර්යක්ෂම වේ
-
-	* කෙසේ වුනත්, "RestTemplate එක" තාම භාවිතා කරනවා, මේක සරල හා Realiabe, Java Class එකක් නිසා.
-
-
+⚠️
+[Slide 12] 
+	* Slide 12 වැඩියෙන්ම ගැලපෙන්නේ, පහල තියෙන Content එකට
 
 
 
@@ -300,81 +274,258 @@ Startd at 6.54AM
 
 
 
-#අපි කතා කලේ, "RestTemplate එක (HTTP requests යවන්න භාවිතා කරන, Java Class එකක්) ගැන"
-#නමුත්, RestTemplate එකට පහසු ක්‍රමයක් පවතී
+[Slide ] Terminology
+
+				Templates vs Libraries
+	
+	*  Library කියන්නේ, අපේ වැඩ ලේසි කරන්න ලියලා තියෙන <red> Program </red> එකකට.
+	*  Template කියන්නේ, අපේ වැඩ ලේසි කරගන්න ලියලා තියෙන <red> Java Classes </red> වලට. 
+
+
+
 
 
 		  (ෆේන්)
-[Slide 18] Feign  Client 
+[Slide 18] Feign  Client Java Library එක
 		   (ෆේන් Client)
 
 	---"Feign Client.png" එක Open කරගන්න
 
 
+	ඇයි මේ, Feign Client කියන Libaray එක අවශ්‍ය වෙන්නේ?
+		* අඩු Codes ප්‍රමාණයක් භාවිතා කරලා, HTTP Request යවන්න.
+		* සම්පුර්ණ Code එකේ සංකීර්ණතාව අඩු කරන්න
+		* <red> Synchrounus ක්‍රමයට Messages යවන්න </red>
+		
+
+
+		
+	 
 
 
 
-	ඇයි මේ, 
+[Slide 19] පින්තුරය පැහැදිලි කිරීම
+
+	* මෙතන තියෙන්නේ, Feign Client කියන Libaray එක ඇතුව, සහ ඒ Library එක නැතුව, HTTP Request එකක් යවපු Code දෙකක්.
+	
+	* දෙවෙනි පින්තුරේ බැලුවම පෙන්වා, Feign Client කියන Libaray එක භාවිතා කළාම, Manually Code කරන්න තියෙන්නේ හරිම අඩුවෙන්. ඉතුරු ඔක්කොම, Library එකෙන් බලාගන්නවා.
+
+
+[Slide 20] 
+	# මොකද්ද මේ Interface කියන්නේ?
+		JAVA වල, එක Class එකකට, Inherit(Extend) කරන්න පුළුවන්, තවත් එක Class එකක් විතරයි. ඒ නිසා, Class කිහිපයක්, භාවිතා කරන්න ඕනේ නම් අපි Interface කියලා එකක් හදනවා. මේක Class එකක් වගේ. නම විතරයි වෙනස්. 
+	
+	
+	How It Works?
+	(කොහොමද Feign Client කියන Libaray එක වැඩ කරන්නේ?)
+		 
+		 පියවර (1) මුලින්ම JAVA Interface එකක් හදාගන්න
+		 පියවර (2) ඊට පස්සේ, Feign Client කියන Libaray එක, Automaticly Implement වෙනවා.
+		 පියවර (3) අන්තිමට, Feign Client කියන Libaray එක භාවිතා කරලා, HTTP Request එකක්, අදාළ Microservice එකට යවන්න පුළුවන්
+
+		
+		* Microservice Search කරන්න, Load එක Balance කරන්න, Circuit Breakers වලට ගොඩක් හොඳ Library එකක්.  
+																			⬇️
+																#Circuit Breakers කියන්නේ, 
+															 	අක්‍රිය තත්වයේ පවතින Microservices වලට, 
+																HTTP Request යැවීමෙන්, Resouces නාස්ති වීම, 
+																වැලැක්වීමයි.
 
 
 
-[Slide 19]
-[Slide 20]
-[Slide 21]
 
 
-[Slide ] මොකද්ද මේ "Blocking (අවහිර කිරීම) හා Non-Blocking(අවහිර නොකිරීම කියන්නේ?)" කියන්නේ?
-	* Blocking (අවහිර කිරීම) කියන්නේ, Microservices ඇතුලත, Functions, Variables වගේ දේවල් අතර දත්ත හුවමාරු වෙද්දී, සිදු වෙන Delay එකයි?
+		
+		පින්තුරය පැහැදිලි කිරීම
 
-	* Blocking (අවහිර කිරීම) කියන්නේ, Microservices Run වෙද්දී, එක Thred එකක Process එකක් ඉවර වෙනකන්, තව Thred එකකට බලන් ඉන්න වෙනවා නම්, එය Blocking වේ
+			* මෙතැනදී වෙන්නේ,
+					
+					order-service  		-------->			Feign Client කියන Libaray එක	 	-------->		user-service එකට
+					එක විසින්.... 							භාවිතා කරලා..... 						 			පණිවිඩයක් යවනු ලබයි
 
-	* Microservce එකක් ඇතුලේ, Function එකක් හෝ Class එකකින්, Message එක හෝ, Event එකකට අදාළ ප්‍රතිචාරය ලැබෙන තුරු බලා ඉඳලා, ඒ ප්‍රතිචාරය ලැබුනට පස්සේ පමණක්, ඊලඟ පණිවිඩය යවනවා. 
+						(i) 									(ii) 												(iii)
 
 
-[Slide 22] 	Web Client
-			
+
+[Slide 21] 
+	Feign Client කියන Libaray එක භාවිතා කිරීමේ වාසි
+	
+		* Implement කරන්න ලේසියි
+		* ගොඩක් Codes ලියන්න ඕන නෑ.
+		* Program එක සරල කරනවා.
+		* Microservices වලට එන Load එක Balance කරනවා
+
+
+	
+
+
+	Feign Client කියන Libaray එක භාවිතා කිරීමේ නොකළ යුතු තැන්
+	(Not Recomanded)
+
+		* Traffic එක ගොඩාක් වැඩි Applications වලට
+		* Asynchronous ක්‍රමයට පණිවිඩ හුවමාරු කරගන්න අවශ්‍ය වුනාම
+		* ප්‍රශ්න තියෙන, Microservices වලට
+
+
+
+
+
+
+
+
+[Slide 22] 	Web Client Java Library එක
+			(Web Client)
+	
+	
 
 
 	---"web client.png" එක Open කරගන්න
 
 	
-	* `Web Client`  කියන්නේ, දැනට ඇති, Latestම, HTTP Request යවන Client වේ.
+	* 	`Web Client`  කියන්නේ, දැනට ඇති, නවීනම, HTTP Request යවන Java Library එක වේ.
 	
-	* මේක `Rest Template එක` වෙනුවට භාවිතා කරන්න පුළුවන්.
+	* 	මේක Rest Template (HTTP Request යවන්න භාවිතා කරන Java Class එකක්) එක වෙනුවට භාවිතා කරන්න පුළුවන්.
 
-	* මෙය, by default, Microservics අතර, Asynchronous Communication එක (අසමමුහුර්ත සන්නිවේදනය) සිදු කරයි, නමුත් අවශ්‍ය නම්, Synchronous Communication එක (සමමුහුර්ත සන්නිවේදනය) වුවද සිදු කළ හැක.
+	* 	මෙය, බොහෝ වෙලාවට, Microservics අතර, Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය) සිදු කිරීමට භාවිතා කරයි, නමුත් අවශ්‍ය නම්, 			Synchronous Communication එක (සමමුහුර්ත සන්නිවේදනය) වුවද සිදු කළ හැක.
 	
 	
 
 
 
-[Slide 23] ඇයි මේ Web Client එක අවශ්‍ය වෙන්නේ?
+
+
+[Slide 12] RestTemplate vs WebClient	
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+		RestTemplate එක 										|							WebClient Library එක
+---------------------------------------------------------------------------------------------------------------------------------
+																|
+		* සරලයි													|						* සංකීර්ණයි
+		* ඉගෙන ගන්න ලේසියි 	 								|						* ඉගෙන ගන්න අමාරුයි
+		* කාර්යක්ෂමතාව අඩුයි 									|						* කාර්යක්ෂමතාව වැඩියි 			
+		* සමමුහුර්ත සන්නිවේදනය සිදු කරයි 						|						* ප්‍රධාන වශයෙන් අසමමුහුර්ත සන්නිවේදනය සිදු කරයි
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+			
+
+	* "Spring Boot Framework" එකේදී, "RestTemplate එකට (HTTP requests යවන්න භාවිතා කරන, Java Class එකක්)" වඩා, 
+	"WebClient" කියන Library එක භාවිතා කරන එක වඩාත්  කාර්යක්ෂම වේ
+
+	* කෙසේ වුනත්, "RestTemplate එක" තාම භාවිතා කරනවා, මේක සරල හා Realiabe, නිසා.
+
+
+
+[Slide 23] ඇයි මේ WebClient කියන Libaray එක අවශ්‍ය වෙන්නේ?
 
 	* අනෙකුත් Microservices සමඟ කතා කරන්න
 	* non-blocking නැත්නම්, Asynchorous ක්‍රමයට, HTTP Request යවන්න
 	* Requests කාර්යක්ෂමව Handle කරන්න
-	* ResTemplate එක වෙනුවට භාවිතා කරන්න
+	* RestTemplate එක වෙනුවට භාවිතා කරන්න
 
 
-[Slide 24] Web Client හි ප්‍රධාන විශේෂාංග
 
 
-	* Asynchronous Communication එකක් (අසමමුහුර්ත සන්නිවේදනය) සිදු කරයි. සහ Reactive වේ (Reactive කියන්නේ මොකද්ද කියලා පහල තියෙනවා)
-	
+[Slide ] Terminology
+
+					Blocking vs Non-blocking
+
+	* Bloking (අවහිර කිරීම) 			=== Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) 
+	* Non blocking (අවහිර නොකිරීම)	=== Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය)	
+
+
+
+
+[Slide 24] WebClient කියන Library එකෙහි ප්‍රධාන විශේෂාංග
+			(Key Features of WebClient Library)
+
+
+	* Asynchronous Communication එකක් (අසමමුහුර්ත සන්නිවේදනය) සිදු කරයි. 
+	* Lightweight සහ වේගවත් වේ.
 	* දත්ත Steam කරන්න පුළුවන්
 		- දත්ත Stream කරනවා කියන්නේ, දත්ත, කුඩා කොටස් වලට කඩලා, Microservices අතර හුමවාමරු කරන්න පුළුවන්.
 
 
-	* Lightweight සහ වේගවත් වේ.
 
-	* WebFlux සහ  Spring MVC කියන Java Frameworks දෙකේම Support කරයි
+
+	# Reactive වේ (Reactive කියන්නේ මොකද්ද කියලා පහල තියෙනවා)
+	# WebFlux සහ  Spring MVC කියන Java Frameworks දෙකේම Support කරයි
+	
 
 
 
 [Slide 25] පින්තුරය පැහැදිලි කිරීම
 	
-	* WebClient() කෙනෙක් හදනවා
-	* 
+	* මේකේ පෙන්වන්නේ, WebClient කියන Library එක භාවිතා කරලා, HTTP Request එකක් යවන්නේ කොහොමද කියලා.
+
+
+
+
+[Slide 26] පින්තුරය පැහැදිලි කිරීම
+			
+	* මේකේ පෙන්වන්නේ, Microservices දෙකක් අතර, Asynchronous Communication (අසමමුහුර්ත සන්නිවේදන) ක්‍රමයට, සන්නිවෙදය කරන විදිහ.
+	
+	* පලවෙනි පින්තුරයෙන්, WebClient කියන Library එකේ, GET Methord එක HTTP Methord එක භාවිතා කරලා, Request එකක් විදිහ පෙන්වයි. 
+	* දෙවෙනි පින්තුරයෙන්, WebClient කියන Library එකේ, POST Methord එක HTTP Methord එක භාවිතා කරලා, Request එකක් විදිහ පෙන්වයි. 
+
+
+
+
+
+[Slide 27] WebClient කියන Library එක, මොන වගේ අවස්තාවලද, භාවිතා කල යුත්තේ?
+	* Microservice වල, Traffic එක ගොඩක් වැඩි නම්
+			- WebClient කියන Library එක, Asynchronous ක්‍රමයට වැඩ කරන නිසා, වැඩි කාර්යක්ෂමතාවකින් වැඩ කළ හැක.
+
+	* බාහිර API සමඟ ගනුදෙනු කරන්න අවශ්‍ය වෙන වෙලාවට
+			උදා:- imDB වගේ බාහිර API එකකට Connect වෙද්දී
+
+	* RestTempalte එකෙන්, වෙන HTTP Request යවන, Library එකකට මාරු වෙන්න ඕන නම්
+
+
+
+[Sldie 28] WebClient කියන Library එක, මොන වගේ අවස්තාවලද, භාවිතා නොකළ යුත්තේ?
+		  (Not Recomanded)
+
+	* Synchronous ආකාරයට Messages හුවමාරු කරගන්න අවශ්‍ය නම්
+	* සරල Code එකක් අවශ්‍ය නම්
+	* Team එකේ Membersලා Reactive Programing ගැන දන්නේ නැත්නම්
+
+
+
+
+
+[Slide 30] What is Reactive Programming?
+			(මොකද්ද මේ Reactive Programing කියන්නේ?)
+
+	# අපි Traditional Programing Methord එකෙන්, Program එකක් ලිව්වොත්, ඒකෙන් කරන්නේ, මොකක් හරි ප්‍රශ්නෙකට උත්තරයක් දෙන එක.
+	
+	* 	අපි Reactive Programing ක්‍රමයට, Program එකක් ලිව්වොත්, ඒකෙන් කරන්නේ, පද්ධතියේ කිසියම් කොටසක (ඒ කියන්නේ, පද්ධතියේ, දත්ත, Event වගේ ඕන දෙයක්) වෙනසක් සිදු වුවහොත් ඒ සඳහා ප්‍රතිචාර දැක්වීමයි. 
+
+	# Reactive Programing ක්‍රමය හරියට බල්ලෙක් වගේ. වෙනස්කම් ගැන Alert එකේ ඉන්නවා.
+
+
+
+	* 	මේ ක්‍රමයේ, භාවිතා කරන්නේ, අසමමුහුර්ත සන්නිවේදනය නිසා, මේ ක්‍රමය, ඉහල කාර්යක්ෂමතාවක් හා වැඩියෙන් Scale කරන්න අවශ්‍ය Applicattions වලට 	 	වඩාත් ගැලපේ
+
+
+
+	
+	Reactive Programing ක්‍රමය භාවිතා කිරීමට ගැලපෙන තැන්
+		* Microservcies අතර Traffic එක වැඩි නම්
+		* Real Time Updates අවශ්‍ය Applications වලට
+		* Database / API සමඟ වැඩ කරන්න
+		* App එකේ Scale එක වැඩි කරද්දී
+
+
+
+
+
+
+
+ලියාගන්න
+[Slide ] 
+	"short note.pdf" එකේ තියෙන වගුව පොතේ ලියාගන්න
 
 
 
@@ -387,11 +538,697 @@ Startd at 6.54AM
 
 
 
-Bloking == Synchorous 
-Non blocking == Asynchorous
-Client හා Template එක අතර වෙනස
-	Java වල Client කියන්නේ වෙන server එකකට requests යවන program එක හෝ library එක! 🚀
-	Template කියන්නේ, Java Class එකකට.
+[Terminology]
+
+Bloking (අවහිර කිරීම) 			=== Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) 
+Non blocking (අවහිර නොකිරීම)	=== Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය)	
+
+Template කියන්නේ, අපේ වැඩ ලේසි කරගන්න ලියලා තියෙන Java Classes වලට. මේක Class එකක් විතරයි
+Library කියන්නේ, අපේ වැඩ ලේසි කරන්න ලියලා තියෙන Program එකකට.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2357,6 +3194,1087 @@ Microservices and Cloud Computing
 11.15
 [Slide 9] How Rest Template Works (Simple Flow)
 			(කොහොමද මේ RestTemplate එක, වැඩ කරන්නේ?)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Microservices and Cloud Computing
+															Lession 04
+												Intercommunication Of Microservices
+											 (Microservices අතර සිදුවන අභ්‍යන්තර සන්නිවේදනය)
+
+
+												---"Intercommucation.png" එක Open කරගන්න
+
+
+⚠️ Slide 5,6,7, තිබ්බ, Examples අයින් කළා
+Target 2.00PM
+Startd at 6.54AM
+1 slide 25mins
+
+
+[Slide 2] Why Communication Between Microservices Matters
+			(ඇයි, Microservices අතර සන්නිවේදනය සිදු කිරීම වැදගත් වෙන්නේ?)
+
+	
+		# හැම Microservice එකටම, තමාට අදාළ දත්ත තියෙනවා. නමුත්, Task එකක් කරගන්න මේ දත්ත හුවමාරු කරගන්න ඕනේ. 
+
+		* 	Microservices අතර සන්නිවේදනය සිදු කිරීම වැදගත් වෙන්නේ, එමගින් Microservice අතර, <red> දත්ත </red> හුවමාරු කරගන්න පුළුවන් වෙන නිසා.
+
+
+[Slide 3] පින්තුරය පැහැදිලි කිරීම (ඉතා වැදගත්)
+
+	* මෙම රුප සටහනෙන්, Microservices දෙකක් අතර සිදු වෙන සන්නිවේදනය පෙන්වයි
+
+	---"Inter 02.png" එක Open කරගන්න
+	---පින්තුරයේ අංකෙට අදාළ විස්තරය Note එකෙන් කියවන්න
+
+	(1) වෙනි කොටු දෙකෙන් පෙනෙන්නේ, Microservices දෙක:
+
+		MS1: Student-Service - students ගැන data handle කරනවා
+		MS2: Books-Service - books ගැන data handle කරනවා
+
+	(2) වෙනි කොටුවෙන් පෙනෙන්නේ, Microservices අතර කතා කරන්න, භාවිතා කරන ක්‍රම 03ක්:
+
+		Rest Template - පැරණි, සරල විදිය HTTP requests යවනවා
+		FeignClient - ඉතා සරල විදිය REST API call කරනවා 
+		WebClient - reactive විදිය asynchronous requests යවනවා
+
+		<red> අපේ, 04වෙනි පාඩම තියෙන්නේ, මේ තුන්දෙනා ගැන </red>
+
+	
+	(3) වෙනි කොටු දෙකෙන් පෙනෙන්නේ, Microservices අතර කතා කරන්න, භාවිතා කරන HTTP Methods:
+
+			GET (@GetMapping) - data බලන්න/ගන්න
+			POST (@PostMapping) - අලුත් data එකතු කරන්න
+			PUT (@PutMapping) - data update කරන්න
+			DELETE (@DeleteMapping) - data delete කරන්න
+			OPTIONS - කරන්න පුළුවන් දේවල් බලන්න
+
+		
+
+		වැඩ කරන හැටි:
+				Student-Service එකෙන් Books-Service එකට data යවන්න ඕන වෙනකොට,  
+				Microservices අතර කතා කරන්න, භාවිතා කරන ක්‍රම 03න් එකක් භාවිතා කරලා,
+				HTTP method එකක් (GET/POST/PUT/DELETE) මාර්ගයෙන් දත්ත යවනවා.
+
+
+
+
+
+[Slide 4] Types Of Inter- Service Communication
+		  (Microservices අතර සිදු වෙන සන්නිවේදන වර්ග)
+
+
+	01) Synchronous Communication
+		(සමමුහුර්ත සන්නිවේදනය)
+
+	02) Asynchronous Communication
+		(අසමමුහුර්ත සන්නිවේදනය)
+
+	03) Hybrid Communication
+		(දෙමුහුන් සන්නිවේදනය)
+
+
+
+
+
+[Slide 5] 01) Synchronous Communication
+			  (සමමුහුර්ත සන්නිවේදනය)
+
+
+														
+	* මෙහිදී, Message එක හෝ, Event එකකට අදාළ ප්‍රතිචාරය ලැබෙන තුරු බලා ඉඳලා, ඒ ප්‍රතිචාරය ලැබුනට පස්සේ පමණක්, ඊලඟ පණිවිඩය යවනවා. 
+	* මෙහිදී Microservices අතර Messages හුවමාරු කිරීමට, බොහෝ වෙලාවට, REST APIs, gRPC හෝ GraphQL වගේ Messaging ක්‍රම භාවිතා කරයි
+
+
+
+			
+					
+
+[Slide 6] 02) Asynchronous Communication
+			(අසමමුහුර්ත සන්නිවේදනය)	
+
+	* මෙහිදී, Message එකක් හෝ Event එකක් යවා, ඒ Message එකට, ප්‍රතිචාරයක් ලැබෙන තුරු බලා  <red> නොඉඳ </red> තවත් පණිවිඩ එක දිගට යවයි.
+	* මෙහිදී, Microservices අතර දත්ත හුවමාරු කිරීමට, RabbitMQ, Kafka, ActiveMQ වැනි, Message Queues භාවිතා වේ.
+
+			
+				
+
+
+[Slide 7] 03) Hybrid Communication
+			 (දෙමුහුන් සන්නිවේදනය)
+
+
+	* මෙහිදී, සමමුහුර්ත හා අසමමුහුර්ත ක්‍රම දෙකම එකතු මෙම ක්‍රමය නිර්මාණය වී ඇත.
+
+
+	* මේ ක්‍රමය භාවිතා කරන්නේ, Microservices දෙකක් අතර සිදු වන සන්නිවේදනයේ කාර්යක්ෂමතාව වැඩි කරගැනීමටයි. 
+	   -	මොකද, සමහර Messages, යවන්න ඕනේ, සමමුහුර්ත ක්‍රමයට, සමහර Messages යවන්න ඕනේ, අසමමුහුර්ත ක්‍රමයට. 
+	  	 	ඒ නිසා මොන වර්ගයේ Message එකක් ආවත්, ඒක යවන්න පුළුවන්, මේ Hybrid ක්‍රමය නිසා.
+
+
+
+	  		
+
+#දැන් අපි යනවා වෙනම කොටසකට.
+
+
+
+ලියාගන්න
+[Slide 8] 	Rest Template
+			(RestTemplate එක)
+
+
+	# 	- JAVA වල, "Template (ටෙම්ප්ලේට්)" කියන්නේ, අපේ වැඩ ලේසි කරන්න, නිර්මාණය කරලා තියෙන, Java Programs හෝ Class වලට
+		- මේකෙන්, Code එකේ සංකීර්ණ දේවල් ඔක්කොම ගැන බලාගන්නවා.
+		- අපිට තියෙන්නේ, මේක අපේ Code එකට Import කරන්න විතරයි.
+
+
+	# RestTemplate ==== HTTP Request යැවීම කියලා මතක තියාගන්න
+				
+
+	---"Rest Template.png" එක Open කරගන්න
+
+
+	මොකද්ද මේ RestTemplate එක කියන්නේ?
+		*  RestTemplate එක කියන්නේ,  Spring boot Framework(Practicle එකේදී මේක ගැන කළා) එකේදී, HTTP requests (GET, POST, PUT, DELETE ) යවන්න භාවිතා 	කරන  "Java Class/Template" එකක්. 
+
+		*  මේක Microservices දෙකක් අතර අතරමැදියෙක් විදිහට තමා වැඩ කරන්නේ.
+		*  මෙහි සිදු වන්නේ Synchronous Communication (සමමුහුර්ත සන්නිවේදනය)
+
+
+
+
+	ඇයි මේ RestTemplate එක භාවිතා කරන්නේ?
+		* Microservices අතර සන්නිවෙදය කිරීමට.
+		* JSON හෝ XML දත්ත, Microservices අතර හුවමාරු කරගන්න.
+		* බාහිර API වලින්, Resouces ගන්න.
+				උදා:- imDB වගේ API වලින්
+
+
+
+[Slide 9] How Rest Template Works (Simple Flow)
+			(කොහොමද මේ "RestTemplate එක", වැඩ කරන්නේ?)
+
+	# අපි මේක උදාහරණයක් ඇසුරෙන් පැහැදිලි කරගමු
+
+
+	order-service  		-------->			RestTemplate එක	 	-------->		inventory-service එකට
+	එක විසින්.... 							භාවිතා කරලා..... 						 පණිවිඩයක් යවනු ලබයි
+
+		(i) 									(ii) 										(iii)
+
+
+
+	* මෙතැනදී, RestTemplate එක, Microservices දෙකක් අතර අතරමැදියෙක් විදිහට තමා වැඩ කලේ.
+
+
+
+
+
+
+[Slide 10] පින්තුරය පැහැදිලි කිරීම
+
+	* මේ Slide එකේ තියෙන්නේ, "RestTemplate එකේ" භාවිතා කරන, HTTP Methords වේ.
+	* එක් එක්  HTTP Methords, භාවිතා කිරීම සඳහා, Codes ලිවිය යුතු ආකාරය මෙම වගුවේ (2) වෙනි තීරුවේ දැක්වේ.
+	
+	#මේ ඔක්කොම බලාගන්න ඕන නෑ
+
+
+
+[Slide 11] පින්තුරය පැහැදිලි කිරීම
+
+	* මේ Slide එකේ තියෙන්නේ, "RestTemplate එක (HTTP Request යවන්න භාවිතා කරන Java Class එකක්)" Spring Boot වලදී භාවිතා කරන්නේ කොහොමද කියලා.
+
+
+⚠️
+[Slide 12] 
+	* Slide 12 වැඩියෙන්ම ගැලපෙන්නේ, පහල තියෙන Content එකට
+
+
+
+[Slide 13] පින්තුරය පැහැදිලි කිරීම
+
+	* මේ Slide එකේ තියෙන්නේ, "RestTemplate එක" භාවිතා කරලා,  GET හා POST methord කියන, HTTP Mehtords, Practically යවන වෙන විදිහ.
+
+
+
+
+
+[Slide 14] How Rest Template Handles HTTP Status Codes 
+		 (කොහොමද, "RestTemplate එකෙන්", HTTP Status Codes, Handle කරන්නේ?)
+
+
+	#මෙතන පෙන්වන්නේ, 	
+		HTTP Status Codes එක  			-  මේ Code එකට ප්‍රතිචාර දැක්වීමක් වශයෙන්, "RestTemplate එකෙන්", Return කරන Messages වේ.
+
+
+	Success Codes 
+	(සාර්ථක කේත)
+		* 200 (OK)						- 	අනෙක් Microservice එකෙන් ලැබුන පණිවිඩය Return කරයි
+		* 201 (Created) 				- 	අලුත් දෙයක් Create වෙලා, ඒ location එක Return කරයි
+		* 204  (No Content)				- 	කිසිම content එකක් නොපෙන්වයි
+
+
+	Error Codes  -> මේවා සඳහා "RestTemplate එකෙන්", Error Message එකක් එවනු ලැබේ.
+	(දෝෂ කේත)
+		* 400 (Bad Request) 			- 	HttpClientErrorException.BadRequest  කියා Return කරයි.
+		* 404 (Not Found) 				- 	HttpClientErrorException.NotFound  කියා Return කරයි.
+		* 409 (Conflict) 				- 	HttpClientErrorException.Conflict කියා Return කරයි.
+		* 500 (Internal Server Error) 	- 	HttpClientErrorException.InternalServerError කියා Return කරයි.
+		* 503 (Service Unavailable) 	- 	HttpClientErrorException.ServiceUnavailable කියා Return කරයි.
+
+
+	Most Useful 300-Range Codes for Microservices Code
+	(Microservices වලට වඩාත් ප්‍රයෝජනවත් 300-Range එකේ කේත)
+		* 300 - Multiple Choices 					- Server එකට, Options ගොඩක් තියෙනවා නම්, Return කරයි.
+<red>	* 301 - Moved Permanently 					- Microservice එකක, Address එක වෙනස් වී ඇත්නම්, Return කරයි. </red>
+		* 302 - Found (Temporary Redirect) 			- Microservice එකක, අලුත් Address එකක් සොයාගත්තොත් Return කරයි
+		* 303 - See Other 							- තව පණිවිඩ තිබේ නම්, Return කරයි
+		* 304 - Not Modified 						- පණිවිඩය වෙනස් කර නැත්නම් Return කරයි
+		* 307 - Temporary Redirect 					- Microservice එකක, Address එක තාවකාලිකව වෙනත් තැනකට වෙනස් කර ඇත්නම් Return කරයි
+<red>	* 308 - Permanent Redirect 					- Microservice එකක, Address එක වෙනස් වී ඇත්නම්, Return කරයි. </red>
+
+
+
+
+
+
+
+[Slide 15] 
+
+
+	* RestTemplate එකට "Automatically Redirection" එකක් Detect වුනොත්, 301 හෝ 308 කියන HTTP Status Code දෙක Return කරනවා
+		මොකද්ද මේ  "Automatically Redirection" කියන්නේ?
+			- Microservice එකක් විසින්, තව Microservice එකකට, Message එකක් හුවමාරු කරද්දී, ඒ Microservice එකේ, Address එක වෙනස් වෙලා නම්, 
+			  301 හෝ 308 කියන HTTP Status Code දෙක Return කරනවා
+			  		උදා:- 	"/order-service/"   කියන Address එක    "/order-details/"   කියන Address එකට වෙනස් වෙලා නම්, 301 හෝ 308 කියන HTTP 				Status Code දෙක Return කරනවා
+
+	* මිට අමතරව, HTTP Status Code වල, 300ට වැඩි Range එකේ, Status Codes, එතරම් භාවිතා වෙන්නේ නෑ.
+	
+
+
+
+
+
+[Slide 16] පින්තුරය පැහැදිලි කිරීම
+
+	* ඒ පින්තුරෙන් පෙන්වන්නෙ, RestTemplate එක (HTTP requests යවන්න භාවිතා කරන, Java Class එකක්) භාවිතා කරලා, ඇත්තටම කොහොමද, HTTP Status Codes වලට ප්‍රතිචාර දක්වන්නේ කියලා.
+
+
+
+[Slide 17] පින්තුරය පැහැදිලි කිරීම
+	
+	* ඒ පින්තුරෙන් පෙන්වන්නෙ, Microservice එකේ, Address එක වෙනස් වෙලා නම්, අලුත් Address එක කොහොමද, Variable එකකට දාගන්නේ කියලා.
+
+	* මේ Code එකේදී වෙන්නේ,
+						i. 		"http://api/v1/order/10", කියන Address එකට Request එකක් යවනවා.
+						ii.		ඊට පස්සේ බලනවා, මේ Address වෙනස් වෙලාද කියලා.
+						iii. 	එහෙම වෙනස් වෙලා නම්, අලුත් Address, එක, "response" කියන Variable එකට, Save කරන්න කියනවා
+
+
+
+
+#අපි කතා කලේ, "RestTemplate එක (HTTP requests යවන්න භාවිතා කරන, Java Class එකක්) ගැන"
+#නමුත්, RestTemplate එකට පහසු ක්‍රමයක් පවතී
+
+
+		  (ෆේන්)
+[Slide 18] Feign  Client 
+		   (ෆේන් Client)
+
+	---"Feign Client.png" එක Open කරගන්න
+
+
+
+
+
+	ඇයි මේ, 
+
+
+
+[Slide 19]
+[Slide 20]
+[Slide 21]
+
+
+
+[Slide ] Terminology
+
+				Templates vs Libraries
+	
+	*  Library කියන්නේ, අපේ වැඩ ලේසි කරන්න ලියලා තියෙන <red> Program </red> එකකට.
+	*  Template කියන්නේ, අපේ වැඩ ලේසි කරගන්න ලියලා තියෙන <red> Java Classes </red> වලට. 
+
+
+
+
+
+[Slide 22] 	Web Client Java Library එක
+			(Web Client)
+	
+	
+
+
+	---"web client.png" එක Open කරගන්න
+
+	
+	* 	`Web Client`  කියන්නේ, දැනට ඇති, නවීනම, HTTP Request යවන Java Library එක වේ.
+	
+	* 	මේක Rest Template (HTTP Request යවන්න භාවිතා කරන Java Class එකක්) එක වෙනුවට භාවිතා කරන්න පුළුවන්.
+
+	* 	මෙය, බොහෝ වෙලාවට, Microservics අතර, Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය) සිදු කිරීමට භාවිතා කරයි, නමුත් අවශ්‍ය නම්, 			Synchronous Communication එක (සමමුහුර්ත සන්නිවේදනය) වුවද සිදු කළ හැක.
+	
+	
+
+
+
+
+
+[Slide 12] RestTemplate vs WebClient	
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+		RestTemplate එක 										|							WebClient Library එක
+---------------------------------------------------------------------------------------------------------------------------------
+																|
+		* සරලයි													|						* සංකීර්ණයි
+		* ඉගෙන ගන්න ලේසියි 	 								|						* ඉගෙන ගන්න අමාරුයි
+		* කාර්යක්ෂමතාව අඩුයි 									|						* කාර්යක්ෂමතාව වැඩියි 			
+		* සමමුහුර්ත සන්නිවේදනය සිදු කරයි 						|						* ප්‍රධාන වශයෙන් අසමමුහුර්ත සන්නිවේදනය සිදු කරයි
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+			
+
+	* "Spring Boot Framework" එකේදී, "RestTemplate එකට (HTTP requests යවන්න භාවිතා කරන, Java Class එකක්)" වඩා, 
+	"WebClient" කියන Library එක භාවිතා කරන එක වඩාත්  කාර්යක්ෂම වේ
+
+	* කෙසේ වුනත්, "RestTemplate එක" තාම භාවිතා කරනවා, මේක සරල හා Realiabe, නිසා.
+
+
+
+[Slide 23] ඇයි මේ WebClient කියන Libaray එක අවශ්‍ය වෙන්නේ?
+
+	* අනෙකුත් Microservices සමඟ කතා කරන්න
+	* non-blocking නැත්නම්, Asynchorous ක්‍රමයට, HTTP Request යවන්න
+	* Requests කාර්යක්ෂමව Handle කරන්න
+	* RestTemplate එක වෙනුවට භාවිතා කරන්න
+
+
+
+
+[Slide ] Terminology
+
+					Blocking vs Non-blocking
+
+	* Bloking (අවහිර කිරීම) 			=== Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) 
+	* Non blocking (අවහිර නොකිරීම)	=== Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය)	
+
+
+
+
+[Slide 24] WebClient කියන Library එකෙහි ප්‍රධාන විශේෂාංග
+			(Key Features of WebClient Library)
+
+
+	* Asynchronous Communication එකක් (අසමමුහුර්ත සන්නිවේදනය) සිදු කරයි. 
+	* Lightweight සහ වේගවත් වේ.
+	* දත්ත Steam කරන්න පුළුවන්
+		- දත්ත Stream කරනවා කියන්නේ, දත්ත, කුඩා කොටස් වලට කඩලා, Microservices අතර හුමවාමරු කරන්න පුළුවන්.
+
+
+
+
+	# Reactive වේ (Reactive කියන්නේ මොකද්ද කියලා පහල තියෙනවා)
+	# WebFlux සහ  Spring MVC කියන Java Frameworks දෙකේම Support කරයි
+	
+
+
+
+[Slide 25] පින්තුරය පැහැදිලි කිරීම
+	
+	* මේකේ පෙන්වන්නේ, WebClient කියන Library එක භාවිතා කරලා, HTTP Request එකක් යවන්නේ කොහොමද කියලා.
+
+
+
+
+[Slide 26] පින්තුරය පැහැදිලි කිරීම
+			
+	* මේකේ පෙන්වන්නේ, Microservices දෙකක් අතර, Asynchronous Communication (අසමමුහුර්ත සන්නිවේදන) ක්‍රමයට, සන්නිවෙදය කරන විදිහ.
+	
+	* පලවෙනි පින්තුරයෙන්, WebClient කියන Library එකේ, GET Methord එක HTTP Methord එක භාවිතා කරලා, Request එකක් විදිහ පෙන්වයි. 
+	* දෙවෙනි පින්තුරයෙන්, WebClient කියන Library එකේ, POST Methord එක HTTP Methord එක භාවිතා කරලා, Request එකක් විදිහ පෙන්වයි. 
+
+
+
+
+
+[Slide 27] WebClient කියන Library එක, මොන වගේ අවස්තාවලද, භාවිතා කල යුත්තේ?
+	* Microservice වල, Traffic එක ගොඩක් වැඩි නම්
+			- WebClient කියන Library එක, Asynchronous ක්‍රමයට වැඩ කරන නිසා, වැඩි කාර්යක්ෂමතාවකින් වැඩ කළ හැක.
+
+	* බාහිර API සමඟ ගනුදෙනු කරන්න අවශ්‍ය වෙන වෙලාවට
+			උදා:- imDB වගේ බාහිර API එකකට Connect වෙද්දී
+
+	* RestTempalte එකෙන්, වෙන HTTP Request යවන, Library එකකට මාරු වෙන්න ඕන නම්
+
+
+[Sldie 28] WebClient කියන Library එක, මොන වගේ අවස්තාවලද, නොකළ යුත්තේ?
+
+	* 
+
+
+[Slide 30] What is Reactive Programming?
+			(මොකද්ද මේ Reactive Programing කියන්නේ?)
+
+	* Reactive Programing කියන්නේ, Data වෙනස් වුනොත්, Events වලට, හෝ Stream එකකට ඒවා සිදු වූ වහාම ප්‍රතිචාර ප්‍රතිචාර දක්වන, එක Task එකක් ඉවර වුනාම අනිත් එක පටන් ගන්නන්වට වඩා.
+
+
+	* Reactive Programing කියන්නේ, Data වෙනස් වුනොත්, Events වලට, හෝ Stream එකකට ඒවා සිදු වූ වහාම ප්‍රතිචාර ප්‍රතිචාර දක්වන, එක Task එකක් ඉවර වුනාම අනිත් එක පටන් ගන්නන්වට වඩා. Programing ක්‍රමයක්
+
+	* Reactive Programing කියන්නේ, එක Task එකක් ඉවර වුනාම අනිත් එක පටන් ගන්නන්වට වඩා, පද්ධතියේ, Data වෙනස් වුනොත්, Events වලට, හෝ Stream එකකට ඒවා සිදු වූ වහාම ප්‍රතිචාර ප්‍රතිචාර දක්වන, Programing ක්‍රමයක්.
+
+	Reactive Programming is a programming style where the system reacts to data changes, events, or streams as they happen, instead of waiting for tasks to 	finish one by one.
+	
+	* Reactive Programing කියන්නේ, Program එකේ, Data වෙනස් වුන වහාම, Events එකක් Trigger වුනු වහාම,  ප්‍රතිචාර ප්‍රතිචාර දක්වන, Programing ක්‍රමයක්. 
+
+	* Reactive Programing කියන්නේ, එක කාර්යයක් අවසන් කල පසු තව කාර්යයක් කිරීමට වඩා, 
+
+
+	* අපි Traditional Programing Methord එකෙන්, Program එකක් ලිව්වොත්, ඒක Execute වෙන්නේ Code එකේ Tasks ලියලා තියෙන පිළිවෙලට
+		* අපි Reactive Programing ක්‍රමයට Program එකක් ලිව්වොත්, ඒක Execute වෙන්නේ, Data, Events වල, වෙනසක් වෙච්ච වහාම
+
+
+	* අපි Traditional Programing Methord එකෙන්, Program එකක් ලිව්වොත්, එකෙන් කරන්නේ, මොකක් හරි ප්‍රශ්නෙකට උත්තරේ දෙන එක
+	* අපි Reactive Programing ක්‍රමයට Program එකක් ලිව්වොත්, ඒක Execute වෙන්නේ, Data, Events වල, වෙනසක් වෙච්ච වහාම ප්‍රතිචාර ප්‍රතිචාර දක්වන එක
+
+
+	* අපි Traditional Programing Methord එකෙන්, Program එකක් ලිව්වොත්, ඒක Execute වෙන්නේ Code එකේ Tasks ලියලා තියෙන පිළිවෙලට
+	* අපි Reactive Programing ක්‍රමයට Program එකක් ලිව්වොත්, ඒක Execute වෙන්නේ, Data හා Events වල, වෙනසක් වෙච්ච වහාම ප්‍රතිචාර ප්‍රතිචාර දක්වන එක
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microservices and Cloud Computing
+															Lession 04
+												Intercommunication Of Microservices
+											 (Microservices අතර සිදුවන අභ්‍යන්තර සන්නිවේදනය)
+
+
+												---"Intercommucation.png" එක Open කරගන්න
+
+
+⚠️ Slide 5,6,7, තිබ්බ, Examples අයින් කළා
+Target 2.00PM
+Startd at 6.54AM
+1 slide 25mins
+
+
+[Slide 2] Why Communication Between Microservices Matters
+			(ඇයි, Microservices අතර සන්නිවේදනය සිදු කිරීම වැදගත් වෙන්නේ?)
+
+	
+		# හැම Microservice එකටම, තමාට අදාළ දත්ත තියෙනවා. නමුත්, Task එකක් කරගන්න මේ දත්ත හුවමාරු කරගන්න ඕනේ. 
+
+		* 	Microservices අතර සන්නිවේදනය සිදු කිරීම වැදගත් වෙන්නේ, එමගින් Microservice අතර, <red> දත්ත </red> හුවමාරු කරගන්න පුළුවන් වෙන නිසා.
+
+
+[Slide 3] පින්තුරය පැහැදිලි කිරීම (ඉතා වැදගත්)
+
+	* මෙම රුප සටහනෙන්, Microservices දෙකක් අතර සිදු වෙන සන්නිවේදනය පෙන්වයි
+
+	---"Inter 02.png" එක Open කරගන්න
+	---පින්තුරයේ අංකෙට අදාළ විස්තරය Note එකෙන් කියවන්න
+
+	(1) වෙනි කොටු දෙකෙන් පෙනෙන්නේ, Microservices දෙක:
+
+		MS1: Student-Service - students ගැන data handle කරනවා
+		MS2: Books-Service - books ගැන data handle කරනවා
+
+	(2) වෙනි කොටුවෙන් පෙනෙන්නේ, Microservices අතර කතා කරන්න, භාවිතා කරන ක්‍රම 03ක්:
+
+		Rest Template - පැරණි, සරල විදිය HTTP requests යවනවා
+		FeignClient - ඉතා සරල විදිය REST API call කරනවා 
+		WebClient - reactive විදිය asynchronous requests යවනවා
+
+		<red> අපේ, 04වෙනි පාඩම තියෙන්නේ, මේ තුන්දෙනා ගැන </red>
+
+	
+	(3) වෙනි කොටු දෙකෙන් පෙනෙන්නේ, Microservices අතර කතා කරන්න, භාවිතා කරන HTTP Methods:
+
+			GET (@GetMapping) - data බලන්න/ගන්න
+			POST (@PostMapping) - අලුත් data එකතු කරන්න
+			PUT (@PutMapping) - data update කරන්න
+			DELETE (@DeleteMapping) - data delete කරන්න
+			OPTIONS - කරන්න පුළුවන් දේවල් බලන්න
+
+		
+
+		වැඩ කරන හැටි:
+				Student-Service එකෙන් Books-Service එකට data යවන්න ඕන වෙනකොට,  
+				Microservices අතර කතා කරන්න, භාවිතා කරන ක්‍රම 03න් එකක් භාවිතා කරලා,
+				HTTP method එකක් (GET/POST/PUT/DELETE) මාර්ගයෙන් දත්ත යවනවා.
+
+
+
+
+
+[Slide 4] Types Of Inter- Service Communication
+		  (Microservices අතර සිදු වෙන සන්නිවේදන වර්ග)
+
+
+	01) Synchronous Communication
+		(සමමුහුර්ත සන්නිවේදනය)
+
+	02) Asynchronous Communication
+		(අසමමුහුර්ත සන්නිවේදනය)
+
+	03) Hybrid Communication
+		(දෙමුහුන් සන්නිවේදනය)
+
+
+
+
+
+[Slide 5] 01) Synchronous Communication
+			  (සමමුහුර්ත සන්නිවේදනය)
+
+
+														
+	* මෙහිදී, Message එක හෝ, Event එකකට අදාළ ප්‍රතිචාරය ලැබෙන තුරු බලා ඉඳලා, ඒ ප්‍රතිචාරය ලැබුනට පස්සේ පමණක්, ඊලඟ පණිවිඩය යවනවා. 
+	* මෙහිදී Microservices අතර Messages හුවමාරු කිරීමට, බොහෝ වෙලාවට, REST APIs, gRPC හෝ GraphQL වගේ Messaging ක්‍රම භාවිතා කරයි
+
+
+
+			
+					
+
+[Slide 6] 02) Asynchronous Communication
+			(අසමමුහුර්ත සන්නිවේදනය)	
+
+	* මෙහිදී, Message එකක් හෝ Event එකක් යවා, ඒ Message එකට, ප්‍රතිචාරයක් ලැබෙන තුරු බලා  <red> නොඉඳ </red> තවත් පණිවිඩ එක දිගට යවයි.
+	* මෙහිදී, Microservices අතර දත්ත හුවමාරු කිරීමට, RabbitMQ, Kafka, ActiveMQ වැනි, Message Queues භාවිතා වේ.
+
+			
+				
+
+
+[Slide 7] 03) Hybrid Communication
+			 (දෙමුහුන් සන්නිවේදනය)
+
+
+	* මෙහිදී, සමමුහුර්ත හා අසමමුහුර්ත ක්‍රම දෙකම එකතු මෙම ක්‍රමය නිර්මාණය වී ඇත.
+
+
+	* මේ ක්‍රමය භාවිතා කරන්නේ, Microservices දෙකක් අතර සිදු වන සන්නිවේදනයේ කාර්යක්ෂමතාව වැඩි කරගැනීමටයි. 
+	   -	මොකද, සමහර Messages, යවන්න ඕනේ, සමමුහුර්ත ක්‍රමයට, සමහර Messages යවන්න ඕනේ, අසමමුහුර්ත ක්‍රමයට. 
+	  	 	ඒ නිසා මොන වර්ගයේ Message එකක් ආවත්, ඒක යවන්න පුළුවන්, මේ Hybrid ක්‍රමය නිසා.
+
+
+
+	  		
+
+#දැන් අපි යනවා වෙනම කොටසකට.
+
+
+
+ලියාගන්න
+[Slide 8] 	Rest Template
+			(RestTemplate එක)
+
+
+	# 	- JAVA වල, "Template (ටෙම්ප්ලේට්)" කියන්නේ, අපේ වැඩ ලේසි කරන්න, නිර්මාණය කරලා තියෙන, Java Programs හෝ Class වලට
+		- මේකෙන්, Code එකේ සංකීර්ණ දේවල් ඔක්කොම ගැන බලාගන්නවා.
+		- අපිට තියෙන්නේ, මේක අපේ Code එකට Import කරන්න විතරයි.
+
+
+	# RestTemplate ==== HTTP Request යැවීම කියලා මතක තියාගන්න
+				
+
+	---"Rest Template.png" එක Open කරගන්න
+
+
+	මොකද්ද මේ RestTemplate එක කියන්නේ?
+		*  RestTemplate එක කියන්නේ,  Spring boot Framework(Practicle එකේදී මේක ගැන කළා) එකේදී, HTTP requests (GET, POST, PUT, DELETE ) යවන්න භාවිතා 	කරන  "Java Class/Template" එකක්. 
+
+		*  මේක Microservices දෙකක් අතර අතරමැදියෙක් විදිහට තමා වැඩ කරන්නේ.
+		*  මෙහි සිදු වන්නේ Synchronous Communication (සමමුහුර්ත සන්නිවේදනය)
+
+
+
+
+	ඇයි මේ RestTemplate එක භාවිතා කරන්නේ?
+		* Microservices අතර සන්නිවෙදය කිරීමට.
+		* JSON හෝ XML දත්ත, Microservices අතර හුවමාරු කරගන්න.
+		* බාහිර API වලින්, Resouces ගන්න.
+				උදා:- imDB වගේ API වලින්
+
+
+
+[Slide 9] How Rest Template Works (Simple Flow)
+			(කොහොමද මේ "RestTemplate එක", වැඩ කරන්නේ?)
+
+	# අපි මේක උදාහරණයක් ඇසුරෙන් පැහැදිලි කරගමු
+
+
+	order-service  		-------->			RestTemplate එක	 	-------->		inventory-service එකට
+	එක විසින්.... 							භාවිතා කරලා..... 						 පණිවිඩයක් යවනු ලබයි
+
+		(i) 									(ii) 										(iii)
+
+
+
+	* මෙතැනදී, RestTemplate එක, Microservices දෙකක් අතර අතරමැදියෙක් විදිහට තමා වැඩ කලේ.
+
+
+
+
+
+
+[Slide 10] පින්තුරය පැහැදිලි කිරීම
+
+	* මේ Slide එකේ තියෙන්නේ, "RestTemplate එකේ" භාවිතා කරන, HTTP Methords වේ.
+	* එක් එක්  HTTP Methords, භාවිතා කිරීම සඳහා, Codes ලිවිය යුතු ආකාරය මෙම වගුවේ (2) වෙනි තීරුවේ දැක්වේ.
+	
+	#මේ ඔක්කොම බලාගන්න ඕන නෑ
+
+
+
+[Slide 11] පින්තුරය පැහැදිලි කිරීම
+
+	* මේ Slide එකේ තියෙන්නේ, "RestTemplate එක (HTTP Request යවන්න භාවිතා කරන Java Class එකක්)" Spring Boot වලදී භාවිතා කරන්නේ කොහොමද කියලා.
+
+
+⚠️
+[Slide 12] 
+	* Slide 12 වැඩියෙන්ම ගැලපෙන්නේ, පහල තියෙන Content එකට
+
+
+
+[Slide 13] පින්තුරය පැහැදිලි කිරීම
+
+	* මේ Slide එකේ තියෙන්නේ, "RestTemplate එක" භාවිතා කරලා,  GET හා POST methord කියන, HTTP Mehtords, Practically යවන වෙන විදිහ.
+
+
+
+
+
+[Slide 14] How Rest Template Handles HTTP Status Codes 
+		 (කොහොමද, "RestTemplate එකෙන්", HTTP Status Codes, Handle කරන්නේ?)
+
+
+	#මෙතන පෙන්වන්නේ, 	
+		HTTP Status Codes එක  			-  මේ Code එකට ප්‍රතිචාර දැක්වීමක් වශයෙන්, "RestTemplate එකෙන්", Return කරන Messages වේ.
+
+
+	Success Codes 
+	(සාර්ථක කේත)
+		* 200 (OK)						- 	අනෙක් Microservice එකෙන් ලැබුන පණිවිඩය Return කරයි
+		* 201 (Created) 				- 	අලුත් දෙයක් Create වෙලා, ඒ location එක Return කරයි
+		* 204  (No Content)				- 	කිසිම content එකක් නොපෙන්වයි
+
+
+	Error Codes  -> මේවා සඳහා "RestTemplate එකෙන්", Error Message එකක් එවනු ලැබේ.
+	(දෝෂ කේත)
+		* 400 (Bad Request) 			- 	HttpClientErrorException.BadRequest  කියා Return කරයි.
+		* 404 (Not Found) 				- 	HttpClientErrorException.NotFound  කියා Return කරයි.
+		* 409 (Conflict) 				- 	HttpClientErrorException.Conflict කියා Return කරයි.
+		* 500 (Internal Server Error) 	- 	HttpClientErrorException.InternalServerError කියා Return කරයි.
+		* 503 (Service Unavailable) 	- 	HttpClientErrorException.ServiceUnavailable කියා Return කරයි.
+
+
+	Most Useful 300-Range Codes for Microservices Code
+	(Microservices වලට වඩාත් ප්‍රයෝජනවත් 300-Range එකේ කේත)
+		* 300 - Multiple Choices 					- Server එකට, Options ගොඩක් තියෙනවා නම්, Return කරයි.
+<red>	* 301 - Moved Permanently 					- Microservice එකක, Address එක වෙනස් වී ඇත්නම්, Return කරයි. </red>
+		* 302 - Found (Temporary Redirect) 			- Microservice එකක, අලුත් Address එකක් සොයාගත්තොත් Return කරයි
+		* 303 - See Other 							- තව පණිවිඩ තිබේ නම්, Return කරයි
+		* 304 - Not Modified 						- පණිවිඩය වෙනස් කර නැත්නම් Return කරයි
+		* 307 - Temporary Redirect 					- Microservice එකක, Address එක තාවකාලිකව වෙනත් තැනකට වෙනස් කර ඇත්නම් Return කරයි
+<red>	* 308 - Permanent Redirect 					- Microservice එකක, Address එක වෙනස් වී ඇත්නම්, Return කරයි. </red>
+
+
+
+
+
+
+
+[Slide 15] 
+
+
+	* RestTemplate එකට "Automatically Redirection" එකක් Detect වුනොත්, 301 හෝ 308 කියන HTTP Status Code දෙක Return කරනවා
+		මොකද්ද මේ  "Automatically Redirection" කියන්නේ?
+			- Microservice එකක් විසින්, තව Microservice එකකට, Message එකක් හුවමාරු කරද්දී, ඒ Microservice එකේ, Address එක වෙනස් වෙලා නම්, 
+			  301 හෝ 308 කියන HTTP Status Code දෙක Return කරනවා
+			  		උදා:- 	"/order-service/"   කියන Address එක    "/order-details/"   කියන Address එකට වෙනස් වෙලා නම්, 301 හෝ 308 කියන HTTP 				Status Code දෙක Return කරනවා
+
+	* මිට අමතරව, HTTP Status Code වල, 300ට වැඩි Range එකේ, Status Codes, එතරම් භාවිතා වෙන්නේ නෑ.
+	
+
+
+
+
+
+[Slide 16] පින්තුරය පැහැදිලි කිරීම
+
+	* ඒ පින්තුරෙන් පෙන්වන්නෙ, RestTemplate එක (HTTP requests යවන්න භාවිතා කරන, Java Class එකක්) භාවිතා කරලා, ඇත්තටම කොහොමද, HTTP Status Codes වලට ප්‍රතිචාර දක්වන්නේ කියලා.
+
+
+
+[Slide 17] පින්තුරය පැහැදිලි කිරීම
+	
+	* ඒ පින්තුරෙන් පෙන්වන්නෙ, Microservice එකේ, Address එක වෙනස් වෙලා නම්, අලුත් Address එක කොහොමද, Variable එකකට දාගන්නේ කියලා.
+
+	* මේ Code එකේදී වෙන්නේ,
+						i. 		"http://api/v1/order/10", කියන Address එකට Request එකක් යවනවා.
+						ii.		ඊට පස්සේ බලනවා, මේ Address වෙනස් වෙලාද කියලා.
+						iii. 	එහෙම වෙනස් වෙලා නම්, අලුත් Address, එක, "response" කියන Variable එකට, Save කරන්න කියනවා
+
+
+
+
+[Slide ] Terminology
+
+				Templates vs Libraries
+	
+	*  Library කියන්නේ, අපේ වැඩ ලේසි කරන්න ලියලා තියෙන <red> Program </red> එකකට.
+	*  Template කියන්නේ, අපේ වැඩ ලේසි කරගන්න ලියලා තියෙන <red> Java Classes </red> වලට. 
+
+
+
+
+
+		  (ෆේන්)
+[Slide 18] Feign  Client Java Library එක
+		   (ෆේන් Client)
+
+	---"Feign Client.png" එක Open කරගන්න
+
+
+	ඇයි මේ, Feign Client කියන Libaray එක අවශ්‍ය වෙන්නේ?
+		* අඩු Codes ප්‍රමාණයක් භාවිතා කරලා, HTTP Request යවන්න.
+		* සම්පුර්ණ Code එකේ සංකීර්ණතාව අඩු කරන්න
+		* <red> Synchrounus ක්‍රමයට Messages යවන්න </red>
+		* Ribbon, Eureka, හෝ Spring Cloud Gateway Frameworks එක්ක පහසුවෙන් integrate කරන්න  			#මේ සම්බධයෙන් මම දන්නෙත් නෑ
+
+
+		
+	 
+
+
+
+[Slide 19] පින්තුරය පැහැදිලි කිරීම
+
+	* මෙතන තියෙන්නේ, Feign Client කියන Libaray එක ඇතුව, සහ ඒ Library එක නැතුව, HTTP Request එකක් යවපු Code දෙකක්.
+	
+	* දෙවෙනි පින්තුරේ බැලුවම පෙන්වා, Feign Client කියන Libaray එක භාවිතා කළාම, Manually Code කරන්න තියෙන්නේ හරිම අඩුවෙන්. ඉතුරු ඔක්කොම, Library එකෙන් බලාගන්නවා.
+
+
+[Slide 20] 
+	# මොකද්ද මේ Interface කියන්නේ?
+		JAVA වල, එක Class එකකට, Inherit(Extend) කරන්න පුළුවන්, තවත් එක Class එකක් විතරයි. ඒ නිසා, Class කිහිපයක්, භාවිතා කරන්න ඕනේ නම් අපි Interface කියලා එකක් හදනවා. මේක Class එකක් වගේ. නම විතරයි වෙනස්. 
+	
+	
+	How It Works?
+	(කොහොමද Feign Client කියන Libaray එක වැඩ කරන්නේ?)
+		 
+		 පියවර (1) මුලින්ම JAVA Interface එකක් හදාගන්න
+		 පියවර (2) ඊට පස්සේ, Feign Client කියන Libaray එක, Automaticly Implement වෙනවා.
+		 පියවර (3) අන්තිමට, Feign Client කියන Libaray එක භාවිතා කරලා, HTTP Request එකක්, අදාළ Microservice එකට යවන්න පුළුවන්
+
+		
+		* Microservice Search කරන්න, Load එක Balance කරන්න, Circuit Breakers වලට ගොඩක් හොඳ Library එකක්.  
+																			⬇️
+																#Circuit Breakers කියන්නේ, 
+															 	අක්‍රිය තත්වයේ පවතින Microservices වලට, 
+																HTTP Request යැවීමෙන්, Resouces නාස්ති වීම, 
+																වැලැක්වීමයි.
+
+
+
+
+
+		
+		පින්තුරය පැහැදිලි කිරීම
+
+			* මෙතැනදී වෙන්නේ,
+					
+					order-service  		-------->			Feign Client කියන Libaray එක	 	-------->		user-service එකට
+					එක විසින්.... 							භාවිතා කරලා..... 						 			පණිවිඩයක් යවනු ලබයි
+
+						(i) 									(ii) 												(iii)
+
+
+
+[Slide 21] 
+	Feign Client කියන Libaray එක භාවිතා කිරීමේ වාසි
+	
+		* Implement කරන්න ලේසියි
+		* ගොඩක් Codes ලියන්න ඕන නෑ.
+		* Program එක සරල කරනවා.
+		* Microservices වලට එන Load එක Balance කරනවා
+
+
+	
+
+
+	Feign Client කියන Libaray එක භාවිතා කිරීමේ නොකළ යුතු තැන්
+	(Not Recomanded)
+
+		* Traffic එක ගොඩාක් වැඩි Applications වලට
+		* Asynchronous ක්‍රමයට පණිවිඩ හුවමාරු කරගන්න අවශ්‍ය වුනාම
+		* ප්‍රශ්න තියෙන, Microservices වලට
+
+
+
+
+
+
+
+
+[Slide 22] 	Web Client Java Library එක
+			(Web Client)
+	
+	
+
+
+	---"web client.png" එක Open කරගන්න
+
+	
+	* 	`Web Client`  කියන්නේ, දැනට ඇති, නවීනම, HTTP Request යවන Java Library එක වේ.
+	
+	* 	මේක Rest Template (HTTP Request යවන්න භාවිතා කරන Java Class එකක්) එක වෙනුවට භාවිතා කරන්න පුළුවන්.
+
+	* 	මෙය, බොහෝ වෙලාවට, Microservics අතර, Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය) සිදු කිරීමට භාවිතා කරයි, නමුත් අවශ්‍ය නම්, 			Synchronous Communication එක (සමමුහුර්ත සන්නිවේදනය) වුවද සිදු කළ හැක.
+	
+	
+
+
+
+
+
+[Slide 12] RestTemplate vs WebClient	
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+		RestTemplate එක 										|							WebClient Library එක
+---------------------------------------------------------------------------------------------------------------------------------
+																|
+		* සරලයි													|						* සංකීර්ණයි
+		* ඉගෙන ගන්න ලේසියි 	 								|						* ඉගෙන ගන්න අමාරුයි
+		* කාර්යක්ෂමතාව අඩුයි 									|						* කාර්යක්ෂමතාව වැඩියි 			
+		* සමමුහුර්ත සන්නිවේදනය සිදු කරයි 						|						* ප්‍රධාන වශයෙන් අසමමුහුර්ත සන්නිවේදනය සිදු කරයි
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+			
+
+	* "Spring Boot Framework" එකේදී, "RestTemplate එකට (HTTP requests යවන්න භාවිතා කරන, Java Class එකක්)" වඩා, 
+	"WebClient" කියන Library එක භාවිතා කරන එක වඩාත්  කාර්යක්ෂම වේ
+
+	* කෙසේ වුනත්, "RestTemplate එක" තාම භාවිතා කරනවා, මේක සරල හා Realiabe, නිසා.
+
+
+
+[Slide 23] ඇයි මේ WebClient කියන Libaray එක අවශ්‍ය වෙන්නේ?
+
+	* අනෙකුත් Microservices සමඟ කතා කරන්න
+	* non-blocking නැත්නම්, Asynchorous ක්‍රමයට, HTTP Request යවන්න
+	* Requests කාර්යක්ෂමව Handle කරන්න
+	* RestTemplate එක වෙනුවට භාවිතා කරන්න
+
+
+
+
+[Slide ] Terminology
+
+					Blocking vs Non-blocking
+
+	* Bloking (අවහිර කිරීම) 			=== Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) 
+	* Non blocking (අවහිර නොකිරීම)	=== Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය)	
+
+
+
+
+[Slide 24] WebClient කියන Library එකෙහි ප්‍රධාන විශේෂාංග
+			(Key Features of WebClient Library)
+
+
+	* Asynchronous Communication එකක් (අසමමුහුර්ත සන්නිවේදනය) සිදු කරයි. 
+	* Lightweight සහ වේගවත් වේ.
+	* දත්ත Steam කරන්න පුළුවන්
+		- දත්ත Stream කරනවා කියන්නේ, දත්ත, කුඩා කොටස් වලට කඩලා, Microservices අතර හුමවාමරු කරන්න පුළුවන්.
+
+
+
+
+	# Reactive වේ (Reactive කියන්නේ මොකද්ද කියලා පහල තියෙනවා)
+	# WebFlux සහ  Spring MVC කියන Java Frameworks දෙකේම Support කරයි
+	
+
+
+
+[Slide 25] පින්තුරය පැහැදිලි කිරීම
+	
+	* මේකේ පෙන්වන්නේ, WebClient කියන Library එක භාවිතා කරලා, HTTP Request එකක් යවන්නේ කොහොමද කියලා.
+
+
+
+
+[Slide 26] පින්තුරය පැහැදිලි කිරීම
+			
+	* මේකේ පෙන්වන්නේ, Microservices දෙකක් අතර, Asynchronous Communication (අසමමුහුර්ත සන්නිවේදන) ක්‍රමයට, සන්නිවෙදය කරන විදිහ.
+	
+	* පලවෙනි පින්තුරයෙන්, WebClient කියන Library එකේ, GET Methord එක HTTP Methord එක භාවිතා කරලා, Request එකක් විදිහ පෙන්වයි. 
+	* දෙවෙනි පින්තුරයෙන්, WebClient කියන Library එකේ, POST Methord එක HTTP Methord එක භාවිතා කරලා, Request එකක් විදිහ පෙන්වයි. 
+
+
+
+
+
+[Slide 27] WebClient කියන Library එක, මොන වගේ අවස්තාවලද, භාවිතා කල යුත්තේ?
+	* Microservice වල, Traffic එක ගොඩක් වැඩි නම්
+			- WebClient කියන Library එක, Asynchronous ක්‍රමයට වැඩ කරන නිසා, වැඩි කාර්යක්ෂමතාවකින් වැඩ කළ හැක.
+
+	* බාහිර API සමඟ ගනුදෙනු කරන්න අවශ්‍ය වෙන වෙලාවට
+			උදා:- imDB වගේ බාහිර API එකකට Connect වෙද්දී
+
+	* RestTempalte එකෙන්, වෙන HTTP Request යවන, Library එකකට මාරු වෙන්න ඕන නම්
+
+
+
+[Sldie 28] WebClient කියන Library එක, මොන වගේ අවස්තාවලද, භාවිතා නොකළ යුත්තේ?
+		   (Not Recomanded)
+
+	* Synchronous ආකාරයට Messages හුවමාරු කරගන්න අවශ්‍ය නම්
+	* සරල Code එකක් අවශ්‍ය නම්
+	* Team එකේ Membersලා Reactive Programing ගැන දන්නේ නැත්නම්
+
+
+
+
+
+[Slide 30] What is Reactive Programming?
+			(මොකද්ද මේ Reactive Programing කියන්නේ?)
+
+	# අපි Traditional Programing Methord එකෙන්, Program එකක් ලිව්වොත්, ඒකෙන් කරන්නේ, මොකක් හරි ප්‍රශ්නෙකට උත්තරයක් දෙන එක.
+	
+	* 	අපි Reactive Programing ක්‍රමයට, Program එකක් ලිව්වොත්, ඒකෙන් කරන්නේ, පද්ධතියේ කිසියම් කොටසක (ඒ කියන්නේ, පද්ධතියේ, දත්ත, Event වගේ ඕන දෙයක්) වෙනසක් සිදු වුවහොත් ඒ සඳහා ප්‍රතිචාර දැක්වීමයි. 
+
+	# Reactive Programing ක්‍රමය හරියට බල්ලෙක් වගේ. වෙනස්කම් ගැන Alert එකේ ඉන්නවා.
+
+
+
+	* 	මේ ක්‍රමයේ, භාවිතා කරන්නේ, අසමමුහුර්ත සන්නිවේදනය නිසා, මේ ක්‍රමය, ඉහල කාර්යක්ෂමතාවක් හා වැඩියෙන් Scale කරන්න අවශ්‍ය Applicattions වලට 	 	වඩාත් ගැලපේ
+
+
+
+	
+	Reactive Programing ක්‍රමය භාවිතා කිරීමට ගැලපෙන තැන්
+		* Microservcies අතර Traffic එක වැඩි නම්
+		* Real Time Updates අවශ්‍ය Applications වලට
+		* Database / API සමඟ වැඩ කරන්න
+		* App එකේ Scale එක වැඩි කරද්දී
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Terminology]
+
+Bloking == Synchorous 
+Non blocking == Asynchorous
+libary හා Template එක අතර වෙනස
+	Java වල Client කියන්නේ වෙන server එකකට requests යවන program එක හෝ library එක! 🚀
+	Template කියන්නේ, Java Class එකකට.
+
+
+
+
+
+
+
+
+
+
+
+
+[Terminology]
+
+Bloking (අවහිර කිරීම) 			=== Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) 
+Non blocking (අවහිර නොකිරීම)	=== Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය)	
+
+Template කියන්නේ, අපේ වැඩ ලේසි කරගන්න ලියලා තියෙන Java Classes වලට. මේක Class එකක් විතරයි
+Library කියන්නේ, අපේ වැඩ ලේසි කරන්න ලියලා තියෙන Program එකකට.
+
 
 
 
