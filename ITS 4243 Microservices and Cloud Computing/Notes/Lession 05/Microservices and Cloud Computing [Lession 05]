@@ -1,0 +1,2006 @@
+												Microservices and Cloud Computing	
+															Lession 05
+												Introduction To Cloud Computing
+											 	(Could Computing ගැන හැඳින්වීම)						
+												(වලාකුළු පරිගණකකරණය හැඳින්වීම)
+
+
+
+
+⚠️ Slide පිළිවෙල වෙනස් කර ඇත
+
+
+
+[Slide 2] 	Why Learn Cloud Computing?
+			(ඇයි අපි මේ වලාකුළු පරිගණක ගැන ඉගෙන ගන්න ඕනේ?)
+
+	* 	මේ ක්ෂේත්‍රයට ලොකු ඉල්ලුමක් පවතින නිසා
+	* 	වැයවෙන පිරිවැය අඩු නිසා
+	*	ලෝකයේ ඕනම තැනක ඉඳන් වැඩ කරන්න පුළුවන් නිසා
+	* 	ආපදාවක් ආවත්, දත්ත බේරා ගන්න පුළුවන් නිසා
+
+
+
+[Slide 3] 	What Is Cloud Computing ? 
+			මොකද්ද මේ Cloud Computing (වලාකුළු පරිගණකකරණය) කියන්නේ?
+
+
+	* Cloud Computing කියන්නේ, Internet එක හරහා, IT Resources, අවශ්‍ය වෙලාවට මිලදී ගන්න සහ, ඒවා භාවිතා කරන ප්‍රමාණයට අනුව මුදල් ගෙවීමට නිර්මාණය කර ඇති පද්ධතියකි.
+
+
+
+
+
+
+[Slide 4] Key Characteristics 
+		 (වලාකුළු පරිගණකකරණයේ ප්‍රධාන ලක්ෂණ)
+
+
+
+	* ඕනෑම වෙලාවක භාවිතා කරන්න පුළුවන්
+	* ඕනෑම device එකකින් වැඩ කරන්න පුළුවන්
+	* සම්පත් බෙදාගන්න පුළුවන්
+	* Use කරන ප්‍රමාණයට ගෙවන්න පුළුවන්
+	* අතත්‍ය පරිගණක වල වැඩ කරන්න පුළුවන්.
+
+
+
+
+ලියාගන්න
+[Slide 5] 	Cloud Deployment Models 
+			(වලාකුළු පරිගණක වර්ග)
+			
+			
+
+	(1) Public Cloud  (පොදුවේ පරිහරණය කරන වලාකුළු පරිගණක)
+	(2) Private Cloud  (පෞද්ගලික වලාකුළු පරිගණක)
+	(3) Hybrid Cloud  (පොදු හා පෞද්ගලික යන දෙකම මිශ්‍ර වී ඇති වලාකුළු පරිගණක)
+	(4) Multi-Cloud  (Cloud Companies කිහිපයක් එකට එකට එකතු වී ලබාදෙන වලාකුළු පරිගණක)
+	
+
+
+
+
+ලියාගන්න
+[Slide 22] වලාකුළු පරිගණක වර්ග සංසන්දනය කිරීම
+			(Cloud Deployment Models Comparison)
+
+	---"Comparison.pdf" Open කරගන්න
+
+
+
+
+
+
+[Slide 23] වලාකුළු පරිගණකයක් (Cloud Computer) මිලදී ගත්විට, එය සමඟ ලැබෙන සේවාවන් (Services)
+			(Cloud Service Models)
+
+	* වලාකුළු පරිගණකයක් (Cloud Computer) මිලදී ගතහොත්, අපිට ඒ සමඟ සේවා (Services) 03ක් ලැබේ.
+			01) IaaS - Infrastructure as a Service (අතත්‍ය යටිතලපහසුකම් සේවාව)      
+			02) PaaS - Platform as a Service (අතත්‍ය, Programs Develop කරන සේවාව)
+			03) SaaS (අතත්‍ය මෘදුකාංග සේවාව)
+
+
+
+
+
+            - IaaS - Infrastructure as a Service (අතත්‍ය යටිතලපහසුකම් සේවාව) ලෙස ලැබෙන දේවල්
+                    + Virtual Machine එකක්
+                    + Cloud Storage එකක්
+                    + Network එකක්
+
+            - Paas (Platform As A Service) ලෙස ලැබෙන දේවල්
+                    + Application Platform එකක්
+                    + Database එකක්
+
+
+            - Saas (Software As A Service) ලෙස ලැබෙන දේවල් 
+                    + Email එකක්
+                    + Office Tools
+
+
+
+
+[Slide 24] 01) IaaS - Infrastructure As A Service
+               (අතත්‍ය යටිතල පහසුකම් සේවාව)      
+			       
+            
+	* IaaS - Infrastructure as a Service (අතත්‍ය යටිතලපහසුකම් සේවාව) කියන්නේ, වලාකුළු පරිගණකයක්, ක්‍රියාත්මක වෙන්න, අවශ්‍ය වෙන, යටිතල පහසුකම් (Infrastructure), 
+      සපයන, සේවාවට.
+
+	* මොනවද, IaaS - Infrastructure as a Service (අතත්‍ය යටිතලපහසුකම් සේවාව) මඟින් ලබාදෙන යටිතල පහසුකම්?
+	  		- අතත්‍ය Machine එකක්	ලබාදෙනවා
+	  		- Storage Device එකක්	ලබාදෙනවා
+	  		- Network connection එකක් ලබාදෙනවා
+	
+
+	* මොනවද, Cloud සේවා සපයන, Platforms විසින් (Azure, AWS), සිදු කරන දේවල්?
+            - Servers නඩත්තු කරයි
+            - Data Centers නඩත්තු කරයි
+            - Network උපාංග නඩත්තු කරයි
+            - යටිතල පහසුකම් සැපයීම සිදු කරයි
+
+
+
+    * මොනවද, වලාකුළු පරිගණකයක, පරිශීලකයන් විසින් කළමනාකරනය කරන්න ඕනේ?
+            - Operating System එක
+            - Applications 
+            - දත්ත
+            - Security settings 
+
+
+
+    * IaaS - Infrastructure as a Service (අතත්‍ය යටිතලපහසුකම් සේවාව) හි ප්‍රධාන ලක්ෂණ
+            - ඕන වෙලාවක resources ලබාගන්න පුළුවන්
+            - scalability එක වැඩි කරන්න පුළුවන්
+            - භාවිතා කරන ප්‍රමාණය අනුව ගෙවන්න පුළුවන්
+
+
+
+    * IaaS - Infrastructure as a Service (අතත්‍ය යටිතලපහසුකම් සේවාව) ලබා දෙන Platforms
+            - AWS EC2 (Amazon Web Services Elastic Compute Cloud)
+            - Google Compute Engine
+            - Microsoft Azure Virtual Machines
+            - Oracle Cloud Infrastructure
+
+
+    * Iaas (අතත්‍ය යටිතලපහසුකම් සේවාව)  භාවිතා කිරීමේ වාසි
+            - Comuter Hardware මිලදී ගැනීම අවශ්‍ය නොවේ.
+            - Scale එක වැඩි කරගන්න පුළුවන්
+            - DevOps සඳහා භාවිතා කරනවා
+
+
+    * IaaS (අතත්‍ය යටිතලපහසුකම් සේවාව) ක්‍රමයෙහි අවාසි
+            - Technical දැනුමක් අවශ්‍ය වීම
+            - OS එක හා Security එක පිලිබඳ අපිටම බලාගැනීමට සිදු වීම
+            
+		
+
+
+
+[Slide 27]  laaS vs On-Premise
+        IaaS (අතත්‍ය යටිතලපහසුකම් සේවා) ක්‍රමය සහ, ආයතන වල තමාගේම Servers භාවිතා කරන ක්‍රමය
+
+
+        IaaS                                                On Premise
+    (අතත්‍ය යටිතලපහසුකම් සේවාව)                        (ආයතන වල තමාගේම Servers භාවිතා කරන ක්‍රමය)
+
+* භාවිතා කරන ප්‍රමාණයට ගෙවන්න පුළුවන්               * මුලික වියදම වැඩිය
+* Scale එක වැඩි කරන්න පුළුවන්                         * Scale එක වැඩි කරන්න බෑ
+* වේගවත්                                              * මන්දගාමියි
+* Cloud Provider විසින්, Hardware බලාගනී                * Company එක විසින් Hardware බලාගනී
+
+
+
+									
+
+
+
+
+
+[Slide 24] 
+
+
+
+[Slide 38] Evolution of Cloud Computing
+			(Could Computing තාක්ෂණයේ පරිණාමය)
+
+	* Could Computing තාක්ෂණයේ පරිණාමය, අවධි 05ක් යටතේ සිදු වී ඇත
+
+
+	(1) පූර්ව Cloud Computing  යුගය
+		(Pre-Cloud Era)
+				- මේ කාලේදී, තමාගේම Servers භාවිතා කළා
+
+
+	(2) අතත්‍යකරණය ආරම්භ වූ යුගය
+		(Virtualization Era)
+				- මේ යුගයේදී, Vmware කියලා Technology එක හොයාගත්තා
+
+
+	(3) Cloud Computing ආරම්භ වුණ යුගය
+		(Birth of Cloud Computing)
+				- මේ යුගයේදී, Amazon Company එක, AWS කියන Platform එක හදනවා
+
+	
+	(4) Cloud Computing තාක්ෂණය, තව දුරටත් වර්ධනය වූ යුගය
+		(Growth Era) 
+				- මේ කාලේදී, Microsoft සහ Google වගේ ලොකු Companies Cloud Services දෙන්න පටන් අරන් තියෙනවා.
+
+
+	(5) Cloud Computing තාක්ෂනය භාවිතා වෙන වර්තමාන යුගය
+		(Modern Cloud)
+				- මේ යුගයේදී, Could Computing, නැතුවම බැරි දෙයක් බවට පත් වෙලා තියෙන්නේ.
+
+
+
+
+
+[Slide 39]  Could Computing ක්‍රමයේ වාසි
+			(Benefits of Cloud Computing)
+
+
+	* භාවිතා කරන ආකාරය අනුව, ගෙවන්න පුළුවන් වීම
+	* වේගවත්ව වැඩ කල හැකි වීම 					#Could Computer එකට හොඳ Performce එකක් තියෙන Machine එකක් තිබීම නිසා, වේගවත්ව වැඩ කල හැක
+	* ලෝකයේ ඕනෑම තැනක ඉඳන් Acess කල හැකි වීම
+	* ඕනෑම Device එකක් භාවිතා කරමින් වැඩ කල හැකි වීම
+	* ආරම්භක වියදම අඩුයි
+	* Scale එක වැඩි කරන්න කරන්න ලේසියි
+
+
+
+[Slide 40] Could Computing ක්‍රමයේ අවාසි
+			(Challenges of Cloud Computing)
+
+	* අන්තර්ජාලය නොමැතිව කිසිවක් සිදු කල නොහැකි වීම
+	* Privacy එක අඩු වීම
+	* Data Security එක අඩු වීම
+	* දැනුමක් අවශ්‍ය වීම
+
+
+
+
+
+[Slide 41] Could Computing තාක්ෂනය භාවිතා වෙන තැන්
+			(Use Cases of Cloud)
+
+	* Website හා mobile app වගේ දේවල් host කරන්න
+	* AI හා Machine Learning models train කරන්න
+	* E Learning Platforms සඳහා
+	* ඇතැම් Softwares, Test කිරීම සඳහා	 (Software එක Test කරන්න, Computer Specs මදි නම්, මේ ක්‍රමයට Testing සිදු කරනු ලැබේ)
+	* රජය විසින් සේවා සපයන Applications Host කරන්න
+	* IoT Devices අන්තර්ජාලයට Connect කරන්න
+
+
+
+
+[Slide 42] Cloud තාක්ෂණයේ ඇති නවීන Features
+			(Modern Cloud)
+
+	
+	*  	Cloud Computers කිහිපයක් එකවර භාවිතා කල හැකි වීම
+	*  	AI පාදක, විශේෂාංග තිබීම
+	* 	Cloud Computers වල, ආරක්ෂාව වැඩිදියුණු කර තිබීම
+
+
+
+
+
+
+[Slide 43] වලාකුළු පරිගණක තාක්ෂණයේ අනාගතය
+			(Future of Cloud)
+
+
+	* වලාකුළු පරිගණක, ක්වන්ටම් වලාකුළු පරිගණක, දක්වා දියුණු වෙයි කියා උපකල්පනය කල හැක.
+	* වලාකුළු පරිගණක වල, සියළුම ක්‍රියාවලි, ස්වයංක්‍රියව සිදු වෙයි කියා උපකල්පනය කල හැක.
+	* වලාකුළු පරිගණක වල, යටිතල පහසුකම්, AI මඟින් Handle කරයි කියා උපකල්පනය කල හැක
+	* Servers නැතුව Run වෙන, වලාකුළු පරිගණක පවා බිහි වෙයි කියා උපකල්පනය කල හැක
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------මේවා ලියන්න එපා---------------------------------------------------------------------
+												Microservices and Cloud Computing	
+															Lession 05
+												Introduction To Cloud Computing
+											 	(Could Computing ගැන හැඳින්වීම)
+7.00AM - 11.00AM Target							
+												(වලාකුළු පරිගණකකරණය හැඳින්වීම)
+One Slide 10mins
+
+
+
+⚠️ තේරුම් ගැනීමේ පහසුව සඳහා, Singlish වලින් ලියා ඇත.
+
+
+
+[Slide 2] 	Why Learn Cloud Computing?
+			(ඇයි අපි මේ වලාකුළු පරිගණක ගැන ඉගෙන ගන්න ඕනේ?)
+
+	* 	මේ ක්ෂේත්‍රයට ලොකු ඉල්ලුමක් පවතින නිසා
+	* 	වැයවෙන පිරිවැය අඩු නිසා
+	*	ලෝකයේ ඕනම තැනක ඉඳන් වැඩ කරන්න පුළුවන් නිසා
+	* 	ආපදාවක් ආවත්, දත්ත බේරා ගන්න පුළුවන් නිසා
+
+
+[Slide 3] 	What is cloud computing ? 
+			මොකද්ද මේ වලාකුළු පරිගණකකරණය  කියන්නේ?
+
+
+	* Cloud Computing කියන්නේ, Internet එක හරහා, IT Resources, අවශ්‍ය වෙලාවට මිලදී ගන්න සහ, ඒවා භාවිතා කරන ප්‍රමාණයට අනුව මුදල් ගෙවීමට නිර්මාණය කර ඇති පද්ධතියකි.
+
+
+
+
+
+
+[Slide 4] Key Characteristics 
+		 (වලාකුළු පරිගණකකරණයේ ප්‍රධාන ලක්ෂණ)
+
+
+
+	* ඕනෑම වෙලාවක භාවිතා කරන්න පුළුවන්
+	* ඕනෑම device එකකින් වැඩ කරන්න පුළුවන්
+	* සම්පත් බෙදාගන්න පුළුවන්
+	* Use කරන ප්‍රමාණයට ගෙවන්න පුළුවන්
+	* අතත්‍ය පරිගණක වල වැඩ කරන්න පුළුවන්.
+
+
+
+
+ලියාගන්න
+[Slide 5] 	Cloud Deployment Models 
+			()
+			
+			
+
+	(1) Public Cloud (පොදුවේ භාවිතා කල හැකි, Cloud Service එකකි)
+	(2) Private Cloud (තමන්ට පෞද්ගලිකව භාවිහා කල හැකි Cloud Service එකකි)
+	(3) Hybrid Cloud (පොදු හා පෞද්ගලික යන දෙකම මිශ්‍ර වී ඇති Cloud Service එකකි)
+	(4) Multi-Cloud (Cloud Companies කිහිපයක් එකට භාවිතා කරන Cloud Service එකකි)
+
+
+	
+
+
+[Slide ] (1) Public Cloud ක්‍රමය
+			(පොදුවේ භාවිතා කල යුතු, Cloud Service ක්‍රමයකි)
+
+	* පොදුවේ භාවිතා කල යුතු, Cloud Service ක්‍රමය කියන්නේ, අන්තර්ජාලය හරහා ලබාදෙන Cloud Services ලබා ගත යු
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------++++-------------------------------------------------------------------------
+
+
+Microservices and Cloud Computing	
+															Lession 05
+												Introduction To Cloud Computing
+											 	(Could Computing ගැන හැඳින්වීම)
+7.00AM - 11.00AM Target							
+												(වලාකුළු පරිගණකකරණය හැඳින්වීම)
+One Slide 10mins
+
+
+
+⚠️ තේරුම් ගැනීමේ පහසුව සඳහා, Singlish වලින් ලියා ඇත.
+
+
+
+[Slide 2] 	Why Learn Cloud Computing?
+			(ඇයි අපි මේ වලාකුළු පරිගණක ගැන ඉගෙන ගන්න ඕනේ?)
+
+	* 	මේ ක්ෂේත්‍රයට ලොකු ඉල්ලුමක් පවතින නිසා
+	* 	වැයවෙන පිරිවැය අඩු නිසා
+	*	ලෝකයේ ඕනම තැනක ඉඳන් වැඩ කරන්න පුළුවන් නිසා
+	* 	ආපදාවක් ආවත්, දත්ත බේරා ගන්න පුළුවන් නිසා
+
+
+
+[Slide 3] 	What is cloud computing ? 
+			මොකද්ද මේ Cloud Computing (වලාකුළු පරිගණකකරණය) කියන්නේ?
+
+
+	* Cloud Computing කියන්නේ, Internet එක හරහා, IT Resources, අවශ්‍ය වෙලාවට මිලදී ගන්න සහ, ඒවා භාවිතා කරන ප්‍රමාණයට අනුව මුදල් ගෙවීමට නිර්මාණය කර ඇති පද්ධතියකි.
+
+
+
+
+
+
+[Slide 4] Key Characteristics 
+		 (වලාකුළු පරිගණකකරණයේ ප්‍රධාන ලක්ෂණ)
+
+
+
+	* ඕනෑම වෙලාවක භාවිතා කරන්න පුළුවන්
+	* ඕනෑම device එකකින් වැඩ කරන්න පුළුවන්
+	* සම්පත් බෙදාගන්න පුළුවන්
+	* Use කරන ප්‍රමාණයට ගෙවන්න පුළුවන්
+	* අතත්‍ය පරිගණක වල වැඩ කරන්න පුළුවන්.
+
+
+
+
+ලියාගන්න
+[Slide 5] 	Cloud Deployment Models 
+			(වලාකුළු පරිගණක වර්ග)
+			
+			
+
+	(1) Public Cloud  (පොදුවේ පරිහරණය කරන වලාකුළු පරිගණක)
+	(2) Private Cloud  (පෞද්ගලික වලාකුළු පරිගණක)
+	(3) Hybrid Cloud  (පොදු හා පෞද්ගලික යන දෙකම මිශ්‍ර වී ඇති වලාකුළු පරිගණක)
+	(4) Multi-Cloud  (Cloud Companies කිහිපයක් එකට එකට එකතු වී ලබාදෙන වලාකුළු පරිගණක)
+	
+
+
+[Slide 6] (1) Public Cloud 
+			(පොදුවේ පරිහරණය කරන වලාකුළු පරිගණක)
+
+	
+	*  පොදුවේ පරිහරණය කරන වලාකුළු පරිගණක කියන්නේ, AWS, Azure වගේ, සේවාවන් විසින්, විශාල පිරිසකගේ පරිහණයට ලබා දෙන පරිගණක වේ.
+
+
+
+	මේ ක්‍රමයේ විශේෂ ලක්ෂණ
+		- හැමෝම, Infrastructures, Share කරගෙන භාවිතා කරනවා.
+		- Use කරන ප්‍රමාණයට ගෙවන්න පුළුවන්
+		- පස්සේ, Scale එක වැඩි කරගන්න පුළුවන්
+		- Infastructure ගැන, Cloud සේවාව සපයන ආයතනය විසින් වගකියනවා
+		- අන්තර්ජාලය හරහා ඕනෑම තැනක ඉඳන් Access කරන්න පුළුවන්.
+
+
+
+
+
+[Slide 7]
+
+	* Public Cloud පරිගණකයක් මිලදී ගත්තොත්, අපිට ලැබෙන සේවා
+
+			- IaaS - Infrastructure as a Service (අතත්‍ය යටිතලපහසුකම් සේවාව)       ලෙස ලැබෙන දේවල්
+					+ Virtual Machine එකක්
+					+ Cloud Storage එකක්
+					+ Network එකක්
+
+			- Paas (Platform As A Service) ලෙස ලැබෙන දේවල්
+					+ Application Platform එකක්
+					+ Database එකක්
+
+
+			- Saas (Software As A Service) ලෙස ලැබෙන දේවල් 
+					+ Email එකක්
+					+ Office Tools
+
+
+
+	* Public Cloud පරිගණක (පොදුවේ පරිහරණය කරන වලාකුළු පරිගණක) වල භාවිත
+			- Website හා mobile app වගේ දේවල් host කරන්න
+			- AI හා Machine Learning models train කරන්න
+			- E Learning Platforms සඳහා
+			- ඇතැම් Softwares, Test කිරීම සඳහා	 (Sofwtare එක Test කරන්න, Computer Specs මදි නම්, මේ ක්‍රමයට Testing සිදු කරනු ලැබේ)
+
+
+
+
+
+
+[Slide 8] 
+	වාසි	
+		* ආරම්භක වියදම අඩුයි
+		* Scale එක වැඩි කරන්න කරන්න ලේසියි
+		* ලෝකයේ ඕන තැනක ඉඳන් භාවිතා කරන්න පුළුවන්
+		* Cloud Service Provider විසින්, පරිගණකයේ Maintenance එක ගැන බලනවා
+
+
+	අවාසි
+		* Privacy එක අඩුයි
+		* Data Security එක අඩුයි
+		* Internet එක නැත්නම්, Cloud Computer එකට Connect වෙන්න බෑ
+
+
+
+
+	
+[Slide 9-21] Skipped
+
+	#මෙහෙම, වලාකුළු පරිගණක වර්ග ගැන එකින් එක, ගැන කතා කරන්න ගියොත් ලොකු වෙලාවක් යනවා සහ මතක හිටින්නෙත් නෑ, Content එක ලොකු වැඩි වෙන නිසා.
+	# මේ නිසා අපි කෙලින්ම, Slide 22ට මාරු වෙමු. අපි තනි, වගුවක් මඟින් වලාකුළු පරිගණක වර්ග ඔක්කොම ගැන කතා කරමු
+
+
+
+
+ලියන්න
+[Slide 22] වලාකුළු පරිගණක වර්ග සංසන්දනය කිරීම
+			(Cloud Deployment Models Comparison)
+
+	---"Comparison.pdf" Open කරගන්න
+
+
+
+
+
+
+
+
+[Slide 23]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Microservices and Cloud Computing   
+                                                            Lession 05
+                                                Introduction To Cloud Computing
+                                                (Could Computing ගැන හැඳින්වීම)                     
+                                                (වලාකුළු පරිගණකකරණය හැඳින්වීම)
+
+
+
+
+⚠️ Slide පිළිවෙල වෙනස් කර ඇත
+
+
+
+[Slide 2]   Why Learn Cloud Computing?
+            (ඇයි අපි මේ වලාකුළු පරිගණක ගැන ඉගෙන ගන්න ඕනේ?)
+
+    *   මේ ක්ෂේත්‍රයට ලොකු ඉල්ලුමක් පවතින නිසා
+    *   වැයවෙන පිරිවැය අඩු නිසා
+    *   ලෝකයේ ඕනම තැනක ඉඳන් වැඩ කරන්න පුළුවන් නිසා
+    *   ආපදාවක් ආවත්, දත්ත බේරා ගන්න පුළුවන් නිසා
+
+
+
+[Slide 3]   What is cloud computing ? 
+            මොකද්ද මේ Cloud Computing (වලාකුළු පරිගණකකරණය) කියන්නේ?
+
+
+    * Cloud Computing කියන්නේ, Internet එක හරහා, IT Resources, අවශ්‍ය වෙලාවට මිලදී ගන්න සහ, ඒවා භාවිතා කරන ප්‍රමාණයට අනුව මුදල් ගෙවීමට නිර්මාණය කර ඇති පද්ධතියකි.
+
+
+
+
+
+
+[Slide 4] Key Characteristics 
+         (වලාකුළු පරිගණකකරණයේ ප්‍රධාන ලක්ෂණ)
+
+
+
+    * ඕනෑම වෙලාවක භාවිතා කරන්න පුළුවන්
+    * ඕනෑම device එකකින් වැඩ කරන්න පුළුවන්
+    * සම්පත් බෙදාගන්න පුළුවන්
+    * Use කරන ප්‍රමාණයට ගෙවන්න පුළුවන්
+    * අතත්‍ය පරිගණක වල වැඩ කරන්න පුළුවන්.
+
+
+
+
+ලියාගන්න
+[Slide 5]   Cloud Deployment Models 
+            (වලාකුළු පරිගණක වර්ග)
+            
+            
+
+    (1) Public Cloud  (පොදුවේ පරිහරණය කරන වලාකුළු පරිගණක)
+    (2) Private Cloud  (පෞද්ගලික වලාකුළු පරිගණක)
+    (3) Hybrid Cloud  (පොදු හා පෞද්ගලික යන දෙකම මිශ්‍ර වී ඇති වලාකුළු පරිගණක)
+    (4) Multi-Cloud  (Cloud Companies කිහිපයක් එකට එකට එකතු වී ලබාදෙන වලාකුළු පරිගණක)
+    
+
+
+
+
+ලියාගන්න
+[Slide 22] වලාකුළු පරිගණක වර්ග සංසන්දනය කිරීම
+            (Cloud Deployment Models Comparison)
+
+    ---"Comparison.pdf" Open කරගන්න
+
+
+
+
+
+
+[Slide 23] වලාකුළු පරිගණකයක් (Cloud Computer) මිලදී ගත්විට, එය සමඟ ලැබෙන සේවාවන් (Services)
+            (Cloud Service Models)
+
+    * වලාකුළු පරිගණකයක් (Cloud Computer) මිලදී ගතහොත්, අපිට ඒ සමඟ සේවා (Services) 03ක් ලැබේ.
+            01) IaaS (Infrastructure as a Service)
+            02) PaaS (Platform as a Service)
+            03) SaaS (Software as a Service)                    #මේවාට සිංහල නම් යෝජනා කල නොහැක
+
+
+
+
+
+
+[Slide 24] 01) IaaS (Infrastructure as a Service)
+                    
+
+    * IaaS (Infrastructure as a Service) කියන්නේ, Cloud Computer එකක්(වලාකුළු පරිගණකයක්), Run වෙන්න අවශ්‍ය කරන, යටිතල පහසුකම් (Infrastructure), 
+      සපයන, Service එකක්.
+
+    * IaaS (Infrastructure as a Service) මඟින් ලබාදෙන යටිතල පහසුකම් :
+            - Virtual Machine එකක්  
+            - Storage Device එකක්   
+            - Network connection එකක්
+    
+
+    * මොනවද, Cloud Services ලබා දෙන ආයතනය විසින් කළමනාකරණය කරන දේවල්?
+            - Servers
+            - Data Centers
+            - Network උපාංග
+            - යටිතල පහසුකම්
+
+
+
+        
+
+
+
+                                    
+
+
+
+
+
+[Slide 24] 
+
+
+
+[Slide 38] Evolution of Cloud Computing
+            (Could Computing තාක්ෂණයේ පරිණාමය)
+
+    * Could Computing තාක්ෂණයේ පරිණාමය, අවධි 05ක් යටතේ සිදු වී ඇත
+
+
+    (1) පූර්ව Cloud Computing  යුගය
+        (Pre-Cloud Era)
+                - මේ කාලේදී, තමාගේම Servers භාවිතා කළා
+
+
+    (2) අතත්‍යකරණය ආරම්භ වූ යුගය
+        (Virtualization Era)
+                - මේ යුගයේදී, Vmware කියලා Technology එක හොයාගත්තා
+
+
+    (3) Cloud Computing ආරම්භ වුණ යුගය
+        (Birth of Cloud Computing)
+                - මේ යුගයේදී, Amazon Company එක, AWS කියන Platform එක හදනවා
+
+    
+    (4) Cloud Computing තාක්ෂණය, තව දුරටත් වර්ධනය වූ යුගය
+        (Growth Era) 
+                - මේ කාලේදී, Microsoft සහ Google වගේ ලොකු Companies Cloud Services දෙන්න පටන් අරන් තියෙනවා.
+
+
+    (5) Cloud Computing තාක්ෂනය භාවිතා වෙන වර්තමාන යුගය
+        (Modern Cloud)
+                - මේ යුගයේදී, Could Computing, නැතුවම බැරි දෙයක් බවට පත් වෙලා තියෙන්නේ.
+
+
+
+
+
+[Slide 39]  Could Computing ක්‍රමයේ වාසි
+            (Benefits of Cloud Computing)
+
+
+    * භාවිතා කරන ආකාරය අනුව, ගෙවන්න පුළුවන් වීම
+    * වේගවත්ව වැඩ කල හැකි වීම                   #Could Computer එකට හොඳ Performce එකක් තියෙන Machine එකක් තිබීම නිසා, වේගවත්ව වැඩ කල හැක
+    * ලෝකයේ ඕනෑම තැනක ඉඳන් Acess කල හැකි වීම
+    * ඕනෑම Device එකක් භාවිතා කරමින් වැඩ කල හැකි වීම
+    * ආරම්භක වියදම අඩුයි
+    * Scale එක වැඩි කරන්න කරන්න ලේසියි
+
+
+
+[Slide 40] Could Computing ක්‍රමයේ අවාසි
+            (Challenges of Cloud Computing)
+
+    * අන්තර්ජාලය නොමැතිව කිසිවක් සිදු කල නොහැකි වීම
+    * Privacy එක අඩු වීම
+    * Data Security එක අඩු වීම
+    * දැනුමක් අවශ්‍ය වීම
+
+
+
+
+
+[Slide 41] Could Computing තාක්ෂනය භාවිතා වෙන තැන්
+            (Use Cases of Cloud)
+
+    * Website හා mobile app වගේ දේවල් host කරන්න
+    * AI හා Machine Learning models train කරන්න
+    * E Learning Platforms සඳහා
+    * ඇතැම් Softwares, Test කිරීම සඳහා   (Sofwtare එක Test කරන්න, Computer Specs මදි නම්, මේ ක්‍රමයට Testing සිදු කරනු ලැබේ)
+    * රජය විසින් සේවා සපයන Applications Host කරන්න
+    * IoT Devices අන්තර්ජාලයට Connect කරන්න
+
+
+
+
+[Slide 42] Cloud තාක්ෂණයේ ඇති නවීන Features
+            (Modern Cloud)
+
+    
+    *   Cloud Computers කිහිපයක් එකවර භාවිතා කල හැකි වීම
+    *   AI පාදක, විශේෂාංග තිබීම
+    *   Cloud Computers වල, ආරක්ෂාව වැඩිදියුණු කර තිබීම
+
+
+
+
+
+
+[Slide 43] වලාකුළු පරිගණක තාක්ෂණයේ අනාගතය
+            (Future of Cloud)
+
+
+    * වලාකුළු පරිගණක, ක්වන්ටම් වලාකුළු පරිගණක, දක්වා දියුණු වෙයි කියා උපකල්පනය කල හැක.
+    * වලාකුළු පරිගණක වල, සියළුම ක්‍රියාවලි, ස්වයංක්‍රියව සිදු වෙයි කියා උපකල්පනය කල හැක.
+    * වලාකුළු පරිගණක වල, යටිතල පහසුකම්, AI මඟින් Handle කරයි කියා උපකල්පනය කල හැක
+    * Servers නැතුව Run වෙන, වලාකුළු පරිගණක පවා බිහි වෙයි කියා උපකල්පනය කල හැක
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microservices and Cloud Computing   
+                                                            Lession 05
+                                                Introduction To Cloud Computing
+                                                (Could Computing ගැන හැඳින්වීම)                     
+                                                (වලාකුළු පරිගණකකරණය හැඳින්වීම)
+
+
+
+
+⚠️ Slide පිළිවෙල වෙනස් කර ඇත
+
+
+
+[Slide 2]   Why Learn Cloud Computing?
+            (ඇයි අපි මේ වලාකුළු පරිගණක ගැන ඉගෙන ගන්න ඕනේ?)
+
+    *   මේ ක්ෂේත්‍රයට ලොකු ඉල්ලුමක් පවතින නිසා
+    *   වැයවෙන පිරිවැය අඩු නිසා
+    *   ලෝකයේ ඕනම තැනක ඉඳන් වැඩ කරන්න පුළුවන් නිසා
+    *   ආපදාවක් ආවත්, දත්ත බේරා ගන්න පුළුවන් නිසා
+
+
+
+[Slide 3]   What Is Cloud Computing ? 
+            මොකද්ද මේ Cloud Computing (වලාකුළු පරිගණකකරණය) කියන්නේ?
+
+
+    * Cloud Computing කියන්නේ, Internet එක හරහා, IT Resources, අවශ්‍ය වෙලාවට මිලදී ගන්න සහ, ඒවා භාවිතා කරන ප්‍රමාණයට අනුව මුදල් ගෙවීමට නිර්මාණය කර ඇති පද්ධතියකි.
+
+
+
+
+
+
+[Slide 4] Key Characteristics 
+         (වලාකුළු පරිගණකකරණයේ ප්‍රධාන ලක්ෂණ)
+
+
+
+    * ඕනෑම වෙලාවක භාවිතා කරන්න පුළුවන්
+    * ඕනෑම device එකකින් වැඩ කරන්න පුළුවන්
+    * සම්පත් බෙදාගන්න පුළුවන්
+    * Use කරන ප්‍රමාණයට ගෙවන්න පුළුවන්
+    * අතත්‍ය පරිගණක වල වැඩ කරන්න පුළුවන්.
+
+
+
+
+ලියාගන්න
+[Slide 5]   Cloud Deployment Models 
+            (වලාකුළු පරිගණක වර්ග)
+            
+            
+
+    (1) Public Cloud  (පොදුවේ පරිහරණය කරන වලාකුළු පරිගණක)
+    (2) Private Cloud  (පෞද්ගලික වලාකුළු පරිගණක)
+    (3) Hybrid Cloud  (පොදු හා පෞද්ගලික යන දෙකම මිශ්‍ර වී ඇති වලාකුළු පරිගණක)
+    (4) Multi-Cloud  (Cloud Companies කිහිපයක් එකට එකට එකතු වී ලබාදෙන වලාකුළු පරිගණක)
+    
+
+
+
+
+ලියාගන්න
+[Slide 22] වලාකුළු පරිගණක වර්ග සංසන්දනය කිරීම
+            (Cloud Deployment Models Comparison)
+
+    ---"Comparison.pdf" Open කරගන්න
+
+
+
+
+
+
+[Slide 23] වලාකුළු පරිගණකයක් (Cloud Computer) මිලදී ගත්විට, එය සමඟ ලැබෙන සේවාවන් (Services)
+            (Cloud Service Models)
+
+    * වලාකුළු පරිගණකයක් (Cloud Computer) මිලදී ගතහොත්, අපිට ඒ සමඟ සේවා (Services) 03ක් ලැබේ.
+            01) IaaS (Infrastructure as a Service)
+            02) PaaS (Platform as a Service)
+            03) SaaS (Software as a Service)                    #මේවාට සිංහල නම් යෝජනා කල නොහැක
+
+
+
+
+
+
+[Slide 24] 01) IaaS (Infrastructure as a Service)
+                   (යටිතල පහසුකම්, සේවාවක් විදිහට, ලබා දීම)     
+            
+    * IaaS (Infrastructure as a Service) කියන්නේ, වලාකුළු පරිගණකයක්, ක්‍රියාත්මක වෙන්න, අවශ්‍ය වෙන, යටිතල පහසුකම් (Infrastructure), 
+      සපයන, සේවාවට.
+
+    * මොනවද, IaaS (Infrastructure as a Service) මඟින් ලබාදෙන යටිතල පහසුකම්?
+            - Virtual Machine එකක්  ලබාදෙනවා
+            - Storage Device එකක්   ලබාදෙනවා
+            - Network connection එකක්ලබාදෙනවා
+    
+
+    * මොනවද, Cloud සේවා සපයන, Platforms විසින් (Azure, AWS), සිදු කරන දේවල්?
+            - Servers නඩත්තු කරයි
+            - Data Centers නඩත්තු කරයි
+            - Network උපාංග නඩත්තු කරයි
+            - යටිතල පහසුකම් සැපයීම සිදු කරයි
+
+
+
+    * මොනවද, වලාකුළු පරිගණකයක, පරිශීලකයන් විසින් කළමනාකරනය කරන්නේ?
+            - Operating System එක
+            - Applications 
+            - දත්ත
+            - Security settings 
+
+
+
+    * Iaas (Infrastructure as a Service) හි ප්‍රධාන ලක්ෂණ
+            - ඕන වෙලාවක resources ලබාගන්න පුළුවන්
+            - scalability එක වැඩි කරන්න පුළුවන්
+            - භාවිතා කරන ප්‍රමාණය අනුව ගෙවන්න පුළුවන්
+
+
+
+    * IaaS (Infrastructure as a Service) සේවා ලබා දෙන Platforms
+            - AWS EC2 (Amazon Web Services Elastic Compute Cloud)
+            - Google Compute Engine
+            - Microsoft Azure Virtual Machines
+            - Oracle Cloud Infrastructure
+
+
+    * Iaas භාවිතා කිරීමේ වාසි
+            - Comuter Hardware මිලදී ගැනීම අවශ්‍ය නොවේ.
+            - Scale එක වැඩි කරගන්න පුළුවන්
+            - DevOps සඳහා භාවිතා කරනවා
+
+
+    * IaaS ක්‍රමයෙහි අවාසි
+            - Technical දැනුමක් අවශ්‍ය වීම
+            - OS එක හා Security එක පිලිබඳ අපිටම බලාගැනීමට සිදු වීම
+            - 
+        
+
+
+
+[Slide 27]  laaS vs On-Premise
+            IaaS ක්‍රමය සහ, ආයතන වල තමාගේම Servers භාවිතා කරන ක්‍රමය
+
+
+        IaaS                                                On Premise
+    (Infrastructure as a Service)                        (ආයතය )
+
+* භාවිතා කරන ප්‍රමාණයට ගෙවන්න පුළුවන්               * මුලික වියදම වැඩිය
+* Scale එක වැඩි කරන්න පුළුවන්                         * Scale එක වැඩි කරන්න වෙන්නේ නෑ
+* වේගවත්                                              * මන්දගාමියි
+* Cloud Provider විසින්, Hardware බලාගනී                * Company එක විසින් Hardware බලාගනී
+
+
+
+                                    
+
+
+
+
+
+[Slide 24] 
+
+
+
+[Slide 38] Evolution of Cloud Computing
+            (Could Computing තාක්ෂණයේ පරිණාමය)
+
+    * Could Computing තාක්ෂණයේ පරිණාමය, අවධි 05ක් යටතේ සිදු වී ඇත
+
+
+    (1) පූර්ව Cloud Computing  යුගය
+        (Pre-Cloud Era)
+                - මේ කාලේදී, තමාගේම Servers භාවිතා කළා
+
+
+    (2) අතත්‍යකරණය ආරම්භ වූ යුගය
+        (Virtualization Era)
+                - මේ යුගයේදී, Vmware කියලා Technology එක හොයාගත්තා
+
+
+    (3) Cloud Computing ආරම්භ වුණ යුගය
+        (Birth of Cloud Computing)
+                - මේ යුගයේදී, Amazon Company එක, AWS කියන Platform එක හදනවා
+
+    
+    (4) Cloud Computing තාක්ෂණය, තව දුරටත් වර්ධනය වූ යුගය
+        (Growth Era) 
+                - මේ කාලේදී, Microsoft සහ Google වගේ ලොකු Companies Cloud Services දෙන්න පටන් අරන් තියෙනවා.
+
+
+    (5) Cloud Computing තාක්ෂනය භාවිතා වෙන වර්තමාන යුගය
+        (Modern Cloud)
+                - මේ යුගයේදී, Could Computing, නැතුවම බැරි දෙයක් බවට පත් වෙලා තියෙන්නේ.
+
+
+
+
+
+[Slide 39]  Could Computing ක්‍රමයේ වාසි
+            (Benefits of Cloud Computing)
+
+
+    * භාවිතා කරන ආකාරය අනුව, ගෙවන්න පුළුවන් වීම
+    * වේගවත්ව වැඩ කල හැකි වීම                   #Could Computer එකට හොඳ Performce එකක් තියෙන Machine එකක් තිබීම නිසා, වේගවත්ව වැඩ කල හැක
+    * ලෝකයේ ඕනෑම තැනක ඉඳන් Acess කල හැකි වීම
+    * ඕනෑම Device එකක් භාවිතා කරමින් වැඩ කල හැකි වීම
+    * ආරම්භක වියදම අඩුයි
+    * Scale එක වැඩි කරන්න කරන්න ලේසියි
+
+
+
+[Slide 40] Could Computing ක්‍රමයේ අවාසි
+            (Challenges of Cloud Computing)
+
+    * අන්තර්ජාලය නොමැතිව කිසිවක් සිදු කල නොහැකි වීම
+    * Privacy එක අඩු වීම
+    * Data Security එක අඩු වීම
+    * දැනුමක් අවශ්‍ය වීම
+
+
+
+
+
+[Slide 41] Could Computing තාක්ෂනය භාවිතා වෙන තැන්
+            (Use Cases of Cloud)
+
+    * Website හා mobile app වගේ දේවල් host කරන්න
+    * AI හා Machine Learning models train කරන්න
+    * E Learning Platforms සඳහා
+    * ඇතැම් Softwares, Test කිරීම සඳහා   (Software එක Test කරන්න, Computer Specs මදි නම්, මේ ක්‍රමයට Testing සිදු කරනු ලැබේ)
+    * රජය විසින් සේවා සපයන Applications Host කරන්න
+    * IoT Devices අන්තර්ජාලයට Connect කරන්න
+
+
+
+
+[Slide 42] Cloud තාක්ෂණයේ ඇති නවීන Features
+            (Modern Cloud)
+
+    
+    *   Cloud Computers කිහිපයක් එකවර භාවිතා කල හැකි වීම
+    *   AI පාදක, විශේෂාංග තිබීම
+    *   Cloud Computers වල, ආරක්ෂාව වැඩිදියුණු කර තිබීම
+
+
+
+
+
+
+[Slide 43] වලාකුළු පරිගණක තාක්ෂණයේ අනාගතය
+            (Future of Cloud)
+
+
+    * වලාකුළු පරිගණක, ක්වන්ටම් වලාකුළු පරිගණක, දක්වා දියුණු වෙයි කියා උපකල්පනය කල හැක.
+    * වලාකුළු පරිගණක වල, සියළුම ක්‍රියාවලි, ස්වයංක්‍රියව සිදු වෙයි කියා උපකල්පනය කල හැක.
+    * වලාකුළු පරිගණක වල, යටිතල පහසුකම්, AI මඟින් Handle කරයි කියා උපකල්පනය කල හැක
+    * Servers නැතුව Run වෙන, වලාකුළු පරිගණක පවා බිහි වෙයි කියා උපකල්පනය කල හැක
+
+
+
+
+
+
