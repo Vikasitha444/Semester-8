@@ -1,0 +1,345 @@
+		Progress Notepad
+
+
+																	w1		w2		w3
+Research Methods & Technical Writing  [0/5]				
+Computer Security					  [7/7]								[OK]	[OK]	[OK]	[DONE]
+Software Quality Assurance			  [6/10]							[OK]
+Mobile Application Development		  [1/x]		
+System Administration				  [6/7]								[OK]	[OK]	
+Software Deployment & Evolution		  [7/7]								[OK]	[OK]	[OK]	[DONE]
+		- Lession 1 : Introduction Part 01 	[OK] 
+		- Lession 2 : Introduction Part 02 	[OK]
+		- Lession 3 : Agile	(AI)		   	[OK]
+		- Lession 4 : System Release		[OK]
+		- Lession 5 : Development and..		[OK]
+		- Lession 6 : Forward engineering  	[OK]
+		- Lession 7 : Legacy systems 		[OK]
+Data Mining & Warehousing 			  
+Digital Control System				  [6/8]
+
+
+
+තව දවස් 6යි
+
+
+
+SQA LOI.m4v [ok]
+SQA L02mkv	[ok]
+SQA L03.mkv [ok]
+SQA L04.mkv [ok]
+SQA L05.mkv [ok] - Dec 21, 2024
+
+
+SQA L06 	[ok] - Dec 28, 2024
+		https://drive.google.com/file/d/1AmPxsTzhOz3uZZ-gYVcCE_PGzqbS3MaE/view?usp=drive_link
+
+SQA L07 		-  Jan 04, 2025
+		https://drive.google.com/file/d/1AmPxsTzhOz3uZZ-gYVcCE_PGzqbS3MaE/view?usp=drive_link
+
+
+SQA L08  -  Jan 11, 2025 Automation Testing
+		https://drive.google.com/file/d/1WbkGAux7SvD9GvCwZhltAlsocHCzbRr_/view?usp=drive_link
+
+SQA L09 	-	Jan 18, 2025
+	https://fotsjpac-my.sharepoint.com/:v:/r/personal/ict21848_fot_sjp_ac_lk/Documents/SQA%20Video/SQA%20L09.mkv?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=PoPEBW
+
+SQA L010
+
+
+❤️
+
+
+
+
+
+
+
+[First Page]
+KD
+මේක කියවලා, මේ වගේම ලස්සන NOte එකක් ගහලා දෙන්න. 
+
+මේක DMW ගැන මොනවත්ම නොදන්නා කෙනෙක් කියෙව්වත් තේරුම් ගන්න පුළුවන් වෙන විදිහට ලියන්න වගේම විභාගෙට definition ලියන්න පුළුවන් වෙන විදිහට ලියන්න. දන්නවනේ නිතර භාවිතා වන ඉංග්‍රීසි වචන ආයේ පරිවර්තනය කරන්න යන්න එපා!
+
+
+
+
+KD
+
+මේ Note එක ඉංග්‍රීසි පැත්තට බර කරලා වැඩියි. සුද්දෙක් ඉංග්‍රීසි කතා කරනවා වගේ නෙවේ, මට ඕනේ, සාමාන්‍ය විදිහට ලියපු Note එකක්. අනික මාතෘකාවට යටින් වරහන් ඇතුලේ ඒ මාතෘකාවේ සිංහල තේරුම ලියන්න. ඔයා මම Photo එකේ දුන්න දේවල් විතරක් දාන්න. වෙන කිසි දෙයක් දාන්න එපා
+
+
+අලුත් මාතෘකාවක් පටන් ගද්දි ඒ මාතෘකාව ගැන හඳුන්වා දෙන්න. මේක බලන්නේ මොනවත් දන්නේ නැති අයනේ
+
+ෆොටෝ එකේ තියෙන කිසිම කරුණක් අඩු වෙන්න නම් බෑ. 
+
+
+මට HTML සහ CSS වලින් ලස්සනම ලස්සන බලන්න හිතෙන Note එකක් විදිහට දෙන්න
+
+
+
+අම්මේ මේ මොනාද මේ ලියලා තියෙන්නේ. තේරෙන්නේ නෑ කිසිම දෙයක්. ඕන කෙනෙක්ට තේරෙන විදිහට ඕනේ
+
+
+
+On Testing
+	
+ෆොටෝ එකේ තියෙන කිසිම කරුණක් අඩු වෙන්න නම් බෑ. කිසිම කරුණක් Sumarize කරන්නත් බෑ. සම්පුර්ණ Note එකම මට ඕනේ
+
+
+
+
+[Beaking Page]
+
+On Testing
+{1}
+මේක කියවලා, මේ වගේම ලස්සන NOte එකක් ගහලා දෙන්න. 
+මේක DMW ගැන මොනවත්ම නොදන්නා කෙනෙක් කියෙව්වත් තේරුම් ගන්න පුළුවන් වෙන විදිහට ලියන්න වගේම විභාගෙට definition ලියන්න පුළුවන් වෙන විදිහට ලියන්න. දන්නවනේ නිතර භාවිතා වන ඉංග්‍රීසි වචන ආයේ පරිවර්තනය කරන්න යන්න එපා!
+
+--මේක කලින් Note එකක දෙවෙනි කොටස. පලවෙනි කොටස තමා මම ඔයාට PDF එකක් වගේ දාලා තියෙන්නේ ඒ නිසා ඔයා මේ ටික මේ තියෙන විදිහටම පරිවර්තනය කරන්න
+
+{2}
+මේ Note එක ඉංග්‍රීසි පැත්තට බර කරලා වැඩියි. සුද්දෙක් ඉංග්‍රීසි කතා කරනවා වගේ නෙවේ, මට ඕනේ, සාමාන්‍ය විදිහට ලියපු Note එකක්. අනික මාතෘකාවට යටින් වරහන් ඇතුලේ ඒ මාතෘකාවේ සිංහල තේරුම ලියන්න. ඔයා මම Photo එකේ දුන්න දේවල් විතරක් දාන්න. වෙන කිසි දෙයක් දාන්න එපා
+
+
+අලුත් මාතෘකාවක් පටන් ගද්දි ඒ මාතෘකාව ගැන හඳුන්වා දෙන්න. මේක බලන්නේ මොනවත් දන්නේ නැති අයනේ
+
+ෆොටෝ එකේ තියෙන කිසිම කරුණක් අඩු වෙන්න නම් බෑ. 
+
+
+මට HTML සහ CSS වලින් ලස්සනම ලස්සන බලන්න හිතෙන Note එකක් විදිහට දෙන්න
+
+
+
+
+
+
+
+Lesssion 03 එකේ ගණන් Parts
+
+01)	Data Cleaing
+		Noize Data
+			How to Handle Noze data
+				- Binning							[OK]
+	
+
+02) Data Integration
+		Handling Rednduncy in Data Integration
+			- Chi squre 							[OK]
+			- Person Collection 					[ගණන් හදන්න නෑ]
+			- Covariance Analysis 					[OK]
+
+
+03) Data Reduction	
+		Diamentionally Reduction						
+			- Wavelet Decomposition
+			- Haar Wavelet Coefficients
+
+
+
+
+
+												Data Preproceing
+													|
+							------------------------------------------------------------------------------------------
+							|						|							|								|		
+						Data Cleaning			Integration				Data Reducition						Transformation
+													|
+					(i) Mising Data 			------------				(i) Diamentionaliy Reduction
+												|			|					a. Haar Wavelet Transformation
+					(ii) Noize Data 			|			|
+						a. Bining 			 Chi 		Covariance
+						b. Regretion		 Squre 	    		    		(ii) Numerosity Reduction
+						c. clustering											a. Regretion
+																				b. Clustering
+																				c. Sampling
+
+																			(iii) Compretion
+
+
+
+
+
+
+
+
+				දත්ත සමානතාව හා අසමානතාව මැනීම
+							|
+			------------------------------------------------------------------------------------------------------
+			|						|							|						| 					|
+	නාමික දත්ත වල			ද්විමය දත්ත වල		    සංඛ්‍යාත්මක දත්ත වල   රටාවකට ඇති    			සියලුම දත්ත
+	අසමානතාවය බැලීම		අසමානතාවය බැලීම		අසමානතාවය බැලීම 		දත්ත වල අසමානතාව		වල අසමානතාව
+		|							|						| 				බැලීම 						බැලීම
+		|					Binary Distances				|					
+		|													|											Eg: Cosine
+Proximity Measure 										Minakoveki 				Ordinal Distance	Similatiry			
+for Nominal Attributes									Distance
+															|
+														---------
+														|   |	|
+														E   M 	S
+
+
+
+
+			Fourier Transform															Wavelet Transform
+	සරල රටා සහිත සංඥා සඳහා ගැලපේ								සංකීර්ණ රටා සහිත සංඥා සඳහා ගැලපේ	
+	මුළු සංඥාවම එකවර විශ්ලේෂණය කරයි 							සිග්නල් කුඩා කොටස් වලට කඩා විශ්ලේෂණය කරයි
+	Noize වැඩි 														Noize අඩුයි
+	සංඛ්‍යාතය පිලිබඳ විස්තර ලබා දෙයි								සංඛ්‍යාතය හා කාලය යන විස්තර දෙකම ලබාදෙයි 
+	එකම resolution එකක් භාවිතා කරයි						 		වෙනස් වෙනස් resolution භාවිතා කරයි
+	
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+					|--------											-------	|
+					|	x හා y අගයන් සියල්ලම, පමණක්, ලියැවී ඇති වාර ගණන	|	x 100
+ Support Count =	|-----------------------------------						|
+ 					|	වගුවේ ඇති සම්පුර්ණ තීරු ගණන 							|
+ 					|----												---------
+
+
+ 																				-1
+ 						|----											-------	|
+ 						|	x හා y අගයන් සියල්ලම, පමණක්, අඩංගු තීරු ගණන	|			
+ Confidence Count = 	|-------------------------------------------			|	x 100
+ 						|	එම තීරු වල පමණක්, y අඩංගු වන වාර ගණන 		|
+ 						|---											---------
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------මේවා ලියන්න එපා+-----------------------------------------------
+
+					|--------							-------	|
+					|	x හා y අගයන් පිළිවලින් ලියැවී ඇති වාර ගණන්		|
+ Support Count =	|-----------------------------------		|
+ 					|	වගුවේ ඇති සම්පුර්ණ තීරු ගණන 			|
+ 					|----								---------
+
+
+ 		
+
+
+
+ 							Progress Notepad
+
+ 																	w1		w2		w3
+Entrepreneurship and Small Business   [3/13]						[OK] 	[OK]
+IT Governence					  	  [4/9]							[OK]				
+Emerging Technologies			  	  [1/3]							[OK]
+Microservices and Cloud Computing	  [5/10]
+Professional Practices in ICT		  [8/10]						[OK]
+
+
+	
+
+
+IT Gov Assignment 					
+
+
+
+Research							5%
+Intern 								50%
+
+
+
+
+Fact
+Software Project එකක් ඉක්මන් කරන්න ඕනේ නම්, පුළුවන් තරම් ඉක්මනට කරන්න
+පාඩමක් ඉක්මනට ඉවර කරන්න ඕනේ නම්, පුළුවන් තරම් හෙමින් කරන්න.
+ප්‍රශ්නෙක හිර වෙලා නම් ඉන්නේ, ඒ ප්‍රශ්නේ ඒ Chat එකේම අනිත් පැත්තට අහන්න. කාලය කන්නේ නැතුව!
+
+
+
+
+
+Fact
+	සරලයි == වෙලාව යනවා
+
+
+
+
+
+
+
+
+ESBM Exam Questions Progress
+									2026					2025  			2024			2023
+	Question 01   		    		Done					Done 			Done
+  	Question 02 					
+
+
+ESBM වල, ප්‍රධාන වශයෙන් Focus කරන්නේ, 2025/2024 ප්‍රශ්න වලට විතරයි
+
+ ESBM වල, ලියාගන්න ඕන Slides නම් කල පාඩම්
+ 				Lession 01 [Done]
+ 				
+ 				Lession 02 [Done]
+
+ 				Lession 04 [Done] 
+
+ 				Lession 06 [Done] [Temp]
+
+ 				Lession 08 [Done] [Temp]
+
+
+
+
+
+
+
+
+
+
+ESBM Lessions
+	01) Introduction														[OK]
+	02) Recognizing	Opportunities and Generating Ideas						[OK]
+	03) Feasibility Analysis 												[OK]
+	04) Industry and Competitor Analysis									
+	05) Mergers & Acquisitions												
+	06) Financing choices for startups
+	07) Business Process Reengineering & Other Growth concepts
+	08) Unique Marketing Issues
+	09) idea
+	10) Preparing the Proper Ethical and Legal Foundation
+	11) Small Business Managemer
+	12) Digital Business Opportunities & Technology Applications in Business Management
+	13) Mergers, Acquisitions, IPO
