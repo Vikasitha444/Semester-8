@@ -1,23 +1,32 @@
 												Microservices and Cloud Computing	
 															Lession 06
 												Process of Microservices Deployment
-											(Microservice එකක්, Deploy කිරීමේ ක්‍රියාවලිය)
-
-Deploy === Run කිරීම
-
-
-⚠️ Quality Has Been Droped of the note
+												
 
 
 
+[Slide ]  Microservices Deployment	
+			(Microservices නිර්මානය සහ මුදාහැරිම)
+
+		- Microservices Deployment කිරීම කියන්නේ, Microservies ක්‍රමය මඟින් නිර්මාණය කළ මෘදුකාංග (Software) පරිශීලකයින් වෙත ලබාදීමේ සම්පූර්ණ ක්‍රියාවලියයි. 
+
+		- මෙය Microservices 
+				සැකසීම, 
+				පරීක්ෂා කිරීම, 
+				ස්ථාපනය කිරීම සහ 
+				යාවත්කාලීන කිරීම යන 
+									සියලු අදියර ඇතුළත් වන අතර, පරිශීලකයින්ට නිසි ලෙස භාවිතා කළ හැකි ආකාරයට මෘදුකාංග ලබාදීම මෙහි මූලික අරමුණයි.
 
 
+ 
 
-[Slide 2] මොකද්ද මේ, Microservice එකක් Deploy කිරීම කියන්නේ?
+
+[Slide 2] මොකද්ද මේ "Microservice එකක් වැඩ කරන විදිහ" කියන්නේ?
 		  (What is Microservice Deployment?)
-		  
 
-	*  	Microservice එකක් Deploy කිරීම කියන්නේ, Microservice එකක්, ධාවනය කිරීමේ ක්‍රියාවලියයි.
+
+
+	*  	Microservice එකක් Microservice එකක් වැඩ කරන විදිහ (Deploy) කිරීම කියන්නේ, Microservice එකක්, ධාවනය කිරීමේ ක්‍රියාවලියයි.
 	
 	* 	Monolitic පද්ධති වගේ, Microservice ක්‍රමයේදී, සම්පුර්ණ පද්ධතියම එකවර Run කරන්න අවශ්‍ය නෑ. ඒ වෙනුවට, Microservices වෙන වෙනම Run 		කරන්න පුළුවන්. එක Microservices එකක් Run කිරීම නිසා, තව Microservice එකකට බලපෑමක් සිදු වන්නේ නෑ.
 
@@ -27,7 +36,12 @@ Deploy === Run කිරීම
 
 
 
-[Slide 3] Microservice එකක් Deploy කිරීම සඳහා, අනුගමනය කල යුතු පියවර
+
+
+
+
+
+[Slide 3] Microservice එකක්, "වැඩ කරන තත්වයට පත් කිරීම" සඳහා අනුගමනය කරන පියවර
 			(Key Activities in Microservice Deployment)
 
 	පියවර 01 :  Microservice එක Build කිරීම
@@ -40,7 +54,8 @@ Deploy === Run කිරීම
 
 
 
-[Slide 4]   Microservices ක්‍රියාත්මක කිරීමේදී සිදු වෙන විශේෂ ලක්ෂණ 
+
+[Slide 4] Microservices "වැඩ කරන තත්වයට පත් කිරීමේදී" සිදු වෙන විශේෂ ලක්ෂණ 
 			(Characteristics of Microservice Deployment)
 
 	
@@ -54,7 +69,7 @@ Deploy === Run කිරීම
 
 
 
-	ඇයි මේක වැදගත්?
+	ඇයි Microservices ක්‍රමය වැදගත්?
 		- ඉක්මනින් Deploy කරන්න පුළුවන් නිසා 
 		- පද්ධතිය වඩාත් Stable තත්වයේ පවත්වා ගත හැකි නිසා
 		- එක Microservice එකක් Fail වුනොත්, අනිත් Microservices වලට බලපෑමක් සිදු නොවෙන නිසා.
@@ -63,13 +78,358 @@ Deploy === Run කිරීම
 
 
 
-[Slide 5] 
+
+
+
+	* Microservices, "වැඩ කරන තත්වයට පත් කිරීමේදී", Microservices ස්වාධීනව Run කිරීම කරනවා, මේ නිසා, Microservice එකක්, Monolithic පද්ධති වලට වඩා වේගයෙන්, Develop කරගන්න පුළුවන් වෙනවා
 
 
 
 
 
- 
+
+
+
+[Slide 5] Microservices Architecture එක කොහොමද වැඩ කරන්නේ?
+		  සාමාන්‍යයෙන්, Microservices Architecture එක පවතින විදිහ
+		   (Typical Microservices Architecture)
+
+	
+
+ 	* සාමාන්‍ය Microservices Architecture එකක, අඩංගු වෙන ප්‍රධාන සංරචක 
+ 			---"" එක open කරගන්න
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -233,6 +593,74 @@ Microservice එකක් Export කරගැනීම
 
 [Slide 5] 
 %5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	Lession 06
+												Process of Microservices Deployment
+											(Microservice එකක්, Deploy කිරීමේ ක්‍රියාවලිය)
+
+Deploy === Run කිරීම
+
+
+⚠️ Quality Has Been Droped of the note
+
+
+
+
+
+
+[Slide 2] මොකද්ද මේ, Microservice එකක් Deploy කිරීම කියන්නේ?
+		  (What is Microservice Deployment?)
+		  
+
+	*  	Microservice එකක් Deploy කිරීම කියන්නේ, Microservice එකක්, ධාවනය කිරීමේ ක්‍රියාවලියයි.
+	
+	* 	Monolitic පද්ධති වගේ, Microservice ක්‍රමයේදී, සම්පුර්ණ පද්ධතියම එකවර Run කරන්න අවශ්‍ය නෑ. ඒ වෙනුවට, Microservices වෙන වෙනම Run 		කරන්න පුළුවන්. එක Microservices එකක් Run කිරීම නිසා, තව Microservice එකකට බලපෑමක් සිදු වන්නේ නෑ.
+
+
+		---Lab Sessions වලදී, වෙන වෙනම, Microservices Run කරපු විදිහ මතක් කරගන්න
+
+
+
+
+[Slide 3] Microservice එකක් Deploy කිරීම සඳහා, අනුගමනය කල යුතු පියවර
+			(Key Activities in Microservice Deployment)
+
+	පියවර 01 :  Microservice එක Build කිරීම
+	පියවර 02 :  Microservice එක Deploy කිරීමට, අවශ්‍ය පරිසරය නිර්මාණය කර ගැනීම
+	පියවර 03 :  Microservice එක Deploy කිරීම (Run කිරීම).
+	පියවර 04 :  Microservice එක, Monitor කිරීම සහ Maintain කිරීම
+
+
+
+
+
+
+[Slide 4]   Microservices ක්‍රියාත්මක කිරීමේදී සිදු වෙන විශේෂ ලක්ෂණ 
+			(Characteristics of Microservice Deployment)
+
+	
+
+	01) Microservices වෙන වෙනම Run කිරීම (Deploy කිරීම) සිදු කල හැකි වීම
+			උදා:- order-service එක Update වෙද්දී, එමඟින්, user-service එකට බලපෑමක් නොවේ.
+
+	02) ස්වාධීනව Maintain කල හැකි වීම
+			උදා:- payment-service එක, සහ, notification-service එක, නිර්මාණය කිරීම සඳහා, කණ්ඩායම් දෙකක් වෙන වෙනම පත් කිරීම.
+
+
+
+
+	ඇයි මේක වැදගත්?
+		- ඉක්මනින් Deploy කරන්න පුළුවන් නිසා 
+		- පද්ධතිය වඩාත් Stable තත්වයේ පවත්වා ගත හැකි නිසා
+		- එක Microservice එකක් Fail වුනොත්, අනිත් Microservices වලට බලපෑමක් සිදු නොවෙන නිසා.
+
+
+
+
+
+[Slide 5] 
+
+
+
 %5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
