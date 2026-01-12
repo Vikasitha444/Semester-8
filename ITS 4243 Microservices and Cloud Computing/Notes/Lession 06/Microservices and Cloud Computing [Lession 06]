@@ -3,6 +3,14 @@
 												Process of Microservices Deployment
 												
 
+⚠ Review කලේ නෑ
+⚠ 19 - 21 දක්වා Slides වල Content එක ලිව්වේ නෑ
+⚠ කුප්පි දාන්න සුදුසු තත්වයේ නෑ
+
+
+
+---Lab 02 තිබ්බ, Spring Boot Practicle එක Simulate කරන ගමන් මේක කියලා දෙන්න
+
 
 
 [Slide ]  Microservices Deployment	
@@ -91,86 +99,305 @@
 
 
 [Slide 5] Microservices Architecture එක කොහොමද වැඩ කරන්නේ?
-		  සාමාන්‍යයෙන්, Microservices Architecture එක පවතින විදිහ
+		  සාමාන්‍යයෙන්, Microservices Architecture එක 
+		  සාමාන්‍ය, Microservices Architecture එක 
 		   (Typical Microservices Architecture)
 
 	
 
- 	* සාමාන්‍ය Microservices Architecture එකක, අඩංගු වෙන ප්‍රධාන සංරචක 
- 			---"" එක open කරගන්න
+ 	* අපි මුලින්ම බලමු, සාමාන්‍ය Microservices Architecture එකක, අඩංගු වෙන ප්‍රධාන සංරචක මොනවද කියලා?
+ 			---"tyipical.png" එක open කරගන්න
 
+ 				(1) Microservices
+ 				(2) Microservice එකකට අදාළ වූ Database එකක්
+ 				(3) Microservices අතර සන්නිවේදනයට භාවිතා කරන, ක්‍රමයක්
+ 		<red> 	(4) Microservice එක Run වෙන Port එකක්  </red>
 
 
 
 
 
+[Slide 6] 	Microservices Architecture එකේ වාසි
+			(Advantages of This Architecture)
 
 
+	* Development Team එකේ එකේ අයට, එකම වෙලාවේ, වෙනස් වෙනස් Microservices, develop කරන්න පුළුවන්.
 
+	* එක Microservice එකක තිබෙන ගැටළුවක් අනික් Microservice එඅක්ට බලපාන්නේ නෑ
 
+	* එක එක Microservice එකේ අවශ්‍යතාව අනුව, Microservice එක Scale කරන්න පුළුවන්
 
+	* System එක වෙනස්වෙන workload එකට, ඉක්මනින් Adopt කරගන්න පුළුවන
 
 
 
 
 
+[Slide 7] Microservice එකක්, "Local Computer එකක, Run කිරීම.
+			(Local Deployment of Microservices)
 
 
+	* Microservice එකක්, Local Computer එකක, Run කිරීම කියන්නේ, තමන්ගේ Computer එකේම, Microservices Run කිරීමයි. 
 
 
+	* ඇයි මේ ක්‍රමය භාවිතා කරන්න අවශ්‍ය?
+			- Microservices වල සිදු කරන, Development වැඩ වලට
+			- Microservices වල සිදු කරන, Testing වැඩ වලට
+			- Microservices වල සිදු කරන, Debugging වැඩ වලට
+			- Microservies පිළිබඳව ඉගෙන ගන්න
 
 
+	* මේ සඳහා අවශ්‍ය Tools
+			- IDE එකක් 
+				උදා:-  IntelliJ, Eclipse, VS Code 
 
+			- Code එක ලිවිම සඳහා අවශ්‍ය Programing Languages
+			
+			-  Docker 
 
 
 
 
+	#Microservice එකක්, "Local Computer එකක, Run කිරීම කියන්නේ, Microservices, පරිශීලකයාට මුදා හැරීමේ, පළමු පියවරයි. මේ ක්‍රමය නිසා, තමන්ගේ Computer එක තුල, ආරක්ෂිතව, Code එක develop සහ Test කිරීම් සිදු කරගන්න පුළුවන්.
 
 
+[Slide 8] Microservice එකක්, "Local Computer එකක, Run කිරීමේ පියවර.
+		  (Steps in Local Deployment)
+		
+		
+		01) Microservice එකේ Repo එක, Computer එකට, Clone කරගන්න
+		
+		02) "application.properties" කියන File එකේ, අවශ්‍ය වෙනස්කම් සිදු කරගන්න
+		02) "application.properties" කියන File එකේ, පවතින, Default Settings, අවශ්‍ය නම්, වෙනස් කරගන්න
+				උදා:- 	- Database එකේ නම
+						- Application එක Run විය යුතු Port එක
 
+							වගේ දේවල්
 
+				---Lab එකේදී, Spring Boot Framework එකේදී, මේක කරපු විදිහ මතක් කරගන්න
 
+		
 
+		03) අත්‍යාවශ්‍ය සේවා මුලින්ම Run කරන්න 
+				උදා:- 	Database Service එක
+						Server Service එක 
 
+						වගේ Services මුලින්ම Run කරන්න
 
 
 
+		04) ඉන්පසු, අනෙකුත් Microservices, Run කරන්න
 
+		
+		05) අවසාන වශයෙන්, Web Browser එකෙන් හෝ Postman කියන Tool එකෙන්, අදාළ Address එකේ, Microservice එක Run වෙනවද කියා 		තරවුරු කරගන්න
 
 
 
 
 
 
+[Slide 9] පින්තුරය පැහැදිලි කිරීම
+	
+	* මේ Code එකෙන් පෙන්වන්නේ, Spring Boot Application එකක්, Local Computer එකක, 8081 කියන Port එකේ, Run කරන විදිහ
 
 
 
 
+[Slide 10] Microservice එකක්, "Local Computer එකක, Run කිරීමේදී, අවධානය යොමු කරන්න ඕන, Settings (Configurations) මොනවද?
+		   (Configuration Management in Local Deployment)	 	 
+			
 
 
+	* Server එක Run වෙන Port එක
+	* Database එකේ URL එක
+	* අනිත් Microservies වල, Address
+	* Environment variables
 
+	ගැන සැලකිලිමත් වෙන්න ඕනේ.
 
 
+	පින්තුරය පැහැදිලි කිරීම
+		* මේක, Spring Boot කියන Framework එකෙ, Settings File එකක්.
+		
+		* මේකෙදි, Application එක, 8081 කියන Port එකේ Run වෙන්න සහ දී ඇති, URL එක ඔස්සේ, Database එකට Connenct වෙන ලෙස උපදෙස් දෙයි.
 
+	
 
 
 
+[Slide 11] Microservices කිහිපයක් "Local Computer එකක, Run කිරීමේදී මතු වෙන ගැටළු සහ ඒවාට විසඳුම්.
+		   (Running Multiple Microservices Locally Challenges and Solutions)
 
 
+ගැටළු
+	* එකම Port එකේ, Microservices කිහිපයක් Run වීම (Port conflicts)
+	* Memory Usage එක වැඩි වීම (High memory usage)
+	
 
+විසඳුම්
+	* සෑම Microservices එකකටම, වෙනස් Ports ලබා දෙන්න
+	* Docker භාවිතා කරන්න
 
 
 
 
 
+[Slide 12]  Microservice එකක්, Run කිරීමේදී, බහුලව දක්නට ලැබෙන ගැටළු
+			(What is Debugging in Microservices?)
 
+	* Server එක Start නොවීම
+	* API වල Erros තිබීම
+	* Database එකට Connect වීමේදී, ගැටළු මතු වීම
+	* Microservices වල අභ්‍යන්තර ගැටළු පැවතීම
 
 
 
+[Slide 13] Microservice එකක්, Run කිරීමේදී, මතු වුනු ගැටළු විසඳාගැනීමේ ක්‍රමවේද.
+			(Debugging Techniques)
 
+		01) Log සටහන් අධ්‍යනය කිරීමෙන් (Logs)
+			
+		02) Microservices අතර සම්බන්ධතාවය බිඳුණු තැන් හඳුනා ගැනීමෙන් (Breakpoints)
 
+		03) Postman හෝ Curl වැනි Tools භාවිතා කිරීමෙන් (Using Postman / Curl tools)
 
+		04) Microservice එකේ, තත්වය පරික්ෂා කිරීමෙන් (Health checks)
 
+
+	#අපි දැන් මේවා එකින් එක කතා කරමු
+
+
+[Slide 14] 01) Log සටහන් අධ්‍යනය කිරීමෙන් 
+				 (Logging in Microservices)
+
+
+	* Microservices එක්ක වැඩ කරද්දී, Log සටහන් අධ්‍යනය කිරීම (Logging) උදව් වෙන්නේ කොහොමද?
+	  	- Microservices අතර හුවමාරු වෙන පණිවිඩ නිර්ක්ෂණය කිරීමට
+	  	- Microservices වල සිදු වෙන, වැරදි අඩුපාඩු සොයාගැනීමට
+	  	
+
+
+	 * Log සටහන් වර්ග
+	 		01) INFO Loging 	: Microservices අතර හුවමාරු වෙන සාමාන්‍ය විස්තර සටහන් කරගනී
+	 									උදා:-  	- Server එක Start වුන වෙලාව 
+							
+			02) WARN Loging 	:  අනතුරු ඇඟවීම් සම්බධ විස්තර සටහන් කර ගනී
+										උදා:- 	 - Disk space running low වගේ පණිවිඩ
+
+			03) ERROR Loging 	:  Code එකේ සිදු වී ඇති Errors සටහන් කර ගනී
+										උදා:-  	- Failed to connect to database වගේ පණිවිඩ
+
+			04) DEBUG Loging  :  	Microserices නිර්මාණය කිරීමේදී, මතුවන ගැටළු නිරාකරණය කරන ආකාරය සටහන් කර ගනී
+										උදා:- 	- Database එකේ URL එක වැරදියි වගේ දේවල්
+			
+
+
+
+ 
+
+[Slide 15]  Microservices අතර, සිදු වෙන, අභ්‍යන්තර සන්නිවේදනයේදී, මතුවෙන ගැටළු සහ ඒවාට විසඳුම්.
+			(Debugging Inter-Service Communication)
+
+
+		ගැටළු
+			* Microservice එකට සම්බන්ධ වීම සඳහා වැරදි, URL එකක් භාවිතා කිරීම
+			* Microservices අක්‍රිය වී තිබීම 
+			
+			
+
+		විසඳුම්
+			* Microservice වල, Port Numbers, නිවැරදිද කියා කිහිප වරක් පරික්ෂා කරන්න
+			* Log සටහන් ලිවිමේ Feature එක, නිතරම  ක්‍රියාත්මක කරන්න
+			* Microservices, වෙන වෙනම, පරික්ෂා කර, Error එක හඳුනා ගන්න.
+
+
+
+
+
+[Slide 16] Microservice එකක් නඩත්තු කිරීම
+			(Maintenance of Microservices)
+
+	* Microservice එකක් නඩත්තු කිරීම කියන්නේ, Microservice එක, හොඳ තත්වයේ පවත්වා ගැනීමයි.
+
+
+
+	* Microservice එකක් හොඳ තත්වයේ පවත්වා ගන්නේ කොහොමද?
+		- Microservices අතර හුවමාරු වෙන Messages Monitor කිරීමෙන්
+
+
+
+
+
+[Slide 16] Microservice එකක් නඩත්තු කිරීම
+			(Maintenance of Microservices)
+
+	* Microservice එකක් නඩත්තු කරන්නේ කොහොමද?
+		- Microservices අතර හුවමාරු වෙන Messages Monitor කිරීමෙන්
+		- Microservices Update කිරීමෙන්
+		- Microservices වල ඇති වෙන, දෝෂ නිවැරදි කිරීමෙන්
+
+
+
+[Slide 17] Microservice එකක්, "Local Computer එකක, Run කරන විට, එම Microservice එක, Monitor කිරීමට භාවිතා කරන Tools.
+			(Monitoring in Local Deployment)
+
+	* Spring Boot Actuator
+	* Logs
+	* Simple dashboards
+
+
+
+
+
+[Sldie 18] 	Microservice එකක් Update කිරීමේ පියවර
+			(Updating a Microservice)
+
+	01) පළමුව, Microsevice එකේ, අවශ්‍ය වෙනස්කම් සිදු කරන්න.
+	02) දෙවනුව, සිදු කරපු වෙනස්කම, Local Computer එකක Test කරන්න
+	03) තෙවනුව, වෙනස්කම සිදු කරපු Microservices පමණක් Restart කරන්න
+	04) Update කළ Microservices, නිවැරදිව ක්‍රියාත්මක වේ දැයි බලන්න
+
+
+
+
+[Slide 19] Microservice එකක් නඩත්තු කිරීමේදී මතුවන ගැටළු සහ ඒවාට විසඳුම්
+			(Common Maintenance Challenges)
+
+ගැටළු
+	*  එක service එකක settings එකක් විදිහට තියෙනවා, තව එකක වෙනස් විදිහට තියෙනවා - මේකෙන් errors එනවා
+	Database Schema Changes - Database structure එක වෙනස් කරද්දී හැම service එකටම බලපානවා, synchronize කරන්න අමාරු වෙනවා
+	Increased Service Count - Services ගණන වැඩි වෙච්ච හැටියට manage කරන්න, monitor කරන්න, maintain කරන්න අමාරු වෙනවා
+
+
+විසඳුම්
+	*  Centralized Configuration - හැම configurations එකම එක central තැනකින් manage කරන්න (Spring Cloud Config වගේ)
+	* Proper Documentation - හොඳ documentation තියන්න - මොනවද කළේ, කොහොමද වැඩ කරන්නේ කියලා
+
+
+
+[Slide 20] Microservices නිර්මාණය කිරීමේදී අනුගමනය කළ යුතු, Best Practises
+			(Best Practices)
+
+		* Microservices වල, නීති වලින් කිහිපයක් මෙතනට දාන්න
+
+
+
+
+
+[Slide 21] Industry Level එකේදී, Microservice Project එකක්, Run කරන ආකාරය
+			(Industry Perspective)
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
