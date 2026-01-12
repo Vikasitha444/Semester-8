@@ -1,0 +1,472 @@
+											Microservices and Cloud Computing	
+													Lession 07
+										Advanced Topics in Microservices & Cloud Computing
+										(Microservices & Cloud Computing වල Advanced Topics)
+
+
+
+
+[Slide 1] 	
+			(Microservices Architecture Overview)
+
+	# Microservices & Cloud Computing වල Advanced Topics ගැන කතා කරන්න කලින්, මුලින්ම, Microservice Architecture එක පිළිබඳව දල අවධෝධයක් ලබාගනිමු (Microservices Architecture Overview).
+
+	#අපි ආයේ මතක් කරගමු, මොනවද, Microservice Architecture එකේ ලක්ෂණ කියලා.
+
+
+Microservice Architecture එකේ ලක්ෂණ:
+		*  Development Team එකේ එකේ අයට, එකම වෙලාවේ, වෙනස් වෙනස් Microservices, develop කරන්න පුළුවන්.
+
+		* එක Microservice එකක තිබෙන ගැටළුවක් අනික් Microservice එඅක්ට බලපාන්නේ නෑ
+
+		* එක එක Microservice එකේ අවශ්‍යතාව අනුව, Microservice එක Scale කරන්න පුළුවන්
+
+		* System එක වෙනස්වෙන workload එකට, ඉක්මනින් Adopt කරගන්න පුළුවන
+
+		* Development Team එකට, හැම Microservice එකක් සඳහාම, වඩාත්ම ගැලපෙන Technologies Stack එකක් භාවිතා කරන්න පුළුවන්
+					උදා:- 	Frontend: React, Angular
+							Backend: Node.js, Python, Java 
+							Database: MongoDB, MySQL
+							Cloud: AWS, Google Cloud 
+
+
+
+
+
+
+[Slide 3]  (01)  API Gateway එක
+		  	     (What is An API Gateway)
+
+	* User කෙනෙක් විසින්, Microservice එක වෙත, එවනු ලබන, Requests (පණිවිඩ) සියල්ලම ඇතුළු වන්නේ API Gateway එක හරහාය.
+	* API Gateway එක විසින්, පැමිණෙන Requests (පණිවිඩ), ගැලපෙන Microservice එක වෙත යොමු කරයි.
+	* API Gateway එක නිසා, Microservies Architecture එකේ, ආරක්ෂාව හා කාර්යක්ෂමතාව වැඩි වේ.
+
+
+
+
+
+[Slide 4] 	API Gateway එකක කාර්යයන්
+			(Gateway Responsibilities)
+
+	* ලැබෙන Requests (පණිවිඩ) නිවැරදි Microservice එක වෙත යොමු කිරීම
+	* Micoservices අතර, පණිවිඩ හුවමාරු කරගැනීමට පවතින තදබදය කළමනාකරණය කිරීම (Load Balancing)
+	* Microservice එකකට ලැබෙන Requst (පණිවිඩ) ප්‍රමාණය, පාලනය කළ කිරීම
+	* Log සටහන් තබා ගැනීම සහ Monitor කිරීම
+
+
+
+[Slide 4] මොකද්ද මේ, "Spring Cloud Gateway" එක කියන්නේ?
+		  (Spring Cloud Gateway)
+
+	* 	Spring Cloud Gateway එක කියන්නේ, Spring Boot කියන Java Framework එකේ, භාවිතා වෙන, API Gateway එක.
+
+		#මෙතැනදී, Cloud කියන වචනේ, ගැන හිතන්න එපා. ඒක නිකන්ම නමක් විතරයි. මේ නම දීලා තියෙන්නේ Java Company එකෙන්. 
+
+	* 	මේක, Spring Web Flux කියන Technology එක භාවිතා කරලා තමා හදලා තියෙන්නේ
+
+	* 	Spring Cloud Gateway එක, පණිවිඩ Filter කිරීම (Filters) හා පණිවිඩ ලැබීම සම්බන්ධයෙන් කොන්දේසි (predicates) පැනවීමට භාවිතා 		කරන්න 	පුළුවන්.
+
+	* <red> Spring Cloud Gateway කියන, API Gateway එක, Eureka (service discovery) සහ Config Server (settings) එක්ක 
+			හොඳට වැඩ කරනවා. </red>
+
+			#මේ මොකද්ද්ද කියලා තේරෙයි ඊළඟ Slide එක බැලුවම
+
+
+
+
+[Slide 5] 	මොකද්ද මේ, "Eureka (යුරේකා) Service Directory" එක කියන්නේ?
+			(WHAT IS Eureka SERVICE DISCOVERY?)
+
+	* 	"Eureka (යුරේකා) Service Directory" එක කියන්නේ, Microservices වලට, සන්නිවේදනය සඳහා උදව් කරන ක්‍රමවේදයක්. 
+
+	* 	මේකෙන්, Microservices වල, URLs සහ IP Address වගේ දේවල් ගබඩා කරගෙන තියාගෙන ඉන්නවා
+		
+	* 	මේක නිසා, Microservies අතර Commucate කරද්දී, Microservices වල, IP Address හා URLs වගේ දේවල්, Manuelly Code එකේ 
+		ලියන්න ඕන නෑ. Automaticlly, Microservice එක විසින්ම, Eureka (යුරේකා) Service Directory එකෙන්, ඒවා හොයාගන්නවා.
+
+	* Eureka (යුරේකා) Service Directory එක, Netfilx ආයතනය විසින් නිර්මාණය කරලා තියෙන්නේ
+
+ 
+
+
+
+[Slide 7] ඇයි මේ Service Directory එකක් අපිට අවශ්‍ය?
+	 	  (Why Service Discovery is Needed)
+
+	* 	මොකද, Microservices වෙන වෙනම තමා Run කරන්නේ. මේ නිසා, Microservices වල Ports සහ Address වගේ දේවල් නිතර වෙනස් 		වෙනවා. ඒ වගේම, තව Microservices, System එකට අලුතෙන් එකතු වෙනවා. 
+
+	* 	එනම්, මේ නිසා, Microservice එකක Address එක නිතරම වෙනස් වෙනවා. 
+	
+	* 	මේක, Microservice එකේ Code එකත් නිතර වෙනස් කරන්න වෙනවා. ඒ වැඩේ ගොඩක් කරදරයි
+
+	* 	මේකට විසඳුමක් විදිහට තමා අපි, Service Directory එකක් භාවිතා කරන්නේ. 
+
+
+
+
+
+
+[Slide 8] කොහොමද මේ Eureka (යුරේකා) කියන Service Directory එක වැඩ කරන්නේ?
+			(How Eureka Works)
+
+
+	* Eureka (යුරේකා) කියන Service Directory එක, ප්‍රධාන වශයෙන් කොටස් දෙකකින් යුක්ත වේ.
+			(1) Eureka Server එක
+				(Eureka Server)
+					* Microservice වල Address ගබඩා කර ඇත්තේ මෙහි වේ
+			
+
+			(2) Eureka Client ලා
+				(Eureka Clients)
+					* Eureka Server එකට Connect වී, Microserviecs වල, Ports හා IP Address ලබා ගන්නා Microservices වේ
+
+
+
+
+
+
+
+
+[Slide 9] 
+
+	01) Microservice එක Start කරන්න
+
+	02) එම Microservice එක, Eureka Server එකේ, ලියාපදිංච් කරන්න
+			- ලියාපදිංචි කිරීමෙන් සිදු වෙන්නේ, අදාළ Microservice එකේ, Address එක, Eureka Server එකේ ගබඩා වීමයි.
+
+
+	
+	ඉන්පසු, වෙනත් Microservice එකකට, තවත් Microservice එකක Address එක සොයා ගන්න අවශ්‍ය නම්, 
+		04) Eureka Server එක විසින්, ඒ මොහොතේ ලියාපදිංචි වෙලා ඉන්න, Microservices List එක දෙනවා.
+		05) මේ Requests සියල්ලම Load Balanced වෙලා තමා සිදු වෙන්නේ
+
+
+
+
+[Slide 10]  Eureka එකේ විශේෂාංග
+			(Key Features of Eureka)
+	* Services, Automaticlly Register වෙනවා
+	* Load එක balance කරනවා
+	* Errors වලට ඔරොත්තු දේ
+	* Server එකක් down උනත් වැඩ කරයි
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+-------------------------------------මේවා ලියන්න එපා ----------------------------------------------------------------------
+											Microservices and Cloud Computing	
+													Lession 07
+										Advanced Topics in Microservices & Cloud Computing
+										(Microservices & Cloud Computing වල Advanced Topics)
+
+
+
+
+[Slide 1] 	
+			(Microservices Architecture Overview)
+
+	# Microservices & Cloud Computing වල Advanced Topics ගැන කතා කරන්න කලින්, මුලින්ම, Microservice Architecture එක පිළිබඳව දල අවධෝධයක් ලබාගනිමු (Microservices Architecture Overview).
+
+	#අපි ආයේ මතක් කරගමු, මොනවද, Microservice Architecture එකේ ලක්ෂණ කියලා.
+
+
+Microservice Architecture එකේ ලක්ෂණ:
+		*  Development Team එකේ එකේ අයට, එකම වෙලාවේ, වෙනස් වෙනස් Microservices, develop කරන්න පුළුවන්.
+
+		* එක Microservice එකක තිබෙන ගැටළුවක් අනික් Microservice එඅක්ට බලපාන්නේ නෑ
+
+		* එක එක Microservice එකේ අවශ්‍යතාව අනුව, Microservice එක Scale කරන්න පුළුවන්
+
+		* System එක වෙනස්වෙන workload එකට, ඉක්මනින් Adopt කරගන්න පුළුවන
+
+		* Development Team එකට, හැම Microservice එකක් සඳහාම, වඩාත්ම ගැලපෙන Technologies Stack එකක් භාවිතා කරන්න පුළුවන්
+					උදා:- 	Frontend: React, Angular
+							Backend: Node.js, Python, Java 
+							Database: MongoDB, MySQL
+							Cloud: AWS, Google Cloud 
+
+
+
+
+
+
+[Slide 3]  (01)  API Gateway එක
+		  	     (What is An API Gateway)
+
+	* User කෙනෙක් විසින්, Microservice එක වෙත, එවනු ලබන, Requests (පණිවිඩ) සියල්ලම ඇතුළු වන්නේ API Gateway එක හරහාය.
+	* API Gateway එක විසින්, පැමිණෙන Requests (පණිවිඩ), ගැලපෙන Microservice එක වෙත යොමු කරයි.
+	* API Gateway එක නිසා, Microservies Architecture එකේ, ආරක්ෂාව හා කාර්යක්ෂමතාව වැඩි වේ.
+
+
+
+
+
+[Slide 4] 	API Gateway එකක කාර්යයන්
+			(Gateway Responsibilities)
+
+	* ලැබෙන Requests (පණිවිඩ) නිවැරදි Microservice එක වෙත යොමු කිරීම
+	* Micoservices අතර, පණිවිඩ හුවමාරු කරගැනීමට පවතින තදබදය කළමනාකරණය කිරීම (Load Balancing)
+	* Microservice එකකට ලැබෙන Requst (පණිවිඩ) ප්‍රමාණය, පාලනය කළ කිරීම
+	* Log සටහන් තබා ගැනීම සහ Monitor කිරීම
+
+
+
+[Slide 4] මොකද්ද මේ, "Spring Cloud Gateway" එක කියන්නේ?
+		  (Spring Cloud Gateway)
+
+	* 	Spring Cloud Gateway එක කියන්නේ, Spring Boot කියන Java Framework එකේ, භාවිතා වෙන, API Gateway එක.
+
+		#මෙතැනදී, Cloud කියන වචනේ, ගැන හිතන්න එපා. ඒක නිකන්ම නමක් විතරයි. මේ නම දීලා තියෙන්නේ Java Company එකෙන්. 
+
+	* 	මේක, Spring Web Flux කියන Technology එක භාවිතා කරලා තමා හදලා තියෙන්නේ
+
+	* 	Spring Cloud Gateway එක, පණිවිඩ Filter කිරීම (Filters) හා පණිවිඩ ලැබීම සම්බන්ධයෙන් කොන්දේසි (predicates) පැනවීමට භාවිතා 		කරන්න 	පුළුවන්.
+
+	* <red> Spring Cloud Gateway කියන, API Gateway එක, Eureka (service discovery) සහ Config Server (settings) එක්ක 
+			හොඳට වැඩ කරනවා. </red>
+
+			#මේ මොකද්ද්ද කියලා තේරෙයි ඊළඟ Slide එක බැලුවම
+
+
+
+
+[Slide 5] 	මොකද්ද මේ, "Eureka (යුරේකා) Service Directory" එක කියන්නේ?
+			(WHAT IS Eureka SERVICE DISCOVERY?)
+
+	* 	"Eureka (යුරේකා) Service Directory" එක කියන්නේ, Microservice Achitecture එකේ, Microservices වල, URLs සහ IP Address වගේ 		දේවල් ගබඩා කරලා තියෙන System එකක්. 
+
+	
+	* 	මේක නිසා, Microservies අතර Commucate කරද්දී, Microservices වල, IP Address හා URLs වගේ දේවල්, Manuelly Code එකේ ලියන්න ඕන  	නෑ. Automaticlly, Microservice එක විසින්ම, මේවා හොයාගන්නවා
+			
+
+
+
+	* 	"Eureka (යුරේකා) Service Directory" එක කියන්නේ, Microservices වලට, සන්නිවේදනය කරන්න උදව් කරන ක්‍රමවේදයක්. 
+
+	* මේකෙන්, Microservices වල, URLs සහ IP Address වගේ දේවල් ගබඩා කරගෙන තියාගෙන ඉන්නවා
+		
+	* 	මේක නිසා, Microservies අතර Commucate කරද්දී, Microservices වල, IP Address හා URLs වගේ දේවල්, Manuelly Code එකේ ලියන්න ඕන  	නෑ. Automaticlly, Microservice එක විසින්ම, මේවා හොයාගන්නවා
+
+
+
+

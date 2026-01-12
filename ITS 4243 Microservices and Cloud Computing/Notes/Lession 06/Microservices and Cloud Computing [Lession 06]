@@ -4,7 +4,6 @@
 												
 
 ⚠ Review කලේ නෑ
-⚠ 19 - 21 දක්වා Slides වල Content එක ලිව්වේ නෑ
 ⚠ කුප්පි දාන්න සුදුසු තත්වයේ නෑ
 
 
@@ -364,22 +363,32 @@
 			(Common Maintenance Challenges)
 
 ගැටළු
-	*  එක service එකක settings එකක් විදිහට තියෙනවා, තව එකක වෙනස් විදිහට තියෙනවා - මේකෙන් errors එනවා
-	Database Schema Changes - Database structure එක වෙනස් කරද්දී හැම service එකටම බලපානවා, synchronize කරන්න අමාරු වෙනවා
-	Increased Service Count - Services ගණන වැඩි වෙච්ච හැටියට manage කරන්න, monitor කරන්න, maintain කරන්න අමාරු වෙනවා
 
+	* Microservices ප්‍රමාණය වැඩි වෙන විට, ඒවා කළමනාකරණය කිරීම අපහසු වීම
+	* Database එකේ, Structure එක වෙනස් කළහොත්, සියලුම Microservies වලට එය බලපෑම
+	* එක Microservice එකක Settings එක විදිහකටත්, තව Microservice එකක Settings තව විදිහකටත් තිබීම
 
 විසඳුම්
-	*  Centralized Configuration - හැම configurations එකම එක central තැනකින් manage කරන්න (Spring Cloud Config වගේ)
-	* Proper Documentation - හොඳ documentation තියන්න - මොනවද කළේ, කොහොමද වැඩ කරන්නේ කියලා
+	* සියලුම Settings එක File එකක Configure කිරීම
+	* Microservice එකේ සියලු ක්‍රියාවලි Documentation කිරීම
 
 
 
 [Slide 20] Microservices නිර්මාණය කිරීමේදී අනුගමනය කළ යුතු, Best Practises
 			(Best Practices)
 
-		* Microservices වල, නීති වලින් කිහිපයක් මෙතනට දාන්න
 
+		*  එක Microservice එකක්, එක කාර්යයක් පමණක් කළ යුතුය
+			(Single Responsibility Principle {SRP})
+		
+		*  හැම Microservice එකක්ම, එකිනෙකා මත Depend නොවිය යුතුය.
+			(Loose Coupling)
+		
+		*  එක Microservice එකකට, තනියෙන් ස්වාධීනව වැඩ කරන්න පුළුවන් විදිහට Microservices නිර්මාණය කළ යුතුය.
+			(Service Autonomy)
+
+		*	හැම Microservice එකකටම, තමාගේම Database එකක් පැවතිය යුතුය.
+			(Database per Service)
 
 
 
@@ -387,6 +396,14 @@
 [Slide 21] Industry Level එකේදී, Microservice Project එකක්, Run කරන ආකාරය
 			(Industry Perspective)
 
+	* Industry Level එකේදී, Microservice Project එකක්, Run කරන ආකාරය
+		(1) පළමුව Local පරිගණකයක, Microservice Application එක, Run කරනු ලබයි
+		(2) ඉන්පසු එය, Development Server කියන, Server එකට යවනු ලබයි
+		(3) ඉන්පසු එය, Testing Server කියන, Server එකට එකට යවනු ලබයි
+		(4) අවසානයේ, Microservice Application එක, Live Server කියන, Server එකේ, Run කරනු ලබයි
+
+	* Deploy කිරීම්, Test කිරීම් CI/CD Pipelines භාවිතා කරයි.
+	* Containerization සඳහා, Docker සහ Kubernetes භාවිතා කරයි.
 
 
 

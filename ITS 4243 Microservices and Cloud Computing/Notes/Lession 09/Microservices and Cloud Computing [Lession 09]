@@ -1,0 +1,126 @@
+											Microservices and Cloud Computing	
+													Lession 09
+											Intercommunication Of Microservices
+										(Microservices අතර සිදුවන අභ්‍යන්තර සන්නිවේදනය)
+
+
+
+[Slide 2] 	Microservices අතර සන්නිවේදනය කිරීම සඳහා භාවිතා කරන ක්‍රම
+			(Communication ක්‍රමයs in Microservices)
+
+
+
+
+[Slide 3] 
+
+	පහත දැක්වෙන්නේ, Microservices අතර සන්නිවේදනය කිරීම සඳහා භාවිතා කරන ක්‍රමවේද  වේ.
+		<red>	1) 	Request-Response ක්‍රමය </red>
+		<red>	2) 	Publish-Subscribe ක්‍රමය </red>
+				3) 	Event Sourcing ක්‍රමය
+				4) 	CQRS (Command Query Responsibility Segregation) ක්‍රමය
+				5) 	Circuit Breaker ක්‍රමය
+				6) 	Saga ක්‍රමය
+		<red>	7) 	API Gateway ක්‍රමය </red>
+				8) 	Backend for Frontend (BFF) ක්‍රමය
+				9) 	Strangler ක්‍රමය
+				10)	Service Mesh ක්‍රමය
+
+
+
+
+[Slide 4]  (1) Request-Response ක්‍රමය 
+	
+	* Request-Response ක්‍රමය කියන්නේ, Microservices අතර, පණිවිඩ හුවමාරු කරගැනීමට බහුලව, භාවිතා කරන ක්‍රමයක් වේ. 
+	* මෙහිදී, Synchorouns ක්‍රමයට පණිවිඩ හුවමාරු කරගනී.
+	* මෙහිදී Request එකක් යවා, එම Request එකට, Reply එකක් ලැබුණු පසු, නැවත Request එකක් යවනු ලැබේ.
+
+
+[Slide ] 
+	* Request-Response ක්‍රමයේ ප්‍රධාන ලක්ෂණ
+		- Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) සිදු කරයි
+		- සන්නිවේදනය සිදු වන්නේ, Client හා Server එක අතර පමණි
+		- සාමාන්‍යයෙන්, HTTP Protocols භාවිතා කරයි
+		
+
+	* Request-Response ක්‍රමයේ වාසි
+		- සරලයි
+		- තේරුම් ගන්න පහසුයි
+		- REST හා gPRC ක්‍රමවේද භාවිතා කරලා පහසුවෙන් Implement කරන්න පුළුවන්
+		- Errors Handle කිරීම පහසුය
+		- Test කරන්න ලේසියි
+		
+
+	* Request-Response ක්‍රමයේ අවාසි
+		- එක Service එකකට, තව Service එකක් බැඳී පවතී (Tight coupling)
+		- Requests ගොඩක් යැවීමේදී, Slow වීම සිදු වේ
+
+
+	* Request-Response ක්‍රමය භාවිතා කළ යුතු තැන්
+		- කෙටි කාලයකින් Complete වෙන Tasks සඳහා
+		- User කෙනෙක් සමඟ ගැටෙන වෙන අවස්ථා සඳහා
+		- Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) අවශ්‍ය අවස්ථා සඳහා
+
+	* Request-Response ක්‍රමය භාවිතා නොකළ යුතු තැන්
+		- වැඩි කාලයක් ගත වෙන Tasks සඳහා
+		- Requests ගොඩක් යවන Tasks සඳහා 
+		- Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය) අවශ්‍ය අවස්ථා සඳහා
+
+
+	* Request–Response ක්‍රමයේදී භාවිතා කර ඇති තාක්ෂණයන්
+		- REST API
+		- gRPC
+		- GraphQL
+		- Feign Client / WebClient 
+
+		
+
+
+
+
+
+
+
+
+
+
+
+[Slide 11] API Gateway Pattern එක
+			(API Gateway ක්‍රමය)
+
+	#API Gateway එක කියන්නේ හරියට Router එකක් වගේ.
+
+	---	API Gateway ක්‍රමය කියන්නේ, හරියට දොරක් වගේ. දොර අරින්නේ නැතුව, කාමර වලට එන්න බෑ වගේ, API Gateway එක නැතුව, 			Microservices වලට පණිවිඩ යවන්න බෑ
+
+
+	---"API Gateway Pattern.png" එක Open කරගන්න
+
+	* User කෙනෙක් විසින්, Microservice එක වෙත, එවනු ලබන, Requests (පණිවිඩ) සියල්ලම ඇතුළු වන්නේ API Gateway එක හරහාය.
+	* API Gateway එක විසින්, පැමිණෙන Requests (පණිවිඩ), ගැලපෙන Microservice එක වෙත යොමු කරයි.
+	* API Gateway එක නිසා, Microservies Architecture එකේ, ආරක්ෂාව හා කාර්යක්ෂමතාව වැඩි වේ.
+
+
+
+	* ඇයි API Gateway එකක් අවශ්‍ය වෙන්නේ?
+			
+			- API Gateway එකක් නැති වුනොත් මොකද වෙන්නේ?
+				+ පරිශීලකයන්ට වෙන වෙනම Microservices පණිවිඩ යැවීමට සිදු වෙනවා
+				+ හැම, Microservice එකකම, Address එක දැන සිටිය යුතු වෙනවා
+				+ Network Traffics හට ගන්න පුළුවන්
+
+
+			- API Gateway එකක් තිබ්බොත් මොකද වෙන්නේ?
+				+ API Gateway එකේ Address එක භාවිතා කරලා, ඕනෑම Microservice එකකට, පණිවිඩ යවන්න පුළුවන්
+				+ Gateway එක විසින්, ස්වයංක්‍රියව, පණිවිඩය යොමු කළ යුතු Microservice එක හොයාගන්නවා
+				+ අඩු Request ප්‍රමාණයකින් පණිවිඩය යවන්න පුළුවන්
+				+ API Gateway එක නිසා, Microservies Architecture එකේ, ආරක්ෂාව හා කාර්යක්ෂමතාව වැඩි වේ.
+
+
+
+
+
+
+
+
+[Slide 12] 
+			(What an API Gateway Does)
+
