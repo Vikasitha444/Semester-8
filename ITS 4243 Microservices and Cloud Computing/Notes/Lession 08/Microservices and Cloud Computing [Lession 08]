@@ -304,6 +304,26 @@ Infastructure
 
 
 
+
+
+[Slide 21 - 22] Docker වල Arcitecture එක
+				(Docker Architecture)
+
+
+	Client : Docker Commands ලබා දෙන කෙනා
+	Docker Host : Docker Install කරලා තියෙන Computer එක
+	
+
+
+
+
+
+
+
+
+
+
+
 [Slide 25] බහුලව භාවිතා වෙන Docker Commands
 			(Common Docker Commands)
 

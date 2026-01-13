@@ -84,8 +84,7 @@
 
 
 
-[Slide 11] API Gateway Pattern එක
-			(API Gateway ක්‍රමය)
+[Slide 11] 03) 	API Gateway ක්‍රමය
 
 	#API Gateway එක කියන්නේ හරියට Router එකක් වගේ.
 
@@ -97,7 +96,7 @@
 	* User කෙනෙක් විසින්, Microservice එක වෙත, එවනු ලබන, Requests (පණිවිඩ) සියල්ලම ඇතුළු වන්නේ API Gateway එක හරහාය.
 	* API Gateway එක විසින්, පැමිණෙන Requests (පණිවිඩ), ගැලපෙන Microservice එක වෙත යොමු කරයි.
 	* API Gateway එක නිසා, Microservies Architecture එකේ, ආරක්ෂාව හා කාර්යක්ෂමතාව වැඩි වේ.
-
+	  #ඒ ඇයි කියලා ඉස්සරහට තේරෙනවා
 
 
 	* ඇයි API Gateway එකක් අවශ්‍ය වෙන්නේ?
@@ -121,6 +120,33 @@
 
 
 
-[Slide 12] 
+[Slide 12] API Gateway එකෙන් මොකද කරන්නේ?
 			(What an API Gateway Does)
 
+	01) ලැබෙන Request (පණිවිඩ), නිවැරදි Microservices වලට යොමු කිරීම
+		(Request Routing)
+
+	
+	02) විවිධ Microservices වලින් එන පණිවිඩ, එකට එකතු කර, තනි Message එකක් විදිහට යැවීම
+		(Aggregation)
+
+
+	03) Microservices අතර, පණිවුඩ හුවමාරු කිරීමේදී, ආරක්ෂක පියවරයන් අනුගමනය කිරීම
+		(Cross-Cutting Concerns)
+					උදා:- 	* Log සටහන් කිරීම
+							* Authentication කිරීම
+							* Authorization කිරීම
+							* Error handling කිරීම
+							* Monitoring කිරීම
+							* Security කිරීම
+							* Caching කිරීම
+
+
+	04) Microservies වල, Address, බාහිර වෙනත් Usersලා ගෙන් සැඟවීම
+		(Security) 
+
+
+
+
+
+[Slide 13] 
