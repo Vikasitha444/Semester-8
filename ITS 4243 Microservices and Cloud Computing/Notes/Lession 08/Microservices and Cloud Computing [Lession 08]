@@ -75,12 +75,7 @@ Infastructure
 		* Software එක Run වීමට අවශ්‍ය සියලුම, Files, Dependencies එකතු කර, "Container Image" කියන එක සාදන්න.
 
 
-	
-	
-	* Software එක Run කිරීමට අවශ්‍ය අවස්ථාවකදී, "Container Image" එක Run කරන්න.
-
-
-
+		#Container Image කියන්නේ මොකද්ද කියන එක පහලට යද්දී තේරෙයි.
 
 
 [Slide 6] 
@@ -254,6 +249,84 @@ Infastructure
 
 
 
+[Slide 20] මොකද්ද මේ Docker කියන්නේ?
+			(What is Docker?)
+
+	* Docker කියන්නේ, Containerization සඳහා ලෝකයේ බහුලව භාවිතා කරන, Open Souce Tool එක වේ.
+	* Docker නිසා, අපට, පරිගණකයේ Hardwares ගැන, වද වෙන්නේ නැතුව, Software එකක් Develop කරන්න පුළුවන්
+
+
+
+
+[Slide 21 - 22] Docker වල Arcitecture එක
+				(Docker Architecture)
+
+	#Docker Architecture එක දැනට අතාරින්න. මේක Slide 24 න් පස්සේ තමා තේරෙන්නේ
+
+
+
+[Slide 23]	Docker Image එකේ සහ Docker Container එකේ වෙනස
+			(Docker Image vs Docker Container)
+
+	* 	Docker Image හා Docker Container යන, Files දෙකම, නිර්මාණය කරනු ලබන්නේ,  Software එක Run වීමට අවශ්‍ය සියලුම, Files, 			Dependencies එකතු කර, තනි File එකක් සෑදීමටය. 
+		
+		#	මෙතැනදී කියන්නේ, 
+		#			- "Docker Image" කියන්නෙත්  Zip Files වලට,
+		#			- "Docker Container" කියන්නෙත් Zip File වලට,
+		#
+		#			එහෙනම් මොකද්ද මේ දෙකේ වෙනස.
+																			
+																		|
+	|------------------------------------------------------------------------------------------------------------------------------
+	|					Docker Image එක 								|				Docker Container එක
+	|------------------------------------------------------------------------------------------------------------------------------
+	|																	|
+	|		* Blueprint එකක් පමණි 									|		* Run කළ හැකි Application එකක් අඩංගු වේ
+	|		  (Application එකක් ලෙස මෙය Run කළ නොහැක)			|
+	|------------------------------------------------------------------------------------------------------------------------------
+	|		* Read only වේ 												|		* Excute කළ හැක
+	|------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+[Slide 24] අපේ පලවෙනි Docker Command එක
+			(Hands-on: First Container)
+	
+		' docker run hello-world '
+
+	
+	මේ Code එකෙන් වෙන්නේ මොකද්ද?
+		පියවර 01 : "hello-world" කියන, Docker Image එක (අපි කලින් කතා කරපු එක), Local Computer එකට Save වේ
+		පියවර 02 : Docker Image එකේ, ඇති Blue Print එක ඇසුරෙන්, Docker Container එක නිර්මාණය වේ (අපි කලින් කතා කරපු එක)
+		පියවර 03 : Docker Container එක Execute වී, Application එක Run වීම ඇරඹෙයි
+
+
+
+[Slide 25] බහුලව භාවිතා වෙන Docker Commands
+			(Common Docker Commands)
+
+	01) 'docker images' : Computer එකේ තිබෙන සියලුම, Docker Images දර්ශනය වේ
+	02) 'docker ps'		: දැනට වැඩ කරන, Containers පෙන්වයි
+	03) 'docker stop' 	: Containers Run වෙන එක නවත්වයි
+	04) 'docker rm' 	: Stop කළ Container එක ඉවත් කරයි
+
+
+
+
+
+[Slide 26] Containerization වල වාසි
+			(Benefits of Containerization) 
+
+	- අවශ්‍ය සියලුම, Files, dependencies වගේ දේවල්, තනි bundle එකක් විදිහට සකසයි
+	- ඕනෑම OS එකක Code එක Run කළ හැක
+	- Lightweight වේ
+	- වේගවත් වේ
+	- අවශ්‍ය සියලුම, Files, dependencies වගේ දේවල්, තනි bundle එකක් විදිහට සකසයි
+	- ඕනෑම OS එකක Code එක Run කළ හැක
+	- Lightweight වේ
+	- වේගවත් වේ
 
 
 
@@ -284,27 +357,7 @@ Infastructure
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
