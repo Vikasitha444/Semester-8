@@ -1,14 +1,15 @@
 											Microservices and Cloud Computing	
 													Lession 08
-										Introduction to Containerization
+											Introduction to Containerization
 										
+
 
 
 [Slide 2] 	මොකද්ද මේ Containerization කියන්නේ?
 			(What is Containerization?)
 
-	* Containerization කියන්නේ, Code එකක්, Run වීම සඳහා, අවශ්‍ය සියලුම, Files, Dependencies සහ වගේ දේවල්, Extract කරගෙන, එය, තනි bundle එකක් විදිහට සකසන තාක්ෂණයකි.
-		#උදාහරණයක් විදිහට මේක, File Zip කරන තාක්ෂනය වගේ.
+	* Containerization කියන්නේ, Code එකක්, Run වීම සඳහා, අවශ්‍ය සියලුම, Files, Dependencies සහ වගේ දේවල්, Extract කරගෙන, එය, තනි Bundle එකක් විදිහට සකසන තාක්ෂණයකි.
+		#උදාහරණයක් විදිහට මේක, Files, Zip කරන තාක්ෂනය වගේ.
 			
 
 
@@ -18,8 +19,6 @@
 			- Lightweight වේ
 			- වේගවත් වේ
 
-
-	* ඒ වගේම, Containerization තාක්ෂණයට පුළුවන්, Oparating System එකේ, Software එක Run වීමට අවශ්‍ය, Kernal කොටස පමණක් Extract කරගන්න. මේ නිසා Machine එකේ, Resouces අවශ්‍ය වන්නේ, Sofwtare එක Run කිරීමට පමණයි.
 
 
 
@@ -57,7 +56,7 @@ Infastructure
 
 
 	03) Developer Friendly නිසා
-			- Machine එකෙන්, Machine එකට, Dependecies, Install කරන්න අවශ්‍ය නැති නිසා, Developer ගේ කාලය ඉතිරි වේ
+			- Machine එකෙන්, Machine එකට, Dependecies, Install කරන්න අවශ්‍ය නැති නිසා, ඒ නිසා, Developer ගේ කාලය ඉතිරි වේ
 
 
 
@@ -75,14 +74,19 @@ Infastructure
 		* Software එක Run වීමට අවශ්‍ය සියලුම, Files, Dependencies එකතු කර, "Container Image" කියන එක සාදන්න.
 
 
-		#Container Image කියන්නේ මොකද්ද කියන එක පහලට යද්දී තේරෙයි.
+		#මේක තේරුනේ නැත්නම් වැඩිය හිතන්න එපා, Container Image එකක්, කියන්නේ මොකද්ද කියන එක, පහලට යද්දී තේරෙයි.
 
 
+
+වැදගත් නෑ
 [Slide 6] 
 	
-	* Containerization තාක්ෂනය, Layers 04ක් මත රඳා පවතී.
+	#මෙතන අපි කලින් කතා කරපු කොටසක් නැවත Repert කරලා තියෙනවා.
+	#ඒ නිසා මේක අතාරින්න
 
+	* Containerization තාක්ෂනය, Layers 04ක් මත රඳා පවතී.	
 		---"doker.png" එක Open කරගන්න
+
 
 
 
@@ -94,6 +98,7 @@ Infastructure
 
 
 
+	#අපි දැන් යනවා අලුත්ම කොටසකට
 
 
 [Slide 8] Virtual Machines vs Containers
@@ -106,7 +111,7 @@ Infastructure
 	#අපි දැන් කතා කරමු මොකද්ද මේ Container එකක් කියන්නේ කියලා.
 
 	* 	Containerization කියන්නේ, Code එකක්, Run වීම සඳහා, අවශ්‍ය සියලුම, Files, Dependencies සහ වගේ දේවල්, Extract කරගෙන, 
-		එය, තනි Bundle එකක් විදිහට සකසන <red> තාක්ෂනනයයි. </red>
+		එය, තනි Bundle එකක් විදිහට සකසන <red> තාක්ෂණයයි. </red>
 			#උදාහරණයක් විදිහට මේක, Files Zip කරන <red> තාක්ෂනය වගේ </red>
 			
 	
@@ -124,7 +129,10 @@ Infastructure
 
 		* ඇත්ත පරිගණකයක් ලෙස වැඩ කරන, (මෘදුකාංගයක් ලෙසින් ඇති), අතත්‍ය පරිගණක වේ
 
-			---මෙතනට, (4) (5) (6) කියන පිටු වල Screenshorts දාන්න.
+			---"page 01.jpg" එක open කරගන්න
+			---"page 02.jpg" එක open කරගන්න
+			---"page 03.jpg" එක open කරගන්න
+
 
 
 
@@ -138,7 +146,7 @@ Infastructure
 ----------------------------------------------------------------------------------------------------------------
 	* Slow 													|		* Speed
 ----------------------------------------------------------------------------------------------------------------
-	* Not lightweight 										|		* Lightweight වේ
+	* lightweight නොවේ 									|		* Lightweight වේ
 ----------------------------------------------------------------------------------------------------------------
 	* වෙනම OS එකක් අවශ්‍ය වේ 							|		* වෙනම OS එකක් අවශ්‍ය නොවේ
 ----------------------------------------------------------------------------------------------------------------
@@ -240,6 +248,7 @@ Infastructure
 	(2) LXC (Linux Containers)
 			- මෙය Linux වල භාවිතා වෙන Containerization Tool එක වේ.
 
+
 	(4) CRI-O
 			- මෙය Kubernets වල භාවිතා කරන, Containerization Tool එක වේ.
 
@@ -298,7 +307,7 @@ Infastructure
 
 	
 	මේ Code එකෙන් වෙන්නේ මොකද්ද?
-		පියවර 01 : "hello-world" කියන, Docker Image එක (අපි කලින් කතා කරපු එක), Local Computer එකට Save වේ
+		පියවර 01 : "hello-world" කියන, Docker Image එක (අපි කලින් Slide එකේ කතා කළා මේක ගැන), Local Computer එකට Save වේ
 		පියවර 02 : Docker Image එකේ, ඇති Blue Print එක ඇසුරෙන්, Docker Container එක නිර්මාණය වේ (අපි කලින් කතා කරපු එක)
 		පියවර 03 : Docker Container එක Execute වී, Application එක Run වීම ඇරඹෙයි
 
@@ -310,15 +319,8 @@ Infastructure
 				(Docker Architecture)
 
 
-	Client : Docker Commands ලබා දෙන කෙනා
-	Docker Host : Docker Install කරලා තියෙන Computer එක
+	---"architecture.png" එක Open කරගන්න
 	
-
-
-
-
-
-
 
 
 
@@ -347,6 +349,11 @@ Infastructure
 	- ඕනෑම OS එකක Code එක Run කළ හැක
 	- Lightweight වේ
 	- වේගවත් වේ
+
+
+
+
+
 
 
 
@@ -1324,6 +1331,714 @@ Infastructure
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+											Microservices and Cloud Computing	
+													Lession 08
+											Introduction to Containerization
+										
 
+
+
+[Slide 2] 	මොකද්ද මේ Containerization කියන්නේ?
+			(What is Containerization?)
+
+	* Containerization කියන්නේ, Code එකක්, Run වීම සඳහා, අවශ්‍ය සියලුම, Files, Dependencies සහ වගේ දේවල්, Extract කරගෙන, එය, තනි Bundle එකක් විදිහට සකසන තාක්ෂණයකි.
+		#උදාහරණයක් විදිහට මේක, Files, Zip කරන තාක්ෂනය වගේ.
+			
+
+
+	* Contatinerization හී වාසි	
+			- අවශ්‍ය සියලුම, Files, dependencies වගේ දේවල්, තනි bundle එකක් විදිහට සකසයි
+			- ඕනෑම OS එකක Code එක Run කළ හැක
+			- Lightweight වේ
+			- වේගවත් වේ
+
+
+	* ඒ වගේම, Containerization තාක්ෂණයට පුළුවන්, Oparating System එකේ, Software එක Run වීමට අවශ්‍ය, Kernal කොටස පමණක් Extract කරගන්න. මේ නිසා Machine එකේ, Resouces අවශ්‍ය වන්නේ, Sofwtare එක Run කිරීමට පමණයි.
+
+
+
+
+[Slide 3] පින්තුරය පැහැදිලි කිරීම
+
+
+---"doker.png" එක Open කරගන්න
+
+
+Apps
+	- මේවා, Applications වේ. මේවාට එකිනෙකට අනන්‍ය වූ, Files හා Dependencies පවතී
+
+Docker(Contatinerization)
+	- Apps වලට අවශ්‍ය, Files හා Dependencies Manage කරයි
+
+HOST OS 
+	- පරිගණකයේ Install කර ඇති, Oparating System එක වේ
+
+Infastructure
+	- පරිගණකයේ පවතින භෞතික උපාංග වේ
+
+
+
+
+[Slide 4] 	ඇයි අපිට මේ Containerization කියන තාක්ෂනය ඕනේ?
+			(Why Do We Need Containerization?)
+
+	
+	01) Portability එක නිසා
+			- ඕනෑම Machine එකක, Software එක Run කරන්න පුළුවන්
+
+	02) Resource නාස්ති වෙන්නේ නැති නිසා
+			- Containerization තාක්ෂනය නිසා, Machine එකේ, Resouces අවශ්‍ය වන්නේ, Sofwtare එක Run කිරීමට පමණයි
+
+
+	03) Developer Friendly නිසා
+			- Machine එකෙන්, Machine එකට, Dependecies, Install කරන්න අවශ්‍ය නැති නිසා, Developer ගේ කාලය ඉතිරි වේ
+
+
+
+
+
+[Slide 5] කොහොමද මේ Containerization තාක්ෂනය වැඩ කරන්නේ?
+			(How does containerization work?)
+
+	
+	පියවර 01 
+		* අවශ්‍ය Software එක නිර්මාණය කරගන්න
+
+
+	පියවර 02
+		* Software එක Run වීමට අවශ්‍ය සියලුම, Files, Dependencies එකතු කර, "Container Image" කියන එක සාදන්න.
+
+
+		#Container Image කියන්නේ මොකද්ද කියන එක පහලට යද්දී තේරෙයි.
+
+
+[Slide 6] 
+	
+	* Containerization තාක්ෂනය, Layers 04ක් මත රඳා පවතී.
+
+		---"doker.png" එක Open කරගන්න
+
+
+
+වැදගත් නෑ
+[Slide 7] පින්තුරය පැහැදිලි කිරීම
+		
+	* මේකේ පෙන්වන්නේ, අපි හදපු, "Container Image" එක, කොහොමද, Amazon AWS වල භාවිතා කරන්නේ කියලා
+
+
+
+
+
+
+[Slide 8] Virtual Machines vs Containers
+		  (අතත්‍ය පරිගණක සහ Containers)
+
+
+මොනවද මේ Containers කියන්නේ?
+
+	#මෙච්චර වෙලා අපි කතා කලේ, Containerization කියන Technology එක ගැන
+	#අපි දැන් කතා කරමු මොකද්ද මේ Container එකක් කියන්නේ කියලා.
+
+	* 	Containerization කියන්නේ, Code එකක්, Run වීම සඳහා, අවශ්‍ය සියලුම, Files, Dependencies සහ වගේ දේවල්, Extract කරගෙන, 
+		එය, තනි Bundle එකක් විදිහට සකසන <red> තාක්ෂනනයයි. </red>
+			#උදාහරණයක් විදිහට මේක, Files Zip කරන <red> තාක්ෂනය වගේ </red>
+			
+	
+	* 	Containers කියන්නේ, ඒ තාක්ෂනය භාවිතා කර, නිර්මාණය කළ File එකකි.
+			#උදාහරණයක් විදිහට, Container කියන්නේ, <red> Zip File එකක් <red> වගේ.
+
+	
+	* Containers Manage කරන්න Kubernates වගේ Tools භාවිතා කරනවා.
+
+
+
+
+[Slide 9] 
+	මොනවද මේ Virual Machine කියන්නේ?
+
+		* ඇත්ත පරිගණකයක් ලෙස වැඩ කරන, (මෘදුකාංගයක් ලෙසින් ඇති), අතත්‍ය පරිගණක වේ
+
+			---මෙතනට, (4) (5) (6) කියන පිටු වල Screenshorts දාන්න.
+
+
+
+
+
+[Slide 10-13]  Virtual Machines vs Containers
+		  	   (අතත්‍ය පරිගණක සහ Containers අතර වෙනස)
+
+----------------------------------------------------------------------------------------------------------------
+		  	  Virtual Machines 								|			Containers
+----------------------------------------------------------------------------------------------------------------
+	* Slow 													|		* Speed
+----------------------------------------------------------------------------------------------------------------
+	* Not lightweight 										|		* Lightweight වේ
+----------------------------------------------------------------------------------------------------------------
+	* වෙනම OS එකක් අවශ්‍ය වේ 							|		* වෙනම OS එකක් අවශ්‍ය නොවේ
+----------------------------------------------------------------------------------------------------------------
+	* වැඩි සම්පත් ප්‍රමානයක් භාවිතා කරයි 					|		* අඩු සම්පත් ප්‍රමාණයක් භාවිතා කරයි
+----------------------------------------------------------------------------------------------------------------
+	* Potability එක අඩුය 									|		* Potability එක වැඩිය 	
+----------------------------------------------------------------------------------------------------------------
+															|
+	උදා:-  	- VM Ware										| 		උදා:- 	Docker 
+			- Virtual Box									| 				Kubernets
+----------------------------------------------------------------------------------------------------------------
+															
+
+
+
+
+
+[Slide 13]
+	# මෙතන තියෙන්නෙත්, කලින් Compare කරපු වගුවේ තියෙන කරුනුමයි. ඒ නිසා මේක Skip කරන්න
+
+
+
+
+[Slide 14] Containers සහ අතත්‍ය පරිගණක අතර සමානකම්
+			(Similarities between containers and virtual machines)
+
+	* මේ ක්‍රම දෙකම Potable වේ
+	* මේ ක්‍රම දෙකම Run වීමට,  Host OS එකක් අවශ්‍ය වේ
+
+
+
+	#අපි දැන් බලමු, Containers සහ virtual machines භාවිතා වෙන තැන්
+
+
+
+[Slide 15] Containers භාවිතා කරන අවස්ථා
+			(Use cases for containers)
+
+ 01) Microservice Architecture ක්‍රමයට, Software එකක් නිර්මාණය කරද්දී
+ 		- Microservice Architecure ක්‍රමයට, Software එකක් නිර්මාණය කරද්දී, Microservices වෙන වෙනම, නිර්මාණය කරයි. ඒ නිසා, මේ හැම Microservice එකකටම, වෙනම File එකක් නිර්මාණය වේ. මේ හැම File එකක්ම (Microservice එකක්ම) Software එක Run වීම සඳහා අත්‍යාවශ්‍ය වේ. එම නිසා, Container එකක් සාදා, සියලුම Files හා dependencies Manage කිරීම අනිවාර්ය වේ
+
+
+ 02) Websites Develop කරද්දී
+ 		- වෙබ් අඩවියක් නිර්මාණය කරද්දී, වෙබ් අඩවියේ විවිධ Resouces එකම තැනක තියෙද්දී, එය නිර්මාණය කිරීම පහසු වේ. එම නිසා, Web අඩවි නිර්මාණය කරද්දී, Containers භාවිතා කිරීම අනිවාර්ය වේ
+
+
+ 03)  Cloud Computing වලදී
+ 		- Cloud Computing වලදී, Containers භාවිතා කළහොත්, Containers මඟින්, අනවශ්‍ය Dependencies ඉවත් කරලා, Software එකේ Size එක අවශ්‍ය පරිදි Scale කරගත හැකි නිසා, අඩු මුදලක් ඒ සඳහා ගෙවිය හැක.
+		
+
+
+
+
+[Slide 16] Virtual Machies භාවිතා වෙන අවස්ථා
+			(Use cases for virtual machines)
+
+
+	01) Software වල Testing කටයුතු කිරීම සඳහා
+			- Virtual Machies එක Software එක Test කරන අවස්ථාවේදී, Crash වුවද, එය ගැටළුවක් නොවෙන නිසා, Software වල Testing කටයුතු සඳහා, Virtual Machies භාවිතා කරයි
+
+
+	02) Backup Servers ලෙස 
+			- ප්‍රධාන Server එක Down වුනහොත්, එය යාතා තත්වයට පත් කරන තුරු, Virtual Machies, Backup Servers ලෙස, භාවිතා කරයි
+
+
+	03) Local Computer එකේ, Perfrmance එක මදි වෙන අවස්ථා වලදී
+			- Local Computer එකේ Performence එක මදි නම්, එවන් අවස්ථා වලදී, Virtual Machies භාවිතා කරයි.
+
+
+
+
+[Slide 17] Containers හා Virtual Machines යන දෙකම මොන වගේ අවස්තාවන් වලද භාවිතා කරන ඕනේ?
+
+	#මෙතන තියෙන්නේ, කලින් කතා කරපු කරුණු ටිකම වගුවකට දාලා
+
+
+[Slide 18]  Containers වර්ග
+			(Types of app containers)
+
+	* ප්‍රධාන වශයෙන්, Containers වර්ග 02ක් පවතී.
+			(1) Application Containers
+			(2) System Containers
+
+
+
+
+
+
+[Slide 19] ලෝකයේ වැඩියෙන්ම භාවිතා වෙන Containerization Engines
+			(Common Engines And Tools Types Of Containerized Applications)
+
+	(1) Docker
+			- Containerization සඳහා ලෝකයේ බහුලව භාවිතා කරන Tool එක වේ
+			  #හරියට WinRAR වගේ
+
+			- මෙය Deveopersලා අතර බොහෝ ජනප්‍රිය Tool එකක් වේ
+
+
+	(2) LXC (Linux Containers)
+			- මෙය Linux වල භාවිතා වෙන Containerization Tool එක වේ.
+
+	(4) CRI-O
+			- මෙය Kubernets වල භාවිතා කරන, Containerization Tool එක වේ.
+
+
+
+
+
+
+
+[Slide 20] මොකද්ද මේ Docker කියන්නේ?
+			(What is Docker?)
+
+	* Docker කියන්නේ, Containerization සඳහා ලෝකයේ බහුලව භාවිතා කරන, Open Souce Tool එක වේ.
+	* Docker නිසා, අපට, පරිගණකයේ Hardwares ගැන, වද වෙන්නේ නැතුව, Software එකක් Develop කරන්න පුළුවන්
+
+
+
+
+[Slide 21 - 22] Docker වල Arcitecture එක
+				(Docker Architecture)
+
+	#Docker Architecture එක දැනට අතාරින්න. මේක Slide 24 න් පස්සේ තමා තේරෙන්නේ
+
+
+
+[Slide 23]	Docker Image එකේ සහ Docker Container එකේ වෙනස
+			(Docker Image vs Docker Container)
+
+	* 	Docker Image හා Docker Container යන, Files දෙකම, නිර්මාණය කරනු ලබන්නේ,  Software එක Run වීමට අවශ්‍ය සියලුම, Files, 			Dependencies එකතු කර, තනි File එකක් සෑදීමටය. 
+		
+		#	මෙතැනදී කියන්නේ, 
+		#			- "Docker Image" කියන්නෙත්  Zip Files වලට,
+		#			- "Docker Container" කියන්නෙත් Zip File වලට,
+		#
+		#			එහෙනම් මොකද්ද මේ දෙකේ වෙනස.
+																			
+																		|
+	|------------------------------------------------------------------------------------------------------------------------------
+	|					Docker Image එක 								|				Docker Container එක
+	|------------------------------------------------------------------------------------------------------------------------------
+	|																	|
+	|		* Blueprint එකක් පමණි 									|		* Run කළ හැකි Application එකක් අඩංගු වේ
+	|		  (Application එකක් ලෙස මෙය Run කළ නොහැක)			|
+	|------------------------------------------------------------------------------------------------------------------------------
+	|		* Read only වේ 												|		* Excute කළ හැක
+	|------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+[Slide 24] අපේ පලවෙනි Docker Command එක
+			(Hands-on: First Container)
+	
+		' docker run hello-world '
+
+	
+	මේ Code එකෙන් වෙන්නේ මොකද්ද?
+		පියවර 01 : "hello-world" කියන, Docker Image එක (අපි කලින් කතා කරපු එක), Local Computer එකට Save වේ
+		පියවර 02 : Docker Image එකේ, ඇති Blue Print එක ඇසුරෙන්, Docker Container එක නිර්මාණය වේ (අපි කලින් කතා කරපු එක)
+		පියවර 03 : Docker Container එක Execute වී, Application එක Run වීම ඇරඹෙයි
+
+
+
+
+
+[Slide 21 - 22] Docker වල Arcitecture එක
+				(Docker Architecture)
+
+
+	Client : Docker Commands ලබා දෙන කෙනා
+	Docker Host : Docker Install කරලා තියෙන Computer එක
+	
+
+
+
+
+
+
+
+
+
+
+
+[Slide 25] බහුලව භාවිතා වෙන Docker Commands
+			(Common Docker Commands)
+
+	01) 'docker images' : Computer එකේ තිබෙන සියලුම, Docker Images දර්ශනය වේ
+	02) 'docker ps'		: දැනට වැඩ කරන, Containers පෙන්වයි
+	03) 'docker stop' 	: Containers Run වෙන එක නවත්වයි
+	04) 'docker rm' 	: Stop කළ Container එක ඉවත් කරයි
+
+
+
+
+
+[Slide 26] Containerization වල වාසි
+			(Benefits of Containerization) 
+
+	- අවශ්‍ය සියලුම, Files, dependencies වගේ දේවල්, තනි bundle එකක් විදිහට සකසයි
+	- ඕනෑම OS එකක Code එක Run කළ හැක
+	- Lightweight වේ
+	- වේගවත් වේ
+	- අවශ්‍ය සියලුම, Files, dependencies වගේ දේවල්, තනි bundle එකක් විදිහට සකසයි
+	- ඕනෑම OS එකක Code එක Run කළ හැක
+	- Lightweight වේ
+	- වේගවත් වේ
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Genius Version %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+											Microservices and Cloud Computing	
+													Lession 08
+											Introduction to Containerization
+										
+
+
+
+[Slide 2] 	මොකද්ද මේ Containerization කියන්නේ?
+			(What is Containerization?)
+
+	* Containerization කියන්නේ, Code එකක්, Run වීම සඳහා, අවශ්‍ය සියලුම, Files, Dependencies සහ වගේ දේවල්, Extract කරගෙන, එය, තනි Bundle එකක් විදිහට සකසන තාක්ෂණයකි.
+		#උදාහරණයක් විදිහට මේක, Files, Zip කරන තාක්ෂනය වගේ.
+			
+
+
+	* Contatinerization හී වාසි	
+			- අවශ්‍ය සියලුම, Files, dependencies වගේ දේවල්, තනි bundle එකක් විදිහට සකසයි
+			- ඕනෑම OS එකක Code එක Run කළ හැක
+			- Lightweight වේ
+			- වේගවත් වේ
+
+
+
+
+
+[Slide 3] පින්තුරය පැහැදිලි කිරීම
+
+
+---"doker.png" එක Open කරගන්න
+
+
+Apps
+	- මේවා, Applications වේ. මේවාට එකිනෙකට අනන්‍ය වූ, Files හා Dependencies පවතී
+
+Docker(Contatinerization)
+	- Apps වලට අවශ්‍ය, Files හා Dependencies Manage කරයි
+
+HOST OS 
+	- පරිගණකයේ Install කර ඇති, Oparating System එක වේ
+
+Infastructure
+	- පරිගණකයේ පවතින භෞතික උපාංග වේ
+
+
+
+
+[Slide 4] 	ඇයි අපිට මේ Containerization කියන තාක්ෂනය ඕනේ?
+			(Why Do We Need Containerization?)
+
+	
+	01) Portability එක නිසා
+			- ඕනෑම Machine එකක, Software එක Run කරන්න පුළුවන්
+
+	02) Resource නාස්ති වෙන්නේ නැති නිසා
+			- Containerization තාක්ෂනය නිසා, Machine එකේ, Resouces අවශ්‍ය වන්නේ, Sofwtare එක Run කිරීමට පමණයි
+
+
+	03) Developer Friendly නිසා
+			- Machine එකෙන්, Machine එකට, Dependecies, Install කරන්න අවශ්‍ය නැති නිසා, ඒ නිසා, Developer ගේ කාලය ඉතිරි වේ
+
+
+
+
+
+[Slide 5] කොහොමද මේ Containerization තාක්ෂනය වැඩ කරන්නේ?
+			(How does containerization work?)
+
+	
+	පියවර 01 
+		* අවශ්‍ය Software එක නිර්මාණය කරගන්න
+
+
+	පියවර 02
+		* Software එක Run වීමට අවශ්‍ය සියලුම, Files, Dependencies එකතු කර, "Container Image" කියන එක සාදන්න.
+
+
+		#මේක තේරුනේ නැත්නම් වැඩිය හිතන්න එපා, Container Image එකක්, කියන්නේ මොකද්ද කියන එක, පහලට යද්දී තේරෙයි.
+
+
+
+වැදගත් නෑ
+[Slide 6] 
+	
+	#මෙතන අපි කලින් කතා කරපු කොටසක් නැවත Repert කරලා තියෙනවා.
+	#ඒ නිසා මේක අතාරින්න
+
+	* Containerization තාක්ෂනය, Layers 04ක් මත රඳා පවතී.	
+		---"doker.png" එක Open කරගන්න
+
+
+
+
+වැදගත් නෑ
+[Slide 7] පින්තුරය පැහැදිලි කිරීම
+		
+	* මේකේ පෙන්වන්නේ, අපි හදපු, "Container Image" එක, කොහොමද, Amazon AWS වල භාවිතා කරන්නේ කියලා
+
+
+
+
+	#අපි දැන් යනවා අලුත්ම කොටසකට
+
+
+[Slide 8] Virtual Machines vs Containers
+		  (අතත්‍ය පරිගණක සහ Containers)
+
+
+මොනවද මේ Containers කියන්නේ?
+
+	#මෙච්චර වෙලා අපි කතා කලේ, Containerization කියන Technology එක ගැන
+	#අපි දැන් කතා කරමු මොකද්ද මේ Container එකක් කියන්නේ කියලා.
+
+	* 	Containerization කියන්නේ, Code එකක්, Run වීම සඳහා, අවශ්‍ය සියලුම, Files, Dependencies සහ වගේ දේවල්, Extract කරගෙන, 
+		එය, තනි Bundle එකක් විදිහට සකසන <red> තාක්ෂණයයි. </red>
+			#උදාහරණයක් විදිහට මේක, Files Zip කරන <red> තාක්ෂනය වගේ </red>
+			
+	
+	* 	Containers කියන්නේ, ඒ තාක්ෂනය භාවිතා කර, නිර්මාණය කළ File එකකි.
+			#උදාහරණයක් විදිහට, Container කියන්නේ, <red> Zip File එකක් <red> වගේ.
+
+			#ඇත්තටම මෙතන හැදෙන්නේ File එකක් නෙවේ. මෙතන වෙන්නේ Process එකක්. නමුත් දැනට, තේරුම් ගන්න ලේසි වෙන්න, මේක File
+			 එකක් කියලා හිතන්න. Slide 24ට ගියාම තේරෙනවා මේ මොකද්ද කියලා.
+			 
+	
+	* Containers Manage කරන්න Kubernates වගේ Tools භාවිතා කරනවා.
+
+
+
+
+[Slide 9] 
+	මොනවද මේ Virual Machine කියන්නේ?
+
+		* ඇත්ත පරිගණකයක් ලෙස වැඩ කරන, (මෘදුකාංගයක් ලෙසින් ඇති), අතත්‍ය පරිගණක වේ
+
+			---මෙතනට, (4) (5) (6) කියන පිටු වල Screenshorts දාන්න.
+
+
+
+
+
+[Slide 10-13]  Virtual Machines vs Containers
+		  	   (අතත්‍ය පරිගණක සහ Containers අතර වෙනස)
+
+----------------------------------------------------------------------------------------------------------------
+		  	  Virtual Machines 								|			Containers
+----------------------------------------------------------------------------------------------------------------
+	* Slow 													|		* Speed
+----------------------------------------------------------------------------------------------------------------
+	* Not lightweight 										|		* Lightweight වේ
+----------------------------------------------------------------------------------------------------------------
+	* වෙනම OS එකක් අවශ්‍ය වේ 							|		* වෙනම OS එකක් අවශ්‍ය නොවේ
+----------------------------------------------------------------------------------------------------------------
+	* වැඩි සම්පත් ප්‍රමානයක් භාවිතා කරයි 					|		* අඩු සම්පත් ප්‍රමාණයක් භාවිතා කරයි
+----------------------------------------------------------------------------------------------------------------
+	* Potability එක අඩුය 									|		* Potability එක වැඩිය 	
+----------------------------------------------------------------------------------------------------------------
+															|
+	උදා:-  	- VM Ware										| 		උදා:- 	Docker 
+			- Virtual Box									| 				Kubernets
+----------------------------------------------------------------------------------------------------------------
+															
+
+
+
+
+
+[Slide 13]
+	# මෙතන තියෙන්නෙත්, කලින් Compare කරපු වගුවේ තියෙන කරුනුමයි. ඒ නිසා මේක Skip කරන්න
+
+
+
+
+[Slide 14] Containers සහ අතත්‍ය පරිගණක අතර සමානකම්
+			(Similarities between containers and virtual machines)
+
+	* මේ ක්‍රම දෙකම Potable වේ
+	* මේ ක්‍රම දෙකම Run වීමට,  Host OS එකක් අවශ්‍ය වේ
+
+
+
+	#අපි දැන් බලමු, Containers සහ virtual machines භාවිතා වෙන තැන්
+
+
+
+[Slide 15] Containers භාවිතා කරන අවස්ථා
+			(Use cases for containers)
+
+ 01) Microservice Architecture ක්‍රමයට, Software එකක් නිර්මාණය කරද්දී
+ 		- Microservice Architecure ක්‍රමයට, Software එකක් නිර්මාණය කරද්දී, Microservices වෙන වෙනම, නිර්මාණය කරයි. ඒ නිසා, මේ හැම Microservice එකකටම, වෙනම File එකක් නිර්මාණය වේ. මේ හැම File එකක්ම (Microservice එකක්ම) Software එක Run වීම සඳහා අත්‍යාවශ්‍ය වේ. එම නිසා, Container එකක් සාදා, සියලුම Files හා dependencies Manage කිරීම අනිවාර්ය වේ
+
+
+ 02) Websites Develop කරද්දී
+ 		- වෙබ් අඩවියක් නිර්මාණය කරද්දී, වෙබ් අඩවියේ විවිධ Resouces එකම තැනක තියෙද්දී, එය නිර්මාණය කිරීම පහසු වේ. එම නිසා, Web අඩවි නිර්මාණය කරද්දී, Containers භාවිතා කිරීම අනිවාර්ය වේ
+
+
+ 03)  Cloud Computing වලදී
+ 		- Cloud Computing වලදී, Containers භාවිතා කළහොත්, Containers මඟින්, අනවශ්‍ය Dependencies ඉවත් කරලා, Software එකේ Size එක අවශ්‍ය පරිදි Scale කරගත හැකි නිසා, අඩු මුදලක් ඒ සඳහා ගෙවිය හැක.
+		
+
+
+
+
+[Slide 16] Virtual Machies භාවිතා වෙන අවස්ථා
+			(Use cases for virtual machines)
+
+
+	01) Software වල Testing කටයුතු කිරීම සඳහා
+			- Virtual Machies එක Software එක Test කරන අවස්ථාවේදී, Crash වුවද, එය ගැටළුවක් නොවෙන නිසා, Software වල Testing කටයුතු සඳහා, Virtual Machies භාවිතා කරයි
+
+
+	02) Backup Servers ලෙස 
+			- ප්‍රධාන Server එක Down වුනහොත්, එය යාතා තත්වයට පත් කරන තුරු, Virtual Machies, Backup Servers ලෙස, භාවිතා කරයි
+
+
+	03) Local Computer එකේ, Perfrmance එක මදි වෙන අවස්ථා වලදී
+			- Local Computer එකේ Performence එක මදි නම්, එවන් අවස්ථා වලදී, Virtual Machies භාවිතා කරයි.
+
+
+
+
+[Slide 17] Containers හා Virtual Machines යන දෙකම මොන වගේ අවස්තාවන් වලද භාවිතා කරන ඕනේ?
+
+	#මෙතන තියෙන්නේ, කලින් කතා කරපු කරුණු ටිකම වගුවකට දාලා
+
+
+[Slide 18]  Containers වර්ග
+			(Types of app containers)
+
+	* ප්‍රධාන වශයෙන්, Containers වර්ග 02ක් පවතී.
+			(1) Application Containers
+			(2) System Containers
+
+
+
+
+
+
+[Slide 19] ලෝකයේ වැඩියෙන්ම භාවිතා වෙන Containerization Engines
+			(Common Engines And Tools Types Of Containerized Applications)
+
+	(1) Docker
+			- Containerization සඳහා ලෝකයේ බහුලව භාවිතා කරන Tool එක වේ
+			  #හරියට WinRAR වගේ
+
+			- මෙය Deveopersලා අතර බොහෝ ජනප්‍රිය Tool එකක් වේ
+
+
+	(2) LXC (Linux Containers)
+			- මෙය Linux වල භාවිතා වෙන Containerization Tool එක වේ.
+
+	(4) CRI-O
+			- මෙය Kubernets වල භාවිතා කරන, Containerization Tool එක වේ.
+
+
+
+
+
+
+
+[Slide 20] මොකද්ද මේ Docker කියන්නේ?
+			(What is Docker?)
+
+	* Docker කියන්නේ, Containerization සඳහා ලෝකයේ බහුලව භාවිතා කරන, Open Souce Tool එක වේ.
+	* Docker නිසා, අපට, පරිගණකයේ Hardwares ගැන, වද වෙන්නේ නැතුව, Software එකක් Develop කරන්න පුළුවන්
+
+
+
+
+[Slide 21 - 22] Docker වල Arcitecture එක
+				(Docker Architecture)
+
+	#Docker Architecture එක දැනට අතාරින්න. මේක Slide 24 න් පස්සේ තමා තේරෙන්නේ
+
+
+
+[Slide 23]	Docker Image එකේ සහ Docker Container එකේ වෙනස
+			(Docker Image vs Docker Container)
+
+	* 	Docker Image හා Docker Container යන, Files දෙකම, නිර්මාණය කරනු ලබන්නේ,  Software එක Run වීමට අවශ්‍ය සියලුම, Files, 			Dependencies එකතු කර, තනි File එකක් සෑදීමටය. 
+		
+		#	මෙතැනදී කියන්නේ, 
+		#			- "Docker Image" කියන්නෙත්  Zip Files වලට,
+		#			- "Docker Container" කියන්නෙත් Zip File වලට,
+		#
+		#			එහෙනම් මොකද්ද මේ දෙකේ වෙනස.
+																			
+																		|
+	|------------------------------------------------------------------------------------------------------------------------------
+	|					Docker Image එක 								|				Docker Container එක
+	|------------------------------------------------------------------------------------------------------------------------------
+	|																	|
+	|		* Blueprint එකක් පමණි 									|		* Run කළ හැකි Application එකක් අඩංගු වේ
+	|		  (Application එකක් ලෙස මෙය Run කළ නොහැක)			|
+	|------------------------------------------------------------------------------------------------------------------------------
+	|		* Read only වේ 												|		* Excute කළ හැක
+	|------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+[Slide 24] අපේ පලවෙනි Docker Command එක
+			(Hands-on: First Container)
+	
+		' docker run hello-world '
+
+	
+	මේ Code එකෙන් වෙන්නේ මොකද්ද?
+		පියවර 01 : "hello-world" කියන, Docker Image එක (අපි කලින් කතා කරපු එක), Local Computer එකට Save වේ
+		පියවර 02 : Docker Image එකේ, ඇති Blue Print එක ඇසුරෙන්, Docker Container එක නිර්මාණය වේ (අපි කලින් කතා කරපු එක)
+		පියවර 03 : Docker Container එක Execute වී, Application එක Run වීම ඇරඹෙයි
+
+
+
+
+
+[Slide 21 - 22] Docker වල Arcitecture එක
+				(Docker Architecture)
+
+
+	---"architecture.png" එක Open කරගන්න
+	
+
+
+
+
+
+[Slide 25] බහුලව භාවිතා වෙන Docker Commands
+			(Common Docker Commands)
+
+	01) 'docker images' : Computer එකේ තිබෙන සියලුම, Docker Images දර්ශනය වේ
+	02) 'docker ps'		: දැනට වැඩ කරන, Containers පෙන්වයි
+	03) 'docker stop' 	: Containers Run වෙන එක නවත්වයි
+	04) 'docker rm' 	: Stop කළ Container එක ඉවත් කරයි
+
+
+
+
+
+[Slide 26] Containerization වල වාසි
+			(Benefits of Containerization) 
+
+	- අවශ්‍ය සියලුම, Files, dependencies වගේ දේවල්, තනි bundle එකක් විදිහට සකසයි
+	- ඕනෑම OS එකක Code එක Run කළ හැක
+	- Lightweight වේ
+	- වේගවත් වේ
+	- අවශ්‍ය සියලුම, Files, dependencies වගේ දේවල්, තනි bundle එකක් විදිහට සකසයි
+	- ඕනෑම OS එකක Code එක Run කළ හැක
+	- Lightweight වේ
+	- වේගවත් වේ
 
 

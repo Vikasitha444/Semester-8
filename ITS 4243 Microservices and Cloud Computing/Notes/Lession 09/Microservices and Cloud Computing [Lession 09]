@@ -1,5 +1,864 @@
 											Microservices and Cloud Computing	
 													Lession 09
+											Intercommunication Of Microservices - Part 02
+									(Microservices අතර සිදුවන අභ්‍යන්තර සන්නිවේදනය - දෙවෙනි කොටස)
+
+
+	#මේකෙදි, අපිට මුලින්ම කතා කරන්න තියෙන්නේ, "Microservices අතර සන්නිවේදනය කිරීම සඳහා භාවිතා කරන ක්‍රම" ගැන
+
+[Slide 2] 	Microservices අතර සන්නිවේදනය කිරීම සඳහා භාවිතා කරන ක්‍රම
+			(Communication ක්‍රමයs in Microservices)
+
+
+
+
+[Slide 3] 
+
+	පහත දැක්වෙන්නේ, Microservices අතර සන්නිවේදනය කිරීම සඳහා භාවිතා කරන ක්‍රමවේද  වේ.
+		<red>	1) 	Request-Response ක්‍රමය </red>
+		<red>	2) 	Publish-Subscribe ක්‍රමය </red>
+				3) 	Event Sourcing ක්‍රමය
+				4) 	CQRS (Command Query Responsibility Segregation) ක්‍රමය
+				5) 	Circuit Breaker ක්‍රමය
+				6) 	Saga ක්‍රමය
+		<red>	7) 	API Gateway ක්‍රමය </red>
+				8) 	Backend for Frontend (BFF) ක්‍රමය
+				9) 	Strangler ක්‍රමය
+				10)	Service Mesh ක්‍රමය
+
+		
+		#මේ 3 ගැන තමා අපිට කතා කරන්න තියෙන්නේ
+		#අපි එහෙනම් වෙන වෙනම මේ ක්‍රම 03 ගැන බලමු
+
+
+
+[Slide 4]  (1) Request-Response ක්‍රමය 
+	
+	* Request-Response ක්‍රමය කියන්නේ, Microservices අතර, පණිවිඩ හුවමාරු කරගැනීමට බහුලව, භාවිතා කරන ක්‍රමයක් වේ. 
+	* මෙහිදී, Synchorouns ක්‍රමයට පණිවිඩ හුවමාරු කරගනී.
+	* මෙහිදී Request එකක් යවා, එම Request එකට, Reply එකක් ලැබුණු පසු, නැවත Request එකක් යවනු ලැබේ.
+
+
+[Slide ] 
+	ලක්ෂණ
+	(Characteristics)
+
+		- Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) සිදු කරයි
+		- සන්නිවේදනය සිදු වන්නේ, Client හා Server එක අතර පමණි
+		- සාමාන්‍යයෙන්, HTTP Protocols භාවිතා කරයි
+		
+
+	වාසි
+	(Advantages)
+
+		- සරලයි
+		- තේරුම් ගන්න පහසුයි
+		- REST හා gPRC ක්‍රමවේද භාවිතා කරලා පහසුවෙන් Implement කරන්න පුළුවන්
+		- Errors Handle කිරීම පහසුය
+		- Test කරන්න ලේසියි
+		
+
+	අවාසි
+	(Disadvantages)
+
+		- එක Service එකකට, තව Service එකක් බැඳී පවතී (Tight coupling)
+		- Requests ගොඩක් යැවීමේදී, Slow වීම සිදු වේ
+
+
+	භාවිතා වෙන ස්ථාන
+	(Typical Use Cases)
+
+		- කෙටි කාලයකින් Complete වෙන Tasks සඳහා
+		- User කෙනෙක් සමඟ ගැටෙන වෙන අවස්ථා සඳහා
+		- Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) අවශ්‍ය අවස්ථා සඳහා
+
+
+
+	භාවිතා නොකළ යුතු තැන්
+	(Avoid when)
+
+		- වැඩි කාලයක් ගත වෙන Tasks සඳහා
+		- Requests ගොඩක් යවන Tasks සඳහා 
+		- Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය) අවශ්‍ය අවස්ථා සඳහා
+
+
+
+	බහුලව භාවිතා වෙන Publish-Subscriber Tools
+	(Popular API Gateway Tool)
+
+		- REST API
+		- gRPC
+		- GraphQL
+		- Feign Client / WebClient 
+
+		
+
+
+
+[Slide 7] (2) Publish-Subscriber ක්‍රමය (Event-Driven ක්‍රමය)
+
+	* Microservice අතර දත්ත හුවමාරු කිරීමට, "API" මෙන්ම "Publish-Subscriber" ක්‍රමයද භාවිතා කළ හැක.
+
+	* මෙහිදී, එක් එක් Microservices වලට, වෙන වෙනම Messgae යවනවාට වඩා, මෙහිදී, Event එක Broadcast කිරීම සිදු වේ. එහිදී, event එක අවශ්‍ය Microservices වලට එම Event එකේ Updates ලබාගැනීමට, Event එක Subscribe කළ හැක.
+
+	* "API හරහා, Microservices අතර දත්ත හුවමාරු කිරීමේ" ක්‍රමයට වඩා, "Publish-Subscriber ක්‍රමය" ක්‍රමය වඩා කාර්යක්ෂම වේ.
+
+	* මේ Diagram එකෙන් එය පැහැදිලි කරගත හැක
+		---"Traditional API and Event Driven Approch.png" එක මෙතන අඳින්න
+
+		<pencil>
+			මේක Youtube Video බලන එකට සමාන කරන්න පුළුවන්.
+
+			OrderService : Chanux bro
+			Broker : Youtbue
+			Notifiction service : Pawan
+			Payment service : Sijja
+			User Login Service : Sucksporu
+
+			Pawan හා Sijja Chanux broව Subcscribe කරලා තියෙන්නේ
+			Sucksporu කරලා නෑ
+		</pencil>
+
+
+
+
+
+
+[Slide 9]
+	ලක්ෂණ
+	(Characteristics)
+		*	අසමමුහුර්ත සන්නිවේදනය
+			(Asynchronous)
+
+		*	හැම Microservice එකක්ම, එකිනෙකා මත Depend නොවේ
+			(Loose Coupling)
+
+		* 	Scale කල හැක
+			(Scalable)
+
+		* 	Event වලට අනුව වැඩ කරයි
+			(Event-driven)
+
+
+	
+	වාසි
+	(Advantages)
+		* එක Service එකක් Crash වුනත්, අනෙක් Services වලට බලපෑමක් වෙන්නේ නෑ 
+		 (System remains stable even if some services are down).
+
+		* Microservices වෙන වෙනම Scale කරන්න පුළුවන් 
+		  (High scalability).
+
+		* ඕනෑම වෙලාවක Subscribers ලා Add කරන්න පුළුවන්
+		  (Subscribers can be added anytime).
+
+		 * අසමමුහුර්ත සන්නිවේදනය සිදු කරයි. එම නිසා වේගයෙන් වැඩිය
+		   (Super fast and non-blocking)
+
+
+
+	අවාසි
+	(Disadvantages)
+		* Implement කරන්න අමාරුයි
+		  (More complex to implement)
+
+		* Debug කරන්න අමාරුයි
+		  (Harder to debug)
+
+		* Message broker කෙනෙක් අවශ්‍යයි
+		  (Requires message brokers)
+
+
+
+
+	ඇයි Publish-Subscriber ක්‍රමය භාවිතා කල යුත්තේ?
+	(Why Use Pub/Sub?)
+
+		* Microservices එකිනෙකා මත Depend වීම වැලැක්වීමට
+		  (Avoid tight coupling between microservices)
+		
+		* Events ගොඩක් එන වෙලාවට ඒවා Handle කරන්න 
+		  (Handle high event volume (e.g., orders, payments))
+		
+		* System එක Scale කරන්න අවශ්‍ය වූ විට
+		  (Make systems more scalable and fault-tolerant)
+		
+		
+	
+
+	භාවිතා වෙන ස්ථාන
+	(Typical Use Cases)
+
+		* Notifications යවන්න
+		  (Sending notifications)
+
+		* IoT devices වල sensors වල දත්ත හසුරවන්න
+		  (IoT sensor data)
+
+		* Data Streaming කරන platforms වලට
+		  (Real-time streaming system)
+
+
+
+	බහුලව භාවිතා වෙන Publish-Subscriber Tools
+	(Popular API Gateway Tool)
+		* Apache Kafka (most popular)
+		* RabbitMQ
+		* Google Pub/Sub
+		* AWS SNS/SQS
+		* Redis Streams
+
+
+
+
+
+[Slide 11] 03) 	API Gateway ක්‍රමය
+
+	#API Gateway එක කියන්නේ හරියට Router එකක් වගේ.
+
+
+	---"API Gateway Pattern.png" එක Open කරගන්න
+
+	* User කෙනෙක් විසින්, Microservice එක වෙත, එවනු ලබන, Requests (පණිවිඩ) සියල්ලම ඇතුළු වන්නේ API Gateway එක හරහාය.
+	* API Gateway එක විසින්, පැමිණෙන Requests (පණිවිඩ), ගැලපෙන Microservice එක වෙත යොමු කරයි.
+	* API Gateway එක නිසා, Microservies Architecture එකේ, ආරක්ෂාව හා කාර්යක්ෂමතාව වැඩි වේ.
+	  #ඒ ඇයි කියලා ඉස්සරහට තේරෙනවා
+
+
+	* ඇයි අපිට API Gateway එකක් අවශ්‍ය වෙන්නේ?
+			
+			- API Gateway එකක් නැති වුනොත් මොකද වෙන්නේ?
+				+ පරිශීලකයන්ට වෙන වෙනම Microservices පණිවිඩ යැවීමට සිදු වෙනවා
+				+ හැම, Microservice එකකම, Address එක දැන සිටිය යුතු වෙනවා
+				+ Network Traffics හට ගන්න පුළුවන්
+
+
+			- API Gateway එකක් තිබ්බොත් මොකද වෙන්නේ?
+				+ API Gateway එකේ Address එක පමණක්, භාවිතා කරලා, ඕනෑම Microservice එකකට, පණිවිඩ යවන්න පුළුවන්
+				+ Gateway එක විසින්, ස්වයංක්‍රියව, පණිවිඩය යොමු කළ යුතු Microservice එක හොයාගන්නවා
+				+ අඩු Request ප්‍රමාණයකින් පණිවිඩය යවන්න පුළුවන්
+				+ API Gateway එක නිසා, Microservies Architecture එකේ, ආරක්ෂාව හා කාර්යක්ෂමතාව වැඩි වේ.
+
+
+
+
+
+
+
+
+[Slide 12] API Gateway එකෙන් මොකද කරන්නේ?
+			(What an API Gateway Does)
+
+	01) ලැබෙන Request (පණිවිඩ), නිවැරදි Microservices වලට යොමු කිරීම
+		(Request Routing)
+
+	
+	02) විවිධ Microservices වලින් එන පණිවිඩ, එකට එකතු කර, තනි Message එකක් විදිහට යැවීම
+		(Aggregation)
+
+
+	03) Microservices අතර, පණිවුඩ හුවමාරු කිරීමේදී, ආරක්ෂක පියවරයන් අනුගමනය කිරීම
+		(Cross-Cutting Concerns)
+					උදා:- 	* Log සටහන් කිරීම
+							* Authentication කිරීම
+							* Authorization කිරීම
+							* Error handling කිරීම
+							* Monitoring කිරීම
+							* Security කිරීම
+							* Caching කිරීම
+
+
+	04) Microservies වල, Address, බාහිර වෙනත් Usersලා ගෙන් සැඟවීම
+		(Security) 
+
+
+
+
+
+[Slide 13] API Gateway එක ගැන උදාහරණයක් ඇසුරෙන් පැහැදිලි කරගමු
+
+ * Food Delivary App එකක් අපි උදාහරණය විදිහට ගනිමු. 
+
+ 		- මේ App එකට, API Gateway එකක් නැති වුනොත් මොකද වෙන්නේ?
+ 				* App එකේ සියලුම Microserviecs වලට, කතා කරලා බලන්න වෙනවා, Order එකක් ලබිලද කියලා
+
+
+ 		-  මේ App එකට, API Gateway එකක් තිබුනොත් මොකද වෙන්නේ?
+ 				* App එකේ සියලුම Microserviecs වලින් එවනු ලබන පණිවිඩ, එකට එකතු කරලා, තනි Message එකක් විදිහට බලන්න පුළුවන්
+ 				  (අපි කලින් කතා කරපු එක)
+
+
+
+
+
+[Slide 14] 
+	
+	වාසි
+	(Advantages)
+		 * සියලුම Microservices වලට, එක Address එකක් තිබීම
+		   (Centralized access point)
+
+		  * හොඳ Security එකක් තිබීම
+		  	(Better security)
+
+		  * Clients ලාට පහසුවෙන් භාවිතා කල හැකි වීම
+		  	(Simplified client logic)
+
+		  
+
+
+	අවාසි
+	(Disadvantages)
+
+			*  API Gateway එක බිඳ වැටුනොත්, මුළු පද්ධතියම බිඳ වැටීම
+			   (A single point of failure)
+
+			*  පණිවිඩ API Gateway එක හරහා ගමන් කරන නිසා, Slow වීම
+				(Adds extra latency)
+
+
+
+	
+	බහුලව භාවිතා වෙන API Gateway Tools
+	(Popular API Gateway Tool)
+			* 	Kong
+			* 	Apigee (Google)
+			* 	AWS API Gateway
+			* 	Azure API Management
+			* 	Traefik
+			* 	NGINX API Gateway
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Microservices and Cloud Computing	
+													Lession 09
 											Intercommunication Of Microservices
 										(Microservices අතර සිදුවන අභ්‍යන්තර සන්නිවේදනය)
 
@@ -149,7 +1008,7 @@
 
 
 
-[Slide 13] API Gateway එක උදාහරණයක් ඇසුරෙන් පැහැදිලි කරගමු
+[Slide 13] API Gateway එක ගැන උදාහරණයක් ඇසුරෙන් පැහැදිලි කරගමු
 
  * Food Delivary App එකක් අපි උදාහරණය විදිහට ගනිමු. 
 
@@ -158,4 +1017,382 @@
 
 
  		-  මේ App එකට, API Gateway එකක් තිබුනොත් මොකද වෙන්නේ?
- 				* App එකේ සියලුම Microserviecs වල පණිවිඩ, එකට එකතු කරලා, තනි Message එකක් විදිහට ගන්න පුළුවන්
+ 				* App එකේ සියලුම Microserviecs වලින් එවනු ලැබූ පණිවිඩ, එකට එකතු කරලා, තනි Message එකක් විදිහට බලන්න පුළුවන්
+ 				  (අපි කලින් කතා කරපු එක)
+
+
+
+
+
+[Slide 14] 
+	
+	වාසි
+	(Advantages)
+		 * සියලුම Microservices වලට, එක Address එකක් තිබීම
+		   (Centralized access point)
+
+		  * හොඳ Security එකක් තිබීම
+		  	(Better security)
+
+		  * Clients ලාට පහසුවෙන් භාවිතා කල හැකි වීම
+		  	(Simplified client logic)
+
+		  
+
+
+	අවාසි
+	(Disadvantages)
+
+			*  API Gateway එක බිඳ වැටුනොත්, මුළු පද්ධතියම බිඳ වැටීම
+			   (A single point of failure)
+
+			*  පණිවිඩ API Gateway එක හරහා ගමන් කරන නිසා, Slow වීම
+				(Adds extra latency)
+
+
+
+	බහුලව භාවිතා වෙන API Gateway Tools
+	(Popular API Gateway Tool)
+			* 	Kong
+			* 	Apigee (Google)
+			* 	AWS API Gateway
+			* 	Azure API Management
+			* 	Traefik
+			* 	NGINX API Gateway
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Microservices and Cloud Computing	
+													Lession 09
+											Intercommunication Of Microservices
+										(Microservices අතර සිදුවන අභ්‍යන්තර සන්නිවේදනය)
+
+⚠️ NOTE එක සම්පුර්ණ නෑ
+
+[Slide 2] 	Microservices අතර සන්නිවේදනය කිරීම සඳහා භාවිතා කරන ක්‍රම
+			(Communication ක්‍රමයs in Microservices)
+
+
+
+
+[Slide 3] 
+
+	පහත දැක්වෙන්නේ, Microservices අතර සන්නිවේදනය කිරීම සඳහා භාවිතා කරන ක්‍රමවේද  වේ.
+		<red>	1) 	Request-Response ක්‍රමය </red>
+		<red>	2) 	Publish-Subscribe ක්‍රමය </red>
+				3) 	Event Sourcing ක්‍රමය
+				4) 	CQRS (Command Query Responsibility Segregation) ක්‍රමය
+				5) 	Circuit Breaker ක්‍රමය
+				6) 	Saga ක්‍රමය
+		<red>	7) 	API Gateway ක්‍රමය </red>
+				8) 	Backend for Frontend (BFF) ක්‍රමය
+				9) 	Strangler ක්‍රමය
+				10)	Service Mesh ක්‍රමය
+
+
+
+
+[Slide 4]  (1) Request-Response ක්‍රමය 
+	
+	* Request-Response ක්‍රමය කියන්නේ, Microservices අතර, පණිවිඩ හුවමාරු කරගැනීමට බහුලව, භාවිතා කරන ක්‍රමයක් වේ. 
+	* මෙහිදී, Synchorouns ක්‍රමයට පණිවිඩ හුවමාරු කරගනී.
+	* මෙහිදී Request එකක් යවා, එම Request එකට, Reply එකක් ලැබුණු පසු, නැවත Request එකක් යවනු ලැබේ.
+
+
+[Slide ] 
+	* Request-Response ක්‍රමයේ ප්‍රධාන ලක්ෂණ
+		- Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) සිදු කරයි
+		- සන්නිවේදනය සිදු වන්නේ, Client හා Server එක අතර පමණි
+		- සාමාන්‍යයෙන්, HTTP Protocols භාවිතා කරයි
+		
+
+	* Request-Response ක්‍රමයේ වාසි
+		- සරලයි
+		- තේරුම් ගන්න පහසුයි
+		- REST හා gPRC ක්‍රමවේද භාවිතා කරලා පහසුවෙන් Implement කරන්න පුළුවන්
+		- Errors Handle කිරීම පහසුය
+		- Test කරන්න ලේසියි
+		
+
+	* Request-Response ක්‍රමයේ අවාසි
+		- එක Service එකකට, තව Service එකක් බැඳී පවතී (Tight coupling)
+		- Requests ගොඩක් යැවීමේදී, Slow වීම සිදු වේ
+
+
+	* Request-Response ක්‍රමය භාවිතා කළ යුතු තැන්
+		- කෙටි කාලයකින් Complete වෙන Tasks සඳහා
+		- User කෙනෙක් සමඟ ගැටෙන වෙන අවස්ථා සඳහා
+		- Synchronous Communication (සමමුහුර්ත සන්නිවේදනය) අවශ්‍ය අවස්ථා සඳහා
+
+	* Request-Response ක්‍රමය භාවිතා නොකළ යුතු තැන්
+		- වැඩි කාලයක් ගත වෙන Tasks සඳහා
+		- Requests ගොඩක් යවන Tasks සඳහා 
+		- Asynchronous Communication (අසමමුහුර්ත සන්නිවේදනය) අවශ්‍ය අවස්ථා සඳහා
+
+
+	* Request–Response ක්‍රමයේදී භාවිතා කර ඇති තාක්ෂණයන්
+		- REST API
+		- gRPC
+		- GraphQL
+		- Feign Client / WebClient 
+
+		
+
+
+
+[Slide 7] (2) Publish-Subscriber ක්‍රමය (Event-Driven ක්‍රමය)
+
+	* Microservice අතර දත්ත හුවමාරු කිරීමට, "API" මෙන්ම "Publish-Subscriber" ක්‍රමයද භාවිතා කළ හැක.
+
+	* මෙහිදී, එක් එක් Microservices වලට, වෙන වෙනම Messgae යවනවාට වඩා, මෙහිදී, Event එක Broadcast කිරීම සිදු වේ. එහිදී, event එක අවශ්‍ය Microservices වලට එම Event එකේ Updates ලබාගැනීමට, Event එක Subscribe කළ හැක.
+
+	* "API හරහා, Microservices අතර දත්ත හුවමාරු කිරීමේ" ක්‍රමයට වඩා, "Publish-Subscriber ක්‍රමය" ක්‍රමය වඩා කාර්යක්ෂම වේ.
+
+	* මේ Diagram එකෙන් එය පැහැදිලි කරගත හැක
+		---"Traditional API and Event Driven Approch.png" එක මෙතන අඳින්න
+
+		<pencil>
+			මේක Youtube Video බලන එකට සමාන කරන්න පුළුවන්.
+
+			OrderService : Chanux bro
+			Broker : Youtbue
+			Notifiction service : Pawan
+			Payment service : Sijja
+			User Login Service : Sucksporu
+
+			Pawan හා Sijja Chanux broව Subcscribe කරලා තියෙන්නේ
+			Sucksporu කරලා නෑ
+		</pencil>
+
+
+
+
+
+
+[Slide 9]
+	ලක්ෂණ
+	(Characteristics)
+		*	අසමමුහුර්ත සන්නිවේදනය
+			(Asynchronous)
+
+		*	හැම Microservice එකක්ම, එකිනෙකා මත Depend නොවේ
+			(Loose Coupling)
+
+		* 	Scale කල හැක
+			(Scalable)
+
+		* 	Event වලට අනුව වැඩ කරයි
+			(Event-driven)
+
+
+	
+	වාසි
+	(Advantages)
+		* එක Service එකක් Crash වුනත්, අනෙක් Services වලට බලපෑමක් වෙන්නේ නෑ 
+		 (System remains stable even if some services are down).
+
+		* Microservices වෙන වෙනම Scale කරන්න පුළුවන් 
+		  (High scalability).
+
+		* ඕනෑම වෙලාවක Subscribers ලා Add කරන්න පුළුවන්
+		  (Subscribers can be added anytime).
+
+		 * අසමමුහුර්ත සන්නිවේදනය සිදු කරයි. එම නිසා වේගයෙන් වැඩිය
+		   (Super fast and non-blocking)
+
+
+
+	අවාසි
+	(Disadvantages)
+		* Implement කරන්න අමාරුයි
+		  (More complex to implement)
+
+		* Debug කරන්න අමාරුයි
+		  (Harder to debug)
+
+		* Message broker කෙනෙක් අවශ්‍යයි
+		  (Requires message brokers)
+
+
+
+
+	ඇයි Publish-Subscriber ක්‍රමය භාවිතා කල යුත්තේ?
+	(Why Use Pub/Sub?)
+		* Microservices එකිනෙකා මත Depend වීම වැලැක්වීමට
+		  (Avoid tight coupling between microservices)
+		
+		* Events ගොඩක් එන වෙලාවට Handle කරන්න 
+		  (Handle high event volume (e.g., orders, payments))
+		
+		* System එක Scale කරන්න අවශ්‍ය වූ විට
+		  (Make systems more scalable and fault-tolerant)
+		
+		
+		* එක Event එකකට, Services කිහිපයකට React කල හැකි වෙන්න
+		  (Allow multiple services to react to the same event)
+
+
+
+	භාවිතා වෙන ස්ථාන
+	(Typical Use Cases)
+
+		* Notifications යවන්න
+		  (Sending notifications)
+
+		* Log සටහන් කිරීම්, analytics, auditing වගේ දේවල් වලට
+		  (Logging, analytics, auditing)
+
+		* Payment related events handle කරන්න
+		  (Payment events)
+
+		* IoT devices වල sensors වල දත්ත 
+		  (IoT sensor data)
+
+		* Data Streaming කරන platforms වලට
+		  (Real-time streaming system)
+
+
+	බහුලව භාවිතා වෙන Publish-Subscriber Tools
+	(Popular API Gateway Tool)
+		* Apache Kafka (most popular)
+		* RabbitMQ
+		* Google Pub/Sub
+		* AWS SNS/SQS
+		* Redis Streams
+
+
+
+
+
+[Slide 11] 03) 	API Gateway ක්‍රමය
+
+	#API Gateway එක කියන්නේ හරියට Router එකක් වගේ.
+
+
+	---"API Gateway Pattern.png" එක Open කරගන්න
+
+	* User කෙනෙක් විසින්, Microservice එක වෙත, එවනු ලබන, Requests (පණිවිඩ) සියල්ලම ඇතුළු වන්නේ API Gateway එක හරහාය.
+	* API Gateway එක විසින්, පැමිණෙන Requests (පණිවිඩ), ගැලපෙන Microservice එක වෙත යොමු කරයි.
+	* API Gateway එක නිසා, Microservies Architecture එකේ, ආරක්ෂාව හා කාර්යක්ෂමතාව වැඩි වේ.
+	  #ඒ ඇයි කියලා ඉස්සරහට තේරෙනවා
+
+
+	* ඇයි අපිට API Gateway එකක් අවශ්‍ය වෙන්නේ?
+			
+			- API Gateway එකක් නැති වුනොත් මොකද වෙන්නේ?
+				+ පරිශීලකයන්ට වෙන වෙනම Microservices පණිවිඩ යැවීමට සිදු වෙනවා
+				+ හැම, Microservice එකකම, Address එක දැන සිටිය යුතු වෙනවා
+				+ Network Traffics හට ගන්න පුළුවන්
+
+
+			- API Gateway එකක් තිබ්බොත් මොකද වෙන්නේ?
+				+ API Gateway එකේ Address එක පමණක්, භාවිතා කරලා, ඕනෑම Microservice එකකට, පණිවිඩ යවන්න පුළුවන්
+				+ Gateway එක විසින්, ස්වයංක්‍රියව, පණිවිඩය යොමු කළ යුතු Microservice එක හොයාගන්නවා
+				+ අඩු Request ප්‍රමාණයකින් පණිවිඩය යවන්න පුළුවන්
+				+ API Gateway එක නිසා, Microservies Architecture එකේ, ආරක්ෂාව හා කාර්යක්ෂමතාව වැඩි වේ.
+
+
+
+
+
+
+
+
+[Slide 12] API Gateway එකෙන් මොකද කරන්නේ?
+			(What an API Gateway Does)
+
+	01) ලැබෙන Request (පණිවිඩ), නිවැරදි Microservices වලට යොමු කිරීම
+		(Request Routing)
+
+	
+	02) විවිධ Microservices වලින් එන පණිවිඩ, එකට එකතු කර, තනි Message එකක් විදිහට යැවීම
+		(Aggregation)
+
+
+	03) Microservices අතර, පණිවුඩ හුවමාරු කිරීමේදී, ආරක්ෂක පියවරයන් අනුගමනය කිරීම
+		(Cross-Cutting Concerns)
+					උදා:- 	* Log සටහන් කිරීම
+							* Authentication කිරීම
+							* Authorization කිරීම
+							* Error handling කිරීම
+							* Monitoring කිරීම
+							* Security කිරීම
+							* Caching කිරීම
+
+
+	04) Microservies වල, Address, බාහිර වෙනත් Usersලා ගෙන් සැඟවීම
+		(Security) 
+
+
+
+
+
+[Slide 13] API Gateway එක ගැන උදාහරණයක් ඇසුරෙන් පැහැදිලි කරගමු
+
+ * Food Delivary App එකක් අපි උදාහරණය විදිහට ගනිමු. 
+
+ 		- මේ App එකට, API Gateway එකක් නැති වුනොත් මොකද වෙන්නේ?
+ 				* App එකේ සියලුම Microserviecs වලට, කතා කරලා බලන්න වෙනවා, Order එකක් ලබිලද කියලා
+
+
+ 		-  මේ App එකට, API Gateway එකක් තිබුනොත් මොකද වෙන්නේ?
+ 				* App එකේ සියලුම Microserviecs වලින් එවනු ලබන පණිවිඩ, එකට එකතු කරලා, තනි Message එකක් විදිහට බලන්න පුළුවන්
+ 				  (අපි කලින් කතා කරපු එක)
+
+
+
+
+
+[Slide 14] 
+	
+	වාසි
+	(Advantages)
+		 * සියලුම Microservices වලට, එක Address එකක් තිබීම
+		   (Centralized access point)
+
+		  * හොඳ Security එකක් තිබීම
+		  	(Better security)
+
+		  * Clients ලාට පහසුවෙන් භාවිතා කල හැකි වීම
+		  	(Simplified client logic)
+
+		  
+
+
+	අවාසි
+	(Disadvantages)
+
+			*  API Gateway එක බිඳ වැටුනොත්, මුළු පද්ධතියම බිඳ වැටීම
+			   (A single point of failure)
+
+			*  පණිවිඩ API Gateway එක හරහා ගමන් කරන නිසා, Slow වීම
+				(Adds extra latency)
+
+
+
+	
+	බහුලව භාවිතා වෙන API Gateway Tools
+	(Popular API Gateway Tool)
+			* 	Kong
+			* 	Apigee (Google)
+			* 	AWS API Gateway
+			* 	Azure API Management
+			* 	Traefik
+			* 	NGINX API Gateway
+
+
+
+
+
+
+
+
+
+
+
+
