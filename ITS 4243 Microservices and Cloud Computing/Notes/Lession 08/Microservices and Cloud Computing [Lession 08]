@@ -1,0 +1,15 @@
+											Microservices and Cloud Computing	
+													Lession 08
+										Introduction to Containerization
+										
+
+
+[Slide 2] 	මොකද්ද මේ Containerization කියන්නේ?
+			(What is Containerization?)
+
+	* Containerization කියන්නේ, Software නිර්මාණය කිරීමේදී, ඒ Software එක Run වීම සඳහා අවශ්‍ය සියලුම, Libraries,  dependencies වගේ දේවල්, එකට එකතු කර, Package එකක් ලෙස හදන තාක්ෂණයකි.
+
+
+
+	* Containerization කියන්නේ, Software නිර්මාණය කිරීමේදී, ඒ Software එක Run වීම සඳහා අවශ්‍ය සියලුම, Libraries,  dependencies වගේ දේවල්, එකට එකතු කර, Package එකක් ලෙස හදන තාක්ෂණයකි.
+
