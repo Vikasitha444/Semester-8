@@ -3,6 +3,26 @@
 					(ආයතනයක ව්‍යාපාර අරමුණු ඉටු කරගැනීමට, IT ක්ෂේත්‍රය භාවිතා කරන ආකාරය සහ තොරතුරු තාක්ෂණ පරිපාලනය)
 
 
+IS = දත්ත එකතු කරලා, සැකසලා, ව්‍යාපාර තීරණ වලට උපකාර කරන පද්ධති වේ
+
+IS == _____ Management systems
+
+ආයතනය කළමනාකරනය කිරීම සඳහා භාවිතා කරන පද්ධති වේ
+	උදා:- 	Enterprise Resource Planning (ERP) System 
+		Customer Relationship Management (CRM) System 				Supply Chain Management (SCM) System
+		
+
+
+
+Strategy = නිවැරදිව, ආයතනය කළමනාකරනය කිරීම සඳහා භාවිතා කරන පද්ධති භාවිතා කරන ආකාරය වේ
+
+
+
+
+
+
+
+
 
 ⚠️ ආයතනයක IT ක්ෂේත්‍රය විසින් භාවිතා කරන පද්ධති == Information Systems
 	ආයතනයකට සහය දක්වන IT Department එකේ ඇති Systems
@@ -13,7 +33,7 @@
 			Eg:- 	Bar Code Reader එක (Input - Bar Code එක, Output - Item Code එක)
 					Pos Machine (Input - බඩු ප්‍රමාණය, Output - Printed Bill එක)
 					ERP 
-
+	- 
 
 
 
@@ -91,7 +111,7 @@ Information System කියන්නේ, Company එකේ IT Department එක
 		  (දිගු කාලින ව්‍යාපාර අරමුණු)
 
 	ඇයි, ව්‍යාපාර විසින් IT Department එකට ගොඩක් සල්ලි වියදම් කරන්නේ?
-		 - මොකද, ආයතනයක, සේවකයන්ගේ, තාක්ෂණික සාක්ෂරතාව (Technology එක භාවිතා කරන හැකියාව), සහ ආයතනයේ Bussiness Goals සාක්ෂාත් 			කරගැනීමේ හැකියාව කියන දේවල් දෙක, එකට බැඳිලා තියෙන්නේ. 
+		 - මොකද, ආයතනයක, සේවකයන්ගේ, තාක්ෂණික සාක්ෂරතාව (Technology එක භාවිතා කරන හැකියාව), සහ ආයතනයේ Bussiness Goals සාක්ෂාත් කරගැනීමේ හැකියාව කියන දේවල් දෙක, එකට බැඳිලා තියෙන්නේ. 
 
 		 - ඒ වගේම, IT Department එකක් නැතුව, අද කාලයේ, Bussiness Goals, Achitchive කරගන්න ගොඩක් අමාරුයි.
 
@@ -116,6 +136,15 @@ Information System කියන්නේ, Company එකේ IT Department එක
 
 			(6) Bussiness එක කඩා වැටීමෙන් වළක්වාගන්න
 				(Survival)
+
+
+
+[Quiz] 2025 March
+	Question 03)
+	A) . Business firms invest heavily in information systems to achieve strategic 							(06 Marks) 
+		  business objectives. Justify this statement with at least three (3) reasons.	
+
+		  ("ව්‍යාපාර විසින්, තමන්ගේ ව්‍යාපාරික අවශ්‍යතා ඉටු කරගන්න, තොරතුරු පද්ධති වලට ලොකු මුදලක් වියදම් කරනවා." අවම වශයෙන් හේතු 03ක් දක්වමින් මෙම ප්‍රකාශය පැහැදිලි කරන්න)
 
 
 
